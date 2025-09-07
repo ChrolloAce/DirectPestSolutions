@@ -8,6 +8,20 @@ export interface Service {
   bullets: string[]
   ctaLabel: string
   gallery?: string[]
+  problem?: string
+  solution?: string
+  process?: Array<{
+    step: number
+    title: string
+    description: string
+  }>
+  benefits?: Array<{
+    icon: string
+    title: string
+    description: string
+  }>
+  beforeImage?: string
+  afterImage?: string
 }
 
 export const services: Service[] = [
