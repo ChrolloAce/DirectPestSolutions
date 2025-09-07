@@ -23,15 +23,15 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   
   if (!service) {
     return {
-      title: 'Service Not Found | Brown\'s Pressure Washing',
+      title: 'Service Not Found | All In Plumbing Solutions',
     }
   }
   
   return {
-    title: `${service.name} | Brown's Pressure Washing | Nashville`,
+    title: `${service.name} | All In Plumbing Solutions | Miami`,
     description: service.summary,
     openGraph: {
-      title: `${service.name} | Brown's Pressure Washing`,
+      title: `${service.name} | All In Plumbing Solutions`,
       description: service.summary,
       type: 'website',
     },
@@ -51,21 +51,15 @@ export default function ServicePage({ params }: ServicePageProps) {
         {/* Hero Section */}
         <div className="max-w-6xl mx-auto">
           <h1 className="heading-xl text-center mb-8">
-            {service.name} with Brown&apos;s Pressure Washing
+            Professional {service.name} in Miami
           </h1>
           
           <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
             {/* Left - Content */}
             <div>
               <p className="text-xl text-black/80 mb-6">
-                {service.description || service.summary}
+                {service.summary}
               </p>
-              
-              {service.longDescription && service.longDescription.map((paragraph, index) => (
-                <p key={index} className="text-body mb-4">
-                  {paragraph}
-                </p>
-              ))}
               
               <div className="mt-8">
                 <CTAButton href="/contact" size="lg">
