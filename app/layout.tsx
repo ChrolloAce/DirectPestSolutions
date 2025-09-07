@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   title: 'All In Plumbing Solutions | 24/7 Emergency Plumbing Services Miami',
   description: '24/7 emergency plumbing services in Miami. Licensed master plumbers for drain cleaning, water heater repair, leak detection, and more. Call (561) 571-2995',
   keywords: 'plumber, Miami, emergency plumbing, drain cleaning, water heater, leak detection, 24/7 plumbing, Florida',
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
   openGraph: {
     title: 'All In Plumbing Solutions | Miami',
     description: '24/7 emergency plumbing services in Miami. Licensed master plumbers ready to help!',
@@ -19,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'All In Plumbing Solutions | Nashville',
-    description: '24/7 emergency plumbing services in Nashville. Licensed master plumbers ready to help!',
+    title: 'All In Plumbing Solutions | Miami',
+    description: '24/7 emergency plumbing services in Miami. Licensed master plumbers ready to help!',
   },
   robots: {
     index: true,

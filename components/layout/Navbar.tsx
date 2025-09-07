@@ -101,7 +101,7 @@ export function Navbar() {
             {/* Mobile Logo and Hamburger */}
             <div className="md:hidden flex items-center justify-between w-full">
               <Link href="/" className="flex items-center gap-2">
-                <img src="/images/logo.png" alt="All In Plumbing Solutions" className="h-10 w-auto" />
+                <img src="/images/logo-new.png" alt="All In Plumbing Solutions" className="h-10 w-auto" />
               </Link>
               
               <button

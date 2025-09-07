@@ -13,7 +13,7 @@ export class TopBar extends React.Component {
             {/* Logo */}
             <div className="flex items-center">
               <a href="/" className="flex items-center gap-2">
-                <img src="/images/logo.png" alt="All In Plumbing Solutions" className="h-10 w-auto" />
+                <img src="/images/logo-new.png" alt="All In Plumbing Solutions" className="h-10 w-auto" />
               </a>
             </div>
             
@@ -33,7 +33,7 @@ export class TopBar extends React.Component {
           <div className="md:hidden py-2">
             <div className="flex flex-col items-center gap-2">
               <a href="/" className="flex items-center gap-2">
-                <img src="/images/logo.png" alt="All In Plumbing Solutions" className="h-8 w-auto" />
+                <img src="/images/logo-new.png" alt="All In Plumbing Solutions" className="h-8 w-auto" />
               </a>
               <a 
                 href="tel:5615712995" 
