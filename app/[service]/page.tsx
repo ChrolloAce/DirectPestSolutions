@@ -4,7 +4,6 @@ import { getServiceBySlug, services } from '@/content/services'
 import { CTAButton } from '@/components/ui/CTAButton'
 import { CheckCircle, Phone, Clock, Shield, Award, MapPin, ChevronRight, Star } from 'lucide-react'
 import { ServiceIcon } from '@/components/ui/ServiceIcon'
-import BeforeAfterSlider from '@/components/ui/BeforeAfterSlider'
 import ServiceFAQ from '@/components/sections/ServiceFAQ'
 import { getServiceFAQs } from '@/content/service-faqs'
 import Button from '@/components/ui/Button'
@@ -152,19 +151,6 @@ export default function ServicePage({ params }: ServicePageProps) {
         </div>
       </section>
 
-      {/* Before & After Gallery */}
-      <section className="py-16 md:py-24 bg-brand-off">
-        <div className="container mx-auto px-4">
-          <h2 className="heading-lg uppercase text-center mb-12 text-brand-black">
-            See The Difference
-          </h2>
-          <BeforeAfterSlider 
-            beforeImage={service.beforeImage || service.heroImage}
-            afterImage={service.afterImage || service.image}
-            altText={`Before and after ${service.name.toLowerCase()} in Miami`}
-          />
-        </div>
-      </section>
 
       {/* Step-by-Step Process */}
       <section className="py-16 md:py-24 bg-white">
