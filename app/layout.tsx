@@ -45,7 +45,7 @@ export default function RootLayout({
       <body>
         <TopBar />
         <Navbar />
-        <main className="min-h-screen">
+        <main className="min-h-screen pt-[7.5rem]">
           {children}
         </main>
         <Footer />

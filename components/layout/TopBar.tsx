@@ -6,7 +6,7 @@ import { Phone } from 'lucide-react'
 export class TopBar extends React.Component {
   render() {
     return (
-      <div className="sticky top-0 z-50 bg-brand-blue text-brand-black border-b-2 border-brand-black">
+      <div className="fixed inset-x-0 top-0 z-50 bg-brand-blue text-brand-black border-b-2 border-brand-black">
         <div className="container mx-auto px-4">
           {/* Desktop Layout */}
           <div className="hidden md:flex items-center justify-between h-14">
