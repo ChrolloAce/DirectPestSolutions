@@ -222,3 +222,8 @@ export const services: Service[] = [
     ctaLabel: 'Learn About Pipelining'
   }
 ]
+
+// Helper function to get a service by slug
+export function getServiceBySlug(slug: string): Service | undefined {
+  return services.find(service => service.slug === slug)
+}
