@@ -14,12 +14,12 @@ export class Footer extends React.Component {
   ]
   
   private services = [
-    { label: '24/7 Emergency', href: '/emergency-plumbing' },
-    { label: 'Drain Cleaning', href: '/drain-cleaning' },
-    { label: 'Water Heater Service', href: '/water-heater' },
+    { label: 'All Services', href: '/services' },
+    { label: '24/7 Emergency', href: '/24-7-emergency' },
+    { label: 'Water Heaters', href: '/water-heaters' },
     { label: 'Leak Detection', href: '/leak-detection' },
-    { label: 'Bathroom Plumbing', href: '/bathroom-plumbing' },
-    { label: 'Commercial Services', href: '/commercial-plumbing' }
+    { label: 'Maintenance Plans', href: '/maintenance-programs' },
+    { label: 'Water Quality', href: '/water-quality' }
   ]
   
   render() {

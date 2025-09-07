@@ -12,12 +12,10 @@ export function Navbar() {
   
   const navItems = [
     { label: 'Home', href: '/' },
-    { label: 'Emergency', href: '/emergency-plumbing' },
-    { label: 'Drain Cleaning', href: '/drain-cleaning' },
-    { label: 'Water Heater', href: '/water-heater-service' },
-    { label: 'Leak Detection', href: '/leak-detection' },
-    { label: 'Bathroom', href: '/bathroom-plumbing' },
-    { label: 'Commercial', href: '/commercial-services' },
+    { label: 'Services', href: '/services' },
+    { label: 'Emergency', href: '/24-7-emergency' },
+    { label: 'Water Heaters', href: '/water-heaters' },
+    { label: 'Maintenance', href: '/maintenance-programs' },
     { label: 'FAQs', href: '/faqs' },
     { label: 'Contact', href: '/contact' }
   ]

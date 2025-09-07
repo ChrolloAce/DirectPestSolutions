@@ -1,32 +1,93 @@
 'use client'
 
 import React from 'react'
-import { AlertCircle, Droplets, Flame, Search, Bath, Building2, Wrench } from 'lucide-react'
+import { 
+  AlertCircle, 
+  Droplets, 
+  Flame, 
+  Search, 
+  Bath, 
+  Building2, 
+  Wrench,
+  Clock,
+  Shield,
+  RefreshCw,
+  Calendar,
+  Truck,
+  RotateCcw
+} from 'lucide-react'
 
 interface ServiceIconProps {
   name: string
-  className?: string
   size?: number
+  className?: string
 }
 
 export class ServiceIcon extends React.Component<ServiceIconProps> {
-  private getIcon() {
-    const { name, className = '', size = 24 } = this.props
+  render() {
+    const { name, size = 24, className = '' } = this.props
     
-    const icons: Record<string, React.ReactNode> = {
-      emergency: <AlertCircle className={className} size={size} />,
-      drain: <Droplets className={className} size={size} />,
-      heater: <Flame className={className} size={size} />,
-      leak: <Search className={className} size={size} />,
-      bathroom: <Bath className={className} size={size} />,
-      building: <Building2 className={className} size={size} />,
-      default: <Wrench className={className} size={size} />
+    const iconProps = {
+      size,
+      className: `text-brand-black ${className}`,
+      strokeWidth: 2
     }
     
-    return icons[name] || icons.default
-  }
-  
-  render() {
-    return <>{this.getIcon()}</>
+    switch(name) {
+      case 'emergency':
+      case 'alert':
+        return <AlertCircle {...iconProps} />
+      
+      case 'clock':
+        return <Clock {...iconProps} />
+        
+      case 'droplet':
+      case 'droplet2':
+      case 'drain':
+        return <Droplets {...iconProps} />
+        
+      case 'flame':
+      case 'flame2':
+      case 'water-heater':
+        return <Flame {...iconProps} />
+        
+      case 'search':
+      case 'leak':
+        return <Search {...iconProps} />
+        
+      case 'bath':
+      case 'bathroom':
+        return <Bath {...iconProps} />
+        
+      case 'building':
+      case 'building2':
+      case 'commercial':
+        return <Building2 {...iconProps} />
+        
+      case 'shield':
+        return <Shield {...iconProps} />
+        
+      case 'rotate':
+      case 'backflow':
+        return <RotateCcw {...iconProps} />
+        
+      case 'calendar':
+      case 'maintenance':
+        return <Calendar {...iconProps} />
+        
+      case 'refresh':
+      case 'flush':
+        return <RefreshCw {...iconProps} />
+        
+      case 'truck':
+      case 'distributor':
+        return <Truck {...iconProps} />
+        
+      case 'wrench':
+      case 'pipe':
+      case 'pipelining':
+      default:
+        return <Wrench {...iconProps} />
+    }
   }
 }

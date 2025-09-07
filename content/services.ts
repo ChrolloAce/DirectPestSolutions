@@ -2,144 +2,223 @@ export interface Service {
   slug: string
   name: string
   icon: string
+  image: string
   heroImage: string
-  gallery: string[]
   summary: string
   bullets: string[]
   ctaLabel: string
-  description?: string
-  longDescription?: string[]
+  gallery?: string[]
 }
 
 export const services: Service[] = [
   {
-    slug: 'emergency-plumbing',
-    name: '24/7 Emergency',
-    icon: 'emergency',
+    slug: '24-7-emergency',
+    name: '24/7 Emergency Service',
+    icon: 'clock',
+    image: '/images/emergency.png',
     heroImage: '/images/emergency.png',
-    gallery: ['/images/hero-plumber.jpeg', '/images/van.jpeg'],
-    summary: 'Round-the-clock emergency plumbing services when you need us most.',
+    summary: 'Round-the-clock emergency plumbing services when you need us most. Our expert team is always ready to respond.',
     bullets: [
       'Available 24 hours a day, 7 days a week',
-      'Rapid response within 60 minutes',
-      'No extra charge for nights and weekends',
-      'All repairs guaranteed'
+      'Rapid response times in Miami area',
+      'Expert diagnosis and immediate repairs',
+      'Fully equipped service vehicles'
     ],
-    ctaLabel: 'Call Emergency Hotline Now!',
-    description: 'When plumbing disasters strike, we\'re here 24/7 to save the day.',
-    longDescription: [
-      'Plumbing emergencies don\'t wait for business hours, and neither do we. Our 24/7 emergency service ensures you\'re never left dealing with a crisis alone.',
-      'From burst pipes to major leaks, overflowing toilets to complete drain backups, our emergency response team is equipped to handle any situation quickly and efficiently.',
-      'We pride ourselves on our rapid response time and our ability to minimize damage to your property while providing lasting solutions.'
-    ]
+    ctaLabel: 'Call Emergency Hotline'
   },
   {
-    slug: 'drain-cleaning',
-    name: 'Drain Cleaning',
-    icon: 'drain',
-    heroImage: '/images/drain-cleaning-new.png',
-    gallery: ['/images/hero-plumber.jpeg', '/images/van.jpeg'],
-    summary: 'Professional drain cleaning to keep your pipes flowing smoothly.',
-    bullets: [
-      'High-pressure hydro jetting',
-      'Video camera inspections',
-      'Removes all blockages and buildup',
-      'Preventive maintenance available'
-    ],
-    ctaLabel: 'Schedule Drain Service',
-    description: 'Keep your drains clear and your home healthy with our professional drain cleaning services.',
-    longDescription: [
-      'Clogged drains are more than just an inconvenience - they can lead to serious plumbing issues and health hazards if left untreated.',
-      'Our professional drain cleaning service uses state-of-the-art equipment including hydro jetting and video inspection cameras to thoroughly clean your pipes and identify potential problems.',
-      'Regular drain maintenance can prevent costly repairs and ensure your plumbing system operates efficiently for years to come.'
-    ]
-  },
-  {
-    slug: 'water-heater',
-    name: 'Water Heater Service',
-    icon: 'heater',
+    slug: 'iron-removal',
+    name: 'Iron Removal',
+    icon: 'droplet',
+    image: '/images/water-heater.png',
     heroImage: '/images/water-heater.png',
-    gallery: ['/images/hero-plumber.jpeg', '/images/van.jpeg'],
-    summary: 'Expert water heater repair, maintenance, and installation services.',
+    summary: 'Professional iron removal systems to improve your water quality and protect your plumbing.',
     bullets: [
-      'Repair all makes and models',
-      'Tank and tankless options',
-      'Energy-efficient upgrades',
-      'Same-day installation available'
+      'Advanced filtration systems',
+      'Removes iron, rust, and sediment',
+      'Protects appliances and fixtures',
+      'Improves water taste and clarity'
     ],
-    ctaLabel: 'Get Hot Water Today!',
-    description: 'Never run out of hot water again with our comprehensive water heater services.',
-    longDescription: [
-      'A reliable water heater is essential for your daily comfort. Whether you need a repair, replacement, or upgrade to a more efficient model, we\'ve got you covered.',
-      'We service all types of water heaters including traditional tank models, tankless systems, and hybrid heat pump water heaters.',
-      'Our experts can help you choose the right size and type of water heater for your home, ensuring optimal performance and energy efficiency.'
-    ]
+    ctaLabel: 'Get Clean Water'
   },
   {
-    slug: 'leak-detection',
-    name: 'Leak Detection',
-    icon: 'leak',
-    heroImage: '/images/leak-detection.png',
-    gallery: ['/images/hero-plumber.jpeg', '/images/van.jpeg'],
-    summary: 'Advanced leak detection to find and fix hidden water leaks.',
+    slug: 'water-heaters',
+    name: 'Water Heaters',
+    icon: 'flame',
+    image: '/images/water-heater.png',
+    heroImage: '/images/water-heater.png',
+    summary: 'Expert water heater installation, repair, and maintenance for reliable hot water supply.',
     bullets: [
-      'Non-invasive detection methods',
-      'Thermal imaging technology',
-      'Acoustic leak detection',
-      'Prevent water damage and mold'
+      'Tank and tankless water heaters',
+      'Energy-efficient upgrades',
+      'Same-day repairs',
+      'Annual maintenance programs'
     ],
-    ctaLabel: 'Find Hidden Leaks Now',
-    description: 'Stop water waste and prevent damage with our advanced leak detection services.',
-    longDescription: [
-      'Hidden water leaks can cause thousands of dollars in damage before you even know they exist. Our advanced leak detection services find problems before they become disasters.',
-      'Using cutting-edge technology including thermal imaging cameras, acoustic listening devices, and pressure testing, we can pinpoint leaks without destructive exploration.',
-      'Early detection and repair of leaks can save you money on water bills, prevent structural damage, and avoid dangerous mold growth.'
-    ]
+    ctaLabel: 'Schedule Service'
   },
   {
     slug: 'bathroom-plumbing',
     name: 'Bathroom Plumbing',
-    icon: 'bathroom',
+    icon: 'bath',
+    image: '/images/bathroom.png',
     heroImage: '/images/bathroom.png',
-    gallery: ['/images/hero-plumber.jpeg', '/images/van.jpeg'],
-    summary: 'Complete bathroom plumbing services from repairs to renovations.',
+    summary: 'Complete bathroom plumbing services from repairs to full renovations.',
     bullets: [
-      'Toilet repair and replacement',
-      'Shower and tub installation',
-      'Faucet and fixture upgrades',
-      'Complete bathroom remodels'
+      'Toilet, sink, and shower repairs',
+      'Fixture installation and upgrades',
+      'Bathroom remodeling',
+      'Clog removal and drain cleaning'
     ],
-    ctaLabel: 'Upgrade Your Bathroom',
-    description: 'Transform your bathroom with our expert plumbing services.',
-    longDescription: [
-      'Your bathroom should be a comfortable, functional space. Our comprehensive bathroom plumbing services cover everything from simple repairs to complete renovations.',
-      'We handle all aspects of bathroom plumbing including toilet repairs and replacements, shower and bathtub installations, sink and faucet upgrades, and pipe relocations for remodels.',
-      'Whether you\'re dealing with a running toilet, planning a bathroom upgrade, or need emergency repairs, our skilled plumbers deliver quality results.'
-    ]
+    ctaLabel: 'Transform Your Bathroom'
   },
   {
-    slug: 'commercial-plumbing',
-    name: 'Commercial Services',
-    icon: 'building',
-    heroImage: '/images/commercial.png',
-    gallery: ['/images/van.jpeg', '/images/hero-plumber.jpeg'],
-    summary: 'Reliable commercial plumbing for businesses throughout Miami.',
+    slug: 'leak-detection',
+    name: 'Leak Detection',
+    icon: 'search',
+    image: '/images/leak-detection.png',
+    heroImage: '/images/leak-detection.png',
+    summary: 'Advanced leak detection technology to find and fix hidden leaks before they cause damage.',
     bullets: [
-      'Preventive maintenance programs',
-      'Minimal disruption to operations',
-      'Code compliance expertise',
-      'Emergency response available'
+      'Non-invasive detection methods',
+      'Thermal imaging technology',
+      'Slab leak specialists',
+      'Prevent water damage'
     ],
-    ctaLabel: 'Get Commercial Quote',
-    description: 'Keep your business running smoothly with our commercial plumbing services.',
-    longDescription: [
-      'Your business can\'t afford plumbing problems. Our commercial services are designed to keep your operations running smoothly with minimal disruption.',
-      'We work with restaurants, offices, retail stores, apartment complexes, and industrial facilities, providing both emergency repairs and preventive maintenance.',
-      'Our commercial plumbers understand the unique needs of businesses and work efficiently to resolve issues while maintaining compliance with all local codes and regulations.'
-    ]
+    ctaLabel: 'Find Hidden Leaks'
+  },
+  {
+    slug: 'gas-lines',
+    name: 'Gas Lines',
+    icon: 'flame2',
+    image: '/images/commercial.png',
+    heroImage: '/images/commercial.png',
+    summary: 'Safe and reliable gas line installation, repair, and inspection services.',
+    bullets: [
+      'Licensed gas line specialists',
+      'Leak detection and repair',
+      'New gas line installation',
+      'Safety inspections and testing'
+    ],
+    ctaLabel: 'Ensure Gas Safety'
+  },
+  {
+    slug: 'commercial-residential',
+    name: 'Commercial / Residential',
+    icon: 'building',
+    image: '/images/commercial.png',
+    heroImage: '/images/commercial.png',
+    summary: 'Comprehensive plumbing solutions for both commercial properties and residential homes.',
+    bullets: [
+      'Commercial building maintenance',
+      'Residential plumbing services',
+      'New construction plumbing',
+      'Property management support'
+    ],
+    ctaLabel: 'Get a Quote'
+  },
+  {
+    slug: 'lead-detection',
+    name: 'Lead Detection',
+    icon: 'shield',
+    image: '/images/leak-detection.png',
+    heroImage: '/images/leak-detection.png',
+    summary: 'Professional lead testing and remediation to ensure your water is safe for your family.',
+    bullets: [
+      'EPA-certified testing methods',
+      'Lead pipe identification',
+      'Water quality analysis',
+      'Complete lead remediation'
+    ],
+    ctaLabel: 'Test Your Water'
+  },
+  {
+    slug: 'backflow-prevention',
+    name: 'Backflow Prevention',
+    icon: 'rotate',
+    image: '/images/drain-cleaning-new.png',
+    heroImage: '/images/drain-cleaning-new.png',
+    summary: 'Protect your water supply with professional backflow prevention installation and testing.',
+    bullets: [
+      'Certified backflow testing',
+      'Annual inspection programs',
+      'Device installation and repair',
+      'Code compliance certification'
+    ],
+    ctaLabel: 'Protect Your Water'
+  },
+  {
+    slug: 'maintenance-programs',
+    name: 'Maintenance Programs',
+    icon: 'calendar',
+    image: '/images/plumber-portrait.png',
+    heroImage: '/images/plumber-portrait.png',
+    summary: 'Preventive maintenance programs to keep your plumbing system running smoothly year-round.',
+    bullets: [
+      'Annual inspection plans',
+      'Priority emergency service',
+      'Discounted repairs',
+      'Extended warranty coverage'
+    ],
+    ctaLabel: 'Join Maintenance Plan'
+  },
+  {
+    slug: 'annual-flush',
+    name: 'Annual Flush (Filtration)',
+    icon: 'refresh',
+    image: '/images/water-heater.png',
+    heroImage: '/images/water-heater.png',
+    summary: 'Annual system flush and filtration services to maintain optimal water quality and system performance.',
+    bullets: [
+      'Water heater flushing',
+      'Pipe cleaning and descaling',
+      'Filter replacement',
+      'System optimization'
+    ],
+    ctaLabel: 'Schedule Annual Service'
+  },
+  {
+    slug: 'water-quality',
+    name: 'Water Quality',
+    icon: 'droplet2',
+    image: '/images/bathroom.png',
+    heroImage: '/images/bathroom.png',
+    summary: 'Comprehensive water quality testing and treatment solutions for cleaner, safer water.',
+    bullets: [
+      'Water testing and analysis',
+      'Filtration system installation',
+      'Water softener services',
+      'Purification solutions'
+    ],
+    ctaLabel: 'Improve Water Quality'
+  },
+  {
+    slug: 'distributor',
+    name: 'Distributor Services',
+    icon: 'truck',
+    image: '/images/van.jpeg',
+    heroImage: '/images/van.jpeg',
+    summary: 'Professional distribution and supply chain services for plumbing contractors and businesses.',
+    bullets: [
+      'Wholesale plumbing supplies',
+      'Fast delivery services',
+      'Contractor partnerships',
+      'Bulk order discounts'
+    ],
+    ctaLabel: 'Partner With Us'
+  },
+  {
+    slug: 'pipelining',
+    name: 'Pipelining',
+    icon: 'wrench',
+    image: '/images/drain-cleaning-new.png',
+    heroImage: '/images/drain-cleaning-new.png',
+    summary: 'Trenchless pipe repair and replacement using advanced pipelining technology.',
+    bullets: [
+      'No-dig pipe repair',
+      'Epoxy pipe lining',
+      'Minimal property disruption',
+      'Long-lasting solutions'
+    ],
+    ctaLabel: 'Learn About Pipelining'
   }
 ]
-
-export function getServiceBySlug(slug: string): Service | undefined {
-  return services.find(service => service.slug === slug)
-}

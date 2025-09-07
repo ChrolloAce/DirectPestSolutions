@@ -1,6 +1,6 @@
 import React from 'react'
 import Hero from '@/components/Hero'
-import { ServicesGrid } from '@/components/sections/ServicesGrid'
+import { FeaturedServices } from '@/components/sections/FeaturedServices'
 import { ServiceTeaser } from '@/components/sections/ServiceTeaser'
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
 import Reviews from '@/components/Reviews'
@@ -14,7 +14,7 @@ export default function HomePage() {
       <Hero />
       
       {/* Services Grid */}
-      <ServicesGrid />
+      <FeaturedServices />
       
       {/* Service Teasers */}
       <ServiceTeaser
