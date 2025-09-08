@@ -105,10 +105,8 @@ export default function Reviews() {
     }))
   }
 
-  const backgroundStyle = { backgroundImage: "url('/textures/speckle.svg')" }
-
   return (
-    <section id="reviews" className="relative bg-brand-off py-16 md:py-24" style={backgroundStyle}>
+    <section id="reviews" className="relative bg-brand-off py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4">
         {/* Header */}
         <header className="mb-8 md:mb-12 text-center">
