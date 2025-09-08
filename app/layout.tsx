@@ -46,8 +46,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className="overflow-x-hidden">
+      <body className="overflow-x-hidden">
         <TopBar />
         <Navbar />
         <main className="min-h-screen pt-16 md:pt-[7.5rem]">

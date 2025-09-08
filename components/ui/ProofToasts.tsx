@@ -82,8 +82,8 @@ export function ProofToasts() {
           >
             <div className="p-4">
               <div className="flex items-start gap-3">
-                <div className="h-10 w-10 flex items-center justify-center border-2 border-brand-black bg-brand-blue text-brand-black font-bold text-lg rounded-none">
-                  ✓
+                <div className="h-10 w-10 flex items-center justify-center">
+                  <img src="/images/proof-logo.png" alt="All In Plumbing" className="h-10 w-10 object-contain" />
                 </div>
                 <div className="flex-1 text-sm leading-5 text-brand-black">
                   <strong className="text-base">Emergency Service Booked</strong>
