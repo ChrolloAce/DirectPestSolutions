@@ -106,7 +106,7 @@ export default function Reviews() {
   }
 
   return (
-    <section id="reviews" className="relative bg-brand-off bg-speckle py-16 md:py-24">
+    <section id="reviews" className="relative bg-brand-off py-16 md:py-24" style={{ backgroundImage: "url('/textures/speckle.svg')" }}>
       <div className="mx-auto max-w-7xl px-4">
         {/* Header */}
         <header className="mb-8 md:mb-12 text-center">

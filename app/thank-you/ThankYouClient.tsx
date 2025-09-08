@@ -53,7 +53,7 @@ export default function ThankYouClient({
   }, [])
 
   return (
-    <main className="min-h-screen bg-brand-off bg-speckle">
+    <main className="min-h-screen bg-brand-off" style={{ backgroundImage: "url('/textures/speckle.svg')" }}>
       {/* Confetti Animation */}
       {showConfetti && (
         <div className="fixed inset-0 z-50 pointer-events-none flex items-center justify-center">
