@@ -90,7 +90,7 @@ export default function ThankYouClient({
               to confirm details and provide pricing. For urgent issues, call us directly.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8">
               <Button
                 as="a"
                 href="tel:5615712995"
@@ -100,16 +100,6 @@ export default function ThankYouClient({
               >
                 <Phone className="inline-block mr-2" size={20} />
                 Call Now (561) 571-2995
-              </Button>
-              <Button
-                as="a"
-                href="/schedule"
-                size="lg"
-                variant="secondary"
-                className="!border-white !text-white hover:!bg-white/20"
-              >
-                <Calendar className="inline-block mr-2" size={20} />
-                Schedule Visit
               </Button>
             </div>
 
