@@ -22,21 +22,7 @@ export interface Service {
   }>
   beforeImage?: string
   afterImage?: string
-  short?: string
 }
-
-// Navigation structure for services dropdown
-export type ServiceLink = { name: string; slug: string; short?: string }
-export const servicesNav: ServiceLink[] = [
-  { name: "24/7 Emergency Service", slug: "24-7-emergency", short: "Emergency Service" },
-  { name: "Water Heaters", slug: "water-heaters" },
-  { name: "Drain Cleaning", slug: "drain-cleaning" },
-  { name: "Leak Detection", slug: "leak-detection" },
-  { name: "Bathroom Plumbing", slug: "bathroom-plumbing" },
-  { name: "Gas Lines", slug: "gas-lines" },
-  { name: "Commercial / Residential", slug: "commercial-residential", short: "Commercial" },
-  { name: "Backflow Prevention", slug: "backflow-prevention" },
-]
 
 export const services: Service[] = [
   {
