@@ -53,7 +53,7 @@ export function Navbar() {
   
   return (
     <>
-      <nav className="fixed inset-x-0 top-[3.5rem] z-50 bg-white border-b-2 border-brand-black">
+      <nav className="fixed inset-x-0 top-0 md:top-[3.5rem] z-40 bg-white border-b-2 border-brand-black">
         <div className="mx-auto max-w-7xl px-4">
           <div className="flex items-center justify-between h-16">
             {/* Desktop Nav */}
@@ -134,7 +134,7 @@ export function Navbar() {
             id="mobile-menu"
             role="dialog"
             aria-label="Navigation menu"
-            className="md:hidden fixed inset-x-0 top-[7.5rem] z-50 bg-white border-b-2 border-brand-black shadow-lg transform transition-transform duration-200 ease-out"
+            className="md:hidden fixed inset-x-0 top-16 z-50 bg-white border-b-2 border-brand-black shadow-lg transform transition-transform duration-200 ease-out"
           >
             <div className="px-4 py-4 space-y-1">
               {navItems.map((item) => {

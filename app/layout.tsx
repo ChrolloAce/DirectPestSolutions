@@ -50,7 +50,7 @@ export default function RootLayout({
       <body>
         <TopBar />
         <Navbar />
-        <main className="min-h-screen pt-[7.5rem]">
+        <main className="min-h-screen pt-16 md:pt-[7.5rem]">
           {children}
         </main>
         <Footer />
