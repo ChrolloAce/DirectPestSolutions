@@ -12,14 +12,34 @@ export default function Hero() {
     e.preventDefault()
     setLoading(true)
     setOk(null)
-    const fd = new FormData(e.currentTarget)
+    const form = e.currentTarget
+    const fd = new FormData(form)
+    
+    // Convert FormData to JSON for the API
+    const data = Object.fromEntries(fd.entries())
+    
     const res = await fetch('/api/quote', {
       method: 'POST',
-      body: fd,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
     }).catch(() => null)
+    
     setLoading(false)
-    setOk(!!res?.ok)
-    if (res?.ok) (e.currentTarget as HTMLFormElement).reset()
+    
+    if (res?.ok) {
+      // Redirect to thank-you page with form data
+      const params = new URLSearchParams({
+        name: data.name as string || '',
+        phone: data.phone as string || '',
+        email: data.email as string || '',
+        service: data.service as string || '',
+        address: data.address as string || '',
+        message: data.message as string || '',
+      })
+      window.location.href = `/thank-you?${params.toString()}`
+    } else {
+      setOk(false)
+    }
   }
 
   return (
