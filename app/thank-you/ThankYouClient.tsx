@@ -52,8 +52,10 @@ export default function ThankYouClient({
     return () => clearTimeout(timer)
   }, [])
 
+  const backgroundStyle = { backgroundImage: "url('/textures/speckle.svg')" }
+
   return (
-    <main className="min-h-screen bg-brand-off" style={{ backgroundImage: `url('/textures/speckle.svg')` }}>
+    <main className="min-h-screen bg-brand-off" style={backgroundStyle}>
       {/* Confetti Animation */}
       {showConfetti && (
         <div className="fixed inset-0 z-50 pointer-events-none flex items-center justify-center">
