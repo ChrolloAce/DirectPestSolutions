@@ -127,7 +127,7 @@ Please respond within 1 hour for best conversion.
         subject: `New ${formType} Lead - ${name || 'Website Visitor'}`,
         html: emailHtml,
         text: emailText,
-        reply_to: email || 'noreply@allinplumbingsolutions.com'
+        replyTo: email || 'noreply@allinplumbingsolutions.com'
       })
     )
 
