@@ -149,27 +149,6 @@ export default function ThankYouClient({
               </div>
             </div>
 
-            {/* $25 Coupon */}
-            <div className="border-2 border-brand-black bg-gradient-to-br from-brand-gold/10 to-white rounded-none shadow-card p-5">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <div className="flex items-center gap-2">
-                    <Gift className="text-brand-gold" size={24} />
-                    <h3 className="font-heading uppercase text-lg">New Customer Special</h3>
-                  </div>
-                  <p className="text-2xl font-bold text-brand-gold mt-2">Save $25</p>
-                  <p className="text-sm text-black/70">On your first service</p>
-                </div>
-                <a
-                  href="/coupon-25.pdf"
-                  download
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold uppercase tracking-wide border-2 border-brand-black bg-brand-gold text-brand-black rounded-none shadow-btn transition hover:translate-y-[1px]"
-                >
-                  <Download size={16} className="mr-1" />
-                  Download
-                </a>
-              </div>
-            </div>
           </div>
 
           {/* Right Column - Next Steps & More */}
@@ -287,27 +266,6 @@ export default function ThankYouClient({
               </div>
             </div>
 
-            {/* Referral Program */}
-            <div className="border-4 border-brand-gold bg-gradient-to-r from-brand-gold/10 to-white rounded-none shadow-card p-6">
-              <div className="flex flex-wrap items-center justify-between gap-4">
-                <div>
-                  <h3 className="font-heading uppercase text-2xl text-brand-black">
-                    Refer & Earn $50
-                  </h3>
-                  <p className="text-black/70 mt-1">
-                    Share All In Plumbing with neighbors—get $50 credit when they book any service
-                  </p>
-                </div>
-                <Button
-                  as="a"
-                  href="/referral"
-                  variant="primary"
-                  className="!bg-brand-gold !border-brand-black"
-                >
-                  Get Referral Link
-                </Button>
-              </div>
-            </div>
           </div>
         </div>
       </section>

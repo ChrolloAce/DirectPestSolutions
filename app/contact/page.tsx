@@ -13,11 +13,40 @@ export default function ContactPage() {
     message: ''
   })
   
-  const handleSubmit = (e: FormEvent) => {
+  const [loading, setLoading] = useState(false)
+  
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log('Form submitted:', formData)
-    alert('Thank you for your inquiry! We\'ll contact you within 24 hours.')
+    setLoading(true)
+    
+    try {
+      const res = await fetch('/api/quote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...formData,
+          formType: 'Contact Form'
+        }),
+      })
+      
+      if (res.ok) {
+        // Redirect to thank-you page
+        const params = new URLSearchParams({
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          service: formData.service,
+          message: formData.message,
+        })
+        window.location.href = `/thank-you?${params.toString()}`
+      } else {
+        alert('There was an error submitting your request. Please try again or call us directly.')
+      }
+    } catch (error) {
+      alert('There was an error submitting your request. Please try again or call us directly.')
+    } finally {
+      setLoading(false)
+    }
   }
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -35,8 +64,8 @@ export default function ContactPage() {
         </h1>
         
         <p className="text-xl text-center text-black/70 mb-12 max-w-3xl mx-auto">
-          Ready to transform your property? Fill out the form below or give us a call for your 
-          free, no-obligation estimate. We typically respond within 24 hours!
+          Need plumbing services in Miami? Fill out the form below or give us a call for your 
+          free estimate. We typically respond within 30 minutes during business hours!
         </p>
         
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -102,10 +131,13 @@ export default function ContactPage() {
                   className="w-full px-4 py-3 border-2 border-black/10 rounded-lg focus:border-brand-blue focus:outline-none"
                 >
                   <option value="">Select a service</option>
-                  <option value="house-wash">House Wash</option>
-                  <option value="roof-wash">Roof Wash</option>
-                  <option value="concrete">Concrete Cleaning & Sealing</option>
-                  <option value="gutter">Gutter Cleaning</option>
+                  <option value="emergency">24/7 Emergency Service</option>
+                  <option value="water-heaters">Water Heaters</option>
+                  <option value="leak-detection">Leak Detection</option>
+                  <option value="bathroom">Bathroom Plumbing</option>
+                  <option value="drain-cleaning">Drain Cleaning</option>
+                  <option value="gas-lines">Gas Lines</option>
+                  <option value="backflow">Backflow Prevention</option>
                   <option value="commercial">Commercial Services</option>
                   <option value="multiple">Multiple Services</option>
                 </select>
@@ -126,8 +158,8 @@ export default function ContactPage() {
                 />
               </div>
               
-              <CTAButton onClick={() => {}} fullWidth>
-                Submit Request
+              <CTAButton onClick={() => {}} fullWidth disabled={loading}>
+                {loading ? 'Submitting...' : 'Submit Request'}
               </CTAButton>
             </form>
           </div>
@@ -155,8 +187,8 @@ export default function ContactPage() {
                   <Mail className="text-brand-blue mt-1" size={20} />
                   <div>
                     <p className="font-semibold">Email</p>
-                    <a href="mailto:info@brownspressurewashing.com" className="text-brand-blue hover:underline">
-                      info@brownspressurewashing.com
+                    <a href="mailto:info@allinplumbingsolutions.com" className="text-brand-blue hover:underline">
+                      info@allinplumbingsolutions.com
                     </a>
                   </div>
                 </div>
@@ -166,8 +198,8 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold">Service Area</p>
                     <p className="text-black/70">
-                      Nashville, Franklin, Brentwood, Spring Hill, 
-                      and surrounding Middle Tennessee areas
+                      Miami, Miami Beach, Coral Gables, Aventura, 
+                      Kendall, Homestead, and all of Miami-Dade County
                     </p>
                   </div>
                 </div>
@@ -177,9 +209,10 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold">Business Hours</p>
                     <p className="text-black/70">
-                      Monday - Friday: 7:00 AM - 6:00 PM<br />
-                      Saturday: 8:00 AM - 4:00 PM<br />
-                      Sunday: Closed
+                      Monday - Friday: 7:00 AM - 8:00 PM<br />
+                      Saturday: 8:00 AM - 6:00 PM<br />
+                      Sunday: 9:00 AM - 5:00 PM<br />
+                      <span className="text-brand-gold font-semibold">24/7 Emergency Service Available</span>
                     </p>
                   </div>
                 </div>
