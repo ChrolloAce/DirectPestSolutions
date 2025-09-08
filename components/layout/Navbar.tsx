@@ -1,47 +1,60 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+import { useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
-import { Menu, X, ChevronDown } from 'lucide-react'
-import Button from '@/components/ui/Button'
+import { servicesNav } from '@/content/services'
+
+function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+  const pathname = usePathname()
+  const active = pathname === href || (href !== '/' && pathname?.startsWith(href))
+  return (
+    <Link
+      href={href}
+      className={[
+        'px-3 py-2 uppercase font-semibold tracking-wide border-2 border-transparent rounded-none transition-colors',
+        active ? 'text-brand-black border-b-brand-gold' : 'text-brand-black/80 hover:text-brand-black hover:border-b-brand-blue'
+      ].join(' ')}
+    >
+      {children}
+    </Link>
+  )
+}
 
 export function Navbar() {
-  const pathname = usePathname()
-  const [isOpen, setIsOpen] = useState(false)
-  
-  const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Services', href: '/services' },
-    { label: 'Emergency', href: '/24-7-emergency' },
-    { label: 'Water Heaters', href: '/water-heaters' },
-    { label: 'Maintenance', href: '/maintenance-programs' },
-    { label: 'FAQs', href: '/faqs' },
-    { label: 'Contact', href: '/contact' }
-  ]
-  
-  const toggleMenu = () => setIsOpen(!isOpen)
-  const closeMenu = () => setIsOpen(false)
-  
-  // Close menu on route change
+  // desktop dropdown state
+  const [open, setOpen] = useState(false)
+  const btnRef = useRef<HTMLButtonElement>(null)
+  const menuRef = useRef<HTMLDivElement>(null)
+
+  // close on outside click / Esc
   useEffect(() => {
-    closeMenu()
-  }, [pathname])
-  
-  // Handle escape key
-  useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isOpen) {
-        closeMenu()
+    function onDoc(e: MouseEvent) {
+      if (!open) return
+      if (!menuRef.current || !btnRef.current) return
+      if (!menuRef.current.contains(e.target as Node) && !btnRef.current.contains(e.target as Node)) {
+        setOpen(false)
       }
     }
-    document.addEventListener('keydown', handleEscape)
-    return () => document.removeEventListener('keydown', handleEscape)
-  }, [isOpen])
-  
-  // Prevent body scroll when menu is open
+    function onEsc(e: KeyboardEvent) {
+      if (e.key === 'Escape') setOpen(false)
+    }
+    document.addEventListener('mousedown', onDoc)
+    document.addEventListener('keydown', onEsc)
+    return () => { 
+      document.removeEventListener('mousedown', onDoc)
+      document.removeEventListener('keydown', onEsc)
+    }
+  }, [open])
+
+  // mobile menu
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+
+  // Prevent body scroll when mobile menu is open
   useEffect(() => {
-    if (isOpen) {
+    if (mobileOpen) {
       document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = ''
@@ -49,139 +62,187 @@ export function Navbar() {
     return () => {
       document.body.style.overflow = ''
     }
-  }, [isOpen])
-  
+  }, [mobileOpen])
+
+  const pathname = usePathname()
+
   return (
     <>
-      <nav className="fixed inset-x-0 top-0 md:top-[3.5rem] z-40 bg-white border-b-2 border-brand-black">
-        <div className="mx-auto max-w-7xl px-4">
-          <div className="flex items-center justify-between h-16">
-            {/* Desktop Nav */}
-            <div className="hidden md:flex items-center gap-6">
-              {navItems.map((item) => {
-                const isActive = pathname === item.href
-                return (
+      <nav className="fixed inset-x-0 top-0 md:top-12 z-40 bg-white border-b-2 border-brand-black">
+        <div className="mx-auto max-w-7xl h-16 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/images/logo-final.png"
+              alt="All In Plumbing Solutions"
+              width={120}
+              height={40}
+              className="h-10 w-auto"
+            />
+          </Link>
+
+          {/* Desktop links */}
+          <div className="hidden md:flex items-center gap-1">
+            <NavLink href="/">Home</NavLink>
+
+            {/* Services dropdown trigger */}
+            <div className="relative">
+              <button
+                ref={btnRef}
+                type="button"
+                aria-haspopup="menu"
+                aria-expanded={open}
+                onClick={() => setOpen((v) => !v)}
+                onMouseEnter={() => setOpen(true)}
+                className={[
+                  'px-3 py-2 uppercase font-semibold tracking-wide rounded-none border-2 transition-colors',
+                  open ? 'border-brand-black bg-brand-blue text-brand-black' : 'border-transparent text-brand-black/80 hover:text-brand-black hover:border-b-brand-blue'
+                ].join(' ')}
+              >
+                Services <span className="text-xs">▾</span>
+              </button>
+
+              {/* Dropdown menu */}
+              {open && (
+                <div
+                  ref={menuRef}
+                  role="menu"
+                  onMouseLeave={() => setOpen(false)}
+                  className="absolute left-0 mt-2 w-72 bg-white border-2 border-brand-black shadow-card rounded-none"
+                >
                   <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`
-                      font-semibold uppercase text-sm tracking-wide transition-colors
-                      ${isActive 
-                        ? 'text-brand-blue border-b-2 border-brand-gold' 
-                        : 'text-brand-black hover:text-brand-blue'
-                      }
-                    `}
+                    href="/services"
+                    className="block px-4 py-3 border-b-2 border-brand-gold bg-brand-blue hover:bg-brand-blue2 text-brand-black uppercase text-sm font-semibold transition-colors"
+                    onClick={() => setOpen(false)}
                   >
-                    {item.label}
+                    All Services →
                   </Link>
-                )
-              })}
+                  <ul className="py-1">
+                    {servicesNav.map(s => (
+                      <li key={s.slug}>
+                        <Link
+                          href={`/${s.slug}`}
+                          className="block px-4 py-2 hover:bg-brand-blue/10 text-sm transition-colors"
+                          onClick={() => setOpen(false)}
+                        >
+                          {s.short ?? s.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
+
+            <NavLink href="/about">About</NavLink>
+            <NavLink href="/faqs">FAQs</NavLink>
+            <NavLink href="/contact">Contact</NavLink>
             
-            {/* Desktop Right Side Buttons */}
-            <div className="hidden md:flex items-center gap-3">
-              <Button
-                as="a"
-                href="/apply"
-                variant="secondary"
-                size="sm"
-              >
-                Join Our Team
-              </Button>
-              <Button
-                as="a"
-                href="/contact"
-                variant="emergency"
-                size="sm"
-              >
-                24/7 Emergency
-              </Button>
-            </div>
+            {/* CTA Button */}
+            <Link
+              href="tel:5615712995"
+              className="ml-4 px-4 py-2 bg-brand-gold text-brand-black border-2 border-brand-black rounded-none font-semibold uppercase tracking-wide hover:bg-brand-gold2 transition-colors shadow-btn"
+            >
+              (561) 571-2995
+            </Link>
+          </div>
+
+          {/* Mobile hamburger */}
+          <button
+            aria-label="Toggle menu"
+            className="md:hidden px-3 py-2 border-2 border-brand-black rounded-none bg-white hover:bg-brand-blue/10 transition-colors"
+            onClick={() => setMobileOpen((v) => !v)}
+          >
+            {mobileOpen ? '✕' : '☰'}
+          </button>
+        </div>
+
+        {/* Mobile panel */}
+        {mobileOpen && (
+          <>
+            {/* Backdrop */}
+            <div 
+              className="md:hidden fixed inset-0 bg-black/50 z-30"
+              onClick={() => setMobileOpen(false)}
+            />
             
-            {/* Mobile Logo and Hamburger */}
-            <div className="md:hidden flex items-center justify-between w-full">
-              <Link href="/" className="flex items-center gap-2">
-                <img src="/images/logo-final.png" alt="All In Plumbing Solutions" className="h-10 w-auto" />
+            {/* Mobile menu */}
+            <div className="md:hidden fixed inset-x-0 top-16 bottom-0 z-40 bg-white border-t-2 border-brand-black overflow-y-auto">
+              <Link 
+                href="/" 
+                className="block px-4 py-3 border-b border-black/10 uppercase font-semibold hover:bg-brand-blue/10 transition-colors" 
+                onClick={() => setMobileOpen(false)}
+              >
+                Home
+              </Link>
+
+              {/* Services accordion */}
+              <button
+                className="w-full flex items-center justify-between px-4 py-3 border-b border-black/10 uppercase font-semibold hover:bg-brand-blue/10 transition-colors"
+                onClick={() => setMobileServicesOpen(v => !v)}
+                aria-expanded={mobileServicesOpen}
+              >
+                Services
+                <span className="text-xl">{mobileServicesOpen ? '−' : '+'}</span>
+              </button>
+              {mobileServicesOpen && (
+                <div className="bg-brand-off">
+                  <Link 
+                    href="/services" 
+                    className="block px-6 py-2 text-sm font-semibold text-brand-blue hover:text-brand-blue2" 
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    View All Services →
+                  </Link>
+                  {servicesNav.map(s => (
+                    <Link
+                      key={s.slug}
+                      href={`/${s.slug}`}
+                      className="block px-6 py-2 text-sm hover:bg-brand-blue/10 transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {s.short ?? s.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+
+              <Link 
+                href="/about" 
+                className="block px-4 py-3 border-t border-black/10 uppercase font-semibold hover:bg-brand-blue/10 transition-colors" 
+                onClick={() => setMobileOpen(false)}
+              >
+                About
+              </Link>
+              <Link 
+                href="/faqs" 
+                className="block px-4 py-3 border-t border-black/10 uppercase font-semibold hover:bg-brand-blue/10 transition-colors" 
+                onClick={() => setMobileOpen(false)}
+              >
+                FAQs
+              </Link>
+              <Link 
+                href="/contact" 
+                className="block px-4 py-3 border-t border-black/10 uppercase font-semibold hover:bg-brand-blue/10 transition-colors" 
+                onClick={() => setMobileOpen(false)}
+              >
+                Contact
               </Link>
               
-              <button
-                type="button"
-                className="h-10 w-10 grid place-items-center rounded-md border-2 border-brand-black bg-white hover:bg-brand-blue/10 transition-colors"
-                aria-label={isOpen ? 'Close menu' : 'Open menu'}
-                aria-controls="mobile-menu"
-                aria-expanded={isOpen ? 'true' : 'false'}
-                onClick={toggleMenu}
-              >
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
-      
-      {/* Mobile Menu Panel and Backdrop */}
-      {isOpen && (
-        <>
-          {/* Backdrop */}
-          <div 
-            className="md:hidden fixed inset-0 z-40 bg-black/50" 
-            onClick={closeMenu}
-            aria-hidden="true"
-          />
-          
-          {/* Mobile Menu Panel */}
-          <div
-            id="mobile-menu"
-            role="dialog"
-            aria-label="Navigation menu"
-            className="md:hidden fixed inset-x-0 top-16 z-50 bg-white border-b-2 border-brand-black shadow-lg transform transition-transform duration-200 ease-out"
-          >
-            <div className="px-4 py-4 space-y-1">
-              {navItems.map((item) => {
-                const isActive = pathname === item.href
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`
-                      block px-3 py-3 font-semibold uppercase text-sm tracking-wide transition-colors border-b border-brand-black/10
-                      ${isActive 
-                        ? 'text-brand-blue bg-brand-gold/10' 
-                        : 'text-brand-black hover:bg-brand-blue/5'
-                      }
-                    `}
-                    onClick={closeMenu}
-                  >
-                    {item.label}
-                  </Link>
-                )
-              })}
-              
-              {/* Mobile CTA Buttons */}
-              <div className="pt-4 space-y-2">
-                <Button
-                  as="a"
-                  href="/apply"
-                  variant="secondary"
-                  fullWidth
-                  onClick={closeMenu}
+              {/* Mobile CTA */}
+              <div className="p-4 border-t-2 border-brand-gold bg-brand-blue/10">
+                <Link
+                  href="tel:5615712995"
+                  className="block w-full px-4 py-3 bg-brand-gold text-brand-black border-2 border-brand-black rounded-none font-semibold uppercase tracking-wide text-center hover:bg-brand-gold2 transition-colors shadow-btn"
+                  onClick={() => setMobileOpen(false)}
                 >
-                  Join Our Team
-                </Button>
-                <Button
-                  as="a"
-                  href="/contact"
-                  variant="emergency"
-                  fullWidth
-                  onClick={closeMenu}
-                >
-                  24/7 Emergency
-                </Button>
+                  Call Now: (561) 571-2995
+                </Link>
               </div>
             </div>
-          </div>
-        </>
-      )}
+          </>
+        )}
+      </nav>
     </>
   )
 }
