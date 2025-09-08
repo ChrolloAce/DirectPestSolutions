@@ -160,17 +160,14 @@ export default function ThankYouClient({
                   <p className="text-2xl font-bold text-brand-gold mt-2">Save $25</p>
                   <p className="text-sm text-black/70">On your first service</p>
                 </div>
-                <Button
-                  as="a"
+                <a
                   href="/coupon-25.pdf"
                   download
-                  size="sm"
-                  variant="primary"
-                  className="!bg-brand-gold !border-brand-black"
+                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold uppercase tracking-wide border-2 border-brand-black bg-brand-gold text-brand-black rounded-none shadow-btn transition hover:translate-y-[1px]"
                 >
                   <Download size={16} className="mr-1" />
                   Download
-                </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -187,8 +184,8 @@ export default function ThankYouClient({
                 {[
                   { num: '1', text: 'Our dispatch team reviews your request and checks technician availability in your area' },
                   { num: '2', text: 'We call or text you with an exact price quote and available time slots' },
-                  { num: '3', text: 'Once confirmed, we send a technician and text you when they're on the way' },
-                  { num: '4', text: 'Service is completed, and you only pay after you're 100% satisfied' }
+                  { num: '3', text: 'Once confirmed, we send a technician and text you when they\'re on the way' },
+                  { num: '4', text: 'Service is completed, and you only pay after you\'re 100% satisfied' }
                 ].map((step) => (
                   <div key={step.num} className="flex gap-4">
                     <span className="flex-shrink-0 w-8 h-8 bg-brand-gold text-brand-black font-bold rounded-full flex items-center justify-center">
