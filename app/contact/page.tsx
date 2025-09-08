@@ -158,9 +158,13 @@ export default function ContactPage() {
                 />
               </div>
               
-              <CTAButton onClick={() => {}} fullWidth disabled={loading}>
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full inline-flex items-center justify-center px-6 py-4 text-base md:text-lg font-semibold uppercase tracking-wide border-2 border-brand-black bg-brand-blue text-white rounded-none shadow-btn transition hover:translate-y-[1px] hover:bg-brand-blue2 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
                 {loading ? 'Submitting...' : 'Submit Request'}
-              </CTAButton>
+              </button>
             </form>
           </div>
           
