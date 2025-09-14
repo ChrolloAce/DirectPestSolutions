@@ -6,26 +6,26 @@ import { Footer } from '@/components/layout/Footer'
 import { ProofToasts } from '@/components/ui/ProofToasts'
 
 export const metadata: Metadata = {
-  title: 'All In Plumbing Solutions | 24/7 Emergency Plumbing Services Miami',
-  description: '24/7 emergency plumbing services in Miami. Licensed master plumbers for drain cleaning, water heater repair, leak detection, and more. Call (561) 571-2995',
-  keywords: 'plumber, Miami, emergency plumbing, drain cleaning, water heater, leak detection, 24/7 plumbing, Florida',
+  title: 'CBE Air Services | Professional Air Conditioning & Heating Services Miami',
+  description: 'Professional air conditioning and heating services in Miami. Licensed HVAC technicians for AC repair, installation, maintenance, and heating systems. Call (305) 560-3087',
+  keywords: 'air conditioning, AC repair, HVAC, Miami, heating system, AC installation, AC maintenance, emergency AC repair, Florida',
   icons: {
     icon: '/favicon.png',
     shortcut: '/favicon.png',
     apple: '/favicon.png',
   },
   openGraph: {
-    title: 'All In Plumbing Solutions | Miami',
-    description: '24/7 emergency plumbing services in Miami. Licensed master plumbers ready to help!',
+    title: 'CBE Air Services | Miami',
+    description: 'Professional air conditioning and heating services in Miami. Licensed HVAC technicians ready to help!',
     type: 'website',
     locale: 'en_US',
-    url: 'https://allinplumbingsolutions.com',
-    siteName: 'All In Plumbing Solutions',
+    url: 'https://cbeairservices.com',
+    siteName: 'CBE Air Services',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'All In Plumbing Solutions | Miami',
-    description: '24/7 emergency plumbing services in Miami. Licensed master plumbers ready to help!',
+    title: 'CBE Air Services | Miami',
+    description: 'Professional air conditioning and heating services in Miami. Licensed HVAC technicians ready to help!',
   },
   robots: {
     index: true,
@@ -62,35 +62,30 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'Plumber',
-              name: 'All In Plumbing Solutions',
-              description: '24/7 emergency plumbing services in Miami and surrounding areas',
-              telephone: '561-571-2995',
-              alternateTelephone: '954-657-3429',
-              email: 'info@allinplumbingsolutions.com',
+              '@type': 'HVACBusiness',
+              name: 'CBE Air Services',
+              description: 'Professional air conditioning and heating services in Miami and surrounding areas',
+              telephone: '305-560-3087',
+              email: 'cbeairservices@gmail.com',
               address: {
                 '@type': 'PostalAddress',
-                addressLocality: 'Miami',
+                streetAddress: '201 180th Dr',
+                addressLocality: 'Sunny Isles Beach',
                 addressRegion: 'FL',
+                postalCode: '33160',
                 addressCountry: 'US'
               },
               openingHoursSpecification: [
                 {
                   '@type': 'OpeningHoursSpecification',
-                  dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-                  opens: '07:00',
+                  dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                  opens: '09:00',
                   closes: '18:00'
-                },
-                {
-                  '@type': 'OpeningHoursSpecification',
-                  dayOfWeek: 'Saturday',
-                  opens: '08:00',
-                  closes: '16:00'
                 }
               ],
               priceRange: '$$',
-              image: 'https://allinplumbingsolutions.com/logo.png',
-              url: 'https://allinplumbingsolutions.com'
+              image: 'https://cbeairservices.com/logo.png',
+              url: 'https://cbeairservices.com'
             })
           }}
         />

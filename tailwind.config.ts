@@ -11,8 +11,8 @@ const config: Config = {
       colors: {
         brand: {
           // Blue (CTA / header)
-          blue: '#63C7E6',      // main
-          blue2: '#2BA0BD',     // hover / dark
+          blue: '#04ADEF',      // main
+          blue2: '#0390C9',     // hover / dark
           // Gold (accents, trust, highlights)
           gold: '#E8B243',
           gold2: '#C9962A',
