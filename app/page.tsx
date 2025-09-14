@@ -1,6 +1,5 @@
 import React from 'react'
 import Hero from '@/components/Hero'
-import { EmergencyBanner } from '@/components/sections/EmergencyBanner'
 import { FeaturedServices } from '@/components/sections/FeaturedServices'
 import { ServiceTeaser } from '@/components/sections/ServiceTeaser'
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
@@ -13,9 +12,6 @@ export default function HomePage() {
     <>
       {/* Hero with Lead Form */}
       <Hero />
-      
-      {/* 24/7 Emergency Services */}
-      <EmergencyBanner />
       
       {/* Services Grid */}
       <FeaturedServices />
