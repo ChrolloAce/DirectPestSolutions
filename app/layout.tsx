@@ -4,6 +4,7 @@ import { TopBar } from '@/components/layout/TopBar'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { ProofToasts } from '@/components/ui/ProofToasts'
+import MobileAppBar from '@/components/layout/MobileAppBar'
 
 export const metadata: Metadata = {
   title: 'CBE Air Services | Professional Air Conditioning & Heating Services Miami',
@@ -50,10 +51,11 @@ export default function RootLayout({
       <body className="overflow-x-hidden">
         <TopBar />
         <Navbar />
-        <main className="min-h-screen pt-16 md:pt-[7.5rem]">
+        <main className="min-h-screen pt-16 md:pt-[7.5rem] pb-16 md:pb-0">
           {children}
         </main>
         <Footer />
+        <MobileAppBar />
         <ProofToasts />
         
         {/* Schema.org LocalBusiness markup */}

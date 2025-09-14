@@ -106,7 +106,7 @@ export function Navbar() {
               
               <button
                 type="button"
-                className="h-10 w-10 grid place-items-center rounded-md border-2 border-brand-black bg-white hover:bg-brand-blue/10 transition-colors"
+                className="h-10 w-10 grid place-items-center rounded-none border-2 border-brand-black bg-white hover:bg-brand-yellow/20 transition-colors"
                 aria-label={isOpen ? 'Close menu' : 'Open menu'}
                 aria-controls="mobile-menu"
                 aria-expanded={isOpen ? 'true' : 'false'}
