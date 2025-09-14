@@ -5,55 +5,60 @@ import { useEffect, useRef, useState } from 'react'
 type Toast = { 
   id: number
   name: string
-  hours: number
+  message: string
   startedAt: number
   duration: number
 }
 
-const NAMES = [
-  'Andy from Coral Gables',
-  'Jenna from Brickell', 
-  'Tommy from South Beach',
-  'Maya from Coconut Grove',
-  'Carlos from Kendall',
-  'Sarah from Aventura',
-  'Mike from Downtown Miami',
-  'Lisa from Miami Beach',
-  'David from Doral',
-  'Rachel from Wynwood'
+const REVIEWS = [
+  { name: 'Maya', message: 'just left a ★★★★★ review' },
+  { name: 'Carlos', message: 'rated us 5 stars!' },
+  { name: 'Sarah', message: 'left a glowing review' },
+  { name: 'Mike', message: 'highly recommends us!' },
+  { name: 'Lisa', message: 'gave us ★★★★★' },
+  { name: 'David', message: 'loves our service!' },
+  { name: 'Rachel', message: 'left a 5-star review' },
+  { name: 'Andy', message: 'recommends our plumbers' },
+  { name: 'Jenna', message: 'rated us excellent!' },
+  { name: 'Tommy', message: 'left ★★★★★ feedback' }
 ]
 
 export function ProofToasts() {
   const [toasts, setToasts] = useState<Toast[]>([])
+  const [dismissedIds, setDismissedIds] = useState<Set<number>>(new Set())
   const idRef = useRef(0)
 
-  // Show a new toast every 20s
+  // Show a new toast every 25s
   useEffect(() => {
     const push = () => {
       const id = ++idRef.current
+      // Don't show if already dismissed
+      if (dismissedIds.has(id)) return
+      
+      const review = REVIEWS[Math.floor(Math.random() * REVIEWS.length)]
       setToasts((t) => [
         ...t,
         {
           id,
-          name: NAMES[Math.floor(Math.random() * NAMES.length)],
-          hours: Math.floor(1 + Math.random() * 23),
+          name: review.name,
+          message: review.message,
           startedAt: Date.now(),
-          duration: 7000, // 7s lifetime
+          duration: 8000, // 8s lifetime
         },
       ])
     }
     
-    // Initial toast after 5s
-    const initialTimeout = setTimeout(push, 5000)
+    // Initial toast after 8s
+    const initialTimeout = setTimeout(push, 8000)
     
-    // Then every 20s
-    const iv = setInterval(push, 20000)
+    // Then every 25s
+    const iv = setInterval(push, 25000)
     
     return () => {
       clearTimeout(initialTimeout)
       clearInterval(iv)
     }
-  }, [])
+  }, [dismissedIds])
 
   // Auto remove when elapsed
   useEffect(() => {
@@ -67,6 +72,7 @@ export function ProofToasts() {
 
   function close(id: number) {
     setToasts((list) => list.filter((t) => t.id !== id))
+    setDismissedIds((prev) => new Set([...prev, id]))
   }
 
   return (
@@ -80,16 +86,10 @@ export function ProofToasts() {
             key={t.id}
             className="w-[320px] bg-white border-2 border-brand-black shadow-card rounded-none animate-slideIn"
           >
-            <div className="p-4">
-              <div className="flex items-start gap-3">
-                <div className="h-10 w-10 flex items-center justify-center">
-                  <img src="/images/proof-logo.png" alt="All In Plumbing" className="h-10 w-10 object-contain" />
-                </div>
-                <div className="flex-1 text-sm leading-5 text-brand-black">
-                  <strong className="text-base">Emergency Service Booked</strong>
-                  <div className="text-black/60 mt-1">
-                    {t.name} • {t.hours} hour{t.hours > 1 ? 's' : ''} ago
-                  </div>
+            <div className="p-3">
+              <div className="flex items-center gap-2">
+                <div className="flex-1 text-sm text-brand-black">
+                  <strong>{t.name}</strong> {t.message}
                 </div>
                 <button
                   onClick={() => close(t.id)}
