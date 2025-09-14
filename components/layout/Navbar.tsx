@@ -82,11 +82,13 @@ export function Navbar() {
             <div className="hidden md:flex items-center gap-3">
               <Button
                 as="a"
-                href="/apply"
+                href="https://www.google.com/maps/place/Plomero+24%2F7/@25.782414,-80.2253934,14z/data=!4m9!1m2!2m1!1sPlomero+24%2F7!3m5!1s0x25211ebdf7fef481:0xcd6ea1ee74acd776!8m2!3d25.782414!4d-80.2253934!16s%2Fg%2F11wg50s473?entry=ttu&g_ep=EgoyMDI5MDkxMC4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
                 variant="secondary"
                 size="sm"
               >
-                Join Our Team
+                Leave a Review
               </Button>
               <Button
                 as="a"
@@ -161,12 +163,14 @@ export function Navbar() {
               <div className="pt-4 space-y-2">
                 <Button
                   as="a"
-                  href="/apply"
+                  href="https://www.google.com/maps/place/Plomero+24%2F7/@25.782414,-80.2253934,14z/data=!4m9!1m2!2m1!1sPlomero+24%2F7!3m5!1s0x25211ebdf7fef481:0xcd6ea1ee74acd776!8m2!3d25.782414!4d-80.2253934!16s%2Fg%2F11wg50s473?entry=ttu&g_ep=EgoyMDI5MDkxMC4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   variant="secondary"
                   fullWidth
                   onClick={closeMenu}
                 >
-                  Join Our Team
+                  Leave a Review
                 </Button>
                 <Button
                   as="a"
