@@ -73,11 +73,11 @@ export default function Hero() {
 
             {/* Trust row */}
             <div className="mt-6 flex flex-wrap items-center gap-4 text-sm">
-              <div className="inline-flex items-center gap-2 rounded-md bg-white/10 px-3 py-2 ring-1 ring-white/20">
+              <div className="inline-flex items-center gap-2 rounded-none bg-white/10 px-3 py-2 ring-1 ring-white/20">
                 <span className="text-brand-gold">★★★★★</span>
                 <span className="text-white/80">5.0 from 500+ customers</span>
               </div>
-              <div className="inline-flex items-center gap-2 rounded-md bg-white/10 px-3 py-2 ring-1 ring-white/20">
+              <div className="inline-flex items-center gap-2 rounded-none bg-white/10 px-3 py-2 ring-1 ring-white/20">
                 <span className="text-brand-blue">Licensed & Insured</span>
                 <span className="text-white/80">Master Plumbers</span>
               </div>
@@ -129,7 +129,7 @@ export default function Hero() {
                   <input 
                     name="name" 
                     required 
-                    className="mt-1 w-full rounded-md border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue" 
+                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue" 
                   />
                 </label>
 
@@ -140,7 +140,7 @@ export default function Hero() {
                       name="phone" 
                       required 
                       inputMode="tel" 
-                      className="mt-1 w-full rounded-md border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue" 
+                      className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue" 
                     />
                   </label>
                   <label className="block">
@@ -148,7 +148,7 @@ export default function Hero() {
                     <input 
                       name="email" 
                       type="email" 
-                      className="mt-1 w-full rounded-md border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue" 
+                      className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue" 
                     />
                   </label>
                 </div>
@@ -157,7 +157,7 @@ export default function Hero() {
                   <span className="text-sm font-medium text-brand-black">Service Needed</span>
                   <select 
                     name="service" 
-                    className="mt-1 w-full rounded-md border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue"
+                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue"
                   >
                     <option>Emergency Repair</option>
                     <option>Leak Detection & Repair</option>
@@ -176,7 +176,7 @@ export default function Hero() {
                   <span className="text-sm font-medium text-brand-black">Address (City/ZIP)</span>
                   <input 
                     name="address" 
-                    className="mt-1 w-full rounded-md border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue" 
+                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue" 
                   />
                 </label>
 
@@ -185,7 +185,7 @@ export default function Hero() {
                   <textarea 
                     name="notes" 
                     rows={3} 
-                    className="mt-1 w-full rounded-md border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue" 
+                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue" 
                   />
                 </label>
 

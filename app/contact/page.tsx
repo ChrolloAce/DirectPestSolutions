@@ -70,7 +70,7 @@ export default function ContactPage() {
         
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-white rounded-xl2 shadow-card p-8">
+          <div className="bg-white rounded-none shadow-card p-8">
             <h2 className="heading-md mb-6">Request a Quote</h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -85,7 +85,7 @@ export default function ContactPage() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border-2 border-black/10 rounded-lg focus:border-brand-blue focus:outline-none"
+                  className="w-full px-4 py-3 border-2 border-black/10 rounded-none focus:border-brand-blue focus:outline-none"
                 />
               </div>
               
@@ -100,7 +100,7 @@ export default function ContactPage() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border-2 border-black/10 rounded-lg focus:border-brand-blue focus:outline-none"
+                  className="w-full px-4 py-3 border-2 border-black/10 rounded-none focus:border-brand-blue focus:outline-none"
                 />
               </div>
               
@@ -115,7 +115,7 @@ export default function ContactPage() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border-2 border-black/10 rounded-lg focus:border-brand-blue focus:outline-none"
+                  className="w-full px-4 py-3 border-2 border-black/10 rounded-none focus:border-brand-blue focus:outline-none"
                 />
               </div>
               
@@ -128,7 +128,7 @@ export default function ContactPage() {
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border-2 border-black/10 rounded-lg focus:border-brand-blue focus:outline-none"
+                  className="w-full px-4 py-3 border-2 border-black/10 rounded-none focus:border-brand-blue focus:outline-none"
                 >
                   <option value="">Select a service</option>
                   <option value="emergency">24/7 Emergency Service</option>
@@ -153,7 +153,7 @@ export default function ContactPage() {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border-2 border-black/10 rounded-lg focus:border-brand-blue focus:outline-none"
+                  className="w-full px-4 py-3 border-2 border-black/10 rounded-none focus:border-brand-blue focus:outline-none"
                   placeholder="Tell us about your project..."
                 />
               </div>
@@ -170,7 +170,7 @@ export default function ContactPage() {
           
           {/* Contact Info */}
           <div>
-            <div className="bg-brand-gray rounded-xl2 p-8 mb-8">
+            <div className="bg-brand-gray rounded-none p-8 mb-8">
               <h2 className="heading-md mb-6">Contact Information</h2>
               
               <div className="space-y-4">
@@ -223,7 +223,7 @@ export default function ContactPage() {
               </div>
             </div>
             
-            <div className="bg-brand-blue text-black rounded-xl2 p-8">
+            <div className="bg-brand-blue text-black rounded-none p-8">
               <h3 className="font-heading text-2xl uppercase mb-4">
                 Prefer to Call?
               </h3>
