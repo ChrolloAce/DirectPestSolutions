@@ -72,7 +72,11 @@ export function ProofToasts() {
 
   function close(id: number) {
     setToasts((list) => list.filter((t) => t.id !== id))
-    setDismissedIds((prev) => new Set([...prev, id]))
+    setDismissedIds((prev) => {
+      const newSet = new Set(prev)
+      newSet.add(id)
+      return newSet
+    })
   }
 
   return (
