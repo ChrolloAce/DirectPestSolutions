@@ -86,8 +86,8 @@ export default function WatchVideosPage() {
             <CTAButton href="/contact" size="lg">
               Get Your Free Quote
             </CTAButton>
-            <CTAButton href="tel:5615712995" variant="secondary" size="lg">
-              Call (561) 571-2995
+            <CTAButton href="tel:7862967304" variant="secondary" size="lg">
+              Call (786) 296-7304
             </CTAButton>
           </div>
         </div>

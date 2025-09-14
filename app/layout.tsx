@@ -5,6 +5,7 @@ import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { ProofToasts } from '@/components/ui/ProofToasts'
 import MobileAppBar from '@/components/layout/MobileAppBar'
+import LanguageToggle from '@/components/layout/LanguageToggle'
 
 export const metadata: Metadata = {
   title: 'CBE Air Services | Professional Air Conditioning & Heating Services Miami',
@@ -56,6 +57,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <MobileAppBar />
+        <LanguageToggle />
         <ProofToasts />
         
         {/* Schema.org LocalBusiness markup */}
@@ -67,8 +69,7 @@ export default function RootLayout({
               '@type': 'HVACBusiness',
               name: 'CBE Air Services',
               description: 'Professional air conditioning and heating services in Miami and surrounding areas',
-              telephone: '305-560-3087',
-              email: 'cbeairservices@gmail.com',
+              telephone: '786-296-7304',
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: '201 180th Dr',

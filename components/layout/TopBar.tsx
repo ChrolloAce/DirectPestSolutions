@@ -20,11 +20,11 @@ export class TopBar extends React.Component {
             {/* Phone Number - Right */}
             <div className="flex items-center">
               <a 
-                href="tel:5615712995" 
+                href="tel:7862967304" 
                 className="flex items-center gap-2 text-xl font-bold hover:underline"
               >
                 <Phone size={20} />
-                <span>(561) 571-2995</span>
+                <span>(786) 296-7304</span>
               </a>
             </div>
           </div>

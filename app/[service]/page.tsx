@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   
   return {
     title: `${service.name} Services in Miami | Professional ${service.name} | All In Plumbing`,
-    description: `Expert ${service.name.toLowerCase()} services in Miami. ${service.summary} Call (561) 571-2995 for free estimate.`,
+    description: `Expert ${service.name.toLowerCase()} services in Miami. ${service.summary} Call (786) 296-7304 for free estimate.`,
     keywords: `${service.name.toLowerCase()}, ${service.name.toLowerCase()} Miami, ${service.name.toLowerCase()} services, plumbing Miami, ${service.name.toLowerCase()} near me`,
     openGraph: {
       title: `${service.name} | All In Plumbing Solutions`,
@@ -99,9 +99,9 @@ export default function ServicePage({ params }: ServicePageProps) {
               <CTAButton href="/contact" size="lg">
                 Get Free Estimate
               </CTAButton>
-              <CTAButton href="tel:5615712995" variant="secondary" size="lg">
+              <CTAButton href="tel:7862967304" variant="secondary" size="lg">
                 <Phone className="inline-block mr-2" size={20} />
-                Call (561) 571-2995
+                Call (786) 296-7304
               </CTAButton>
             </div>
           </div>
@@ -292,9 +292,9 @@ export default function ServicePage({ params }: ServicePageProps) {
             <Button href="/contact" size="lg" variant="primary">
               Get Free Estimate
             </Button>
-            <Button href="tel:5615712995" size="lg" variant="secondary">
+            <Button href="tel:7862967304" size="lg" variant="secondary">
               <Phone className="inline-block mr-2" size={20} />
-              (561) 571-2995
+              (786) 296-7304
             </Button>
           </div>
         </div>
@@ -312,7 +312,7 @@ export default function ServicePage({ params }: ServicePageProps) {
             provider: {
               '@type': 'Plumber',
               name: 'All In Plumbing Solutions',
-              telephone: '561-571-2995',
+              telephone: '786-296-7304',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Miami',

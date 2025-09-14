@@ -36,7 +36,7 @@ export class Footer extends React.Component {
                 <CTAButton href="/contact" variant="secondary">
                   Free Estimate
                 </CTAButton>
-                <CTAButton href="tel:6155811581" variant="primary">
+                <CTAButton href="tel:7862967304" variant="primary">
                   Call Now
                 </CTAButton>
               </div>
@@ -82,19 +82,10 @@ export class Footer extends React.Component {
                 <li className="flex items-start gap-2">
                   <Phone size={18} className="text-brand-blue mt-1" />
                   <div className="flex flex-col">
-                    <a href="tel:5615712995" className="text-white/70 hover:text-brand-blue">
-                      (561) 571-2995
-                    </a>
-                    <a href="tel:9546573429" className="text-white/70 hover:text-brand-blue">
-                      (954) 657-3429
+                    <a href="tel:7862967304" className="text-white/70 hover:text-brand-blue">
+                      (786) 296-7304
                     </a>
                   </div>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Mail size={18} className="text-brand-blue mt-1" />
-                  <a href="mailto:info@allinplumbingsolutions.com" className="text-white/70 hover:text-brand-blue">
-                    info@allinplumbingsolutions.com
-                  </a>
                 </li>
                 <li className="flex items-start gap-2">
                   <MapPin size={18} className="text-brand-blue mt-1" />

@@ -87,11 +87,11 @@ export default function Hero() {
             <div className="mt-7 flex flex-wrap items-center gap-4">
               <Button 
                 as="a" 
-                href="tel:5615712995" 
+                href="tel:7862967304" 
                 variant="secondary"
                 className="!bg-white/10 !text-white !border-white hover:!bg-white/20"
               >
-                Call (561) 571-2995
+                Call (786) 296-7304
               </Button>
               <Button 
                 as="a" 
@@ -140,14 +140,6 @@ export default function Hero() {
                       name="phone" 
                       required 
                       inputMode="tel" 
-                      className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue" 
-                    />
-                  </label>
-                  <label className="block">
-                    <span className="text-sm font-medium text-brand-black">Email</span>
-                    <input 
-                      name="email" 
-                      type="email" 
                       className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue" 
                     />
                   </label>

@@ -26,7 +26,7 @@ export default function MobileAppBar() {
     },
     {
       name: 'Emergency',
-      href: 'tel:3054567890',
+      href: 'tel:7862967304',
       icon: Phone,
       isExternal: true,
     },

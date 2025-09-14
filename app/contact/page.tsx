@@ -178,8 +178,8 @@ export default function ContactPage() {
                   <Phone className="text-brand-blue mt-1" size={20} />
                   <div>
                     <p className="font-semibold">Phone</p>
-                    <a href="tel:5615712995" className="text-brand-blue hover:underline">
-                      (561) 571-2995
+                    <a href="tel:7862967304" className="text-brand-blue hover:underline">
+                      (786) 296-7304
                     </a>
                     <a href="tel:9546573429" className="text-brand-blue hover:underline block">
                       (954) 657-3429
@@ -230,8 +230,8 @@ export default function ContactPage() {
               <p className="mb-6">
                 Get your quote even faster by calling us directly. Our friendly team is ready to help!
               </p>
-              <CTAButton href="tel:5615712995" variant="secondary" size="lg" fullWidth>
-                Call (561) 571-2995
+              <CTAButton href="tel:7862967304" variant="secondary" size="lg" fullWidth>
+                Call (786) 296-7304
               </CTAButton>
             </div>
           </div>

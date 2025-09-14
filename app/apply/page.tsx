@@ -129,7 +129,7 @@ export default function ApplyPage() {
             <CTAButton href="mailto:info@allinplumbingsolutions.com" size="lg">
               Send Your Application
             </CTAButton>
-                          <CTAButton href="tel:5615712995" variant="secondary" size="lg">
+                          <CTAButton href="tel:7862967304" variant="secondary" size="lg">
                 Call to Learn More
             </CTAButton>
           </div>
