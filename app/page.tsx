@@ -28,7 +28,7 @@ export default function HomePage() {
           'Our professional drain cleaning service uses advanced hydro-jetting technology and video inspection cameras to thoroughly clean your pipes and identify potential issues before they become emergencies.',
           'Regular drain maintenance prevents costly backups, eliminates foul odors, and ensures your plumbing system operates efficiently, saving you money and headaches in the long run.'
         ]}
-        images={['/images/plumber-professional.png', '/images/drain-cleaning-new.png']}
+        images={['/images/drain-cleaning-new.png', '/images/leak-detection.png']}
         direction="left"
         ctaText="Schedule Drain Service"
         ctaHref="/drain-cleaning"
@@ -41,7 +41,7 @@ export default function HomePage() {
           'We service all makes and models, from traditional tank water heaters to modern tankless systems. Our team can help you choose the most energy-efficient option for your home and budget.',
           'With same-day installation available and comprehensive maintenance plans, we ensure you always have reliable hot water when you need it most.'
         ]}
-        images={['/images/water-heater.png', '/images/plumber-professional.png']}
+        images={['/images/water-heater.png', '/images/bathroom.png']}
         direction="right"
         ctaText="Get Hot Water Today"
         ctaHref="/water-heater"
