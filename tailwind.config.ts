@@ -10,16 +10,22 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          // Blue (CTA / header)
-          blue: '#04ADEF',      // main
-          blue2: '#0390C9',     // hover / dark
-          // Gold (accents, trust, highlights)
-          gold: '#E8B243',
-          gold2: '#C9962A',
-          // Neutrals
-          black: '#0B0D0F',
+          // Blue (Primary - matching logo)
+          blue: '#2B7A9B',      // main blue from logo
+          blue2: '#1E5F7A',     // darker blue for hover
+          blue3: '#4A9BC4',     // lighter blue
+          // Yellow (Accent - matching logo)
+          yellow: '#F5B800',    // main yellow from logo
+          yellow2: '#D49F00',   // darker yellow for hover
+          yellow3: '#FFD233',   // lighter yellow
+          // Black & Neutrals
+          black: '#0B0D0F',     // rich black
+          black2: '#1A1A1A',    // softer black
           off: '#FBFBFB',
           gray: '#F2F2F3',
+          // Legacy gold (keeping for gradual transition)
+          gold: '#F5B800',      // now same as yellow
+          gold2: '#D49F00',     // now same as yellow2
         }
       },
       fontFamily: {

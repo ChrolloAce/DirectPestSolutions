@@ -23,7 +23,7 @@ export function ServiceCard({ slug, title, icon, image }: ServiceCardProps) {
       
       {/* Icon badge - visible outside card bounds */}
       <div className="absolute -top-4 left-4 z-10 pointer-events-none">
-        <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-brand-blue border-2 border-brand-black">
+        <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-brand-yellow border-2 border-brand-black">
           <ServiceIcon name={icon} />
         </span>
       </div>

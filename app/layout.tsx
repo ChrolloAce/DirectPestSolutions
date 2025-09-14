@@ -84,7 +84,7 @@ export default function RootLayout({
                 }
               ],
               priceRange: '$$',
-              image: 'https://cbeairservices.com/logo.png',
+              image: '/images/logo-247.png',
               url: 'https://cbeairservices.com'
             })
           }}

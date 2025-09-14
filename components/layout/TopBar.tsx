@@ -6,14 +6,14 @@ import { Phone } from 'lucide-react'
 export class TopBar extends React.Component {
   render() {
     return (
-      <div className="hidden md:block fixed inset-x-0 top-0 z-50 bg-brand-blue text-brand-black border-b-2 border-brand-black">
+      <div className="hidden md:block fixed inset-x-0 top-0 z-50 bg-brand-yellow text-brand-black border-b-2 border-brand-black">
         <div className="container mx-auto px-4">
           {/* Desktop Layout */}
           <div className="flex items-center justify-between h-14">
             {/* Logo */}
             <div className="flex items-center">
               <a href="/" className="flex items-center gap-2">
-                <img src="/images/logo-final.png" alt="All In Plumbing Solutions" className="h-10 w-auto" />
+                <img src="/images/logo-247.png" alt="24/7 Plumbing Company" className="h-12 w-auto" />
               </a>
             </div>
             
