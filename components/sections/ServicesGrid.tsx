@@ -15,9 +15,9 @@ export function ServicesGrid() {
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8 md:mt-12 pt-8">
           {services.map((service) => (
             <ServiceCard
-              key={service.slug}
-              slug={service.slug}
-              title={service.name}
+              key={service.id}
+              slug={service.slug || service.id}
+              title={service.title}
               icon={service.icon}
               image={service.image}
             />

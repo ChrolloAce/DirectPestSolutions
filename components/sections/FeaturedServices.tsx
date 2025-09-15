@@ -24,11 +24,10 @@ export function FeaturedServices() {
           {services.map((service) => (
             <ServiceCard
               key={service.id}
+              slug={service.id}
               title={service.title}
-              description={service.shortDescription}
               icon={service.icon}
               image={service.image}
-              href={service.href}
             />
           ))}
         </div>

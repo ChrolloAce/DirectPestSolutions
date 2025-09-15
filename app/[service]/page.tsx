@@ -64,7 +64,8 @@ export default function ServicePage({ params }: ServicePageProps) {
     { step: 4, title: 'Quality Check', description: 'Final inspection and customer walkthrough' },
   ]
 
-  const benefits = service.benefits || [
+  // Always use the object format for benefits to maintain consistency
+  const benefits = [
     { icon: 'shield', title: 'Protect Your Investment', description: 'Prevent costly damage and extend system life' },
     { icon: 'clock', title: 'Save Time & Money', description: 'Efficient service that prevents future problems' },
     { icon: 'award', title: 'Peace of Mind', description: 'Licensed, insured professionals you can trust' },
