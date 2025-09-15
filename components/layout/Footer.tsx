@@ -7,19 +7,20 @@ import { CTAButton } from '../ui/CTAButton'
 export class Footer extends React.Component {
   private quickLinks = [
     { label: 'Home', href: '/' },
-    { label: 'About Us', href: '/about' },
     { label: 'Services', href: '/services' },
-    { label: 'FAQs', href: '/faqs' },
+    { label: 'Commercial', href: '/commercial' },
+    { label: 'About', href: '/about' },
+    { label: 'Locations', href: '/locations' },
     { label: 'Contact', href: '/contact' }
   ]
   
   private services = [
-    { label: 'All Services', href: '/services' },
-    { label: '24/7 Emergency', href: '/24-7-emergency' },
-    { label: 'Water Heaters', href: '/water-heaters' },
-    { label: 'Leak Detection', href: '/leak-detection' },
-    { label: 'Maintenance Plans', href: '/maintenance-programs' },
-    { label: 'Water Quality', href: '/water-quality' }
+    { label: 'AC Repair', href: '/services/ac-repair-miami' },
+    { label: 'AC Maintenance', href: '/services/ac-maintenance-miami' },
+    { label: 'AC Installation', href: '/services/ac-installation-miami' },
+    { label: 'Heating Installation', href: '/services/heating-installation-miami' },
+    { label: 'Coil Cleaning', href: '/services/coil-cleaning-miami' },
+    { label: 'Weekend Service', href: '/services/weekend-service-miami' }
   ]
   
   render() {
@@ -30,14 +31,14 @@ export class Footer extends React.Component {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <h2 className="font-heading text-4xl md:text-5xl uppercase tracking-tight">
-                Get Your Free, Speedy Fast Quote:
+                Need AC Service? Get Your Free Quote:
               </h2>
               <div className="flex gap-4">
                 <CTAButton href="/contact" variant="secondary">
-                  Free Estimate
+                  Book Service
                 </CTAButton>
-                <CTAButton href="tel:7862967304" variant="primary">
-                  Call Now
+                <CTAButton href="tel:+13055603087" variant="primary">
+                  Call (305) 560-3087
                 </CTAButton>
               </div>
             </div>
@@ -47,6 +48,53 @@ export class Footer extends React.Component {
         {/* Main Footer Content */}
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {/* Company Info */}
+            <div>
+              <h3 className="font-heading text-xl uppercase mb-4">CBE Air Services</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <MapPin size={18} className="text-brand-blue mt-1" />
+                  <span className="text-white/70">
+                    201 180th Dr<br />
+                    Sunny Isles Beach, FL 33160
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Phone size={18} className="text-brand-blue mt-1" />
+                  <a href="tel:+13055603087" className="text-white/70 hover:text-brand-blue">
+                    (305) 560-3087
+                  </a>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Mail size={18} className="text-brand-blue mt-1" />
+                  <a href="mailto:cbeairservices@gmail.com" className="text-white/70 hover:text-brand-blue">
+                    cbeairservices@gmail.com
+                  </a>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Clock size={18} className="text-brand-blue mt-1" />
+                  <span className="text-white/70">
+                    Mon-Sat: 9:00 AM - 6:00 PM<br />
+                    Sunday: Closed
+                  </span>
+                </li>
+              </ul>
+            </div>
+            
+            {/* Services */}
+            <div>
+              <h3 className="font-heading text-xl uppercase mb-4">Our Services</h3>
+              <ul className="space-y-2">
+                {this.services.map((service) => (
+                  <li key={service.href}>
+                    <a href={service.href} className="text-white/70 hover:text-brand-blue transition">
+                      {service.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
             {/* Quick Links */}
             <div>
               <h3 className="font-heading text-xl uppercase mb-4">Quick Links</h3>
@@ -61,70 +109,57 @@ export class Footer extends React.Component {
               </ul>
             </div>
             
-            {/* Services */}
+            {/* Service Areas */}
             <div>
-              <h3 className="font-heading text-xl uppercase mb-4">Services</h3>
-              <ul className="space-y-2">
-                {this.services.map((service) => (
-                  <li key={service.href}>
-                    <a href={service.href} className="text-white/70 hover:text-brand-blue transition">
-                      {service.label}
-                    </a>
-                  </li>
-                ))}
+              <h3 className="font-heading text-xl uppercase mb-4">Service Areas</h3>
+              <p className="text-white/70 mb-4">
+                Proudly serving Miami & Miami-Dade County:
+              </p>
+              <ul className="text-sm text-white/60 space-y-1">
+                <li>• Miami Beach</li>
+                <li>• Aventura</li>
+                <li>• North Miami Beach</li>
+                <li>• Coral Gables</li>
+                <li>• Doral</li>
+                <li>• Hialeah</li>
+                <li>• And more...</li>
               </ul>
-            </div>
-            
-            {/* Contact Info */}
-            <div>
-              <h3 className="font-heading text-xl uppercase mb-4">Contact</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <Phone size={18} className="text-brand-blue mt-1" />
-                  <div className="flex flex-col">
-                    <a href="tel:7862967304" className="text-white/70 hover:text-brand-blue">
-                      (786) 296-7304
-                    </a>
-                  </div>
-                </li>
-                <li className="flex items-start gap-2">
-                  <MapPin size={18} className="text-brand-blue mt-1" />
-                  <span className="text-white/70">
-                    Miami, FL
-                  </span>
-                </li>
-              </ul>
-            </div>
-            
-            {/* Hours */}
-            <div>
-              <h3 className="font-heading text-xl uppercase mb-4">Hours</h3>
-              <div className="flex items-start gap-2">
-                <Clock size={18} className="text-brand-blue mt-1" />
-                <div className="text-white/70">
-                  <p>Monday - Friday: 7:00 AM - 6:00 PM</p>
-                  <p>Saturday: 8:00 AM - 4:00 PM</p>
-                  <p>Sunday: Closed</p>
+              
+              {/* Social Links */}
+              <div className="mt-6">
+                <h4 className="font-semibold mb-3">Follow Us</h4>
+                <div className="flex gap-4">
+                  <a href="#" className="text-white/50 hover:text-brand-blue transition">
+                    <Facebook size={24} />
+                  </a>
+                  <a href="#" className="text-white/50 hover:text-brand-blue transition">
+                    <Instagram size={24} />
+                  </a>
+                  <a href="#" className="text-white/50 hover:text-brand-blue transition">
+                    <Youtube size={24} />
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-          
-          {/* Social Links */}
-          <div className="mt-12 pt-8 border-t border-white/20">
-            <div className="flex items-center justify-between">
-              <p className="text-white/50 text-sm">
-                © 2024 24/7 Plumber. All rights reserved.
+        </div>
+        
+        {/* Bottom Bar */}
+        <div className="border-t border-white/10 py-6">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <p className="text-sm text-white/60">
+                © {new Date().getFullYear()} CBE Air Services. All rights reserved. Licensed & Insured.
               </p>
-              <div className="flex gap-4">
-                <a href="#" className="text-white/50 hover:text-brand-blue transition">
-                  <Facebook size={24} />
+              <div className="flex gap-6 text-sm">
+                <a href="/privacy" className="text-white/60 hover:text-white transition">
+                  Privacy Policy
                 </a>
-                <a href="#" className="text-white/50 hover:text-brand-blue transition">
-                  <Instagram size={24} />
+                <a href="/terms" className="text-white/60 hover:text-white transition">
+                  Terms of Service
                 </a>
-                <a href="#" className="text-white/50 hover:text-brand-blue transition">
-                  <Youtube size={24} />
+                <a href="/sitemap" className="text-white/60 hover:text-white transition">
+                  Sitemap
                 </a>
               </div>
             </div>

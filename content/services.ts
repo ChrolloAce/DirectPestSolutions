@@ -1,198 +1,193 @@
 export interface Service {
-  slug: string
-  name: string
+  id: string
+  title: string
+  shortDescription: string
+  description: string[]
   icon: string
   image: string
-  heroImage: string
-  summary: string
-  bullets: string[]
-  ctaLabel: string
-  gallery?: string[]
-  problem?: string
-  solution?: string
-  process?: Array<{
-    step: number
-    title: string
-    description: string
-  }>
-  benefits?: Array<{
-    icon: string
-    title: string
-    description: string
-  }>
-  beforeImage?: string
-  afterImage?: string
+  benefits: string[]
+  href: string
+  featured?: boolean
+  emergency?: boolean
 }
 
 export const services: Service[] = [
   {
-    slug: '24-7-emergency',
-    name: '24/7 Emergency Service',
-    icon: 'clock',
-    image: '/images/emergency-service.png',
-    heroImage: '/images/emergency-service.png',
-    summary: 'Round-the-clock emergency plumbing services when you need us most. Our expert team is always ready to respond.',
-    bullets: [
-      'Available 24 hours a day, 7 days a week',
-      'Rapid response times in Miami area',
-      'Expert diagnosis and immediate repairs',
-      'Fully equipped service vehicles'
+    id: 'ac-repair',
+    title: 'AC Repair',
+    shortDescription: 'Fast, reliable AC repair service for all makes and models in Miami',
+    description: [
+      'When your AC breaks down in Miami\'s heat, you need immediate professional help. Our certified technicians provide same-day AC repair service throughout Miami-Dade County.',
+      'We diagnose and fix all AC problems including refrigerant leaks, compressor failures, frozen coils, electrical issues, and thermostat malfunctions.',
+      'With transparent pricing and a satisfaction guarantee, trust CBE Air Services to restore your comfort quickly and affordably.'
     ],
-    ctaLabel: 'Call Emergency Hotline'
+    icon: 'Wrench',
+    image: '/images/emergency.png',
+    benefits: [
+      'Same-day service available',
+      'All makes and models',
+      'Transparent pricing',
+      'Licensed & insured technicians',
+      '100% satisfaction guarantee'
+    ],
+    href: '/services/ac-repair-miami',
+    featured: true,
+    emergency: true
   },
   {
-    slug: 'water-heaters',
-    name: 'Water Heaters',
-    icon: 'flame',
-    image: '/images/water-heater.png',
-    heroImage: '/images/water-heater.png',
-    summary: 'Expert water heater installation, repair, and maintenance for reliable hot water supply.',
-    bullets: [
-      'Tank and tankless water heaters',
-      'Energy-efficient upgrades',
-      'Same-day repairs',
-      'Annual maintenance programs'
+    id: 'ac-maintenance',
+    title: 'AC Maintenance',
+    shortDescription: 'Preventive maintenance to keep your AC running efficiently year-round',
+    description: [
+      'Regular AC maintenance is essential in Miami\'s climate to prevent breakdowns and extend system life. Our comprehensive tune-ups keep your AC running at peak efficiency.',
+      'Our maintenance service includes cleaning coils, checking refrigerant levels, inspecting electrical connections, calibrating thermostats, and replacing filters.',
+      'Join our maintenance plan for priority service, discounted repairs, and peace of mind knowing your AC is always ready for Miami\'s heat.'
     ],
-    ctaLabel: 'Schedule Service'
-  },
-  {
-    slug: 'bathroom-plumbing',
-    name: 'Bathroom Plumbing',
-    icon: 'bath',
-    image: '/images/bathroom.png',
-    heroImage: '/images/bathroom.png',
-    summary: 'Complete bathroom plumbing services from repairs to full renovations.',
-    bullets: [
-      'Toilet, sink, and shower repairs',
-      'Fixture installation and upgrades',
-      'Bathroom remodeling',
-      'Clog removal and drain cleaning'
-    ],
-    ctaLabel: 'Transform Your Bathroom'
-  },
-  {
-    slug: 'leak-detection',
-    name: 'Leak Detection',
-    icon: 'search',
-    image: '/images/leak-detection.png',
-    heroImage: '/images/leak-detection.png',
-    summary: 'Advanced leak detection technology to find and fix hidden leaks before they cause damage.',
-    bullets: [
-      'Non-invasive detection methods',
-      'Thermal imaging technology',
-      'Slab leak specialists',
-      'Prevent water damage'
-    ],
-    ctaLabel: 'Find Hidden Leaks'
-  },
-  {
-    slug: 'gas-lines',
-    name: 'Gas Lines',
-    icon: 'flame2',
-    image: '/images/gas-lines.png',
-    heroImage: '/images/gas-lines.png',
-    summary: 'Safe and reliable gas line installation, repair, and inspection services.',
-    bullets: [
-      'Licensed gas line specialists',
-      'Leak detection and repair',
-      'New gas line installation',
-      'Safety inspections and testing'
-    ],
-    ctaLabel: 'Ensure Gas Safety'
-  },
-  {
-    slug: 'commercial-residential',
-    name: 'Commercial / Residential',
-    icon: 'building',
-    image: '/images/commercial.png',
-    heroImage: '/images/commercial.png',
-    summary: 'Comprehensive plumbing solutions for both commercial properties and residential homes.',
-    bullets: [
-      'Commercial building maintenance',
-      'Residential plumbing services',
-      'New construction plumbing',
-      'Property management support'
-    ],
-    ctaLabel: 'Get a Quote'
-  },
-  {
-    slug: 'backflow-prevention',
-    name: 'Backflow Prevention',
-    icon: 'rotate',
-    image: '/images/backflow-prevention.png',
-    heroImage: '/images/backflow-prevention.png',
-    summary: 'Protect your water supply with professional backflow prevention installation and testing.',
-    bullets: [
-      'Certified backflow testing',
-      'Annual inspection programs',
-      'Device installation and repair',
-      'Code compliance certification'
-    ],
-    ctaLabel: 'Protect Your Water'
-  },
-  {
-    slug: 'maintenance-programs',
-    name: 'Maintenance Programs',
-    icon: 'calendar',
+    icon: 'Shield',
     image: '/images/maintenance-programs.png',
-    heroImage: '/images/maintenance-programs.png',
-    summary: 'Preventive maintenance programs to keep your plumbing system running smoothly year-round.',
-    bullets: [
-      'Annual inspection plans',
-      'Priority emergency service',
-      'Discounted repairs',
-      'Extended warranty coverage'
+    benefits: [
+      'Prevent costly breakdowns',
+      'Lower energy bills',
+      'Extend equipment life',
+      'Priority service',
+      'Maintenance agreements available'
     ],
-    ctaLabel: 'Join Maintenance Plan'
+    href: '/services/ac-maintenance-miami',
+    featured: true
   },
   {
-    slug: 'annual-flush',
-    name: 'Annual Flush (Filtration)',
-    icon: 'refresh',
-    image: '/images/annual-flush.png',
-    heroImage: '/images/annual-flush.png',
-    summary: 'Annual system flush and filtration services to maintain optimal water quality and system performance.',
-    bullets: [
-      'Water heater flushing',
-      'Pipe cleaning and descaling',
-      'Filter replacement',
-      'System optimization'
+    id: 'ac-installation',
+    title: 'AC Installation',
+    shortDescription: 'Professional AC installation with energy-efficient systems',
+    description: [
+      'Upgrade to a new, energy-efficient AC system and save up to 40% on cooling costs. Our HVAC experts help you choose the perfect system for your Miami home.',
+      'We install all major brands including Carrier, Trane, Lennox, and Rheem. Our certified installers ensure proper sizing and code compliance.',
+      'Take advantage of available rebates and our flexible financing options. Professional installation backed by comprehensive warranties.'
     ],
-    ctaLabel: 'Schedule Annual Service'
+    icon: 'Home',
+    image: '/images/water-heater.png',
+    benefits: [
+      'Energy-efficient systems',
+      'All major brands',
+      'Financing available',
+      'Rebates & incentives',
+      'Installation warranty'
+    ],
+    href: '/services/ac-installation-miami',
+    featured: true
   },
   {
-    slug: 'water-quality',
-    name: 'Water Quality',
-    icon: 'droplet2',
-    image: '/images/water-quality.png',
-    heroImage: '/images/water-quality.png',
-    summary: 'Comprehensive water quality testing and treatment solutions for cleaner, safer water.',
-    bullets: [
-      'Water testing and analysis',
-      'Filtration system installation',
-      'Water softener services',
-      'Purification solutions'
+    id: 'heating-installation',
+    title: 'Heating System Installation',
+    shortDescription: 'Heat pump and heating system installation for Miami homes',
+    description: [
+      'While Miami is known for heat, winter nights can get chilly. We install efficient heating systems including heat pumps that provide both heating and cooling.',
+      'Heat pumps are ideal for Miami\'s climate, offering energy-efficient heating in winter and cooling in summer from a single system.',
+      'Our experts help you choose between heat pumps, electric heaters, and other heating solutions based on your needs and budget.'
     ],
-    ctaLabel: 'Improve Water Quality'
+    icon: 'Thermometer',
+    image: '/images/commercial.png',
+    benefits: [
+      'Heat pump specialists',
+      'Energy-efficient options',
+      'Dual heating/cooling systems',
+      'Professional installation',
+      'Warranty included'
+    ],
+    href: '/services/heating-installation-miami'
   },
   {
-    slug: 'pipelining',
-    name: 'Pipelining',
-    icon: 'wrench',
-    image: '/images/pipelining.png',
-    heroImage: '/images/pipelining.png',
-    summary: 'Trenchless pipe repair and replacement using advanced pipelining technology.',
-    bullets: [
-      'No-dig pipe repair',
-      'Epoxy pipe lining',
-      'Minimal property disruption',
-      'Long-lasting solutions'
+    id: 'coil-cleaning',
+    title: 'Coil Cleaning Service',
+    shortDescription: 'Professional evaporator and condenser coil cleaning',
+    description: [
+      'Dirty coils reduce AC efficiency by up to 30% and increase energy bills. Our professional coil cleaning service restores your system\'s performance.',
+      'We thoroughly clean both evaporator and condenser coils, removing dirt, debris, and microbial growth that impedes heat transfer.',
+      'Regular coil cleaning improves air quality, reduces energy consumption, and prevents premature system failure.'
     ],
-    ctaLabel: 'Learn About Pipelining'
+    icon: 'Sparkles',
+    image: '/images/drain-cleaning.png',
+    benefits: [
+      'Improved efficiency',
+      'Lower energy bills',
+      'Better air quality',
+      'Prevent breakdowns',
+      'Extended equipment life'
+    ],
+    href: '/services/coil-cleaning-miami'
+  },
+  {
+    id: 'commercial-hvac',
+    title: 'Commercial HVAC',
+    shortDescription: 'Complete HVAC solutions for Miami businesses',
+    description: [
+      'Keep your Miami business comfortable with our commercial HVAC services. We service offices, retail stores, restaurants, and industrial facilities.',
+      'Our commercial services include installation, repair, maintenance contracts, and emergency service for all types of commercial HVAC equipment.',
+      'Minimize downtime with our preventive maintenance programs and 24/7 emergency response for critical systems.'
+    ],
+    icon: 'Building',
+    image: '/images/commercial.png',
+    benefits: [
+      'All commercial systems',
+      'Maintenance contracts',
+      '24/7 emergency service',
+      'Minimal downtime',
+      'Licensed & insured'
+    ],
+    href: '/commercial',
+    featured: true
+  },
+  {
+    id: 'emergency-service',
+    title: 'Emergency AC Service',
+    shortDescription: '24/7 emergency AC repair when you need it most',
+    description: [
+      'AC emergencies don\'t wait for business hours. Our emergency response team is available 24/7 for urgent AC repairs throughout Miami-Dade County.',
+      'We prioritize emergency calls and arrive quickly with fully-stocked trucks to handle most repairs on the spot.',
+      'Don\'t suffer in the heat - call CBE Air Services for immediate emergency AC service.'
+    ],
+    icon: 'AlertCircle',
+    image: '/images/emergency-service.png',
+    benefits: [
+      '24/7 availability',
+      'Fast response time',
+      'No overtime charges',
+      'Fully stocked trucks',
+      'Immediate relief'
+    ],
+    href: '/services/weekend-service-miami',
+    emergency: true
+  },
+  {
+    id: 'duct-cleaning',
+    title: 'Air Duct Cleaning',
+    shortDescription: 'Professional duct cleaning for better air quality',
+    description: [
+      'Clean air ducts are essential for healthy indoor air quality. Our professional duct cleaning removes dust, allergens, and contaminants from your HVAC system.',
+      'We use advanced equipment to thoroughly clean your ductwork, improving airflow and reducing allergens that trigger respiratory issues.',
+      'Breathe easier with our comprehensive duct cleaning service that improves both air quality and system efficiency.'
+    ],
+    icon: 'Wind',
+    image: '/images/drain-cleaning-new.png',
+    benefits: [
+      'Improved air quality',
+      'Reduced allergens',
+      'Better airflow',
+      'Energy savings',
+      'Eliminate odors'
+    ],
+    href: '/services/regular-service-miami'
   }
 ]
 
-// Helper function to get a service by slug
-export function getServiceBySlug(slug: string): Service | undefined {
-  return services.find(service => service.slug === slug)
+export function getServiceById(id: string): Service | undefined {
+  return services.find(service => service.id === id)
+}
+
+export function getFeaturedServices(): Service[] {
+  return services.filter(service => service.featured)
+}
+
+export function getEmergencyServices(): Service[] {
+  return services.filter(service => service.emergency)
 }

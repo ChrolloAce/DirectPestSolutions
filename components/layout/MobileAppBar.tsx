@@ -25,8 +25,8 @@ export default function MobileAppBar() {
       icon: FileText,
     },
     {
-      name: 'Emergency',
-      href: 'tel:7862967304',
+      name: 'Call Now',
+      href: 'tel:+13055603087',
       icon: Phone,
       isExternal: true,
     },
@@ -48,7 +48,7 @@ export default function MobileAppBar() {
               >
                 <div
                   className={`p-1.5 rounded-none transition-colors ${
-                    item.name === 'Emergency'
+                    item.name === 'Call Now'
                       ? 'bg-brand-red text-brand-white'
                       : isActive
                       ? 'bg-brand-blue text-white'

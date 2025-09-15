@@ -9,26 +9,26 @@ import LanguageToggle from '@/components/layout/LanguageToggle'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-  title: '24/7 Plumber | Professional Emergency Plumbing Services Miami',
-  description: 'Professional 24/7 emergency plumbing services in Miami. Licensed master plumbers for repairs, installations, and maintenance. Call (786) 296-7304',
-  keywords: '24/7 plumber, emergency plumbing, Miami plumber, plumbing repair, leak detection, drain cleaning, water heater, sewer line, Florida',
+  title: 'CBE Air Services – Miami AC & Heating | AC Repair & Installation',
+  description: 'Professional AC repair, installation & maintenance in Miami & Miami-Dade County. Licensed & insured HVAC experts. Call (305) 560-3087 for same-day service.',
+  keywords: 'air conditioning repair Miami, AC repair Miami, AC service Miami, AC maintenance Miami, AC installation Miami, heating system installation Miami, HVAC Miami, emergency AC repair Miami, commercial HVAC Miami, residential AC Miami',
   icons: {
     icon: '/favicon.png',
     shortcut: '/favicon.png',
     apple: '/favicon.png',
   },
   openGraph: {
-    title: '24/7 Plumber | Miami',
-    description: 'Professional 24/7 emergency plumbing services in Miami. Licensed master plumbers ready to help!',
+    title: 'CBE Air Services – Miami AC & Heating',
+    description: 'Professional AC repair, installation & maintenance in Miami. Licensed & insured HVAC experts. Call (305) 560-3087.',
     type: 'website',
     locale: 'en_US',
-    url: 'https://24-7-plomero.vercel.app',
-    siteName: '24/7 Plumber',
+    url: 'https://cbeairservices.com',
+    siteName: 'CBE Air Services',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '24/7 Plumber | Miami',
-    description: 'Professional 24/7 emergency plumbing services in Miami. Licensed master plumbers ready to help!',
+    title: 'CBE Air Services – Miami AC & Heating',
+    description: 'Professional AC repair, installation & maintenance in Miami. Call (305) 560-3087.',
   },
   robots: {
     index: true,
@@ -69,10 +69,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'Plumber',
-              name: '24/7 Plumber',
-              description: 'Professional 24/7 emergency plumbing services in Miami and surrounding areas',
-              telephone: '786-296-7304',
+              '@type': 'HVACBusiness',
+              name: 'CBE Air Services',
+              description: 'Professional AC repair, installation and maintenance services in Miami and Miami-Dade County',
+              telephone: '+1-305-560-3087',
+              email: 'cbeairservices@gmail.com',
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: '201 180th Dr',
@@ -81,17 +82,47 @@ export default function RootLayout({
                 postalCode: '33160',
                 addressCountry: 'US'
               },
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: '25.9429',
+                longitude: '-80.1213'
+              },
+              areaServed: [
+                'Miami',
+                'Miami-Dade County',
+                'Sunny Isles Beach',
+                'Aventura',
+                'North Miami Beach',
+                'Miami Beach',
+                'North Miami',
+                'Bal Harbour',
+                'Surfside',
+                'Hialeah',
+                'Doral',
+                'Wynwood',
+                'Brickell',
+                'Little Havana',
+                'Coral Gables',
+                'Kendall',
+                'Homestead'
+              ],
               openingHoursSpecification: [
                 {
                   '@type': 'OpeningHoursSpecification',
                   dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
                   opens: '09:00',
                   closes: '18:00'
+                },
+                {
+                  '@type': 'OpeningHoursSpecification',
+                  dayOfWeek: 'Sunday',
+                  opens: '00:00',
+                  closes: '00:00'
                 }
               ],
               priceRange: '$$',
               image: '/images/ACLOGO.png',
-              url: 'https://24-7-plomero.vercel.app'
+              url: 'https://cbeairservices.com'
             })
           }}
         />

@@ -1,74 +1,74 @@
 'use client'
 
 import React from 'react'
-import { Shield, Award, Users } from 'lucide-react'
+import { Shield, Award, Users, Clock, ThumbsUp, Wrench } from 'lucide-react'
 
-interface BulletPoint {
-  icon: React.ReactNode
-  title: string
-  description: string
-}
-
-export class WhyChooseUs extends React.Component {
-  private bulletPoints: BulletPoint[] = [
+export function WhyChooseUs() {
+  const reasons = [
     {
       icon: <Shield className="h-10 w-10 text-brand-blue" />,
-      title: 'Licensed Master Plumbers',
-      description: 'Our team consists of licensed master plumbers with years of experience. Fully insured and bonded for your protection and peace of mind.'
+      title: 'Licensed & Insured HVAC Experts',
+      description: 'NATE-certified technicians with comprehensive insurance for your protection'
+    },
+    {
+      icon: <Clock className="h-10 w-10 text-brand-blue" />,
+      title: 'Same-Day AC Service',
+      description: 'Fast response times because we know Miami heat doesn\'t wait'
     },
     {
       icon: <Award className="h-10 w-10 text-brand-blue" />,
-      title: '24/7 Emergency Service',
-      description: 'Plumbing disasters don\'t wait for business hours. We\'re available 24/7 with rapid response times to handle any emergency.'
+      title: 'Transparent Pricing',
+      description: 'Upfront quotes with no hidden fees or surprise charges'
     },
     {
       icon: <Users className="h-10 w-10 text-brand-blue" />,
-      title: 'Upfront Transparent Pricing',
-      description: 'No surprises or hidden fees. We provide clear, upfront pricing before any work begins, so you know exactly what to expect.'
+      title: 'Local Miami Company',
+      description: 'Serving Miami-Dade County with pride since establishment'
+    },
+    {
+      icon: <ThumbsUp className="h-10 w-10 text-brand-blue" />,
+      title: '100% Satisfaction Guarantee',
+      description: 'We stand behind our work with comprehensive warranties'
+    },
+    {
+      icon: <Wrench className="h-10 w-10 text-brand-blue" />,
+      title: 'All Brands Serviced',
+      description: 'Expert repair and installation for all AC makes and models'
     }
   ]
-  
-  render() {
-    return (
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="font-heading text-5xl md:text-7xl uppercase tracking-tight text-center mb-12">
-            Why Choose Us
+
+  return (
+    <section className="py-16 bg-brand-gray">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="font-heading text-4xl md:text-5xl uppercase mb-4">
+            Why Choose CBE Air Services?
           </h2>
-          
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left - Image */}
-            <div>
-              <img 
-                src="/images/about-team.png" 
-                alt="24/7 Plumbing Company professional team"
-                className="rounded-none shadow-card w-full object-cover"
-              />
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+            When it comes to your comfort, choose Miami's trusted HVAC professionals. 
+            Here's what sets us apart from the competition.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {reasons.map((reason, index) => (
+            <div key={index} className="bg-white p-6 shadow-card border-2 border-brand-black">
+              <div className="mb-4">{reason.icon}</div>
+              <h3 className="font-bold text-xl mb-2">{reason.title}</h3>
+              <p className="text-gray-700">{reason.description}</p>
             </div>
-            
-            {/* Right - Bullet Points */}
-            <div>
-              <ul className="space-y-8">
-                {this.bulletPoints.map((point, index) => (
-                  <li key={index} className="flex items-start gap-4">
-                    {point.icon}
-                    <div>
-                      <h4 className="font-heading text-2xl uppercase mb-2 text-brand-black">
-                        <span className="underline decoration-brand-gold decoration-2 underline-offset-4">
-                          {point.title}
-                        </span>
-                      </h4>
-                      <p className="text-black/70 text-[17px] leading-7">
-                        {point.description}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          ))}
+        </div>
+        
+        <div className="mt-12 text-center">
+          <div className="inline-flex items-center gap-4 bg-brand-red text-white px-6 py-4 rounded-none">
+            <span className="text-2xl font-bold">Call Now:</span>
+            <a href="tel:+13055603087" className="text-2xl font-bold hover:underline">
+              (305) 560-3087
+            </a>
           </div>
         </div>
-      </section>
-    )
-  }
+      </div>
+    </section>
+  )
 }

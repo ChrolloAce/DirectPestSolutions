@@ -48,7 +48,7 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10">
         <Image
           src="/images/hero-banner.png"
-          alt="24/7 Plumbing Company - Professional plumbers"
+          alt="CBE Air Services - Professional HVAC Services Miami"
           fill
           priority
           className="object-cover object-center"
@@ -63,23 +63,23 @@ export default function Hero() {
           {/* Left: Copy / CTAs */}
           <div className="text-white">
             <h1 className="font-heading uppercase leading-[0.95] tracking-tight text-5xl sm:text-6xl">
-              <span className="underline decoration-brand-red decoration-4 underline-offset-4">24/7 Plumber</span>
-              <br /> <span className="text-brand-blue">Miami&apos;s</span> Trusted Experts
+              <span className="underline decoration-brand-red decoration-4 underline-offset-4">AC Repair</span>
+              <br /> <span className="text-brand-blue">Miami&apos;s</span> HVAC Experts
             </h1>
 
             <p className="mt-5 max-w-xl text-lg text-white/90">
-              Licensed • Insured • 24/7 Emergency Service. From leaks to installations, we handle all your plumbing needs with expertise and care.
+              Licensed • Insured • Same-Day Service. Professional AC repair, installation & maintenance for Miami homes and businesses.
             </p>
 
             {/* Trust row */}
             <div className="mt-6 flex flex-wrap items-center gap-4 text-sm">
               <div className="inline-flex items-center gap-2 rounded-none bg-white/10 px-3 py-2 ring-1 ring-white/20">
                 <span className="text-brand-red">★★★★★</span>
-                <span className="text-white/80">5.0 from 500+ customers</span>
+                <span className="text-white/80">5.0 from 300+ customers</span>
               </div>
               <div className="inline-flex items-center gap-2 rounded-none bg-white/10 px-3 py-2 ring-1 ring-white/20">
                 <span className="text-brand-blue">Licensed & Insured</span>
-                <span className="text-white/80">Master Plumbers</span>
+                <span className="text-white/80">HVAC Certified</span>
               </div>
             </div>
 
@@ -87,11 +87,11 @@ export default function Hero() {
             <div className="mt-7 flex flex-wrap items-center gap-4">
               <Button 
                 as="a" 
-                href="tel:7862967304" 
+                href="tel:+13055603087" 
                 variant="secondary"
                 className="!bg-white/10 !text-white !border-white hover:!bg-white/20"
               >
-                Call (786) 296-7304
+                Call (305) 560-3087
               </Button>
               <Button 
                 as="a" 
@@ -104,7 +104,7 @@ export default function Hero() {
 
             {/* Small proof strip */}
             <p className="mt-5 text-sm text-white/75">
-              Miami's #1 Emergency Plumber • Same-day service • Free estimates • Licensed & Insured in Florida
+              Miami's Trusted HVAC Company • Same-day service • Free estimates • Licensed & Insured in Florida
             </p>
           </div>
 
@@ -114,12 +114,12 @@ export default function Hero() {
               onSubmit={onSubmit}
               className="rounded-none bg-white/95 backdrop-blur px-5 sm:px-6 py-6 shadow-card ring-1 ring-brand-black/10 max-w-md ml-auto"
             >
-              <div className="pb-4 border-b border-brand-gold/30 mb-4">
+              <div className="pb-4 border-b border-brand-red/30 mb-4">
                 <h3 className="font-heading uppercase text-2xl text-brand-black">
-                  Get Your Free Quote
+                  Get Your Free AC Quote
                 </h3>
                 <p className="text-sm text-brand-black/70">
-                  Answer a few quick questions—we&apos;ll text you a price today.
+                  Fast response • Same-day service available
                 </p>
               </div>
 
@@ -151,15 +151,15 @@ export default function Hero() {
                     name="service" 
                     className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue"
                   >
-                    <option>Emergency Repair</option>
-                    <option>Leak Detection & Repair</option>
-                    <option>Drain Cleaning</option>
-                    <option>Water Heater Service</option>
-                    <option>Toilet Repair/Installation</option>
-                    <option>Pipe Repair/Replacement</option>
-                    <option>Fixture Installation</option>
-                    <option>Sewer Line Service</option>
-                    <option>Commercial Plumbing</option>
+                    <option>AC Not Cooling</option>
+                    <option>AC Repair</option>
+                    <option>AC Maintenance</option>
+                    <option>AC Installation</option>
+                    <option>Heating System</option>
+                    <option>Coil Cleaning</option>
+                    <option>Thermostat Issues</option>
+                    <option>Commercial HVAC</option>
+                    <option>Emergency Service</option>
                     <option>Other</option>
                   </select>
                 </label>
@@ -198,8 +198,8 @@ export default function Hero() {
                 )}
               </div>
 
-              {/* gold accent frame */}
-              <div className="pointer-events-none absolute inset-0 rounded-none ring-1 ring-brand-gold/60"></div>
+              {/* red accent frame */}
+              <div className="pointer-events-none absolute inset-0 rounded-none ring-1 ring-brand-red/60"></div>
             </form>
           </div>
         </div>

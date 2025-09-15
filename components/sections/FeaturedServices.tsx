@@ -1,48 +1,46 @@
 'use client'
 
-import { ServiceCard } from '../ui/ServiceCard'
-import { services } from '@/content/services'
-import Button from '@/components/ui/Button'
+import React from 'react'
+import { ServiceCard } from '@/components/ui/ServiceCard'
+import { getFeaturedServices } from '@/content/services'
 
 export function FeaturedServices() {
-  // Show only 6 featured services on homepage
-  const featuredServices = services.slice(0, 6)
+  const services = getFeaturedServices()
   
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="heading-xl mb-4 uppercase font-bold text-brand-black">
-            Our Services
+          <h2 className="font-heading text-4xl md:text-5xl uppercase mb-4">
+            Our HVAC Services
           </h2>
-          <p className="text-lg text-brand-black/70 max-w-2xl mx-auto">
-            Professional plumbing solutions for every need. From emergency repairs to preventive maintenance.
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+            From emergency AC repair to new installations, CBE Air Services provides comprehensive 
+            HVAC solutions for Miami homes and businesses.
           </p>
         </div>
         
-        {/* Grid showing 6 featured services */}
-        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8 md:mt-12 pt-8">
-          {featuredServices.map((service) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service) => (
             <ServiceCard
-              key={service.slug}
-              slug={service.slug}
-              title={service.name}
+              key={service.id}
+              title={service.title}
+              description={service.shortDescription}
               icon={service.icon}
               image={service.image}
+              href={service.href}
             />
           ))}
         </div>
         
-        {/* View All Services Button */}
-        <div className="text-center mt-12">
-          <Button
-            as="a"
-            href="/services"
-            variant="primary"
-            size="lg"
+        <div className="mt-12 text-center">
+          <a 
+            href="/services" 
+            className="inline-flex items-center gap-2 text-brand-blue font-semibold hover:text-brand-red transition-colors"
           >
-            View All 14 Services
-          </Button>
+            View All Services
+            <span className="text-xl">→</span>
+          </a>
         </div>
       </div>
     </section>

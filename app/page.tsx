@@ -18,29 +18,29 @@ export default function HomePage() {
       
       {/* Service Teasers */}
       <ServiceTeaser
-        title="Professional Drain Cleaning"
+        title="Professional AC Repair Miami"
         description={[
-          'Slow drains and frequent clogs are more than just annoyances - they\'re warning signs of bigger problems brewing in your plumbing system.',
-          'Our professional drain cleaning service uses advanced hydro-jetting technology and video inspection cameras to thoroughly clean your pipes and identify potential issues before they become emergencies.',
-          'Regular drain maintenance prevents costly backups, eliminates foul odors, and ensures your plumbing system operates efficiently, saving you money and headaches in the long run.'
+          'When your AC stops working in Miami\'s heat and humidity, you need fast, reliable service. Our certified technicians diagnose and repair all AC makes and models with same-day service available.',
+          'We use advanced diagnostic tools to quickly identify issues, from refrigerant leaks to compressor problems. Our repair trucks are fully stocked with common parts, ensuring most repairs are completed in a single visit.',
+          'With transparent pricing and a satisfaction guarantee, you can trust CBE Air Services to get your AC running efficiently again, keeping your home cool and comfortable year-round.'
         ]}
         images={['/images/drain-cleaning-new.png', '/images/leak-detection.png']}
         direction="left"
-        ctaText="Schedule Drain Service"
-        ctaHref="/drain-cleaning"
+        ctaText="Schedule AC Repair"
+        ctaHref="/services/ac-repair-miami"
       />
       
       <ServiceTeaser
-        title="Expert Water Heater Services"
+        title="AC Installation & Replacement"
         description={[
-          'Nothing disrupts your day like running out of hot water. Whether your water heater needs repair or it\'s time for an upgrade, our expert technicians have you covered.',
-          'We service all makes and models, from traditional tank water heaters to modern tankless systems. Our team can help you choose the most energy-efficient option for your home and budget.',
-          'With same-day installation available and comprehensive maintenance plans, we ensure you always have reliable hot water when you need it most.'
+          'Upgrade to a new, energy-efficient AC system and save up to 40% on your cooling costs. Our HVAC experts help you choose the perfect system for your Miami home and budget.',
+          'We install all major brands including Carrier, Trane, Lennox, and Rheem. Our certified installers ensure proper sizing, ductwork optimization, and code compliance for maximum efficiency and longevity.',
+          'Take advantage of available rebates and our flexible financing options. With professional installation and comprehensive warranties, your new AC system will provide reliable comfort for years to come.'
         ]}
         images={['/images/water-heater.png', '/images/bathroom.png']}
         direction="right"
-        ctaText="Get Hot Water Today"
-        ctaHref="/water-heater"
+        ctaText="Get Free Installation Quote"
+        ctaHref="/services/ac-installation-miami"
       />
       
       {/* Why Choose Us */}
