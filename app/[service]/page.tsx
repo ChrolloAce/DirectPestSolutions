@@ -16,7 +16,7 @@ interface ServicePageProps {
 
 export async function generateStaticParams() {
   return services.map((service) => ({
-    service: service.slug,
+    service: service.id,
   }))
 }
 
@@ -25,19 +25,19 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   
   if (!service) {
     return {
-      title: 'Service Not Found | 24/7 Plumber Solutions',
+      title: 'Service Not Found | CBE Air Services',
     }
   }
   
   return {
-    title: `${service.name} Miami FL | 24/7 Emergency ${service.name} | 24/7 Plumber`,
-    description: `Professional ${service.name.toLowerCase()} services in Miami, Florida. 24/7 Plumber offers emergency ${service.name.toLowerCase()} in Miami-Dade County. ${service.summary} Call (786) 296-7304 for immediate service in Miami.`,
-    keywords: `${service.name.toLowerCase()} Miami, ${service.name.toLowerCase()} Miami FL, emergency ${service.name.toLowerCase()} Miami, 24/7 plumber Miami, ${service.name.toLowerCase()} service Miami Beach, ${service.name.toLowerCase()} Coral Gables, ${service.name.toLowerCase()} Brickell, Miami plumbing`,
+    title: `${service.title} Miami | CBE Air Services`,
+    description: service.shortDescription + ' Call (305) 560-3087 for immediate service in Miami.',
+    keywords: `${service.title.toLowerCase()} Miami, ${service.title.toLowerCase()} Miami FL, emergency ${service.title.toLowerCase()} Miami, HVAC Miami, AC repair Miami, ${service.title.toLowerCase()} service Miami Beach, ${service.title.toLowerCase()} Coral Gables`,
     openGraph: {
-      title: `${service.name} | 24/7 Plumber Solutions`,
-      description: service.summary,
+      title: `${service.title} | CBE Air Services`,
+      description: service.shortDescription,
       type: 'website',
-      images: [service.heroImage],
+      images: [service.image],
     },
   }
 }
@@ -49,17 +49,17 @@ export default function ServicePage({ params }: ServicePageProps) {
     notFound()
   }
 
-  const faqs = getServiceFAQs(service.slug)
+  const faqs = getServiceFAQs(service.id)
   
   // Service-specific content
   const problemSolution = {
-    problem: service.problem || `Without professional ${service.name.toLowerCase()}, you risk water damage, health hazards, and costly repairs down the line.`,
-    solution: service.solution || `Our expert team uses state-of-the-art equipment and proven techniques to deliver lasting results that protect your property.`
+    problem: `Without professional ${service.title.toLowerCase()}, you risk system failure, higher energy bills, and uncomfortable living conditions.`,
+    solution: `Our expert HVAC team uses state-of-the-art equipment and proven techniques to deliver lasting results that keep your home comfortable.`
   }
 
-  const process = service.process || [
-    { step: 1, title: 'Initial Inspection', description: 'Thorough assessment of the issue' },
-    { step: 2, title: 'Preparation', description: 'Protect surrounding areas and prepare equipment' },
+  const process = [
+    { step: 1, title: 'Initial Inspection', description: 'Thorough assessment of your HVAC system' },
+    { step: 2, title: 'Diagnosis', description: 'Identify the root cause of the problem' },
     { step: 3, title: 'Service Execution', description: 'Professional service using industry-best practices' },
     { step: 4, title: 'Quality Check', description: 'Final inspection and customer walkthrough' },
   ]
@@ -82,7 +82,7 @@ export default function ServicePage({ params }: ServicePageProps) {
       <section 
         className="relative bg-brand-blue bg-noise py-20 md:py-32"
         style={{
-          backgroundImage: `linear-gradient(rgba(11, 13, 15, 0.7), rgba(11, 13, 15, 0.7)), url(${service.heroImage})`,
+          backgroundImage: `linear-gradient(rgba(11, 13, 15, 0.7), rgba(11, 13, 15, 0.7)), url(${service.image})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -90,10 +90,10 @@ export default function ServicePage({ params }: ServicePageProps) {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="heading-xl uppercase mb-6">
-              24/7 {service.name} Services in Miami, Florida
+              24/7 {service.title} Services in Miami, Florida
             </h1>
             <p className="text-xl mb-8 text-white/90">
-              {service.summary} 24/7 Plumber is Miami's most trusted plumbing company, serving Miami-Dade County with emergency {service.name.toLowerCase()} services 24 hours a day.
+              {service.shortDescription} CBE Air Services is Miami's trusted HVAC company, serving Miami-Dade County with {service.title.toLowerCase()} services.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <CTAButton href="/contact" size="lg">
@@ -114,7 +114,7 @@ export default function ServicePage({ params }: ServicePageProps) {
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div>
               <h2 className="heading-lg uppercase mb-6 text-brand-black">
-                Why {service.name} Matters
+                Why {service.title} Matters
               </h2>
               
               <div className="mb-8">
@@ -138,8 +138,8 @@ export default function ServicePage({ params }: ServicePageProps) {
             
             <div className="relative">
               <img 
-                src={service.heroImage} 
-                alt={`Professional ${service.name} service in Miami`}
+                src={service.image} 
+                alt={`Professional ${service.title} service in Miami`}
                 className="rounded-none shadow-xl border-4 border-brand-black"
               />
               <div className="absolute -bottom-4 -right-4 bg-brand-gold p-4 border-2 border-brand-black">
@@ -183,10 +183,10 @@ export default function ServicePage({ params }: ServicePageProps) {
       <section className="py-16 md:py-24 bg-brand-blue bg-noise">
         <div className="container mx-auto px-4">
           <h2 className="heading-lg uppercase text-center mb-4 text-white">
-            Why Invest in {service.name}?
+            Why Invest in {service.title}?
           </h2>
           <p className="text-center text-white/80 mb-12 max-w-3xl mx-auto">
-            Professional {service.name.toLowerCase()} services protect your property and save you money in the long run.
+            Professional {service.title.toLowerCase()} services protect your property and save you money in the long run.
           </p>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -217,7 +217,7 @@ export default function ServicePage({ params }: ServicePageProps) {
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
                 <div className="text-4xl font-bold text-brand-gold mb-2">500+</div>
-                <p className="text-lg">{service.name} Projects Completed</p>
+                <p className="text-lg">{service.title} Projects Completed</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-brand-gold mb-2">4.9★</div>
@@ -237,7 +237,7 @@ export default function ServicePage({ params }: ServicePageProps) {
                 ))}
               </div>
               <p className="text-lg italic mb-4">
-                "24/7 Plumber provided excellent {service.name.toLowerCase()} service. 
+                "CBE Air Services provided excellent {service.title.toLowerCase()} service. 
                 Professional, on-time, and the results exceeded our expectations. 
                 Highly recommend for anyone in Miami!"
               </p>
@@ -251,9 +251,9 @@ export default function ServicePage({ params }: ServicePageProps) {
       <section className="py-16 md:py-24 bg-brand-off">
         <div className="container mx-auto px-4">
           <h2 className="heading-lg uppercase text-center mb-12 text-brand-black">
-            {service.name} FAQs
+            {service.title} FAQs
           </h2>
-          <ServiceFAQ faqs={faqs} serviceName={service.name} />
+          <ServiceFAQ faqs={faqs} serviceName={service.title} />
         </div>
       </section>
 
@@ -266,7 +266,7 @@ export default function ServicePage({ params }: ServicePageProps) {
               Serving All of Miami-Dade County
             </h2>
             <p className="text-lg mb-8 text-brand-black/80">
-              We provide professional {service.name.toLowerCase()} services throughout the Miami metropolitan area.
+              We provide professional {service.title.toLowerCase()} services throughout the Miami metropolitan area.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {serviceAreas.map((area) => (
@@ -283,7 +283,7 @@ export default function ServicePage({ params }: ServicePageProps) {
       <section className="bg-brand-black py-16 border-t-4 border-brand-gold">
         <div className="container mx-auto px-4 text-center">
           <h2 className="heading-lg uppercase mb-4 text-white">
-            Get Your Free {service.name} Estimate Today
+            Get Your Free {service.title} Estimate Today
           </h2>
           <p className="text-xl text-white/80 mb-8">
             Professional service, competitive pricing, 100% satisfaction guaranteed
@@ -307,12 +307,12 @@ export default function ServicePage({ params }: ServicePageProps) {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Service',
-            name: service.name,
-            description: service.summary,
+            name: service.title,
+            description: service.shortDescription,
             provider: {
-              '@type': 'Plumber',
-              name: '24/7 Plumber Solutions',
-              telephone: '786-296-7304',
+              '@type': 'HVACBusiness',
+              name: 'CBE Air Services',
+              telephone: '+1-305-560-3087',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Miami',
@@ -325,7 +325,7 @@ export default function ServicePage({ params }: ServicePageProps) {
             },
             hasOfferCatalog: {
               '@type': 'OfferCatalog',
-              name: service.name + ' Services',
+              name: service.title + ' Services',
               itemListElement: benefits.map(b => ({
                 '@type': 'Offer',
                 name: b.title,
