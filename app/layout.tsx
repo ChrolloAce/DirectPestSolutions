@@ -5,7 +5,6 @@ import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { ProofToasts } from '@/components/ui/ProofToasts'
 import MobileAppBar from '@/components/layout/MobileAppBar'
-import LanguageToggle from '@/components/layout/LanguageToggle'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
@@ -59,7 +58,6 @@ export default function RootLayout({
           </main>
           <Footer />
           <MobileAppBar />
-          <LanguageToggle />
           <ProofToasts />
         </LanguageProvider>
         

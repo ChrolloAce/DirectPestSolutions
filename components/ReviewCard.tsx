@@ -60,9 +60,6 @@ export default function ReviewCard({ review }: ReviewCardProps) {
           <span className="rounded-none border border-brand-black bg-brand-red/20 px-2 py-1 font-semibold text-brand-black">
             {review.service}
           </span>
-          {review.source && (
-            <span className="text-brand-black/60">• via {review.source}</span>
-          )}
         </span>
         <time dateTime={review.date} className="text-brand-black/60">
           {formatDate(review.date)}

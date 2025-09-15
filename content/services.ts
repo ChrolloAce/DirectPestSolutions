@@ -78,46 +78,6 @@ export const services: Service[] = [
     featured: true
   },
   {
-    id: 'heating-installation',
-    title: 'Heating System Installation',
-    shortDescription: 'Heat pump and heating system installation for Miami homes',
-    description: [
-      'While Miami is known for heat, winter nights can get chilly. We install efficient heating systems including heat pumps that provide both heating and cooling.',
-      'Heat pumps are ideal for Miami\'s climate, offering energy-efficient heating in winter and cooling in summer from a single system.',
-      'Our experts help you choose between heat pumps, electric heaters, and other heating solutions based on your needs and budget.'
-    ],
-    icon: 'Thermometer',
-    image: '/images/commercial.png',
-    benefits: [
-      'Heat pump specialists',
-      'Energy-efficient options',
-      'Dual heating/cooling systems',
-      'Professional installation',
-      'Warranty included'
-    ],
-    href: '/services/heating-installation-miami'
-  },
-  {
-    id: 'coil-cleaning',
-    title: 'Coil Cleaning Service',
-    shortDescription: 'Professional evaporator and condenser coil cleaning',
-    description: [
-      'Dirty coils reduce AC efficiency by up to 30% and increase energy bills. Our professional coil cleaning service restores your system\'s performance.',
-      'We thoroughly clean both evaporator and condenser coils, removing dirt, debris, and microbial growth that impedes heat transfer.',
-      'Regular coil cleaning improves air quality, reduces energy consumption, and prevents premature system failure.'
-    ],
-    icon: 'Sparkles',
-    image: '/images/drain-cleaning.png',
-    benefits: [
-      'Improved efficiency',
-      'Lower energy bills',
-      'Better air quality',
-      'Prevent breakdowns',
-      'Extended equipment life'
-    ],
-    href: '/services/coil-cleaning-miami'
-  },
-  {
     id: 'commercial-hvac',
     title: 'Commercial HVAC',
     shortDescription: 'Complete HVAC solutions for Miami businesses',
