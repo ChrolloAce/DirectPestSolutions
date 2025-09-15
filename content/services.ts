@@ -1,5 +1,6 @@
 export interface Service {
   id: string
+  slug?: string
   title: string
   shortDescription: string
   description: string[]
@@ -182,6 +183,10 @@ export const services: Service[] = [
 
 export function getServiceById(id: string): Service | undefined {
   return services.find(service => service.id === id)
+}
+
+export function getServiceBySlug(slug: string): Service | undefined {
+  return services.find(service => service.slug === slug || service.id === slug)
 }
 
 export function getFeaturedServices(): Service[] {

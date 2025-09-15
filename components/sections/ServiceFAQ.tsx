@@ -9,20 +9,46 @@ interface FAQ {
 }
 
 interface ServiceFAQProps {
-  faqs: FAQ[]
-  serviceName: string
+  faqs?: FAQ[]
+  serviceName?: string
 }
 
-export default function ServiceFAQ({ faqs, serviceName }: ServiceFAQProps) {
+export function ServiceFAQ({ faqs = [], serviceName = 'Service' }: ServiceFAQProps = {}) {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
   }
 
+  // Default FAQs if none provided
+  const defaultFAQs: FAQ[] = [
+    {
+      question: 'How quickly can you respond to AC emergencies?',
+      answer: 'We offer same-day service for most AC repairs in Miami-Dade County. Our technicians are available Mon-Sat 9AM-6PM, with emergency services available.'
+    },
+    {
+      question: 'Do you service all AC brands?',
+      answer: 'Yes! Our certified technicians are trained to repair and maintain all major AC brands including Carrier, Trane, Lennox, Rheem, Goodman, and more.'
+    },
+    {
+      question: 'What areas do you serve?',
+      answer: 'We provide AC services throughout Miami-Dade County including Miami, Miami Beach, Sunny Isles Beach, Aventura, Coral Gables, Doral, and surrounding areas.'
+    },
+    {
+      question: 'Do you offer financing for new AC installations?',
+      answer: 'Yes, we offer flexible financing options to help make your new AC system more affordable. Contact us to learn about current financing plans and promotions.'
+    },
+    {
+      question: 'How often should I service my AC?',
+      answer: 'We recommend annual AC maintenance to keep your system running efficiently and prevent breakdowns. Regular maintenance can extend your AC\'s life and lower energy bills.'
+    }
+  ]
+
+  const faqsToShow = faqs.length > 0 ? faqs : defaultFAQs
+
   return (
     <div className="max-w-3xl mx-auto">
-      {faqs.map((faq, index) => (
+      {faqsToShow.map((faq, index) => (
         <div key={index} className="mb-4 border-2 border-brand-black bg-white">
           <button
             className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-brand-blue/5 transition-colors"
@@ -65,3 +91,6 @@ export default function ServiceFAQ({ faqs, serviceName }: ServiceFAQProps) {
     </div>
   )
 }
+
+// Default export for backward compatibility
+export default ServiceFAQ

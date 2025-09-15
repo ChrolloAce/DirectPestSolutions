@@ -4,7 +4,7 @@ import { getServiceBySlug, services } from '@/content/services'
 import { CTAButton } from '@/components/ui/CTAButton'
 import { CheckCircle, Phone, Clock, Shield, Award, MapPin, ChevronRight, Star } from 'lucide-react'
 import { ServiceIcon } from '@/components/ui/ServiceIcon'
-import ServiceFAQ from '@/components/sections/ServiceFAQ'
+import { ServiceFAQ } from '@/components/sections/ServiceFAQ'
 import { getServiceFAQs } from '@/content/service-faqs'
 import Button from '@/components/ui/Button'
 
