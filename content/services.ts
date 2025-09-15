@@ -29,8 +29,8 @@ export const services: Service[] = [
     slug: '24-7-emergency',
     name: '24/7 Emergency Service',
     icon: 'clock',
-    image: '/images/emergency.png',
-    heroImage: '/images/emergency.png',
+    image: '/images/emergency-service.png',
+    heroImage: '/images/emergency-service.png',
     summary: 'Round-the-clock emergency plumbing services when you need us most. Our expert team is always ready to respond.',
     bullets: [
       'Available 24 hours a day, 7 days a week',
@@ -39,21 +39,6 @@ export const services: Service[] = [
       'Fully equipped service vehicles'
     ],
     ctaLabel: 'Call Emergency Hotline'
-  },
-  {
-    slug: 'iron-removal',
-    name: 'Iron Removal',
-    icon: 'droplet',
-    image: '/images/iron-removal.png',
-    heroImage: '/images/iron-removal.png',
-    summary: 'Professional iron removal systems to improve your water quality and protect your plumbing.',
-    bullets: [
-      'Advanced filtration systems',
-      'Removes iron, rust, and sediment',
-      'Protects appliances and fixtures',
-      'Improves water taste and clarity'
-    ],
-    ctaLabel: 'Get Clean Water'
   },
   {
     slug: 'water-heaters',
@@ -131,21 +116,6 @@ export const services: Service[] = [
     ctaLabel: 'Get a Quote'
   },
   {
-    slug: 'lead-detection',
-    name: 'Lead Detection',
-    icon: 'shield',
-    image: '/images/lead-detection.png',
-    heroImage: '/images/lead-detection.png',
-    summary: 'Professional lead testing and remediation to ensure your water is safe for your family.',
-    bullets: [
-      'EPA-certified testing methods',
-      'Lead pipe identification',
-      'Water quality analysis',
-      'Complete lead remediation'
-    ],
-    ctaLabel: 'Test Your Water'
-  },
-  {
     slug: 'backflow-prevention',
     name: 'Backflow Prevention',
     icon: 'rotate',
@@ -204,21 +174,6 @@ export const services: Service[] = [
       'Purification solutions'
     ],
     ctaLabel: 'Improve Water Quality'
-  },
-  {
-    slug: 'distributor',
-    name: 'Distributor Services',
-    icon: 'truck',
-    image: '/images/van.jpeg',
-    heroImage: '/images/van.jpeg',
-    summary: 'Professional distribution and supply chain services for plumbing contractors and businesses.',
-    bullets: [
-      'Wholesale plumbing supplies',
-      'Fast delivery services',
-      'Contractor partnerships',
-      'Bulk order discounts'
-    ],
-    ctaLabel: 'Partner With Us'
   },
   {
     slug: 'pipelining',
