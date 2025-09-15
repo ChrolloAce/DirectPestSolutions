@@ -23,7 +23,7 @@ export const services: Service[] = [
       'With transparent pricing and a satisfaction guarantee, trust CBE Air Services to restore your comfort quickly and affordably.'
     ],
     icon: 'Wrench',
-    image: '/images/emergency.png',
+    image: '/images/ac-repair-new.png',
     benefits: [
       'Same-day service available',
       'All makes and models',
@@ -66,7 +66,7 @@ export const services: Service[] = [
       'Take advantage of available rebates and our flexible financing options. Professional installation backed by comprehensive warranties.'
     ],
     icon: 'Home',
-    image: '/images/water-heater.png',
+    image: '/images/ac-installation-new.png',
     benefits: [
       'Energy-efficient systems',
       'All major brands',
@@ -148,7 +148,7 @@ export const services: Service[] = [
       'Don\'t suffer in the heat - call CBE Air Services for immediate emergency AC service.'
     ],
     icon: 'AlertCircle',
-    image: '/images/emergency-service.png',
+    image: '/images/emergency-ac-new.png',
     benefits: [
       '24/7 availability',
       'Fast response time',
@@ -170,7 +170,7 @@ export const services: Service[] = [
       'Breathe easier with our comprehensive duct cleaning service that improves both air quality and system efficiency.'
     ],
     icon: 'Wind',
-    image: '/images/drain-cleaning-new.png',
+    image: '/images/air-duct-cleaning-new.png',
     benefits: [
       'Improved air quality',
       'Reduced allergens',
