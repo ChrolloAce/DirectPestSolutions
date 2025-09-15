@@ -23,7 +23,7 @@ export const services: Service[] = [
       'With transparent pricing and a satisfaction guarantee, trust CBE Air Services to restore your comfort quickly and affordably.'
     ],
     icon: 'Wrench',
-    image: '/images/ac-repair-new.png',
+    image: '/images/ac-repair-service.png',
     benefits: [
       'Same-day service available',
       'All makes and models',

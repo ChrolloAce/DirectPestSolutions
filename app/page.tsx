@@ -6,6 +6,7 @@ import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
 import Reviews from '@/components/Reviews'
 import { FAQAccordion } from '@/components/sections/FAQAccordion'
 import { NextSteps } from '@/components/sections/NextSteps'
+import { PortfolioCarousel } from '@/components/sections/PortfolioCarousel'
 
 export default function HomePage() {
   return (
@@ -51,6 +52,9 @@ export default function HomePage() {
       
       {/* FAQs */}
       <FAQAccordion />
+      
+      {/* Portfolio Gallery */}
+      <PortfolioCarousel />
       
       {/* Next Steps */}
       <NextSteps />
