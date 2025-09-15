@@ -17,13 +17,12 @@ export function Navbar() {
       label: 'Services', 
       href: '/services',
       dropdown: [
-        { label: 'AC Repair', href: '/services/ac-repair-miami' },
-        { label: 'AC Maintenance', href: '/services/ac-maintenance-miami' },
-        { label: 'AC Installation', href: '/services/ac-installation-miami' },
-        { label: 'Heating Installation', href: '/services/heating-installation-miami' },
-        { label: 'Coil Cleaning', href: '/services/coil-cleaning-miami' },
-        { label: 'Regular Service', href: '/services/regular-service-miami' },
-        { label: 'Weekend Service', href: '/services/weekend-service-miami' }
+        { label: 'AC Repair', href: '/ac-repair' },
+        { label: 'AC Maintenance', href: '/ac-maintenance' },
+        { label: 'AC Installation', href: '/ac-installation' },
+        { label: 'Commercial HVAC', href: '/commercial-hvac' },
+        { label: 'Emergency AC Service', href: '/emergency-service' },
+        { label: 'Air Duct Cleaning', href: '/duct-cleaning' }
       ]
     },
     { label: 'Commercial', href: '/commercial' },

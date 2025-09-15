@@ -143,6 +143,15 @@ export default function Hero() {
                       className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue" 
                     />
                   </label>
+                  <label className="block">
+                    <span className="text-sm font-medium text-brand-black">Email*</span>
+                    <input 
+                      name="email" 
+                      type="email"
+                      required 
+                      className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue" 
+                    />
+                  </label>
                 </div>
 
                 <label className="block">

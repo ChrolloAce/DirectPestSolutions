@@ -1,236 +1,316 @@
 'use client'
 
-import React, { useState, FormEvent } from 'react'
-import { CTAButton } from '@/components/ui/CTAButton'
-import { Phone, Mail, MapPin, Clock } from 'lucide-react'
+import { useState } from 'react'
+import { Metadata } from 'next'
+import { Phone, Mail, MapPin, Clock, CheckCircle, AlertCircle } from 'lucide-react'
+import Button from '@/components/ui/Button'
+
+// export const metadata: Metadata = {
+//   title: 'Contact CBE Air Services | AC Repair Miami',
+//   description: 'Contact CBE Air Services for AC repair, installation & maintenance in Miami. Call (305) 560-3087 for same-day service. Available 24/7 for emergencies.',
+// }
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: ''
-  })
-  
   const [loading, setLoading] = useState(false)
-  
-  const handleSubmit = async (e: FormEvent) => {
+  const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(false)
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setLoading(true)
+    setError(false)
+    
+    const form = e.currentTarget
+    const formData = new FormData(form)
+    const data = Object.fromEntries(formData.entries())
     
     try {
       const res = await fetch('/api/quote', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...formData,
-          formType: 'Contact Form'
-        }),
+        body: JSON.stringify(data),
       })
       
       if (res.ok) {
-        // Redirect to thank-you page
-        const params = new URLSearchParams({
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email,
-          service: formData.service,
-          message: formData.message,
-        })
-        window.location.href = `/thank-you?${params.toString()}`
+        setSubmitted(true)
+        form.reset()
       } else {
-        alert('There was an error submitting your request. Please try again or call us directly.')
+        setError(true)
       }
-    } catch (error) {
-      alert('There was an error submitting your request. Please try again or call us directly.')
+    } catch {
+      setError(true)
     } finally {
       setLoading(false)
     }
   }
-  
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
-  
+
   return (
-    <div className="py-16 md:py-24">
-      <div className="container mx-auto px-4">
-        <h1 className="heading-xl text-center mb-8">
-          24/7 Plumber Miami - Get Your Free Quote
-        </h1>
-        
-        <p className="text-xl text-center text-black/70 mb-12 max-w-3xl mx-auto">
-          Need emergency plumbing services in Miami, Florida? 24/7 Plumber is Miami-Dade County's most trusted 
-          plumbing company. Fill out the form below or call (786) 296-7304 for immediate service. 
-          We serve all of Miami including Coral Gables, Brickell, South Beach, Coconut Grove, and surrounding areas!
-        </p>
-        
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
-          <div className="bg-white rounded-none shadow-card p-8">
-            <h2 className="heading-md mb-6">Request a Miami Plumbing Quote</h2>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-semibold mb-2">
-                  Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border-2 border-black/10 rounded-none focus:border-brand-blue focus:outline-none"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-semibold mb-2">
-                  Email *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border-2 border-black/10 rounded-none focus:border-brand-blue focus:outline-none"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="phone" className="block text-sm font-semibold mb-2">
-                  Phone *
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  required
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border-2 border-black/10 rounded-none focus:border-brand-blue focus:outline-none"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="service" className="block text-sm font-semibold mb-2">
-                  Service Needed
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border-2 border-black/10 rounded-none focus:border-brand-blue focus:outline-none"
-                >
-                  <option value="">Select a service</option>
-                  <option value="emergency">24/7 Emergency Service</option>
-                  <option value="water-heaters">Water Heaters</option>
-                  <option value="leak-detection">Leak Detection</option>
-                  <option value="bathroom">Bathroom Plumbing</option>
-                  <option value="drain-cleaning">Drain Cleaning</option>
-                  <option value="gas-lines">Gas Lines</option>
-                  <option value="backflow">Backflow Prevention</option>
-                  <option value="commercial">Commercial Services</option>
-                  <option value="multiple">Multiple Services</option>
-                </select>
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-semibold mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border-2 border-black/10 rounded-none focus:border-brand-blue focus:outline-none"
-                  placeholder="Tell us about your project..."
-                />
-              </div>
-              
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full inline-flex items-center justify-center px-6 py-4 text-base md:text-lg font-semibold uppercase tracking-wide border-2 border-brand-black bg-brand-blue text-white rounded-none shadow-btn transition hover:translate-y-[1px] hover:bg-brand-blue2 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {loading ? 'Submitting...' : 'Submit Request'}
-              </button>
-            </form>
+    <>
+      {/* Hero Section */}
+      <section className="relative bg-brand-blue bg-noise py-20 md:py-32">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <h1 className="heading-xl uppercase mb-6">
+              Contact CBE Air Services
+            </h1>
+            <p className="text-xl text-white/90">
+              24/7 Emergency Service • Same-Day Repairs • Free Estimates
+            </p>
           </div>
-          
-          {/* Contact Info */}
-          <div>
-            <div className="bg-brand-gray rounded-none p-8 mb-8">
-              <h2 className="heading-md mb-6">24/7 Plumber Miami Contact Information</h2>
-              
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <Phone className="text-brand-blue mt-1" size={20} />
-                  <div>
-                    <p className="font-semibold">24/7 Emergency Hotline</p>
-                    <a href="tel:7862967304" className="text-brand-blue hover:underline text-lg font-bold">
-                      (786) 296-7304
-                    </a>
-                    <p className="text-sm text-black/60 mt-1">Available 24 hours for Miami plumbing emergencies</p>
-                  </div>
-                </div>
-                
-                
-                <div className="flex items-start gap-3">
-                  <MapPin className="text-brand-blue mt-1" size={20} />
-                  <div>
-                    <p className="font-semibold">Miami Service Areas</p>
-                    <p className="text-black/70">
-                      <strong>North Miami:</strong> Aventura, North Miami Beach, Sunny Isles<br/>
-                      <strong>Central Miami:</strong> Downtown, Brickell, Coconut Grove, Coral Gables<br/>
-                      <strong>South Miami:</strong> Kendall, Pinecrest, Palmetto Bay, Cutler Bay<br/>
-                      <strong>Miami Beach:</strong> South Beach, Mid-Beach, North Beach<br/>
-                      <strong>West Miami:</strong> Doral, Westchester, Sweetwater, Hialeah
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <Clock className="text-brand-blue mt-1" size={20} />
-                  <div>
-                    <p className="font-semibold">24/7 Plumber Miami Hours</p>
-                    <p className="text-black/70">
-                      <span className="text-brand-yellow font-bold text-lg">24/7 Emergency Service</span><br />
-                      Regular Service Hours:<br />
-                      Monday - Friday: 7:00 AM - 8:00 PM<br />
-                      Saturday - Sunday: 8:00 AM - 6:00 PM<br />
-                      <span className="text-sm">Emergency plumbing available 24/7 in Miami-Dade County</span>
-                    </p>
-                  </div>
-                </div>
+        </div>
+      </section>
+
+      {/* Contact Info Cards */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16">
+            <div className="bg-brand-off border-2 border-brand-black p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="text-brand-black" size={28} />
               </div>
+              <h3 className="font-bold text-lg mb-2">Call Us</h3>
+              <a href="tel:3055603087" className="text-brand-blue hover:text-brand-red font-bold text-xl">
+                (305) 560-3087
+              </a>
+              <p className="text-sm text-brand-black/60 mt-2">24/7 Emergency Line</p>
             </div>
-            
-            <div className="bg-brand-blue text-black rounded-none p-8">
-              <h3 className="font-heading text-2xl uppercase mb-4">
-                Prefer to Call?
-              </h3>
-              <p className="mb-6">
-                Get your quote even faster by calling us directly. Our friendly team is ready to help!
+
+            <div className="bg-brand-off border-2 border-brand-black p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="text-brand-black" size={28} />
+              </div>
+              <h3 className="font-bold text-lg mb-2">Email Us</h3>
+              <a href="mailto:info@cbeairservices.com" className="text-brand-blue hover:text-brand-red">
+                info@cbeairservices.com
+              </a>
+              <p className="text-sm text-brand-black/60 mt-2">Quick Response</p>
+            </div>
+
+            <div className="bg-brand-off border-2 border-brand-black p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="text-brand-black" size={28} />
+              </div>
+              <h3 className="font-bold text-lg mb-2">Service Area</h3>
+              <p className="text-brand-black">Miami-Dade County</p>
+              <p className="text-sm text-brand-black/60 mt-2">All Areas Covered</p>
+            </div>
+
+            <div className="bg-brand-off border-2 border-brand-black p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="text-brand-black" size={28} />
+              </div>
+              <h3 className="font-bold text-lg mb-2">Hours</h3>
+              <p className="text-brand-black">24/7 Available</p>
+              <p className="text-sm text-brand-black/60 mt-2">Emergency Service</p>
+            </div>
+          </div>
+
+          {/* Contact Form and Info */}
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Contact Form */}
+            <div>
+              <h2 className="heading-lg uppercase mb-6 text-brand-black">
+                Get Your Free Quote
+              </h2>
+              <p className="text-lg text-brand-black/70 mb-8">
+                Fill out the form below and we'll get back to you within 30 minutes during business hours.
               </p>
-              <CTAButton href="tel:7862967304" variant="secondary" size="lg" fullWidth>
-                Call (786) 296-7304
-              </CTAButton>
+
+              {submitted ? (
+                <div className="bg-green-50 border-2 border-green-500 p-8 text-center">
+                  <CheckCircle className="mx-auto mb-4 text-green-500" size={48} />
+                  <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
+                  <p className="text-lg">We've received your request and will contact you shortly.</p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-brand-black mb-2">
+                        First Name*
+                      </label>
+                      <input
+                        type="text"
+                        name="firstName"
+                        required
+                        className="w-full px-4 py-3 border-2 border-brand-black/20 focus:border-brand-blue outline-none transition-colors"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-brand-black mb-2">
+                        Last Name*
+                      </label>
+                      <input
+                        type="text"
+                        name="lastName"
+                        required
+                        className="w-full px-4 py-3 border-2 border-brand-black/20 focus:border-brand-blue outline-none transition-colors"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-brand-black mb-2">
+                        Phone*
+                      </label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        required
+                        className="w-full px-4 py-3 border-2 border-brand-black/20 focus:border-brand-blue outline-none transition-colors"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-brand-black mb-2">
+                        Email*
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        required
+                        className="w-full px-4 py-3 border-2 border-brand-black/20 focus:border-brand-blue outline-none transition-colors"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-brand-black mb-2">
+                      Service Needed
+                    </label>
+                    <select
+                      name="service"
+                      className="w-full px-4 py-3 border-2 border-brand-black/20 focus:border-brand-blue outline-none transition-colors"
+                    >
+                      <option value="">Select a Service</option>
+                      <option>AC Repair</option>
+                      <option>AC Maintenance</option>
+                      <option>AC Installation</option>
+                      <option>Commercial HVAC</option>
+                      <option>Emergency Service</option>
+                      <option>Air Duct Cleaning</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-brand-black mb-2">
+                      Address
+                    </label>
+                    <input
+                      type="text"
+                      name="address"
+                      className="w-full px-4 py-3 border-2 border-brand-black/20 focus:border-brand-blue outline-none transition-colors"
+                      placeholder="City, ZIP Code"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-brand-black mb-2">
+                      Message
+                    </label>
+                    <textarea
+                      name="message"
+                      rows={4}
+                      className="w-full px-4 py-3 border-2 border-brand-black/20 focus:border-brand-blue outline-none transition-colors resize-none"
+                      placeholder="Please describe your AC issue or service needs..."
+                    />
+                  </div>
+
+                  {error && (
+                    <div className="bg-red-50 border border-red-200 p-4 flex items-start gap-3">
+                      <AlertCircle className="text-red-500 flex-shrink-0" size={20} />
+                      <p className="text-sm text-red-700">
+                        There was an error submitting your request. Please try again or call us directly.
+                      </p>
+                    </div>
+                  )}
+
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full"
+                    disabled={loading}
+                  >
+                    {loading ? 'Sending...' : 'Get Free Quote'}
+                  </Button>
+
+                  <p className="text-sm text-brand-black/60 text-center">
+                    By submitting, you agree to receive communications from CBE Air Services
+                  </p>
+                </form>
+              )}
+            </div>
+
+            {/* Right Side - Info */}
+            <div>
+              <div className="bg-brand-blue bg-noise text-white p-8 mb-8">
+                <h3 className="text-2xl font-bold mb-4">Why Choose CBE?</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-brand-gold flex-shrink-0 mt-1" size={20} />
+                    <span>24/7 Emergency Service Available</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-brand-gold flex-shrink-0 mt-1" size={20} />
+                    <span>Same-Day Service for Most Repairs</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-brand-gold flex-shrink-0 mt-1" size={20} />
+                    <span>Licensed & Insured Technicians</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-brand-gold flex-shrink-0 mt-1" size={20} />
+                    <span>Transparent, Upfront Pricing</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-brand-gold flex-shrink-0 mt-1" size={20} />
+                    <span>100% Satisfaction Guarantee</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-brand-gold flex-shrink-0 mt-1" size={20} />
+                    <span>5-Star Rated on Google</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-brand-gold border-2 border-brand-black p-8">
+                <h3 className="text-2xl font-bold mb-4 text-brand-black">Need Immediate Help?</h3>
+                <p className="text-lg mb-6 text-brand-black/80">
+                  Don't wait for a callback. Our emergency line is available 24/7 for urgent AC repairs.
+                </p>
+                <Button
+                  href="tel:3055603087"
+                  size="lg"
+                  className="w-full !bg-brand-black !text-white hover:!bg-brand-blue"
+                >
+                  <Phone className="inline-block mr-2" size={20} />
+                  Call Now: (305) 560-3087
+                </Button>
+              </div>
+
+              <div className="mt-8 p-6 bg-brand-off border-l-4 border-brand-red">
+                <h4 className="font-bold mb-2">Service Areas Include:</h4>
+                <p className="text-sm text-brand-black/70">
+                  Miami, Miami Beach, Coral Gables, Aventura, Kendall, Homestead, 
+                  Palmetto Bay, Cutler Bay, Doral, Hialeah, and all of Miami-Dade County
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+
+      {/* Map Section (Optional Placeholder) */}
+      <section className="bg-gray-200 h-96 relative">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center">
+            <MapPin className="mx-auto mb-4 text-brand-blue" size={48} />
+            <h3 className="text-2xl font-bold mb-2">Serving All of Miami-Dade County</h3>
+            <p className="text-brand-black/70">Professional HVAC Services Throughout South Florida</p>
+          </div>
+        </div>
+      </section>
+    </>
   )
 }
