@@ -109,7 +109,7 @@ export function ProofToasts() {
             {/* Progress bar */}
             <div className="h-1 bg-black/10">
               <div
-                className="h-1 bg-brand-gold transition-all"
+                className="h-1 bg-brand-red transition-all"
                 style={{ 
                   width: `${pct}%`, 
                   transition: 'width .18s linear' 

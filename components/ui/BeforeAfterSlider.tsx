@@ -54,11 +54,11 @@ export default function BeforeAfterSlider({ beforeImage, afterImage, altText }: 
         
         {/* Slider Line */}
         <div 
-          className="absolute top-0 bottom-0 w-1 bg-brand-gold shadow-lg"
+          className="absolute top-0 bottom-0 w-1 bg-brand-red shadow-lg"
           style={{ left: `${sliderPosition}%` }}
         >
           {/* Slider Handle */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-brand-gold border-2 border-brand-black rounded-full flex items-center justify-center shadow-lg">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-brand-red border-2 border-brand-black rounded-full flex items-center justify-center shadow-lg">
             <svg className="w-6 h-6 text-brand-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
             </svg>
@@ -69,7 +69,7 @@ export default function BeforeAfterSlider({ beforeImage, afterImage, altText }: 
         <div className="absolute top-4 left-4 bg-brand-black text-white px-3 py-1 font-bold uppercase">
           Before
         </div>
-        <div className="absolute top-4 right-4 bg-brand-gold text-brand-black px-3 py-1 font-bold uppercase">
+        <div className="absolute top-4 right-4 bg-brand-red text-brand-white px-3 py-1 font-bold uppercase">
           After
         </div>
       </div>

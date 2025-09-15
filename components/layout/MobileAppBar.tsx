@@ -49,7 +49,7 @@ export default function MobileAppBar() {
                 <div
                   className={`p-1.5 rounded-none transition-colors ${
                     item.name === 'Emergency'
-                      ? 'bg-brand-yellow text-brand-black'
+                      ? 'bg-brand-red text-brand-white'
                       : isActive
                       ? 'bg-brand-blue text-white'
                       : 'text-brand-black'

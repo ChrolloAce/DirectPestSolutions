@@ -35,10 +35,10 @@ export default function Button({
   }
   
   const variants = {
-    primary: 'bg-brand-yellow text-brand-black border-brand-black hover:bg-brand-yellow2',
-    secondary: 'bg-brand-blue text-white border-brand-black hover:bg-brand-blue2',
+    primary: 'bg-brand-red text-brand-white border-brand-black hover:bg-brand-red2',
+    secondary: 'bg-brand-blue text-brand-white border-brand-black hover:bg-brand-blue2',
     ghost: 'bg-transparent text-brand-black border-transparent hover:bg-black/5',
-    emergency: 'bg-brand-yellow text-brand-black border-brand-black hover:bg-brand-yellow2 font-bold'
+    emergency: 'bg-brand-red text-brand-white border-brand-black hover:bg-brand-red2 font-bold'
   }
 
   const classes = clsx(

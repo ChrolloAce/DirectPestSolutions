@@ -67,7 +67,7 @@ export function Navbar() {
                     className={`
                       font-semibold uppercase text-sm tracking-wide transition-colors
                       ${isActive 
-                        ? 'text-brand-blue border-b-2 border-brand-gold' 
+                        ? 'text-brand-blue border-b-2 border-brand-red' 
                         : 'text-brand-black hover:text-brand-blue'
                       }
                     `}
@@ -103,12 +103,12 @@ export function Navbar() {
             {/* Mobile Logo and Hamburger */}
             <div className="md:hidden flex items-center justify-between w-full">
               <Link href="/" className="flex items-center gap-2">
-                <img src="/images/logo-247.png" alt="24/7 Plumbing Company" className="h-12 w-auto" />
+                <img src="/images/ACLOGO.png" alt="AC Company" className="h-12 w-auto" />
               </Link>
               
               <button
                 type="button"
-                className="h-10 w-10 grid place-items-center rounded-none border-2 border-brand-black bg-white hover:bg-brand-yellow/20 transition-colors"
+                className="h-10 w-10 grid place-items-center rounded-none border-2 border-brand-black bg-white hover:bg-brand-red/20 transition-colors"
                 aria-label={isOpen ? 'Close menu' : 'Open menu'}
                 aria-controls="mobile-menu"
                 aria-expanded={isOpen ? 'true' : 'false'}
@@ -148,7 +148,7 @@ export function Navbar() {
                     className={`
                       block px-3 py-3 font-semibold uppercase text-sm tracking-wide transition-colors border-b border-brand-black/10
                       ${isActive 
-                        ? 'text-brand-blue bg-brand-gold/10' 
+                        ? 'text-brand-blue bg-brand-red/10' 
                         : 'text-brand-black hover:bg-brand-blue/5'
                       }
                     `}

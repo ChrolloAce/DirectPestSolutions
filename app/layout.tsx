@@ -90,7 +90,7 @@ export default function RootLayout({
                 }
               ],
               priceRange: '$$',
-              image: '/images/logo-247.png',
+              image: '/images/ACLOGO.png',
               url: 'https://24-7-plomero.vercel.app'
             })
           }}

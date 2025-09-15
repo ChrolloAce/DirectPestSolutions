@@ -23,15 +23,15 @@ export function ServiceCard({ slug, title, icon, image }: ServiceCardProps) {
       
       {/* Icon badge - visible outside card bounds */}
       <div className="absolute -top-4 left-4 z-10 pointer-events-none">
-        <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-brand-yellow border-2 border-brand-black">
+        <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-brand-red border-2 border-brand-black">
           <ServiceIcon name={icon} />
         </span>
       </div>
       
       {/* Bottom ribbon */}
       <div className="absolute inset-x-0 bottom-0 pointer-events-none">
-        <div className="border-t border-brand-gold bg-brand-black text-white uppercase font-semibold tracking-wide px-5 py-3 relative">
-          {title} <span className="ml-2 text-brand-gold">»</span>
+        <div className="border-t border-brand-red bg-brand-black text-white uppercase font-semibold tracking-wide px-5 py-3 relative">
+          {title} <span className="ml-2 text-brand-red">»</span>
           <span className="absolute -bottom-2 left-8 w-0 h-0 border-l-8 border-l-brand-black border-t-8 border-t-transparent" />
         </div>
       </div>

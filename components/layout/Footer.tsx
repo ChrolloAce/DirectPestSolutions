@@ -26,7 +26,7 @@ export class Footer extends React.Component {
     return (
       <footer className="bg-brand-black text-white">
         {/* CTA Banner */}
-        <div className="bg-brand-yellow text-brand-black py-12 border-b-4 border-brand-black">
+        <div className="bg-brand-red text-brand-white py-12 border-b-4 border-brand-black">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <h2 className="font-heading text-4xl md:text-5xl uppercase tracking-tight">

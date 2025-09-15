@@ -43,7 +43,7 @@ export default function ReviewCard({ review }: ReviewCardProps) {
       <div className="flex items-center gap-3">
         <div>
           <h4 className="font-semibold text-brand-black">{review.name}</h4>
-          <div className="text-sm text-brand-gold font-bold">
+          <div className="text-sm text-brand-red font-bold">
             {renderStars(review.rating)}
           </div>
         </div>
@@ -57,7 +57,7 @@ export default function ReviewCard({ review }: ReviewCardProps) {
       {/* Footer with service and date */}
       <div className="mt-4 flex items-center justify-between text-xs">
         <span className="inline-flex items-center gap-2">
-          <span className="rounded-none border border-brand-black bg-brand-gold/20 px-2 py-1 font-semibold text-brand-black">
+          <span className="rounded-none border border-brand-black bg-brand-red/20 px-2 py-1 font-semibold text-brand-black">
             {review.service}
           </span>
           {review.source && (

@@ -15,7 +15,7 @@ export default function LanguageToggle() {
   return (
     <button
       onClick={toggleLanguage}
-      className="fixed bottom-20 right-4 md:bottom-4 md:right-4 z-50 bg-brand-yellow text-brand-black border-2 border-brand-black rounded-none p-3 shadow-lg hover:bg-brand-yellow2 transition-colors flex items-center gap-2"
+      className="fixed bottom-20 right-4 md:bottom-4 md:right-4 z-50 bg-brand-blue text-brand-white border-2 border-brand-black rounded-none p-3 shadow-lg hover:bg-brand-blue2 transition-colors flex items-center gap-2"
       aria-label={language === 'en' ? 'Cambiar a Español' : 'Switch to English'}
     >
       <Globe size={20} />

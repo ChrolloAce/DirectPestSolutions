@@ -10,22 +10,26 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          // Blue (Primary - matching logo)
-          blue: '#2B7A9B',      // main blue from logo
-          blue2: '#1E5F7A',     // darker blue for hover
-          blue3: '#4A9BC4',     // lighter blue
-          // Yellow (Accent - matching logo)
-          yellow: '#F5B800',    // main yellow from logo
-          yellow2: '#D49F00',   // darker yellow for hover
-          yellow3: '#FFD233',   // lighter yellow
-          // Black & Neutrals
-          black: '#0B0D0F',     // rich black
-          black2: '#1A1A1A',    // softer black
-          off: '#FBFBFB',
-          gray: '#F2F2F3',
-          // Legacy gold (keeping for gradual transition)
-          gold: '#F5B800',      // now same as yellow
-          gold2: '#D49F00',     // now same as yellow2
+          // Red (Primary - Hot/Heat)
+          red: '#DC2626',       // main red
+          red2: '#B91C1C',      // darker red for hover
+          red3: '#EF4444',      // lighter red
+          // Blue (Primary - Cold/Cool)
+          blue: '#2563EB',      // main blue
+          blue2: '#1D4ED8',     // darker blue for hover
+          blue3: '#60A5FA',     // lighter blue
+          // Black & White & Neutrals
+          black: '#000000',     // pure black
+          black2: '#1F2937',    // softer black
+          white: '#FFFFFF',     // pure white
+          off: '#FAFAFA',       // off-white
+          gray: '#F3F4F6',      // light gray
+          // Legacy colors (for gradual transition)
+          yellow: '#DC2626',    // now red for compatibility
+          yellow2: '#B91C1C',   // now red2 for compatibility
+          yellow3: '#EF4444',   // now red3 for compatibility
+          gold: '#DC2626',      // now red for compatibility
+          gold2: '#B91C1C',     // now red2 for compatibility
         }
       },
       fontFamily: {

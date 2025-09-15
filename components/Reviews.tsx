@@ -114,7 +114,7 @@ export default function Reviews() {
             What Our Customers Say
           </h2>
           <p className="mt-3 text-brand-black/70 flex items-center justify-center gap-3">
-            <span className="text-brand-gold font-bold">★ {averageRating}/5</span>
+            <span className="text-brand-red font-bold">★ {averageRating}/5</span>
             <span>•</span>
             <span>Licensed & Insured</span>
             <span>•</span>
@@ -178,7 +178,7 @@ export default function Reviews() {
                   aria-current={i === currentIndex}
                   aria-label={`Go to slide ${i + 1}`}
                   onClick={() => goToSlide(i)}
-                  className="h-2.5 w-4 rounded-full border border-brand-black bg-white aria-[current=true]:bg-brand-gold transition-colors"
+                  className="h-2.5 w-4 rounded-full border border-brand-black bg-white aria-[current=true]:bg-brand-red transition-colors"
                 />
               ))}
             </div>

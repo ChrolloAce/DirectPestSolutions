@@ -63,7 +63,7 @@ export default function Hero() {
           {/* Left: Copy / CTAs */}
           <div className="text-white">
             <h1 className="font-heading uppercase leading-[0.95] tracking-tight text-5xl sm:text-6xl">
-              <span className="underline decoration-brand-gold decoration-4 underline-offset-4">24/7 Plumber</span>
+              <span className="underline decoration-brand-red decoration-4 underline-offset-4">24/7 Plumber</span>
               <br /> <span className="text-brand-blue">Miami&apos;s</span> Trusted Experts
             </h1>
 
@@ -74,7 +74,7 @@ export default function Hero() {
             {/* Trust row */}
             <div className="mt-6 flex flex-wrap items-center gap-4 text-sm">
               <div className="inline-flex items-center gap-2 rounded-none bg-white/10 px-3 py-2 ring-1 ring-white/20">
-                <span className="text-brand-gold">★★★★★</span>
+                <span className="text-brand-red">★★★★★</span>
                 <span className="text-white/80">5.0 from 500+ customers</span>
               </div>
               <div className="inline-flex items-center gap-2 rounded-none bg-white/10 px-3 py-2 ring-1 ring-white/20">

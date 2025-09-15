@@ -11,7 +11,7 @@ export function GoldUnderline({ children, className = '' }: GoldUnderlineProps) 
   return (
     <span className={`relative ${className}`}>
       {children}
-      <span className="absolute left-0 -bottom-1 h-[3px] w-full bg-brand-gold/80"></span>
+      <span className="absolute left-0 -bottom-1 h-[3px] w-full bg-brand-red/80"></span>
     </span>
   )
 }
