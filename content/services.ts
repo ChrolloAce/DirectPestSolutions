@@ -66,7 +66,7 @@ export const services: Service[] = [
       'Take advantage of available rebates and our flexible financing options. Professional installation backed by comprehensive warranties.'
     ],
     icon: 'Home',
-    image: '/images/ac-installation-new.png',
+    image: '/images/ac-installation-updated.png',
     benefits: [
       'Energy-efficient systems',
       'All major brands',
