@@ -60,18 +60,19 @@ export default function ContactPage() {
     <div className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <h1 className="heading-xl text-center mb-8">
-          Get Your Free Quote
+          24/7 Plumber Miami - Get Your Free Quote
         </h1>
         
         <p className="text-xl text-center text-black/70 mb-12 max-w-3xl mx-auto">
-          Need plumbing services in Miami? Fill out the form below or give us a call for your 
-          free estimate. We typically respond within 30 minutes during business hours!
+          Need emergency plumbing services in Miami, Florida? 24/7 Plumber is Miami-Dade County's most trusted 
+          plumbing company. Fill out the form below or call (786) 296-7304 for immediate service. 
+          We serve all of Miami including Coral Gables, Brickell, South Beach, Coconut Grove, and surrounding areas!
         </p>
         
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <div className="bg-white rounded-none shadow-card p-8">
-            <h2 className="heading-md mb-6">Request a Quote</h2>
+            <h2 className="heading-md mb-6">Request a Miami Plumbing Quote</h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -171,39 +172,31 @@ export default function ContactPage() {
           {/* Contact Info */}
           <div>
             <div className="bg-brand-gray rounded-none p-8 mb-8">
-              <h2 className="heading-md mb-6">Contact Information</h2>
+              <h2 className="heading-md mb-6">24/7 Plumber Miami Contact Information</h2>
               
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <Phone className="text-brand-blue mt-1" size={20} />
                   <div>
-                    <p className="font-semibold">Phone</p>
-                    <a href="tel:7862967304" className="text-brand-blue hover:underline">
+                    <p className="font-semibold">24/7 Emergency Hotline</p>
+                    <a href="tel:7862967304" className="text-brand-blue hover:underline text-lg font-bold">
                       (786) 296-7304
                     </a>
-                    <a href="tel:9546573429" className="text-brand-blue hover:underline block">
-                      (954) 657-3429
-                    </a>
+                    <p className="text-sm text-black/60 mt-1">Available 24 hours for Miami plumbing emergencies</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-3">
-                  <Mail className="text-brand-blue mt-1" size={20} />
-                  <div>
-                    <p className="font-semibold">Email</p>
-                    <a href="mailto:info@allinplumbingsolutions.com" className="text-brand-blue hover:underline">
-                      info@allinplumbingsolutions.com
-                    </a>
-                  </div>
-                </div>
                 
                 <div className="flex items-start gap-3">
                   <MapPin className="text-brand-blue mt-1" size={20} />
                   <div>
-                    <p className="font-semibold">Service Area</p>
+                    <p className="font-semibold">Miami Service Areas</p>
                     <p className="text-black/70">
-                      Miami, Miami Beach, Coral Gables, Aventura, 
-                      Kendall, Homestead, and all of Miami-Dade County
+                      <strong>North Miami:</strong> Aventura, North Miami Beach, Sunny Isles<br/>
+                      <strong>Central Miami:</strong> Downtown, Brickell, Coconut Grove, Coral Gables<br/>
+                      <strong>South Miami:</strong> Kendall, Pinecrest, Palmetto Bay, Cutler Bay<br/>
+                      <strong>Miami Beach:</strong> South Beach, Mid-Beach, North Beach<br/>
+                      <strong>West Miami:</strong> Doral, Westchester, Sweetwater, Hialeah
                     </p>
                   </div>
                 </div>
@@ -211,12 +204,13 @@ export default function ContactPage() {
                 <div className="flex items-start gap-3">
                   <Clock className="text-brand-blue mt-1" size={20} />
                   <div>
-                    <p className="font-semibold">Business Hours</p>
+                    <p className="font-semibold">24/7 Plumber Miami Hours</p>
                     <p className="text-black/70">
+                      <span className="text-brand-yellow font-bold text-lg">24/7 Emergency Service</span><br />
+                      Regular Service Hours:<br />
                       Monday - Friday: 7:00 AM - 8:00 PM<br />
-                      Saturday: 8:00 AM - 6:00 PM<br />
-                      Sunday: 9:00 AM - 5:00 PM<br />
-                      <span className="text-brand-gold font-semibold">24/7 Emergency Service Available</span>
+                      Saturday - Sunday: 8:00 AM - 6:00 PM<br />
+                      <span className="text-sm">Emergency plumbing available 24/7 in Miami-Dade County</span>
                     </p>
                   </div>
                 </div>

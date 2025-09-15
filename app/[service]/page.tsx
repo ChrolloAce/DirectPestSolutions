@@ -30,9 +30,9 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   }
   
   return {
-    title: `${service.name} Services in Miami | Professional ${service.name} | 24/7 Plumber`,
-    description: `Expert ${service.name.toLowerCase()} services in Miami. ${service.summary} Call (786) 296-7304 for free estimate.`,
-    keywords: `${service.name.toLowerCase()}, ${service.name.toLowerCase()} Miami, ${service.name.toLowerCase()} services, plumbing Miami, ${service.name.toLowerCase()} near me`,
+    title: `${service.name} Miami FL | 24/7 Emergency ${service.name} | 24/7 Plumber`,
+    description: `Professional ${service.name.toLowerCase()} services in Miami, Florida. 24/7 Plumber offers emergency ${service.name.toLowerCase()} in Miami-Dade County. ${service.summary} Call (786) 296-7304 for immediate service in Miami.`,
+    keywords: `${service.name.toLowerCase()} Miami, ${service.name.toLowerCase()} Miami FL, emergency ${service.name.toLowerCase()} Miami, 24/7 plumber Miami, ${service.name.toLowerCase()} service Miami Beach, ${service.name.toLowerCase()} Coral Gables, ${service.name.toLowerCase()} Brickell, Miami plumbing`,
     openGraph: {
       title: `${service.name} | 24/7 Plumber Solutions`,
       description: service.summary,
@@ -90,10 +90,10 @@ export default function ServicePage({ params }: ServicePageProps) {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="heading-xl uppercase mb-6">
-              Professional {service.name} in Miami
+              24/7 {service.name} Services in Miami, Florida
             </h1>
             <p className="text-xl mb-8 text-white/90">
-              {service.summary}
+              {service.summary} 24/7 Plumber is Miami's most trusted plumbing company, serving Miami-Dade County with emergency {service.name.toLowerCase()} services 24 hours a day.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <CTAButton href="/contact" size="lg">

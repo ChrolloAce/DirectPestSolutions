@@ -104,7 +104,7 @@ export default function Hero() {
 
             {/* Small proof strip */}
             <p className="mt-5 text-sm text-white/75">
-              24/7 Emergency Response • Same-day service • Free estimates • Fully insured
+              Miami's #1 Emergency Plumber • Same-day service • Free estimates • Licensed & Insured in Florida
             </p>
           </div>
 
