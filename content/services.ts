@@ -45,7 +45,7 @@ export const services: Service[] = [
       'Join our maintenance plan for priority service, discounted repairs, and peace of mind knowing your AC is always ready for Miami\'s heat.'
     ],
     icon: 'Shield',
-    image: '/images/maintenance-programs.png',
+    image: '/images/ac-maintenance-tech.png',
     benefits: [
       'Prevent costly breakdowns',
       'Lower energy bills',
@@ -127,7 +127,7 @@ export const services: Service[] = [
       'Minimize downtime with our preventive maintenance programs and 24/7 emergency response for critical systems.'
     ],
     icon: 'Building',
-    image: '/images/commercial.png',
+    image: '/images/commercial-hvac-tech.png',
     benefits: [
       'All commercial systems',
       'Maintenance contracts',

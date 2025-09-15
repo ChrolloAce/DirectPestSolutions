@@ -47,7 +47,7 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/hero-banner.png"
+          src="/images/hero-banner-new.jpg"
           alt="CBE Air Services - Professional HVAC Services Miami"
           fill
           priority
