@@ -157,6 +157,7 @@ export const services: Service[] = [
       'Immediate relief'
     ],
     href: '/services/weekend-service-miami',
+    featured: true,
     emergency: true
   },
   {
@@ -177,7 +178,8 @@ export const services: Service[] = [
       'Energy savings',
       'Eliminate odors'
     ],
-    href: '/services/regular-service-miami'
+    href: '/services/regular-service-miami',
+    featured: true
   }
 ]
 

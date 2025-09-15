@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Phone, Clock, MapPin } from 'lucide-react'
+import { Phone } from 'lucide-react'
 
 export class TopBar extends React.Component {
   render() {
@@ -18,16 +18,9 @@ export class TopBar extends React.Component {
               </a>
             </div>
             
-            {/* Center: Business Info */}
+            {/* Center: Empty for now */}
             <div className="flex items-center gap-6">
-              <div className="flex items-center gap-2">
-                <MapPin size={16} />
-                <span className="text-sm">Sunny Isles Beach, FL</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock size={16} />
-                <span className="text-sm">Mon-Sat 9AM-6PM</span>
-              </div>
+              {/* Location and hours removed as requested */}
             </div>
             
             {/* Right: Phone */}
