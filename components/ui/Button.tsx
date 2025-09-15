@@ -6,6 +6,8 @@ import { clsx } from 'clsx'
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   as?: 'button' | 'a'
   href?: string
+  target?: string
+  rel?: string
   variant?: 'primary' | 'secondary' | 'ghost' | 'emergency'
   size?: 'sm' | 'md' | 'lg'
   fullWidth?: boolean
@@ -15,6 +17,8 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 export default function Button({
   as = 'button',
   href,
+  target,
+  rel,
   variant = 'primary',
   size = 'md',
   fullWidth = false,
@@ -47,7 +51,7 @@ export default function Button({
 
   if (as === 'a') {
     return (
-      <a href={href} className={classes}>
+      <a href={href} target={target} rel={rel} className={classes}>
         {children}
       </a>
     )
