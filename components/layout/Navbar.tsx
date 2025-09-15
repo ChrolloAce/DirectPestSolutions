@@ -25,7 +25,7 @@ export function Navbar() {
         { label: 'Air Duct Cleaning', href: '/duct-cleaning' }
       ]
     },
-    { label: 'Commercial', href: '/commercial' },
+    { label: 'Blog', href: '/blog' },
     { label: 'About', href: '/about' },
     { label: 'Locations', href: '/locations' },
     { label: 'Contact', href: '/contact' }

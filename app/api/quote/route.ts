@@ -2,14 +2,11 @@ import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
 // Initialize Resend with your API key
-const resend = new Resend(process.env.RESEND_API_KEY || 're_39Cpz1sS_NHVXe94bPyAU1AMBBJmG5Nsf')
+const resend = new Resend(process.env.RESEND_API_KEY || 're_QFX2anNF_Q4KwUyFJHg29ciQnt2do7hnV')
 
 // Email recipients
-// Note: Resend is in test mode and can only send to ernesto@maktubtechnologies.com
-// To send to other emails, you need to verify your domain at resend.com/domains
 const EMAIL_RECIPIENTS = [
-  'yosvanyleon658@gmail.com'  // Primary recipient
-  // 'ernesto@maktubtechnologies.com' // Backup recipient if needed
+  'info@cbeairservices.com'  // Primary recipient
 ]
 
 export async function POST(request: Request) {
@@ -48,7 +45,7 @@ export async function POST(request: Request) {
           <div class="container">
             <div class="header">
               <h1>New ${formType} Submission</h1>
-              <p>24/7 Plumber Solutions</p>
+              <p>CBE Air Services</p>
             </div>
             
             <div class="content">
@@ -97,7 +94,7 @@ export async function POST(request: Request) {
             </div>
             
             <div class="footer">
-              <p>This lead was submitted from the 24/7 Plumber Solutions website.</p>
+              <p>This lead was submitted from the CBE Air Services website.</p>
               <p>Please respond within 1 hour for best conversion.</p>
             </div>
           </div>
@@ -107,7 +104,7 @@ export async function POST(request: Request) {
 
     // Create plain text version
     const emailText = `
-New ${formType} Submission - 24/7 Plumber Solutions
+New ${formType} Submission - CBE Air Services
 
 Name: ${name || 'Not provided'}
 Email: ${email || 'Not provided'}
@@ -117,19 +114,19 @@ ${address ? `Address: ${address}` : ''}
 ${preferredTime ? `Preferred Time: ${preferredTime}` : ''}
 ${message ? `Message: ${message}` : ''}
 
-This lead was submitted from the 24/7 Plumber Solutions website.
+This lead was submitted from the CBE Air Services website.
 Please respond within 1 hour for best conversion.
     `.trim()
 
     // Send email to all recipients
     const emailPromises = EMAIL_RECIPIENTS.map(recipient => 
       resend.emails.send({
-        from: '24/7 Plumber <onboarding@resend.dev>',
+        from: 'CBE Air Services <onboarding@resend.dev>',
         to: recipient,
         subject: `New ${formType} Lead - ${name || 'Website Visitor'}`,
         html: emailHtml,
         text: emailText,
-        replyTo: email || 'yosvanyleon658@gmail.com'
+        replyTo: email || 'info@cbeairservices.com'
       })
     )
 
