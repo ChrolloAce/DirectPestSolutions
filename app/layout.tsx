@@ -6,28 +6,29 @@ import { Footer } from '@/components/layout/Footer'
 import { ProofToasts } from '@/components/ui/ProofToasts'
 import MobileAppBar from '@/components/layout/MobileAppBar'
 import LanguageToggle from '@/components/layout/LanguageToggle'
+import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-  title: 'CBE Air Services | Professional Air Conditioning & Heating Services Miami',
-  description: 'Professional air conditioning and heating services in Miami. Licensed HVAC technicians for AC repair, installation, maintenance, and heating systems. Call (305) 560-3087',
-  keywords: 'air conditioning, AC repair, HVAC, Miami, heating system, AC installation, AC maintenance, emergency AC repair, Florida',
+  title: '24/7 Plumber | Professional Emergency Plumbing Services Miami',
+  description: 'Professional 24/7 emergency plumbing services in Miami. Licensed master plumbers for repairs, installations, and maintenance. Call (786) 296-7304',
+  keywords: '24/7 plumber, emergency plumbing, Miami plumber, plumbing repair, leak detection, drain cleaning, water heater, sewer line, Florida',
   icons: {
     icon: '/favicon.png',
     shortcut: '/favicon.png',
     apple: '/favicon.png',
   },
   openGraph: {
-    title: 'CBE Air Services | Miami',
-    description: 'Professional air conditioning and heating services in Miami. Licensed HVAC technicians ready to help!',
+    title: '24/7 Plumber | Miami',
+    description: 'Professional 24/7 emergency plumbing services in Miami. Licensed master plumbers ready to help!',
     type: 'website',
     locale: 'en_US',
-    url: 'https://cbeairservices.com',
-    siteName: 'CBE Air Services',
+    url: 'https://24-7-plomero.vercel.app',
+    siteName: '24/7 Plumber',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CBE Air Services | Miami',
-    description: 'Professional air conditioning and heating services in Miami. Licensed HVAC technicians ready to help!',
+    title: '24/7 Plumber | Miami',
+    description: 'Professional 24/7 emergency plumbing services in Miami. Licensed master plumbers ready to help!',
   },
   robots: {
     index: true,
@@ -50,15 +51,17 @@ export default function RootLayout({
   return (
     <html lang="en" className="overflow-x-hidden">
       <body className="overflow-x-hidden">
-        <TopBar />
-        <Navbar />
-        <main className="min-h-screen pt-16 md:pt-[7.5rem] pb-16 md:pb-0">
-          {children}
-        </main>
-        <Footer />
-        <MobileAppBar />
-        <LanguageToggle />
-        <ProofToasts />
+        <LanguageProvider>
+          <TopBar />
+          <Navbar />
+          <main className="min-h-screen pt-16 md:pt-[7.5rem] pb-16 md:pb-0">
+            {children}
+          </main>
+          <Footer />
+          <MobileAppBar />
+          <LanguageToggle />
+          <ProofToasts />
+        </LanguageProvider>
         
         {/* Schema.org LocalBusiness markup */}
         <script
@@ -66,9 +69,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'HVACBusiness',
-              name: 'CBE Air Services',
-              description: 'Professional air conditioning and heating services in Miami and surrounding areas',
+              '@type': 'Plumber',
+              name: '24/7 Plumber',
+              description: 'Professional 24/7 emergency plumbing services in Miami and surrounding areas',
               telephone: '786-296-7304',
               address: {
                 '@type': 'PostalAddress',
@@ -88,7 +91,7 @@ export default function RootLayout({
               ],
               priceRange: '$$',
               image: '/images/logo-247.png',
-              url: 'https://cbeairservices.com'
+              url: 'https://24-7-plomero.vercel.app'
             })
           }}
         />

@@ -48,7 +48,7 @@ export async function POST(request: Request) {
           <div class="container">
             <div class="header">
               <h1>New ${formType} Submission</h1>
-              <p>All In Plumbing Solutions</p>
+              <p>24/7 Plumber Solutions</p>
             </div>
             
             <div class="content">
@@ -97,7 +97,7 @@ export async function POST(request: Request) {
             </div>
             
             <div class="footer">
-              <p>This lead was submitted from the All In Plumbing Solutions website.</p>
+              <p>This lead was submitted from the 24/7 Plumber Solutions website.</p>
               <p>Please respond within 1 hour for best conversion.</p>
             </div>
           </div>
@@ -107,7 +107,7 @@ export async function POST(request: Request) {
 
     // Create plain text version
     const emailText = `
-New ${formType} Submission - All In Plumbing Solutions
+New ${formType} Submission - 24/7 Plumber Solutions
 
 Name: ${name || 'Not provided'}
 Email: ${email || 'Not provided'}
@@ -117,14 +117,14 @@ ${address ? `Address: ${address}` : ''}
 ${preferredTime ? `Preferred Time: ${preferredTime}` : ''}
 ${message ? `Message: ${message}` : ''}
 
-This lead was submitted from the All In Plumbing Solutions website.
+This lead was submitted from the 24/7 Plumber Solutions website.
 Please respond within 1 hour for best conversion.
     `.trim()
 
     // Send email to all recipients
     const emailPromises = EMAIL_RECIPIENTS.map(recipient => 
       resend.emails.send({
-        from: 'All In Plumbing <onboarding@resend.dev>',
+        from: '24/7 Plumber <onboarding@resend.dev>',
         to: recipient,
         subject: `New ${formType} Lead - ${name || 'Website Visitor'}`,
         html: emailHtml,

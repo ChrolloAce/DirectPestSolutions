@@ -114,7 +114,7 @@ export class Footer extends React.Component {
           <div className="mt-12 pt-8 border-t border-white/20">
             <div className="flex items-center justify-between">
               <p className="text-white/50 text-sm">
-                © 2024 All In Plumbing Solutions. All rights reserved.
+                © 2024 24/7 Plumber. All rights reserved.
               </p>
               <div className="flex gap-4">
                 <a href="#" className="text-white/50 hover:text-brand-blue transition">

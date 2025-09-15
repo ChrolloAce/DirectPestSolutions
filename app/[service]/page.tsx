@@ -25,16 +25,16 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   
   if (!service) {
     return {
-      title: 'Service Not Found | All In Plumbing Solutions',
+      title: 'Service Not Found | 24/7 Plumber Solutions',
     }
   }
   
   return {
-    title: `${service.name} Services in Miami | Professional ${service.name} | All In Plumbing`,
+    title: `${service.name} Services in Miami | Professional ${service.name} | 24/7 Plumber`,
     description: `Expert ${service.name.toLowerCase()} services in Miami. ${service.summary} Call (786) 296-7304 for free estimate.`,
     keywords: `${service.name.toLowerCase()}, ${service.name.toLowerCase()} Miami, ${service.name.toLowerCase()} services, plumbing Miami, ${service.name.toLowerCase()} near me`,
     openGraph: {
-      title: `${service.name} | All In Plumbing Solutions`,
+      title: `${service.name} | 24/7 Plumber Solutions`,
       description: service.summary,
       type: 'website',
       images: [service.heroImage],
@@ -237,7 +237,7 @@ export default function ServicePage({ params }: ServicePageProps) {
                 ))}
               </div>
               <p className="text-lg italic mb-4">
-                "All In Plumbing provided excellent {service.name.toLowerCase()} service. 
+                "24/7 Plumber provided excellent {service.name.toLowerCase()} service. 
                 Professional, on-time, and the results exceeded our expectations. 
                 Highly recommend for anyone in Miami!"
               </p>
@@ -311,7 +311,7 @@ export default function ServicePage({ params }: ServicePageProps) {
             description: service.summary,
             provider: {
               '@type': 'Plumber',
-              name: 'All In Plumbing Solutions',
+              name: '24/7 Plumber Solutions',
               telephone: '786-296-7304',
               address: {
                 '@type': 'PostalAddress',

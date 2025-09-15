@@ -63,7 +63,7 @@ export default function Hero() {
           {/* Left: Copy / CTAs */}
           <div className="text-white">
             <h1 className="font-heading uppercase leading-[0.95] tracking-tight text-5xl sm:text-6xl">
-              All In <span className="underline decoration-brand-gold decoration-4 underline-offset-4">Plumbing</span> Solutions
+              <span className="underline decoration-brand-gold decoration-4 underline-offset-4">24/7 Plumber</span>
               <br /> <span className="text-brand-blue">Miami&apos;s</span> Trusted Experts
             </h1>
 
