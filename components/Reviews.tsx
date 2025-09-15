@@ -149,9 +149,9 @@ export default function Reviews() {
           </div>
 
           {/* Controls */}
-          <div className="mt-8 flex items-center justify-between">
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4">
             {/* Arrow buttons */}
-            <div className="flex gap-2">
+            <div className="flex gap-2 order-2 sm:order-1">
               <button
                 aria-label="Previous review"
                 onClick={prev}
@@ -171,7 +171,7 @@ export default function Reviews() {
             </div>
 
             {/* Dots */}
-            <div className="flex gap-2">
+            <div className="flex gap-2 order-1 sm:order-2">
               {Array.from({ length: maxIndex + 1 }).map((_, i) => (
                 <button
                   key={i}

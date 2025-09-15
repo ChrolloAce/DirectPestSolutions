@@ -80,7 +80,7 @@ export function ProofToasts() {
   }
 
   return (
-    <div className="fixed left-4 bottom-4 z-[60] space-y-3">
+    <div className="fixed left-4 bottom-4 md:bottom-4 bottom-20 z-[60] space-y-3">
       {toasts.map((t) => {
         const elapsed = Date.now() - t.startedAt
         const pct = Math.min(100, (elapsed / t.duration) * 100)
