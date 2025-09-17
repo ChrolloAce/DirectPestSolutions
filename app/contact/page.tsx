@@ -80,8 +80,8 @@ export default function ContactPage() {
                 <Mail className="text-brand-black" size={28} />
               </div>
               <h3 className="font-bold text-lg mb-2">Email Us</h3>
-              <a href="mailto:info@cbeairservices.com" className="text-brand-blue hover:text-brand-red">
-                info@cbeairservices.com
+              <a href="mailto:cbeairservices@gmail.com" className="text-brand-blue hover:text-brand-red">
+                cbeairservices@gmail.com
               </a>
               <p className="text-sm text-brand-black/60 mt-2">Quick Response</p>
             </div>

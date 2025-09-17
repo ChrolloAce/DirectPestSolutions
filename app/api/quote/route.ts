@@ -6,7 +6,7 @@ const resend = new Resend(process.env.RESEND_API_KEY || 're_QFX2anNF_Q4KwUyFJHg2
 
 // Email recipients
 const EMAIL_RECIPIENTS = [
-  'info@cbeairservices.com'  // Primary recipient
+  'cbeairservices@gmail.com'  // Primary recipient
 ]
 
 export async function POST(request: Request) {
@@ -126,7 +126,7 @@ Please respond within 1 hour for best conversion.
         subject: `New ${formType} Lead - ${name || 'Website Visitor'}`,
         html: emailHtml,
         text: emailText,
-        replyTo: email || 'info@cbeairservices.com'
+        replyTo: email || 'cbeairservices@gmail.com'
       })
     )
 
