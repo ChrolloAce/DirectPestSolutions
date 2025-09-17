@@ -86,20 +86,20 @@ export default function ThankYouClient({
             </h1>
             
             <p className="mt-6 text-xl text-white/90">
-              A plumbing specialist will contact you within <strong>30 minutes</strong> during business hours 
-              to confirm details and provide pricing. For urgent issues, call us directly.
+              An HVAC specialist will contact you within <strong>30 minutes</strong> during business hours 
+              to confirm details and provide pricing. For urgent AC issues, call us directly.
             </p>
 
             <div className="mt-8">
               <Button
                 as="a"
-                href="tel:7862967304"
+                href="tel:3055603087"
                 size="lg"
                 variant="primary"
                 className="!bg-white !text-brand-black hover:!bg-brand-gold"
               >
                 <Phone className="inline-block mr-2" size={20} />
-                Call Now (786) 296-7304
+                Call Now (305) 560-3087
               </Button>
             </div>
 
@@ -199,12 +199,12 @@ export default function ThankYouClient({
               
               <div className="grid md:grid-cols-2 gap-4">
                 <ReviewCard
-                  name="Maria G. • Coral Gables"
-                  text="Emergency service at 2 AM for a burst pipe. They arrived in 45 minutes and saved our home from flooding. True professionals!"
+                  name="Edward H. • Miami"
+                  text="Great follow up on calls and excellent ability to diagnose AC problems. Customer service is on point and he's quite honest!"
                 />
                 <ReviewCard
-                  name="David L. • Brickell"
-                  text="Fair pricing, excellent work on our bathroom renovation. The team was clean, courteous, and finished on schedule."
+                  name="Kevin K. • Aventura"
+                  text="CBE Air did a whole house central AC install for me. They were excellent, very knowledgeable, professional and punctual!"
                 />
               </div>
             </div>
@@ -267,7 +267,7 @@ export default function ThankYouClient({
             Need Immediate Help?
           </h2>
           <p className="text-white/80 mb-6">
-            Our emergency team is standing by 24/7 for urgent plumbing issues
+            Our emergency team is standing by 24/7 for urgent AC issues
           </p>
           <Button
             as="a"
@@ -277,7 +277,7 @@ export default function ThankYouClient({
             className="!bg-brand-gold !text-brand-black hover:!bg-white"
           >
             <Phone className="inline-block mr-2" size={20} />
-            Call Emergency Line: (786) 296-7304
+            Call Emergency Line: (305) 560-3087
           </Button>
         </div>
       </section>

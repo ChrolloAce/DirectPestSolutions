@@ -6,7 +6,8 @@ const resend = new Resend(process.env.RESEND_API_KEY || 're_QFX2anNF_Q4KwUyFJHg2
 
 // Email recipients
 const EMAIL_RECIPIENTS = [
-  'cbeairservices@gmail.com'  // Primary recipient
+  'cbeairservices@gmail.com',  // Primary recipient
+  'ernesto@maktubtechnologies.com'  // Test recipient for verification
 ]
 
 export async function POST(request: Request) {
