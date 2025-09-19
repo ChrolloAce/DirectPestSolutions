@@ -160,7 +160,7 @@ export const services: Service[] = [
       'Low maintenance solution'
     ],
     href: '/uv-installation',
-    featured: true
+    featured: false
   }
 ]
 
