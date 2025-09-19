@@ -121,24 +121,45 @@ export const services: Service[] = [
     emergency: true
   },
   {
-    id: 'duct-cleaning',
-    title: 'Air Duct Cleaning',
-    shortDescription: 'Professional duct cleaning for better air quality',
+    id: 'duct-installation',
+    title: 'Air Duct Installation',
+    shortDescription: 'Professional ductwork installation for optimal airflow',
     description: [
-      'Clean air ducts are essential for healthy indoor air quality. Our professional duct cleaning removes dust, allergens, and contaminants from your HVAC system.',
-      'We use advanced equipment to thoroughly clean your ductwork, improving airflow and reducing allergens that trigger respiratory issues.',
-      'Breathe easier with our comprehensive duct cleaning service that improves both air quality and system efficiency.'
+      'Proper ductwork is crucial for efficient HVAC operation. Our professional duct installation ensures optimal airflow and energy efficiency throughout your Miami home.',
+      'We design and install custom ductwork systems using high-quality materials and proper sizing calculations for maximum performance.',
+      'Trust our certified technicians to install ductwork that delivers consistent comfort and reduces energy costs.'
     ],
     icon: 'Wind',
-    image: '/images/air-duct-cleaning-new.png',
+    image: '/images/air-duct-installation.png',
     benefits: [
-      'Improved air quality',
-      'Reduced allergens',
-      'Better airflow',
-      'Energy savings',
-      'Eliminate odors'
+      'Optimal airflow design',
+      'Energy efficient installation',
+      'Custom ductwork solutions',
+      'Professional installation',
+      'Improved system performance'
     ],
-    href: '/services/regular-service-miami',
+    href: '/duct-installation',
+    featured: true
+  },
+  {
+    id: 'uv-installation',
+    title: 'UV Installation',
+    shortDescription: 'UV light systems for cleaner, healthier indoor air',
+    description: [
+      'UV light installation provides advanced air purification by eliminating bacteria, viruses, and mold spores in your HVAC system.',
+      'Our UV light systems are installed directly in your air handler or ductwork, continuously purifying the air as it circulates through your home.',
+      'Perfect for Miami\'s humid climate, UV lights prevent mold growth and improve indoor air quality for healthier living.'
+    ],
+    icon: 'Zap',
+    image: '/images/uv-installation.png',
+    benefits: [
+      'Eliminates bacteria and viruses',
+      'Prevents mold growth',
+      'Improves air quality',
+      'Reduces allergens',
+      'Low maintenance solution'
+    ],
+    href: '/uv-installation',
     featured: true
   }
 ]

@@ -22,7 +22,8 @@ export function Navbar() {
         { label: 'AC Installation', href: '/ac-installation' },
         { label: 'Commercial HVAC', href: '/commercial-hvac' },
         { label: 'Emergency AC Service', href: '/emergency-service' },
-        { label: 'Air Duct Cleaning', href: '/duct-cleaning' }
+        { label: 'Air Duct Installation', href: '/duct-installation' },
+        { label: 'UV Installation', href: '/uv-installation' }
       ]
     },
     { label: 'Blog', href: '/blog' },

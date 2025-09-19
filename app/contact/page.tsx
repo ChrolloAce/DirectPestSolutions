@@ -188,7 +188,8 @@ export default function ContactPage() {
                       <option>AC Installation</option>
                       <option>Commercial HVAC</option>
                       <option>Emergency Service</option>
-                      <option>Air Duct Cleaning</option>
+                      <option>Air Duct Installation</option>
+                      <option>UV Installation</option>
                       <option>Other</option>
                     </select>
                   </div>

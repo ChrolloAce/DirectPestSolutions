@@ -164,11 +164,10 @@ export default function Hero() {
                     <option>AC Repair</option>
                     <option>AC Maintenance</option>
                     <option>AC Installation</option>
-                    <option>Heating System</option>
-                    <option>Coil Cleaning</option>
-                    <option>Thermostat Issues</option>
                     <option>Commercial HVAC</option>
                     <option>Emergency Service</option>
+                    <option>Air Duct Installation</option>
+                    <option>UV Installation</option>
                     <option>Other</option>
                   </select>
                 </label>
