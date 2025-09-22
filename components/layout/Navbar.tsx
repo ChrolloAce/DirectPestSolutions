@@ -21,6 +21,7 @@ export function Navbar() {
         { label: 'AC Maintenance', href: '/ac-maintenance' },
         { label: 'AC Installation', href: '/ac-installation' },
         { label: 'Commercial HVAC', href: '/commercial-hvac' },
+        { label: 'RTU Package Units', href: '/rtu-package-units' },
         { label: 'Emergency AC Service', href: '/emergency-service' },
         { label: 'Air Duct Installation', href: '/duct-installation' },
         { label: 'UV Installation', href: '/uv-installation' }

@@ -99,6 +99,27 @@ export const services: Service[] = [
     featured: true
   },
   {
+    id: 'rtu-package-units',
+    title: 'RTU Package Units',
+    shortDescription: 'Commercial rooftop package units up to 30 ton - sales, maintenance and service',
+    description: [
+      'Specializing in commercial rooftop package units (RTU) up to 30 tons for Miami businesses. We provide complete sales, installation, maintenance, and repair services.',
+      'Our certified technicians have extensive experience with all major RTU brands and models, ensuring your commercial HVAC system operates at peak efficiency.',
+      'From small office buildings to large commercial facilities, we deliver reliable RTU solutions that keep your business comfortable and operational.'
+    ],
+    icon: 'Building',
+    image: '/images/commercial-hvac-tech.png',
+    benefits: [
+      'Up to 30 ton capacity',
+      'Sales and installation',
+      'Preventive maintenance',
+      'Emergency repair service',
+      'All major brands'
+    ],
+    href: '/rtu-package-units',
+    featured: false
+  },
+  {
     id: 'emergency-service',
     title: 'Emergency AC Service',
     shortDescription: '24/7 emergency AC repair when you need it most',

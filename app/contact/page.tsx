@@ -187,6 +187,7 @@ export default function ContactPage() {
                       <option>AC Maintenance</option>
                       <option>AC Installation</option>
                       <option>Commercial HVAC</option>
+                      <option>RTU Package Units</option>
                       <option>Emergency Service</option>
                       <option>Air Duct Installation</option>
                       <option>UV Installation</option>
