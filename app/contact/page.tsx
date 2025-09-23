@@ -51,7 +51,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="heading-xl uppercase mb-6">
-              Contact CBE Air Services
+              Contact GreenScape Miami
             </h1>
             <p className="text-xl text-white/90">
               24/7 Emergency Service • Same-Day Repairs • Free Estimates
@@ -183,14 +183,14 @@ export default function ContactPage() {
                       className="w-full px-4 py-3 border-2 border-brand-black/20 focus:border-brand-blue outline-none transition-colors"
                     >
                       <option value="">Select a Service</option>
-                      <option>AC Repair</option>
-                      <option>AC Maintenance</option>
-                      <option>AC Installation</option>
-                      <option>Commercial HVAC</option>
-                      <option>RTU Package Units</option>
-                      <option>Emergency Service</option>
-                      <option>Air Duct Installation</option>
-                      <option>UV Installation</option>
+                      <option>Landscape Design</option>
+                      <option>Lawn Maintenance</option>
+                      <option>Irrigation Systems</option>
+                      <option>Commercial Landscaping</option>
+                      <option>Tree & Shrub Care</option>
+                      <option>Emergency Cleanup</option>
+                      <option>Hardscaping</option>
+                      <option>Sod Installation</option>
                       <option>Other</option>
                     </select>
                   </div>
@@ -238,7 +238,7 @@ export default function ContactPage() {
                   </Button>
 
                   <p className="text-sm text-brand-black/60 text-center">
-                    By submitting, you agree to receive communications from CBE Air Services
+                    By submitting, you agree to receive communications from GreenScape Miami
                   </p>
                 </form>
               )}

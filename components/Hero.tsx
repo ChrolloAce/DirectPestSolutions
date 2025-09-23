@@ -48,7 +48,7 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10">
         <Image
           src="/images/hero-banner-logo.png"
-          alt="CBE Air Services - Professional HVAC Services Miami"
+          alt="GreenScape Miami - Professional Landscaping Services Miami"
           fill
           priority
           className="object-cover object-center"
@@ -63,23 +63,23 @@ export default function Hero() {
           {/* Left: Copy / CTAs */}
           <div className="text-white">
             <h1 className="font-heading uppercase leading-[0.95] tracking-tight text-5xl sm:text-6xl">
-              <span className="underline decoration-brand-red decoration-4 underline-offset-4">AC Repair</span>
-              <br /> <span className="text-brand-blue">Miami&apos;s</span> HVAC Experts
+              <span className="underline decoration-brand-green decoration-4 underline-offset-4">Landscaping</span>
+              <br /> <span className="text-brand-darkgreen">Miami&apos;s</span> Garden Experts
             </h1>
 
             <p className="mt-5 max-w-xl text-lg text-white/90">
-              Licensed • Insured • Same-Day Service. Professional AC repair, installation & maintenance for Miami homes and businesses.
+              Licensed • Insured • Same-Day Service. Professional landscaping design, installation & maintenance for Miami homes and businesses.
             </p>
 
             {/* Trust row */}
             <div className="mt-6 flex flex-wrap items-center gap-4 text-sm">
               <div className="inline-flex items-center gap-2 rounded-none bg-white/10 px-3 py-2 ring-1 ring-white/20">
-                <span className="text-brand-red">★★★★★</span>
+                <span className="text-brand-green">★★★★★</span>
                 <span className="text-white/80">5.0 from 300+ customers</span>
               </div>
               <div className="inline-flex items-center gap-2 rounded-none bg-white/10 px-3 py-2 ring-1 ring-white/20">
-                <span className="text-brand-blue">Licensed & Insured</span>
-                <span className="text-white/80">HVAC Certified</span>
+                <span className="text-brand-darkgreen">Licensed & Insured</span>
+                <span className="text-white/80">Landscaping Certified</span>
               </div>
             </div>
 
@@ -98,13 +98,13 @@ export default function Hero() {
                 href="#quote" 
                 variant="primary"
               >
-                Get Free Estimate
+                Get Free Landscape Quote
               </Button>
             </div>
 
             {/* Small proof strip */}
             <p className="mt-5 text-sm text-white/75">
-              Miami's Trusted HVAC Company • Same-day service • Free estimates • Licensed & Insured in Florida
+              Miami's Trusted Landscaping Company • Same-day service • Free estimates • Licensed & Insured in Florida
             </p>
           </div>
 
@@ -114,9 +114,9 @@ export default function Hero() {
               onSubmit={onSubmit}
               className="rounded-none bg-white/95 backdrop-blur px-5 sm:px-6 py-6 shadow-card ring-1 ring-brand-black/10 max-w-md ml-auto"
             >
-              <div className="pb-4 border-b border-brand-red/30 mb-4">
+              <div className="pb-4 border-b border-brand-green/30 mb-4">
                 <h3 className="font-heading uppercase text-2xl text-brand-black">
-                  Get Your Free AC Quote
+                  Get Your Free Landscape Quote
                 </h3>
                 <p className="text-sm text-brand-black/70">
                   Fast response • Same-day service available
@@ -129,7 +129,7 @@ export default function Hero() {
                   <input 
                     name="name" 
                     required 
-                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue" 
+                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-green" 
                   />
                 </label>
 
@@ -140,7 +140,7 @@ export default function Hero() {
                       name="phone" 
                       required 
                       inputMode="tel" 
-                      className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue" 
+                      className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-green" 
                     />
                   </label>
                   <label className="block">
@@ -149,7 +149,7 @@ export default function Hero() {
                       name="email" 
                       type="email"
                       required 
-                      className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue" 
+                      className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-green" 
                     />
                   </label>
                 </div>
@@ -158,17 +158,17 @@ export default function Hero() {
                   <span className="text-sm font-medium text-brand-black">Service Needed</span>
                   <select 
                     name="service" 
-                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue"
+                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-green"
                   >
-                    <option>AC Not Cooling</option>
-                    <option>AC Repair</option>
-                    <option>AC Maintenance</option>
-                    <option>AC Installation</option>
-                    <option>Commercial HVAC</option>
-                    <option>RTU Package Units</option>
-                    <option>Emergency Service</option>
-                    <option>Air Duct Installation</option>
-                    <option>UV Installation</option>
+                    <option>Lawn Care</option>
+                    <option>Landscape Design</option>
+                    <option>Lawn Maintenance</option>
+                    <option>Tree & Shrub Care</option>
+                    <option>Irrigation Systems</option>
+                    <option>Hardscaping</option>
+                    <option>Emergency Cleanup</option>
+                    <option>Sod Installation</option>
+                    <option>Mulching & Fertilization</option>
                     <option>Other</option>
                   </select>
                 </label>
@@ -177,7 +177,7 @@ export default function Hero() {
                   <span className="text-sm font-medium text-brand-black">Address (City/ZIP)</span>
                   <input 
                     name="address" 
-                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue" 
+                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-green" 
                   />
                 </label>
 
@@ -186,7 +186,7 @@ export default function Hero() {
                   <textarea 
                     name="notes" 
                     rows={3} 
-                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-blue" 
+                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-green" 
                   />
                 </label>
 
@@ -208,7 +208,7 @@ export default function Hero() {
               </div>
 
               {/* red accent frame */}
-              <div className="pointer-events-none absolute inset-0 rounded-none ring-1 ring-brand-red/60"></div>
+              <div className="pointer-events-none absolute inset-0 rounded-none ring-1 ring-brand-green/60"></div>
             </form>
           </div>
         </div>

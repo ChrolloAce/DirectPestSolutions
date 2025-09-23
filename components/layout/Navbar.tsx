@@ -17,14 +17,14 @@ export function Navbar() {
       label: 'Services', 
       href: '/services',
       dropdown: [
-        { label: 'AC Repair', href: '/ac-repair' },
-        { label: 'AC Maintenance', href: '/ac-maintenance' },
-        { label: 'AC Installation', href: '/ac-installation' },
-        { label: 'Commercial HVAC', href: '/commercial-hvac' },
-        { label: 'RTU Package Units', href: '/rtu-package-units' },
-        { label: 'Emergency AC Service', href: '/emergency-service' },
-        { label: 'Air Duct Installation', href: '/duct-installation' },
-        { label: 'UV Installation', href: '/uv-installation' }
+        { label: 'Landscape Design', href: '/landscape-design' },
+        { label: 'Lawn Maintenance', href: '/lawn-maintenance' },
+        { label: 'Irrigation Systems', href: '/irrigation-systems' },
+        { label: 'Commercial Landscaping', href: '/commercial-landscaping' },
+        { label: 'Tree & Shrub Care', href: '/tree-shrub-care' },
+        { label: 'Emergency Cleanup', href: '/emergency-cleanup' },
+        { label: 'Hardscaping', href: '/hardscaping' },
+        { label: 'Sod Installation', href: '/sod-installation' }
       ]
     },
     { label: 'Blog', href: '/blog' },
@@ -142,7 +142,7 @@ export function Navbar() {
             {/* Mobile Logo and Hamburger */}
             <div className="md:hidden flex items-center justify-between w-full">
               <Link href="/" className="flex items-center gap-2">
-                <img src="/images/ACLOGO.png" alt="CBE Air Services" className="h-12 w-auto" />
+                <img src="/images/GreenScapeLogo.png" alt="GreenScape Miami" className="h-12 w-auto" />
               </Link>
               
               <button

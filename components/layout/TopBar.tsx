@@ -13,8 +13,8 @@ export class TopBar extends React.Component {
             {/* Left: Logo */}
             <div className="flex items-center">
               <a href="/" className="flex items-center gap-2">
-                <img src="/images/ACLOGO.png" alt="CBE Air Services" className="h-10 w-auto" />
-                <span className="font-bold text-lg">CBE Air Services</span>
+                <img src="/images/GreenScapeLogo.png" alt="GreenScape Miami" className="h-10 w-auto" />
+                <span className="font-bold text-lg">GreenScape Miami</span>
               </a>
             </div>
             

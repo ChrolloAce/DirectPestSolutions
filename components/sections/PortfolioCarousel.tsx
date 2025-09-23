@@ -5,19 +5,19 @@ import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const portfolioImages = [
-  { src: '/images/portfolio/IMG_3592.webp', alt: 'HVAC Installation Project 1' },
-  { src: '/images/portfolio/2024-05-03.webp', alt: 'AC Repair Service' },
-  { src: '/images/portfolio/Resized_20230516_171935.webp', alt: 'Commercial HVAC Work' },
-  { src: '/images/portfolio/IMG_4144.webp', alt: 'Residential AC Installation' },
-  { src: '/images/portfolio/Resized_20230516_171828.webp', alt: 'AC Maintenance Service' },
-  { src: '/images/portfolio/IMG_4077.webp', alt: 'HVAC System Upgrade' },
-  { src: '/images/portfolio/IMG_4108.webp', alt: 'Emergency AC Repair' },
-  { src: '/images/portfolio/IMG_4076.webp', alt: 'Duct Cleaning Service' },
-  { src: '/images/portfolio/IMG_3734.webp', alt: 'AC Unit Installation' },
-  { src: '/images/portfolio/Resized_20230715_094803.webp', alt: 'Commercial HVAC Maintenance' },
-  { src: '/images/portfolio/Resized_20230516_171951.webp', alt: 'Residential HVAC Service' },
-  { src: '/images/portfolio/2024-05-03 (1).webp', alt: 'AC System Repair' },
-  { src: '/images/portfolio/2024-01-24.webp', alt: 'HVAC Installation Complete' },
+  { src: '/images/portfolio/IMG_3592.webp', alt: 'Landscape Design Project 1' },
+  { src: '/images/portfolio/2024-05-03.webp', alt: 'Garden Maintenance Service' },
+  { src: '/images/portfolio/Resized_20230516_171935.webp', alt: 'Commercial Landscaping Work' },
+  { src: '/images/portfolio/IMG_4144.webp', alt: 'Residential Landscape Installation' },
+  { src: '/images/portfolio/Resized_20230516_171828.webp', alt: 'Lawn Care Service' },
+  { src: '/images/portfolio/IMG_4077.webp', alt: 'Irrigation System Upgrade' },
+  { src: '/images/portfolio/IMG_4108.webp', alt: 'Emergency Landscape Cleanup' },
+  { src: '/images/portfolio/IMG_4076.webp', alt: 'Tree Care Service' },
+  { src: '/images/portfolio/IMG_3734.webp', alt: 'Hardscaping Installation' },
+  { src: '/images/portfolio/Resized_20230715_094803.webp', alt: 'Commercial Landscape Maintenance' },
+  { src: '/images/portfolio/Resized_20230516_171951.webp', alt: 'Residential Garden Service' },
+  { src: '/images/portfolio/2024-05-03 (1).webp', alt: 'Irrigation System Repair' },
+  { src: '/images/portfolio/2024-01-24.webp', alt: 'Landscape Installation Complete' },
 ]
 
 export function PortfolioCarousel() {
@@ -70,7 +70,7 @@ export function PortfolioCarousel() {
             Our Work Portfolio
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Browse through our recent HVAC installations, repairs, and maintenance projects. 
+            Browse through our recent landscaping installations, designs, and maintenance projects. 
             Quality workmanship and customer satisfaction in every job.
           </p>
         </div>

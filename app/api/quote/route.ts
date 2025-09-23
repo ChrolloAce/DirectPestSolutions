@@ -46,7 +46,7 @@ export async function POST(request: Request) {
           <div class="container">
             <div class="header">
               <h1>New ${formType} Submission</h1>
-              <p>CBE Air Services</p>
+              <p>GreenScape Miami</p>
             </div>
             
             <div class="content">
@@ -95,7 +95,7 @@ export async function POST(request: Request) {
             </div>
             
             <div class="footer">
-              <p>This lead was submitted from the CBE Air Services website.</p>
+              <p>This lead was submitted from the GreenScape Miami website.</p>
               <p>Please respond within 1 hour for best conversion.</p>
             </div>
           </div>
@@ -105,7 +105,7 @@ export async function POST(request: Request) {
 
     // Create plain text version
     const emailText = `
-New ${formType} Submission - CBE Air Services
+New ${formType} Submission - GreenScape Miami
 
 Name: ${name || 'Not provided'}
 Email: ${email || 'Not provided'}

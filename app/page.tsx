@@ -19,29 +19,29 @@ export default function HomePage() {
       
       {/* Service Teasers */}
       <ServiceTeaser
-        title="Professional AC Repair Miami"
+        title="Professional Landscape Design Miami"
         description={[
-          'When your AC stops working in Miami\'s heat and humidity, you need fast, reliable service. Our certified technicians diagnose and repair all AC makes and models with same-day service available.',
-          'We use advanced diagnostic tools to quickly identify issues, from refrigerant leaks to compressor problems. Our repair trucks are fully stocked with common parts, ensuring most repairs are completed in a single visit.',
-          'With transparent pricing and a satisfaction guarantee, you can trust CBE Air Services to get your AC running efficiently again, keeping your home cool and comfortable year-round.'
+          'When your outdoor space needs transformation in Miami\'s tropical climate, you need expert design and reliable service. Our certified landscape architects create beautiful, sustainable designs with same-day consultations available.',
+          'We use advanced design tools and local plant knowledge to create stunning landscapes, from native plant selections to irrigation planning. Our design process ensures your landscape thrives in South Florida\'s climate.',
+          'With transparent pricing and a satisfaction guarantee, you can trust our landscape experts to bring your outdoor vision to life, creating beautiful spaces that enhance your property value year-round.'
         ]}
-        images={['/images/ac-repair-teaser.png', '/images/leak-detection.png']}
+        images={['/images/landscape-design-teaser.png', '/images/garden-planning.png']}
         direction="left"
-        ctaText="Schedule AC Repair"
-        ctaHref="/services/ac-repair-miami"
+        ctaText="Schedule Design Consultation"
+        ctaHref="/services/landscape-design-miami"
       />
       
       <ServiceTeaser
-        title="AC Installation & Replacement"
+        title="Irrigation Systems & Installation"
         description={[
-          'Upgrade to a new, energy-efficient AC system and save up to 40% on your cooling costs. Our HVAC experts help you choose the perfect system for your Miami home and budget.',
-          'We install all major brands including Carrier, Trane, Lennox, and Rheem. Our certified installers ensure proper sizing, ductwork optimization, and code compliance for maximum efficiency and longevity.',
-          'Take advantage of available rebates and our flexible financing options. With professional installation and comprehensive warranties, your new AC system will provide reliable comfort for years to come.'
+          'Upgrade to a new, water-efficient irrigation system and save up to 40% on your water costs. Our irrigation experts help you choose the perfect system for your Miami landscape and budget.',
+          'We install all major brands including Rain Bird, Hunter, Toro, and Raindrip. Our certified installers ensure proper coverage, pressure optimization, and code compliance for maximum efficiency and plant health.',
+          'Take advantage of available water rebates and our flexible financing options. With professional installation and comprehensive warranties, your new irrigation system will provide reliable plant care for years to come.'
         ]}
-        images={['/images/ac-installation-final.png', '/images/bathroom.png']}
+        images={['/images/irrigation-installation-final.png', '/images/sprinkler-system.png']}
         direction="right"
-        ctaText="Get Free Installation Quote"
-        ctaHref="/services/ac-installation-miami"
+        ctaText="Get Free Irrigation Quote"
+        ctaHref="/services/irrigation-systems-miami"
       />
       
       {/* Why Choose Us */}

@@ -12,13 +12,13 @@ export const translations = {
     emergencyButton: '24/7 Emergency',
     
     // Hero Section
-    heroTitle1: '24/7 Plumber',
+    heroTitle1: '24/7 Landscaping',
     heroTitle2: "Miami's",
-    heroTitle3: 'Trusted Experts',
-    heroDescription: 'Licensed • Insured • 24/7 Emergency Service. From leaks to installations, we handle all your plumbing needs with expertise and care.',
+    heroTitle3: 'Garden Experts',
+    heroDescription: 'Licensed • Insured • 24/7 Emergency Service. From design to maintenance, we handle all your landscaping needs with expertise and care.',
     heroTrust1: '5.0 from 500+ customers',
     heroTrust2: 'Licensed & Insured',
-    heroTrust3: 'Master Plumbers',
+    heroTrust3: 'Certified Landscapers',
     callButton: 'Call',
     getQuoteButton: 'Get Instant Quote',
     
@@ -37,27 +37,27 @@ export const translations = {
     
     // Services
     ourServices: 'Our Services',
-    servicesSubtitle: 'Professional plumbing solutions for every need',
+    servicesSubtitle: 'Professional landscaping solutions for every need',
     viewAllServices: 'View All Services',
     scheduleService: 'Schedule Service',
     
     // Service Names
-    emergencyService: '24/7 Emergency Service',
-    drainCleaning: 'Drain Cleaning',
-    leakDetection: 'Leak Detection & Repair',
-    waterHeater: 'Water Heater Services',
-    toiletRepair: 'Toilet Repair & Installation',
-    pipeRepair: 'Pipe Repair & Replacement',
-    sewerLine: 'Sewer Line Services',
-    fixtureInstallation: 'Fixture Installation',
-    commercialPlumbing: 'Commercial Plumbing',
+    emergencyService: '24/7 Emergency Cleanup',
+    landscapeDesign: 'Landscape Design',
+    lawnMaintenance: 'Lawn Maintenance',
+    irrigationSystems: 'Irrigation Systems',
+    treeCare: 'Tree & Shrub Care',
+    hardscaping: 'Hardscaping',
+    sodInstallation: 'Sod Installation',
+    mulching: 'Mulching & Fertilization',
+    commercialLandscaping: 'Commercial Landscaping',
     
     // Why Choose Us
     whyChooseUs: 'Why Choose Us',
-    licensedMaster: 'Licensed Master Plumbers',
+    licensedMaster: 'Licensed Landscape Professionals',
     licensedMasterDesc: 'Fully certified and insured professionals with years of experience',
     emergencyAvailable: '24/7 Emergency Service',
-    emergencyAvailableDesc: 'Round-the-clock availability for urgent plumbing needs',
+    emergencyAvailableDesc: 'Round-the-clock availability for urgent landscape needs',
     transparentPricing: 'Transparent Pricing',
     transparentPricingDesc: 'Upfront quotes with no hidden fees or surprises',
     guaranteedWork: 'Guaranteed Workmanship',
@@ -73,8 +73,8 @@ export const translations = {
     contactInfo: 'Contact',
     hours: 'Hours',
     always247: '24/7 - Always Available',
-    emergencyCallout: 'Plumbing Emergency?',
-    emergencyDesc: "Don't wait! Our emergency team is standing by 24/7.",
+    emergencyCallout: 'Landscape Emergency?',
+    emergencyDesc: "Don't wait! Our emergency cleanup team is standing by 24/7.",
     callNow: 'Call Now',
   },
   
@@ -91,13 +91,13 @@ export const translations = {
     emergencyButton: 'Emergencia 24/7',
     
     // Hero Section
-    heroTitle1: 'Plomero 24/7',
+    heroTitle1: 'Jardinería 24/7',
     heroTitle2: 'Expertos de',
-    heroTitle3: 'Confianza en Miami',
-    heroDescription: 'Licenciado • Asegurado • Servicio de Emergencia 24/7. Desde fugas hasta instalaciones, manejamos todas sus necesidades de plomería con experiencia y cuidado.',
+    heroTitle3: 'Jardines en Miami',
+    heroDescription: 'Licenciado • Asegurado • Servicio de Emergencia 24/7. Desde diseño hasta mantenimiento, manejamos todas sus necesidades de jardinería con experiencia y cuidado.',
     heroTrust1: '5.0 de 500+ clientes',
     heroTrust2: 'Licenciado y Asegurado',
-    heroTrust3: 'Plomeros Maestros',
+    heroTrust3: 'Jardineros Certificados',
     callButton: 'Llamar',
     getQuoteButton: 'Cotización Instantánea',
     
@@ -116,27 +116,27 @@ export const translations = {
     
     // Services
     ourServices: 'Nuestros Servicios',
-    servicesSubtitle: 'Soluciones profesionales de plomería para cada necesidad',
+    servicesSubtitle: 'Soluciones profesionales de jardinería para cada necesidad',
     viewAllServices: 'Ver Todos los Servicios',
     scheduleService: 'Programar Servicio',
     
     // Service Names
     emergencyService: 'Servicio de Emergencia 24/7',
-    drainCleaning: 'Limpieza de Drenajes',
-    leakDetection: 'Detección y Reparación de Fugas',
-    waterHeater: 'Servicios de Calentador de Agua',
-    toiletRepair: 'Reparación e Instalación de Inodoros',
-    pipeRepair: 'Reparación y Reemplazo de Tuberías',
-    sewerLine: 'Servicios de Línea de Alcantarillado',
-    fixtureInstallation: 'Instalación de Accesorios',
-    commercialPlumbing: 'Plomería Comercial',
+    landscapeDesign: 'Diseño de Jardines',
+    lawnMaintenance: 'Mantenimiento de Césped',
+    irrigationSystems: 'Sistemas de Riego',
+    treeCare: 'Cuidado de Árboles y Arbustos',
+    hardscaping: 'Paisajismo Duro',
+    sodInstallation: 'Instalación de Césped',
+    mulching: 'Mantillo y Fertilización',
+    commercialLandscaping: 'Jardinería Comercial',
     
     // Why Choose Us
     whyChooseUs: 'Por Qué Elegirnos',
-    licensedMaster: 'Plomeros Maestros Licenciados',
+    licensedMaster: 'Jardineros Profesionales Licenciados',
     licensedMasterDesc: 'Profesionales totalmente certificados y asegurados con años de experiencia',
     emergencyAvailable: 'Servicio de Emergencia 24/7',
-    emergencyAvailableDesc: 'Disponibilidad las 24 horas para necesidades urgentes de plomería',
+    emergencyAvailableDesc: 'Disponibilidad las 24 horas para necesidades urgentes de jardinería',
     transparentPricing: 'Precios Transparentes',
     transparentPricingDesc: 'Cotizaciones por adelantado sin tarifas ocultas ni sorpresas',
     guaranteedWork: 'Trabajo Garantizado',
@@ -152,8 +152,8 @@ export const translations = {
     contactInfo: 'Contacto',
     hours: 'Horario',
     always247: '24/7 - Siempre Disponible',
-    emergencyCallout: '¿Emergencia de Plomería?',
-    emergencyDesc: '¡No espere! Nuestro equipo de emergencia está disponible 24/7.',
+    emergencyCallout: '¿Emergencia de Jardinería?',
+    emergencyDesc: '¡No espere! Nuestro equipo de limpieza de emergencia está disponible 24/7.',
     callNow: 'Llamar Ahora',
   }
 }
