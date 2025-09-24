@@ -50,7 +50,7 @@ export class Footer extends React.Component {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Company Info */}
             <div>
-              <h3 className="font-heading text-xl uppercase mb-4">CBE Air Services</h3>
+              <h3 className="font-heading text-xl uppercase mb-4">Hitts Top Quality Tree And Lawn LLC</h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
                   <MapPin size={18} className="text-brand-blue mt-1" />
@@ -149,7 +149,7 @@ export class Footer extends React.Component {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-sm text-white/60">
-                © {new Date().getFullYear()} CBE Air Services. All rights reserved. Licensed & Insured.
+                © {new Date().getFullYear()} Hitts Top Quality Tree And Lawn LLC. All rights reserved. Licensed & Insured.
               </p>
               <div className="flex gap-6 text-sm">
                 <a href="/privacy" className="text-white/60 hover:text-white transition">

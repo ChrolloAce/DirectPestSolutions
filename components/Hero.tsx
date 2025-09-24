@@ -47,8 +47,8 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/hero-banner-logo.png"
-          alt="GreenScape Miami - Professional Landscaping Services Miami"
+          src="/images/banner.jpg"
+          alt="Hitts Top Quality Tree And Lawn LLC - Professional Tree and Lawn Services Miami"
           fill
           priority
           className="object-cover object-center"

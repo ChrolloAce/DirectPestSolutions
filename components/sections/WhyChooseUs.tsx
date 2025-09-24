@@ -42,7 +42,7 @@ export function WhyChooseUs() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-heading text-4xl md:text-5xl uppercase mb-4">
-            Why Choose CBE Air Services?
+            Why Choose Hitts Top Quality Tree And Lawn LLC?
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             When it comes to your comfort, choose Miami's trusted HVAC professionals. 

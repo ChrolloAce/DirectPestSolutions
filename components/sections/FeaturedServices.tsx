@@ -15,7 +15,7 @@ export function FeaturedServices() {
             Our HVAC Services
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            From emergency AC repair to new installations, CBE Air Services provides comprehensive 
+            From emergency tree care to lawn maintenance, Hitts Top Quality Tree And Lawn LLC provides comprehensive 
             HVAC solutions for Miami homes and businesses.
           </p>
         </div>

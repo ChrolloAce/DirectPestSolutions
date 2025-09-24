@@ -4,8 +4,8 @@ import { Award, Users, Clock, Shield, CheckCircle, Star } from 'lucide-react'
 import Button from '@/components/ui/Button'
 
 export const metadata: Metadata = {
-  title: 'About CBE Air Services | Miami\'s Trusted HVAC Company',
-  description: 'Learn about CBE Air Services - Miami\'s trusted HVAC company. Family-owned, licensed & insured, providing professional AC repair and installation since establishment.',
+  title: 'About Hitts Top Quality Tree And Lawn LLC | Miami\'s Trusted HVAC Company',
+  description: 'Learn about Hitts Top Quality Tree And Lawn LLC - Miami\'s trusted HVAC company. Family-owned, licensed & insured, providing professional AC repair and installation since establishment.',
 }
 
 export default function AboutPage() {
@@ -16,7 +16,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="heading-xl uppercase mb-6">
-              About CBE Air Services
+              About Hitts Top Quality Tree And Lawn LLC
             </h1>
             <p className="text-xl text-white/90">
               Miami's Trusted HVAC Experts - Professional, Reliable, and Committed to Your Comfort
@@ -34,7 +34,7 @@ export default function AboutPage() {
                 Our Story
               </h2>
               <p className="text-lg text-brand-black/80 mb-4">
-                CBE Air Services was founded with a simple mission: to provide Miami residents and businesses with 
+                Hitts Top Quality Tree And Lawn LLC was founded with a simple mission: to provide Miami residents and businesses with 
                 honest, reliable, and professional HVAC services they can trust.
               </p>
               <p className="text-lg text-brand-black/80 mb-4">
@@ -53,8 +53,8 @@ export default function AboutPage() {
             <div className="relative">
               <div className="aspect-[4/3] relative">
                 <Image
-                  src="/images/commercial-hvac-tech.png"
-                  alt="CBE Air Services Team"
+                  src="/images/Untitled design (28).png"
+                  alt="Hitts Top Quality Tree And Lawn LLC Team"
                   fill
                   className="object-cover rounded-none border-4 border-brand-black"
                 />
@@ -213,7 +213,7 @@ export default function AboutPage() {
             <div className="bg-brand-off p-8 border-2 border-brand-black">
               <h3 className="text-2xl font-bold mb-4">Blendi - Owner & Lead Technician</h3>
               <p className="text-lg text-brand-black/80 mb-6">
-                "I started CBE Air Services with one goal: to provide the kind of honest, reliable HVAC service 
+                "I started Hitts Top Quality Tree And Lawn LLC with one goal: to provide the kind of honest, reliable HVAC service 
                 that I would want for my own family. Every day, my team and I work hard to earn your trust through 
                 quality work, fair pricing, and exceptional customer service."
               </p>
@@ -223,7 +223,7 @@ export default function AboutPage() {
                 to address any concerns."
               </p>
               <p className="font-bold text-brand-black">
-                - Blendi, Owner of CBE Air Services
+                - Blendi, Owner of Hitts Top Quality Tree And Lawn LLC
               </p>
             </div>
           </div>
@@ -237,7 +237,7 @@ export default function AboutPage() {
             Experience the CBE Difference
           </h2>
           <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Join hundreds of satisfied customers who trust CBE Air Services for all their HVAC needs.
+            Join hundreds of satisfied customers who trust Hitts Top Quality Tree And Lawn LLC for all their HVAC needs.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button href="/contact" size="lg" variant="primary">

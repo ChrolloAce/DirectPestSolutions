@@ -23,7 +23,7 @@ export const services: Service[] = [
       'With transparent pricing and a satisfaction guarantee, trust our landscape experts to bring your outdoor vision to life quickly and professionally.'
     ],
     icon: 'Palette',
-    image: '/images/landscape-design-service.png',
+    image: '/images/1.jpg',
     benefits: [
       'Same-day consultations available',
       'Custom design solutions',
@@ -45,7 +45,7 @@ export const services: Service[] = [
       'Join our maintenance plan for priority service, discounted treatments, and peace of mind knowing your lawn is always ready for Miami\'s weather.'
     ],
     icon: 'Shield',
-    image: '/images/lawn-maintenance-tech.png',
+    image: '/images/2.jpg',
     benefits: [
       'Prevent lawn diseases',
       'Maintain property value',
@@ -66,7 +66,7 @@ export const services: Service[] = [
       'Take advantage of available water rebates and our flexible financing options. Professional installation backed by comprehensive warranties.'
     ],
     icon: 'Home',
-    image: '/images/irrigation-installation-final.png',
+    image: '/images/3.jpg',
     benefits: [
       'Water-efficient systems',
       'All major brands',
@@ -87,7 +87,7 @@ export const services: Service[] = [
       'Maintain professional appearance with our preventive maintenance programs and rapid response for urgent landscaping needs.'
     ],
     icon: 'Building',
-    image: '/images/commercial-landscape-tech.png',
+    image: '/images/4.jpg',
     benefits: [
       'All commercial properties',
       'Maintenance contracts',
@@ -129,7 +129,7 @@ export const services: Service[] = [
       'Don\'t let landscape damage sit - call our landscape experts for immediate emergency cleanup service.'
     ],
     icon: 'AlertCircle',
-    image: '/images/emergency-cleanup-new.png',
+    image: '/images/5.jpg',
     benefits: [
       '24/7 availability',
       'Fast response time',
@@ -151,7 +151,7 @@ export const services: Service[] = [
       'Trust our certified installers to create hardscaping that delivers lasting value and enhances your outdoor lifestyle.'
     ],
     icon: 'Mountain',
-    image: '/images/hardscaping-installation.png',
+    image: '/images/6.jpg',
     benefits: [
       'Custom design solutions',
       'Durable installations',

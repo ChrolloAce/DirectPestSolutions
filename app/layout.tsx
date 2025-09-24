@@ -8,8 +8,8 @@ import MobileAppBar from '@/components/layout/MobileAppBar'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-  title: 'GreenScape Miami – Professional Landscaping | Landscape Design & Installation',
-  description: 'Professional landscape design, installation & maintenance in Miami & Miami-Dade County. Licensed & insured landscaping experts. Call (305) 560-3087 for same-day service.',
+  title: 'Hitts Top Quality Tree And Lawn LLC – Professional Tree & Lawn Services | Miami',
+  description: 'Professional tree and lawn services in Miami & Miami-Dade County. Licensed & insured tree and lawn care experts. Call (305) 560-3087 for same-day service.',
   keywords: 'landscape design Miami, landscaping Miami, lawn care Miami, landscape maintenance Miami, irrigation installation Miami, hardscaping Miami, tree care Miami, emergency cleanup Miami, commercial landscaping Miami, residential landscaping Miami',
   icons: {
     icon: '/favicon.png',
@@ -17,17 +17,17 @@ export const metadata: Metadata = {
     apple: '/favicon.png',
   },
   openGraph: {
-    title: 'GreenScape Miami – Professional Landscaping',
-    description: 'Professional landscape design, installation & maintenance in Miami. Licensed & insured landscaping experts. Call (305) 560-3087.',
+    title: 'Hitts Top Quality Tree And Lawn LLC – Professional Tree & Lawn Services',
+    description: 'Professional tree and lawn services in Miami. Licensed & insured tree and lawn care experts. Call (305) 560-3087.',
     type: 'website',
     locale: 'en_US',
     url: 'https://greenscapemiami.com',
-    siteName: 'GreenScape Miami',
+    siteName: 'Hitts Top Quality Tree And Lawn LLC',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GreenScape Miami – Professional Landscaping',
-    description: 'Professional landscape design, installation & maintenance in Miami. Call (305) 560-3087.',
+    title: 'Hitts Top Quality Tree And Lawn LLC – Professional Tree & Lawn Services',
+    description: 'Professional tree and lawn services in Miami. Call (305) 560-3087.',
   },
   robots: {
     index: true,
@@ -68,8 +68,8 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'LandscapingBusiness',
-              name: 'GreenScape Miami',
-              description: 'Professional landscape design, installation and maintenance services in Miami and Miami-Dade County',
+              name: 'Hitts Top Quality Tree And Lawn LLC',
+              description: 'Professional tree and lawn care services in Miami and Miami-Dade County',
               telephone: '+1-305-560-3087',
               email: 'info@greenscapemiami.com',
               address: {
