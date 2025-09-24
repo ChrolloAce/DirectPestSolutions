@@ -7,13 +7,13 @@ export function WhyChooseUs() {
   const reasons = [
     {
       icon: <Shield className="h-10 w-10 text-brand-blue" />,
-      title: 'Licensed & Insured HVAC Experts',
-      description: 'NATE-certified technicians with comprehensive insurance for your protection'
+      title: 'Licensed & Insured Landscaping Experts',
+      description: 'Certified landscaping professionals with comprehensive insurance for your protection'
     },
     {
       icon: <Clock className="h-10 w-10 text-brand-blue" />,
-      title: 'Same-Day AC Service',
-      description: 'Fast response times because we know Miami heat doesn\'t wait'
+      title: 'Same-Day Landscape Service',
+      description: 'Fast response times because we know your landscape needs don\'t wait'
     },
     {
       icon: <Award className="h-10 w-10 text-brand-blue" />,
@@ -32,8 +32,8 @@ export function WhyChooseUs() {
     },
     {
       icon: <Wrench className="h-10 w-10 text-brand-blue" />,
-      title: 'All Brands Serviced',
-      description: 'Expert repair and installation for all AC makes and models'
+      title: 'All Landscape Services',
+      description: 'Expert design and maintenance for all landscape types and needs'
     }
   ]
 
@@ -45,7 +45,7 @@ export function WhyChooseUs() {
             Why Choose Hitts Top Quality Tree And Lawn LLC?
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            When it comes to your comfort, choose Miami's trusted HVAC professionals. 
+            When it comes to your outdoor spaces, choose Miami's trusted landscaping professionals. 
             Here's what sets us apart from the competition.
           </p>
         </div>

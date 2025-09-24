@@ -12,11 +12,11 @@ export function FeaturedServices() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-heading text-4xl md:text-5xl uppercase mb-4">
-            Our HVAC Services
+            Our Landscaping Services
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             From emergency tree care to lawn maintenance, Hitts Top Quality Tree And Lawn LLC provides comprehensive 
-            HVAC solutions for Miami homes and businesses.
+            landscaping solutions for Miami homes and businesses.
           </p>
         </div>
         

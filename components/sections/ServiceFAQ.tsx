@@ -23,24 +23,24 @@ export function ServiceFAQ({ faqs = [], serviceName = 'Service' }: ServiceFAQPro
   // Default FAQs if none provided
   const defaultFAQs: FAQ[] = [
     {
-      question: 'How quickly can you respond to AC emergencies?',
-      answer: 'We offer same-day service for most AC repairs in Miami-Dade County. Our technicians are available Mon-Sat 9AM-6PM, with emergency services available.'
+      question: 'How quickly can you respond to landscape emergencies?',
+      answer: 'We offer same-day service for most landscape emergencies in Miami-Dade County. Our team is available Mon-Sat 9AM-6PM, with emergency cleanup services available.'
     },
     {
-      question: 'Do you service all AC brands?',
-      answer: 'Yes! Our certified technicians are trained to repair and maintain all major AC brands including Carrier, Trane, Lennox, Rheem, Goodman, and more.'
+      question: 'Do you handle all types of landscaping projects?',
+      answer: 'Yes! Our certified landscaping professionals handle all types of projects including lawn care, tree service, irrigation, hardscaping, commercial landscaping, and more.'
     },
     {
       question: 'What areas do you serve?',
-      answer: 'We provide AC services throughout Miami-Dade County including Miami, Miami Beach, Sunny Isles Beach, Aventura, Coral Gables, Doral, and surrounding areas.'
+      answer: 'We provide landscaping services throughout Miami-Dade County including Miami, Miami Beach, Sunny Isles Beach, Aventura, Coral Gables, Doral, and surrounding areas.'
     },
     {
-      question: 'Do you offer financing for new AC installations?',
-      answer: 'Yes, we offer flexible financing options to help make your new AC system more affordable. Contact us to learn about current financing plans and promotions.'
+      question: 'Do you offer financing for landscaping projects?',
+      answer: 'Yes, we offer flexible financing options to help make your landscaping project more affordable. Contact us to learn about current financing plans and promotions.'
     },
     {
-      question: 'How often should I service my AC?',
-      answer: 'We recommend annual AC maintenance to keep your system running efficiently and prevent breakdowns. Regular maintenance can extend your AC\'s life and lower energy bills.'
+      question: 'How often should I maintain my landscape?',
+      answer: 'We recommend regular landscape maintenance to keep your outdoor spaces healthy and beautiful. Regular care prevents issues, maintains property value, and keeps your landscape thriving year-round.'
     }
   ]
 
