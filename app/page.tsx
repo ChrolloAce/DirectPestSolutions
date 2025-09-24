@@ -25,7 +25,7 @@ export default function HomePage() {
           'We use advanced design tools and local plant knowledge to create stunning landscapes, from native plant selections to irrigation planning. Our design process ensures your landscape thrives in South Florida\'s climate.',
           'With transparent pricing and a satisfaction guarantee, you can trust our landscape experts to bring your outdoor vision to life, creating beautiful spaces that enhance your property value year-round.'
         ]}
-        images={['/images/landscape-design-teaser.png', '/images/garden-planning.png']}
+        images={['/images/1.jpg', '/images/6.jpg']}
         direction="left"
         ctaText="Schedule Design Consultation"
         ctaHref="/services/landscape-design-miami"
@@ -38,7 +38,7 @@ export default function HomePage() {
           'We install all major brands including Rain Bird, Hunter, Toro, and Raindrip. Our certified installers ensure proper coverage, pressure optimization, and code compliance for maximum efficiency and plant health.',
           'Take advantage of available water rebates and our flexible financing options. With professional installation and comprehensive warranties, your new irrigation system will provide reliable plant care for years to come.'
         ]}
-        images={['/images/irrigation-installation-final.png', '/images/sprinkler-system.png']}
+        images={['/images/3.jpg', '/images/2.jpg']}
         direction="right"
         ctaText="Get Free Irrigation Quote"
         ctaHref="/services/irrigation-systems-miami"

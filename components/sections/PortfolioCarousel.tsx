@@ -5,19 +5,18 @@ import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const portfolioImages = [
-  { src: '/images/portfolio/IMG_3592.webp', alt: 'Landscape Design Project 1' },
-  { src: '/images/portfolio/2024-05-03.webp', alt: 'Garden Maintenance Service' },
-  { src: '/images/portfolio/Resized_20230516_171935.webp', alt: 'Commercial Landscaping Work' },
-  { src: '/images/portfolio/IMG_4144.webp', alt: 'Residential Landscape Installation' },
-  { src: '/images/portfolio/Resized_20230516_171828.webp', alt: 'Lawn Care Service' },
-  { src: '/images/portfolio/IMG_4077.webp', alt: 'Irrigation System Upgrade' },
-  { src: '/images/portfolio/IMG_4108.webp', alt: 'Emergency Landscape Cleanup' },
-  { src: '/images/portfolio/IMG_4076.webp', alt: 'Tree Care Service' },
-  { src: '/images/portfolio/IMG_3734.webp', alt: 'Hardscaping Installation' },
-  { src: '/images/portfolio/Resized_20230715_094803.webp', alt: 'Commercial Landscape Maintenance' },
-  { src: '/images/portfolio/Resized_20230516_171951.webp', alt: 'Residential Garden Service' },
-  { src: '/images/portfolio/2024-05-03 (1).webp', alt: 'Irrigation System Repair' },
-  { src: '/images/portfolio/2024-01-24.webp', alt: 'Landscape Installation Complete' },
+  { src: '/images/1.jpg', alt: 'Professional Landscape Design Project' },
+  { src: '/images/2.jpg', alt: 'Lawn Maintenance and Care Service' },
+  { src: '/images/3.jpg', alt: 'Irrigation Systems Installation' },
+  { src: '/images/4.jpg', alt: 'Commercial Landscaping Project' },
+  { src: '/images/5.jpg', alt: 'Emergency Tree Care and Cleanup' },
+  { src: '/images/6.jpg', alt: 'Hardscaping and Garden Installation' },
+  { src: '/images/1.jpg', alt: 'Custom Landscape Design Miami' },
+  { src: '/images/2.jpg', alt: 'Professional Lawn Care Service' },
+  { src: '/images/3.jpg', alt: 'Water-Efficient Irrigation System' },
+  { src: '/images/4.jpg', alt: 'Commercial Property Landscaping' },
+  { src: '/images/5.jpg', alt: 'Tree and Shrub Care Services' },
+  { src: '/images/6.jpg', alt: 'Residential Hardscaping Project' },
 ]
 
 export function PortfolioCarousel() {
