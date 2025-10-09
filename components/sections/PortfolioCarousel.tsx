@@ -5,18 +5,18 @@ import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const portfolioImages = [
-  { src: '/images/1.jpg', alt: 'Professional Landscape Design Project' },
-  { src: '/images/2.jpg', alt: 'Lawn Maintenance and Care Service' },
-  { src: '/images/3.jpg', alt: 'Irrigation Systems Installation' },
-  { src: '/images/4.jpg', alt: 'Commercial Landscaping Project' },
-  { src: '/images/5.jpg', alt: 'Emergency Tree Care and Cleanup' },
-  { src: '/images/6.jpg', alt: 'Hardscaping and Garden Installation' },
-  { src: '/images/1.jpg', alt: 'Custom Landscape Design Miami' },
-  { src: '/images/2.jpg', alt: 'Professional Lawn Care Service' },
-  { src: '/images/3.jpg', alt: 'Water-Efficient Irrigation System' },
-  { src: '/images/4.jpg', alt: 'Commercial Property Landscaping' },
-  { src: '/images/5.jpg', alt: 'Tree and Shrub Care Services' },
-  { src: '/images/6.jpg', alt: 'Residential Hardscaping Project' },
+  { src: '/images/imgi_23_car-body-polishing-process-at-the-detailing-workshop-1024x682.jpg', alt: 'Premium Exterior Detailing Service' },
+  { src: '/images/imgi_24_AdobeStock_198465715-1024x683.jpg', alt: 'Professional Paint Correction' },
+  { src: '/images/imgi_25_AdobeStock_377385492-1024x682.jpg', alt: 'Ceramic Coating Application' },
+  { src: '/images/imgi_26_AdobeStock_791616590-1024x574.jpg', alt: 'Paint Protection Film Installation' },
+  { src: '/images/imgi_27_AdobeStock_462320361-1024x683.jpg', alt: 'Engine Bay Detailing' },
+  { src: '/images/imgi_28_AdobeStock_781952791-1024x574.jpg', alt: 'Headlight Restoration Service' },
+  { src: '/images/imgi_29_AdobeStock_432639942-1024x654.jpg', alt: 'Complete Detail Package' },
+  { src: '/images/imgi_31_cropped-image-of-businessman-with-luxury-watch-closing-door-while-sitting-in-car.jpg', alt: 'Luxury Interior Detailing' },
+  { src: '/images/imgi_32_radiator-grille-of-a-new-luxury-car.jpg', alt: 'Exotic Vehicle Care' },
+  { src: '/images/imgi_33_car-dashboard-modern-luxury-interior-steering-wheel.jpg', alt: 'Premium Interior Restoration' },
+  { src: '/images/imgi_34_luxury-car-interior-in-brown-and-white-colors.jpg', alt: 'Leather Conditioning Service' },
+  { src: '/images/imgi_35_AdobeStock_312924792_Editorial_Use_Only-scaled.jpg', alt: 'Luxury Car Detailing Miami' },
 ]
 
 export function PortfolioCarousel() {
@@ -66,11 +66,11 @@ export function PortfolioCarousel() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="heading-lg uppercase mb-4 text-brand-black">
-            Our Work Portfolio
+            Our Detailing Portfolio
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Browse through our recent landscaping installations, designs, and maintenance projects. 
-            Quality workmanship and customer satisfaction in every job.
+            Browse through our recent car detailing projects, paint corrections, and ceramic coating applications. 
+            Quality workmanship and customer satisfaction on every luxury vehicle.
           </p>
         </div>
 
@@ -109,14 +109,14 @@ export function PortfolioCarousel() {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 bg-brand-gold hover:bg-brand-red text-brand-black hover:text-white p-3 rounded-full shadow-lg transition-all duration-300 z-10"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 bg-brand-red hover:bg-brand-red2 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-10"
             aria-label="Previous images"
           >
             <ChevronLeft size={24} />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 bg-brand-gold hover:bg-brand-red text-brand-black hover:text-white p-3 rounded-full shadow-lg transition-all duration-300 z-10"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 bg-brand-red hover:bg-brand-red2 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-10"
             aria-label="Next images"
           >
             <ChevronRight size={24} />
@@ -131,7 +131,7 @@ export function PortfolioCarousel() {
               onClick={() => setCurrentIndex(index)}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
                 index === currentIndex 
-                  ? 'bg-brand-gold w-8' 
+                  ? 'bg-brand-red w-8' 
                   : 'bg-gray-300 hover:bg-gray-400'
               }`}
               aria-label={`Go to slide ${index + 1}`}
@@ -143,9 +143,9 @@ export function PortfolioCarousel() {
         <div className="text-center mt-12">
           <a 
             href="/contact" 
-            className="inline-block bg-brand-gold hover:bg-brand-red text-brand-black hover:text-white px-8 py-4 font-bold uppercase transition-all duration-300 border-2 border-brand-black"
+            className="inline-block bg-brand-red hover:bg-brand-red2 text-white px-8 py-4 font-bold uppercase transition-all duration-300 border-2 border-brand-black"
           >
-            Get Your Free Estimate Today
+            Get Your Free Detailing Quote Today
           </a>
         </div>
       </div>
