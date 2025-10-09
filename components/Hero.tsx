@@ -47,8 +47,8 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/banner.jpg"
-          alt="Hitts Top Quality Tree And Lawn LLC - Professional Tree and Lawn Services Miami"
+          src="/images/imgi_22_AdobeStock_598538013-1024x576.jpg"
+          alt="Premium Auto Detailing Miami - Luxury Car Care Services"
           fill
           priority
           className="object-cover object-center"
@@ -63,23 +63,23 @@ export default function Hero() {
           {/* Left: Copy / CTAs */}
           <div className="text-white">
             <h1 className="font-heading uppercase leading-[0.95] tracking-tight text-5xl sm:text-6xl">
-              <span className="underline decoration-brand-green decoration-4 underline-offset-4">Landscaping</span>
-              <br /> <span className="text-brand-darkgreen">Miami&apos;s</span> Garden Experts
+              <span className="underline decoration-brand-green decoration-4 underline-offset-4">Premium</span>
+              <br /> <span className="text-brand-darkgreen">Auto Detailing</span> Miami
             </h1>
 
             <p className="mt-5 max-w-xl text-lg text-white/90">
-              Licensed • Insured • Same-Day Service. Professional landscaping design, installation & maintenance for Miami homes and businesses.
+              Licensed • Insured • Mobile Service Available. Professional car detailing for luxury vehicles, exotic cars, and premium automobiles.
             </p>
 
             {/* Trust row */}
             <div className="mt-6 flex flex-wrap items-center gap-4 text-sm">
               <div className="inline-flex items-center gap-2 rounded-none bg-white/10 px-3 py-2 ring-1 ring-white/20">
                 <span className="text-brand-green">★★★★★</span>
-                <span className="text-white/80">5.0 from 300+ customers</span>
+                <span className="text-white/80">5.0 from 500+ luxury car owners</span>
               </div>
               <div className="inline-flex items-center gap-2 rounded-none bg-white/10 px-3 py-2 ring-1 ring-white/20">
-                <span className="text-brand-darkgreen">Licensed & Insured</span>
-                <span className="text-white/80">Landscaping Certified</span>
+                <span className="text-brand-darkgreen">Certified Detailers</span>
+                <span className="text-white/80">Luxury Car Specialists</span>
               </div>
             </div>
 
@@ -98,13 +98,13 @@ export default function Hero() {
                 href="#quote" 
                 variant="primary"
               >
-                Get Free Landscape Quote
+                Get Free Detailing Quote
               </Button>
             </div>
 
             {/* Small proof strip */}
             <p className="mt-5 text-sm text-white/75">
-              Miami's Trusted Landscaping Company • Same-day service • Free estimates • Licensed & Insured in Florida
+              Miami's Premier Auto Detailing • Mobile service available • Free estimates • Trusted by luxury car owners
             </p>
           </div>
 
@@ -116,10 +116,10 @@ export default function Hero() {
             >
               <div className="pb-4 border-b border-brand-green/30 mb-4">
                 <h3 className="font-heading uppercase text-2xl text-brand-black">
-                  Get Your Free Landscape Quote
+                  Get Your Free Detailing Quote
                 </h3>
                 <p className="text-sm text-brand-black/70">
-                  Fast response • Same-day service available
+                  Fast response • Mobile service available
                 </p>
               </div>
 
@@ -160,15 +160,15 @@ export default function Hero() {
                     name="service" 
                     className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-green"
                   >
-                    <option>Lawn Care</option>
-                    <option>Landscape Design</option>
-                    <option>Lawn Maintenance</option>
-                    <option>Tree & Shrub Care</option>
-                    <option>Irrigation Systems</option>
-                    <option>Hardscaping</option>
-                    <option>Emergency Cleanup</option>
-                    <option>Sod Installation</option>
-                    <option>Mulching & Fertilization</option>
+                    <option>Exterior Detailing</option>
+                    <option>Interior Detailing</option>
+                    <option>Full Detail Package</option>
+                    <option>Paint Correction</option>
+                    <option>Ceramic Coating</option>
+                    <option>Paint Protection Film</option>
+                    <option>Engine Bay Detailing</option>
+                    <option>Headlight Restoration</option>
+                    <option>Leather Conditioning</option>
                     <option>Other</option>
                   </select>
                 </label>

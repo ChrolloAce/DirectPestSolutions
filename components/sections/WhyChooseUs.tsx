@@ -7,13 +7,13 @@ export function WhyChooseUs() {
   const reasons = [
     {
       icon: <Shield className="h-10 w-10 text-brand-blue" />,
-      title: 'Licensed & Insured Landscaping Experts',
-      description: 'Certified landscaping professionals with comprehensive insurance for your protection'
+      title: 'Certified Detailing Experts',
+      description: 'Professional detailers trained in luxury and exotic vehicle care with full insurance'
     },
     {
       icon: <Clock className="h-10 w-10 text-brand-blue" />,
-      title: 'Same-Day Landscape Service',
-      description: 'Fast response times because we know your landscape needs don\'t wait'
+      title: 'Mobile Service Available',
+      description: 'We come to your home or office - convenient detailing on your schedule'
     },
     {
       icon: <Award className="h-10 w-10 text-brand-blue" />,
@@ -23,17 +23,17 @@ export function WhyChooseUs() {
     {
       icon: <Users className="h-10 w-10 text-brand-blue" />,
       title: 'Local Miami Company',
-      description: 'Serving Miami-Dade County with pride since establishment'
+      description: 'Trusted by luxury car owners throughout Miami-Dade County'
     },
     {
       icon: <ThumbsUp className="h-10 w-10 text-brand-blue" />,
       title: '100% Satisfaction Guarantee',
-      description: 'We stand behind our work with comprehensive warranties'
+      description: 'We stand behind our work with comprehensive quality guarantees'
     },
     {
       icon: <Wrench className="h-10 w-10 text-brand-blue" />,
-      title: 'All Landscape Services',
-      description: 'Expert design and maintenance for all landscape types and needs'
+      title: 'Premium Products Only',
+      description: 'Professional-grade products specifically chosen for luxury vehicles'
     }
   ]
 
@@ -42,10 +42,10 @@ export function WhyChooseUs() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-heading text-4xl md:text-5xl uppercase mb-4">
-            Why Choose Hitts Top Quality Tree And Lawn LLC?
+            Why Choose Our <span className="text-brand-green">Premium Detailing</span>?
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            When it comes to your outdoor spaces, choose Miami's trusted landscaping professionals. 
+            When it comes to your luxury vehicle, choose Miami's trusted auto detailing professionals. 
             Here's what sets us apart from the competition.
           </p>
         </div>

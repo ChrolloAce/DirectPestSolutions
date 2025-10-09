@@ -7,6 +7,7 @@ import Reviews from '@/components/Reviews'
 import { FAQAccordion } from '@/components/sections/FAQAccordion'
 import { NextSteps } from '@/components/sections/NextSteps'
 import { PortfolioCarousel } from '@/components/sections/PortfolioCarousel'
+import { BrandMarquee } from '@/components/sections/BrandMarquee'
 
 export default function HomePage() {
   return (
@@ -14,34 +15,37 @@ export default function HomePage() {
       {/* Hero with Lead Form */}
       <Hero />
       
+      {/* Brand Marquee */}
+      <BrandMarquee />
+      
       {/* Services Grid */}
       <FeaturedServices />
       
       {/* Service Teasers */}
       <ServiceTeaser
-        title="Professional Landscape Design Miami"
+        title="Premium Exterior Detailing"
         description={[
-          'When your outdoor space needs transformation in Miami\'s tropical climate, you need expert design and reliable service. Our certified landscape architects create beautiful, sustainable designs with same-day consultations available.',
-          'We use advanced design tools and local plant knowledge to create stunning landscapes, from native plant selections to irrigation planning. Our design process ensures your landscape thrives in South Florida\'s climate.',
-          'With transparent pricing and a satisfaction guarantee, you can trust our landscape experts to bring your outdoor vision to life, creating beautiful spaces that enhance your property value year-round.'
+          'When your luxury vehicle needs that showroom shine in Miami, you need expert detailing and reliable service. Our certified detailers restore your car\'s exterior to pristine condition with same-day appointments available.',
+          'We use professional-grade products and advanced techniques including hand washing, clay bar treatment, paint correction, and protective coating to ensure your vehicle looks its absolute best.',
+          'With transparent pricing and a satisfaction guarantee, you can trust our detailing experts to deliver exceptional results that protect your investment and turn heads on Miami streets.'
         ]}
-        images={['/images/1.jpg', '/images/6.jpg']}
+        images={['/images/imgi_29_AdobeStock_432639942-1024x654.jpg', '/images/imgi_32_radiator-grille-of-a-new-luxury-car.jpg']}
         direction="left"
-        ctaText="Schedule Design Consultation"
-        ctaHref="/services/landscape-design-miami"
+        ctaText="Schedule Exterior Detailing"
+        ctaHref="/services/exterior-detailing-miami"
       />
       
       <ServiceTeaser
-        title="Irrigation Systems & Installation"
+        title="Ceramic Coating & Paint Protection"
         description={[
-          'Upgrade to a new, water-efficient irrigation system and save up to 40% on your water costs. Our irrigation experts help you choose the perfect system for your Miami landscape and budget.',
-          'We install all major brands including Rain Bird, Hunter, Toro, and Raindrip. Our certified installers ensure proper coverage, pressure optimization, and code compliance for maximum efficiency and plant health.',
-          'Take advantage of available water rebates and our flexible financing options. With professional installation and comprehensive warranties, your new irrigation system will provide reliable plant care for years to come.'
+          'Protect your luxury vehicle with our professional ceramic coating services. Save time on maintenance and enjoy years of durable, hydrophobic protection for your car\'s paint.',
+          'We install premium ceramic coatings including industry-leading brands. Our certified installers ensure proper paint preparation, flawless application, and maximum durability with multi-year warranties.',
+          'Take advantage of our package deals and financing options. With professional installation and comprehensive warranties, your ceramic coating will provide lasting protection and stunning gloss.'
         ]}
-        images={['/images/3.jpg', '/images/2.jpg']}
+        images={['/images/imgi_34_luxury-car-interior-in-brown-and-white-colors.jpg', '/images/imgi_41_AdobeStock_312924792_Editorial_Use_Only-2048x1160.jpg']}
         direction="right"
-        ctaText="Get Free Irrigation Quote"
-        ctaHref="/services/irrigation-systems-miami"
+        ctaText="Get Ceramic Coating Quote"
+        ctaHref="/services/ceramic-coating-miami"
       />
       
       {/* Why Choose Us */}
