@@ -12,11 +12,11 @@ export function FeaturedServices() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-heading text-4xl md:text-5xl uppercase mb-4">
-            Our Landscaping Services
+            Our Car Detailing Services
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            From emergency tree care to lawn maintenance, Hitts Top Quality Tree And Lawn LLC provides comprehensive 
-            landscaping solutions for Miami homes and businesses.
+            From ceramic coating to paint correction, we provide comprehensive 
+            luxury car detailing solutions for Miami's finest vehicles.
           </p>
         </div>
         

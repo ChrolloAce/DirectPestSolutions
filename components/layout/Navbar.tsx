@@ -142,7 +142,7 @@ export function Navbar() {
             {/* Mobile Logo and Hamburger */}
             <div className="md:hidden flex items-center justify-between w-full">
               <Link href="/" className="flex items-center gap-2">
-                <span className="font-bold text-xl text-white">Hitts Top Quality Tree And Lawn LLC</span>
+                <span className="font-bold text-xl text-white">Car Detailing Miami</span>
               </Link>
               
               <button

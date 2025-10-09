@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { ServiceIcon } from './ServiceIcon'
 
 interface ServiceCardProps {
   slug: string
@@ -19,13 +18,6 @@ export function ServiceCard({ slug, title, icon, image }: ServiceCardProps) {
           src={image}
           alt=""
         />
-      </div>
-      
-      {/* Icon badge - visible outside card bounds */}
-      <div className="absolute -top-4 left-4 z-10 pointer-events-none">
-        <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-brand-red border-2 border-brand-black">
-          <ServiceIcon name={icon} />
-        </span>
       </div>
       
       {/* Bottom ribbon */}
