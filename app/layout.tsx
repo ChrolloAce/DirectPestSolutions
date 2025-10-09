@@ -8,26 +8,26 @@ import MobileAppBar from '@/components/layout/MobileAppBar'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-  title: 'Hitts Top Quality Tree And Lawn LLC – Professional Tree & Lawn Services | Miami',
-  description: 'Professional tree and lawn services in Miami & Miami-Dade County. Licensed & insured tree and lawn care experts. Call (305) 560-3087 for same-day service.',
-  keywords: 'landscape design Miami, landscaping Miami, lawn care Miami, landscape maintenance Miami, irrigation installation Miami, hardscaping Miami, tree care Miami, emergency cleanup Miami, commercial landscaping Miami, residential landscaping Miami',
+  title: 'Premium Car Detailing Miami – Luxury Auto Detailing Services | Mobile Service Available',
+  description: 'Professional car detailing services in Miami & Miami-Dade County. Certified detailers specializing in luxury and exotic vehicles. Mobile service available. Call (305) 560-3087.',
+  keywords: 'car detailing Miami, auto detailing Miami, luxury car detailing, ceramic coating Miami, paint correction Miami, PPF Miami, mobile detailing Miami, interior detailing, exterior detailing, exotic car detailing',
   icons: {
     icon: '/favicon.png',
     shortcut: '/favicon.png',
     apple: '/favicon.png',
   },
   openGraph: {
-    title: 'Hitts Top Quality Tree And Lawn LLC – Professional Tree & Lawn Services',
-    description: 'Professional tree and lawn services in Miami. Licensed & insured tree and lawn care experts. Call (305) 560-3087.',
+    title: 'Premium Car Detailing Miami – Luxury Auto Detailing Services',
+    description: 'Professional car detailing services in Miami. Certified detailers specializing in luxury vehicles. Mobile service available. Call (305) 560-3087.',
     type: 'website',
     locale: 'en_US',
-    url: 'https://greenscapemiami.com',
-    siteName: 'Hitts Top Quality Tree And Lawn LLC',
+    url: 'https://premiumautodetailingmiami.com',
+    siteName: 'Premium Car Detailing Miami',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hitts Top Quality Tree And Lawn LLC – Professional Tree & Lawn Services',
-    description: 'Professional tree and lawn services in Miami. Call (305) 560-3087.',
+    title: 'Premium Car Detailing Miami – Luxury Auto Detailing Services',
+    description: 'Professional car detailing services in Miami. Call (305) 560-3087.',
   },
   robots: {
     index: true,
@@ -67,11 +67,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'LandscapingBusiness',
-              name: 'Hitts Top Quality Tree And Lawn LLC',
-              description: 'Professional tree and lawn care services in Miami and Miami-Dade County',
+              '@type': 'AutoRepair',
+              name: 'Premium Car Detailing Miami',
+              description: 'Professional luxury car detailing services in Miami and Miami-Dade County',
               telephone: '+1-305-560-3087',
-              email: 'info@greenscapemiami.com',
+              email: 'info@premiumautodetailingmiami.com',
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: '201 180th Dr',
@@ -108,19 +108,13 @@ export default function RootLayout({
                 {
                   '@type': 'OpeningHoursSpecification',
                   dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-                  opens: '09:00',
+                  opens: '08:00',
                   closes: '18:00'
-                },
-                {
-                  '@type': 'OpeningHoursSpecification',
-                  dayOfWeek: 'Sunday',
-                  opens: '00:00',
-                  closes: '00:00'
                 }
               ],
-              priceRange: '$$',
-              image: '/images/GreenScapeLogo.png',
-              url: 'https://greenscapemiami.com'
+              priceRange: '$$$',
+              image: '/images/imgi_35_AdobeStock_312924792_Editorial_Use_Only-scaled.jpg',
+              url: 'https://premiumautodetailingmiami.com'
             })
           }}
         />
