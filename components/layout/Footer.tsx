@@ -26,7 +26,7 @@ export class Footer extends React.Component {
   
   render() {
     return (
-      <footer className="bg-brand-black text-white">
+      <footer className="bg-white text-brand-black">
         {/* CTA Banner */}
         <div className="bg-brand-red text-brand-white py-12 border-b-4 border-brand-black">
           <div className="container mx-auto px-4">
@@ -51,33 +51,33 @@ export class Footer extends React.Component {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Company Info */}
             <div>
-              <h3 className="font-heading text-xl uppercase mb-4">Direct Pest Solutions</h3>
-              <p className="text-white/70 mb-4 text-sm">
+              <h3 className="font-heading text-xl uppercase mb-4 text-brand-black">Direct Pest Solutions</h3>
+              <p className="text-brand-black/70 mb-4 text-sm">
                 Miami's trusted pest control company providing professional extermination services since 2020. Licensed, insured, and guaranteed.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
                   <MapPin size={18} className="text-brand-red mt-1 flex-shrink-0" />
-                  <span className="text-white/70 text-sm">
+                  <span className="text-brand-black/70 text-sm">
                     201 180th Dr<br />
                     Sunny Isles Beach, FL 33160
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Phone size={18} className="text-brand-red mt-1 flex-shrink-0" />
-                  <a href="tel:+13055603087" className="text-white/70 hover:text-brand-red transition text-sm">
+                  <a href="tel:+13055603087" className="text-brand-black/70 hover:text-brand-red transition text-sm">
                     (305) 560-3087
                   </a>
                 </li>
                 <li className="flex items-start gap-2">
                   <Mail size={18} className="text-brand-red mt-1 flex-shrink-0" />
-                  <a href="mailto:info@directpestsolutions.com" className="text-white/70 hover:text-brand-red transition text-sm">
+                  <a href="mailto:info@directpestsolutions.com" className="text-brand-black/70 hover:text-brand-red transition text-sm">
                     info@directpestsolutions.com
                   </a>
                 </li>
                 <li className="flex items-start gap-2">
                   <Clock size={18} className="text-brand-red mt-1 flex-shrink-0" />
-                  <span className="text-white/70 text-sm">
+                  <span className="text-brand-black/70 text-sm">
                     Mon-Sun: 7:00 AM - 7:00 PM<br />
                     Emergency Service Available
                   </span>
@@ -87,11 +87,11 @@ export class Footer extends React.Component {
             
             {/* Services */}
             <div>
-              <h3 className="font-heading text-xl uppercase mb-4">Our Services</h3>
+              <h3 className="font-heading text-xl uppercase mb-4 text-brand-black">Our Services</h3>
               <ul className="space-y-2">
                 {this.services.map((service) => (
                   <li key={service.href}>
-                    <a href={service.href} className="text-white/70 hover:text-brand-red transition text-sm">
+                    <a href={service.href} className="text-brand-black/70 hover:text-brand-red transition text-sm">
                       {service.label}
                     </a>
                   </li>
@@ -101,31 +101,31 @@ export class Footer extends React.Component {
             
             {/* Quick Links */}
             <div>
-              <h3 className="font-heading text-xl uppercase mb-4">Quick Links</h3>
+              <h3 className="font-heading text-xl uppercase mb-4 text-brand-black">Quick Links</h3>
               <ul className="space-y-2">
                 {this.quickLinks.map((link) => (
                   <li key={link.href}>
-                    <a href={link.href} className="text-white/70 hover:text-brand-red transition text-sm">
+                    <a href={link.href} className="text-brand-black/70 hover:text-brand-red transition text-sm">
                       {link.label}
                     </a>
                   </li>
                 ))}
               </ul>
               
-              <h3 className="font-heading text-xl uppercase mt-6 mb-4">Resources</h3>
+              <h3 className="font-heading text-xl uppercase mt-6 mb-4 text-brand-black">Resources</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="/faqs" className="text-white/70 hover:text-brand-red transition text-sm">
+                  <a href="/faqs" className="text-brand-black/70 hover:text-brand-red transition text-sm">
                     FAQs
                   </a>
                 </li>
                 <li>
-                  <a href="/termite-control-miami/treatment-cost" className="text-white/70 hover:text-brand-red transition text-sm">
+                  <a href="/termite-control-miami/treatment-cost" className="text-brand-black/70 hover:text-brand-red transition text-sm">
                     Treatment Costs
                   </a>
                 </li>
                 <li>
-                  <a href="/termite-control-miami/prevention" className="text-white/70 hover:text-brand-red transition text-sm">
+                  <a href="/termite-control-miami/prevention" className="text-brand-black/70 hover:text-brand-red transition text-sm">
                     Prevention Tips
                   </a>
                 </li>
@@ -134,11 +134,11 @@ export class Footer extends React.Component {
             
             {/* Service Areas */}
             <div>
-              <h3 className="font-heading text-xl uppercase mb-4">Service Areas</h3>
-              <p className="text-white/70 mb-4 text-sm">
+              <h3 className="font-heading text-xl uppercase mb-4 text-brand-black">Service Areas</h3>
+              <p className="text-brand-black/70 mb-4 text-sm">
                 Proudly serving Miami-Dade County:
               </p>
-              <ul className="text-sm text-white/60 space-y-1">
+              <ul className="text-sm text-brand-black/60 space-y-1">
                 <li>• Miami</li>
                 <li>• Miami Beach</li>
                 <li>• Coral Gables</li>
@@ -153,15 +153,15 @@ export class Footer extends React.Component {
               
               {/* Social Links */}
               <div className="mt-6">
-                <h4 className="font-semibold mb-3 text-sm">Follow Us</h4>
+                <h4 className="font-semibold mb-3 text-sm text-brand-black">Follow Us</h4>
                 <div className="flex gap-4">
-                  <a href="https://www.facebook.com/directpestsolutions" className="text-white/50 hover:text-brand-red transition" aria-label="Facebook">
+                  <a href="https://www.facebook.com/directpestsolutions" className="text-brand-black/50 hover:text-brand-red transition" aria-label="Facebook">
                     <Facebook size={24} />
                   </a>
-                  <a href="https://www.instagram.com/directpestsolutions" className="text-white/50 hover:text-brand-red transition" aria-label="Instagram">
+                  <a href="https://www.instagram.com/directpestsolutions" className="text-brand-black/50 hover:text-brand-red transition" aria-label="Instagram">
                     <Instagram size={24} />
                   </a>
-                  <a href="https://www.yelp.com/biz/direct-pest-solutions-miami" className="text-white/50 hover:text-brand-red transition" aria-label="Yelp">
+                  <a href="https://www.yelp.com/biz/direct-pest-solutions-miami" className="text-brand-black/50 hover:text-brand-red transition" aria-label="Yelp">
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/>
                       <path d="M12 7c-.552 0-1 .448-1 1v4c0 .552.448 1 1 1s1-.448 1-1V8c0-.552-.448-1-1-1zm0 7c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1z"/>
@@ -173,8 +173,8 @@ export class Footer extends React.Component {
           </div>
         </div>
         
-        {/* Bottom Bar */}
-        <div className="border-t border-white/10 py-6">
+        {/* Bottom Bar - BLACK BACKGROUND */}
+        <div className="bg-brand-black border-t border-white/10 py-6">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-sm text-white/60">
