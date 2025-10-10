@@ -549,27 +549,6 @@ export default function PestPage({ params }: PestPageProps) {
           </div>
         </div>
       </section>
-
-      {/* Final CTA - WHITE BACKGROUND */}
-      <section className="bg-white py-16 border-t-4 border-brand-black/10">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-heading uppercase text-3xl md:text-4xl mb-4 text-brand-black">
-            Need {pest.name} Control in Miami?
-          </h2>
-          <p className="text-xl text-brand-black/80 mb-8">
-            Professional, licensed exterminators. Same-day service available.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button href="/contact" size="lg" variant="primary">
-              Get Free Inspection
-            </Button>
-            <Button href="tel:+13053516886" size="lg" variant="primary">
-              <Phone className="inline-block mr-2" size={20} />
-              +1-(305) 351-6886
-            </Button>
-          </div>
-        </div>
-      </section>
     </>
   )
 }

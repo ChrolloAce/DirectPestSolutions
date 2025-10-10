@@ -130,7 +130,7 @@ export default function LocationsPage() {
               Professional Pest Control & Extermination Throughout Miami-Dade County
             </p>
             <p className="text-lg text-white/80">
-              Same-Day Service • Licensed & Insured • 100% Guaranteed
+              Locations • Licensed & Insured • 100% Guaranteed
             </p>
           </div>
         </div>
@@ -201,36 +201,7 @@ export default function LocationsPage() {
                   
                   {/* Content */}
                   <div className="p-6">
-                    <p className="text-brand-black/70 mb-4 text-sm leading-relaxed">{location.description}</p>
-                    
-                    <div className="mb-4">
-                      <h4 className="font-semibold text-brand-black mb-2 text-xs uppercase tracking-wide">Services Available:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {location.services.slice(0, 3).map((service, idx) => (
-                          <span key={idx} className="text-xs bg-brand-red/10 text-brand-black px-3 py-1 border border-brand-red/30 font-medium">
-                            {service}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between text-sm pt-4 border-t border-brand-black/10">
-                      <div className="flex items-center gap-2">
-                        <Clock size={16} className="text-brand-red" />
-                        <span className="text-brand-black/70 font-medium">{location.responseTime}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Star size={16} className="text-yellow-400 fill-current" />
-                        <span className="text-brand-black font-bold">{location.rating}</span>
-                      </div>
-                    </div>
-                    
-                    <div className="mt-4">
-                      <div className="flex items-center gap-2 text-brand-red font-bold text-sm uppercase tracking-wider">
-                        <span>View Details</span>
-                        <span className="group-hover:translate-x-1 transition-transform">→</span>
-                      </div>
-                    </div>
+                    <p className="text-brand-black/70 text-sm leading-relaxed">{location.description}</p>
                   </div>
                 </div>
               </Link>
@@ -244,31 +215,6 @@ export default function LocationsPage() {
 
       {/* Customer Reviews - BLACK BACKGROUND */}
       <Reviews />
-
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-white border-t-4 border-brand-red">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-heading text-4xl md:text-5xl uppercase mb-4 text-brand-black font-bold">
-            Need Pest Control in Your Area?
-          </h2>
-          <p className="text-xl text-brand-black/80 mb-8 max-w-2xl mx-auto">
-            Don't see your specific location listed? We serve all of Miami-Dade County. 
-            Call us to confirm service in your area.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <a href="tel:+13053516886" className="bg-brand-red text-white px-8 py-4 font-bold uppercase border-2 border-brand-black hover:bg-brand-black hover:text-white transition-colors text-lg inline-flex items-center gap-2">
-              <Phone size={20} />
-              Call +1-(305) 351-6886
-            </a>
-            <a href="/contact" className="bg-brand-black text-white px-8 py-4 font-bold uppercase border-2 border-brand-black hover:bg-brand-red transition-colors text-lg">
-              Get Free Inspection
-            </a>
-          </div>
-          <p className="text-brand-black/60 mt-6 text-sm font-medium">
-            Licensed & Insured • Same-Day Service Available • 100% Satisfaction Guaranteed
-          </p>
-        </div>
-      </section>
     </>
   )
 }

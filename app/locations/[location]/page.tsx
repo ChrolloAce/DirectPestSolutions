@@ -25,7 +25,8 @@ const locations = [
     description: 'Professional pest control services in Miami, Florida. Serving downtown Miami, Brickell, Little Havana, and surrounding neighborhoods.',
     coordinates: { lat: 25.7617, lng: -80.1918 },
     neighborhoods: ['Downtown Miami', 'Brickell', 'Little Havana', 'Coconut Grove', 'Midtown'],
-    distance: '12 miles from our central office'
+    distance: '12 miles from our central office',
+    image: '/images/locations/miami-tropical-building-palm-trees.jpg'
   },
   {
     slug: 'miami-beach',
@@ -35,7 +36,8 @@ const locations = [
     description: 'Expert pest control and extermination services in Miami Beach. Protecting South Beach, Mid-Beach, and North Beach properties from pests.',
     coordinates: { lat: 25.7907, lng: -80.1300 },
     neighborhoods: ['South Beach', 'Mid-Beach', 'North Beach', 'Sunset Islands', 'Fisher Island'],
-    distance: '15 miles from our central office'
+    distance: '15 miles from our central office',
+    image: '/images/locations/miami-beach-florida-coastline.jpg'
   },
   {
     slug: 'coral-gables',
@@ -45,7 +47,8 @@ const locations = [
     description: 'Premium pest control services in Coral Gables, FL. Protecting historic homes and properties in the City Beautiful with eco-friendly solutions.',
     coordinates: { lat: 25.7211, lng: -80.2683 },
     neighborhoods: ['Miracle Mile', 'Gables Estates', 'Old Cutler', 'South Gables', 'University of Miami area'],
-    distance: '8 miles from our central office'
+    distance: '8 miles from our central office',
+    image: '/images/locations/coral-gables-florida-pest-control.jpg'
   },
   {
     slug: 'aventura',
@@ -55,7 +58,8 @@ const locations = [
     description: 'Trusted pest control company serving Aventura, Florida. Residential and commercial pest management for North Miami-Dade properties.',
     coordinates: { lat: 25.9565, lng: -80.1390 },
     neighborhoods: ['Aventura Mall area', 'Williams Island', 'Porto Vita', 'Waterways', 'Turnberry Isle'],
-    distance: '20 miles from our central office'
+    distance: '20 miles from our central office',
+    image: '/images/locations/north-miami-florida.jpg'
   },
   {
     slug: 'kendall',
@@ -65,7 +69,8 @@ const locations = [
     description: 'Complete pest control solutions in Kendall, Miami. Licensed exterminators serving West Kendall, East Kendall, and surrounding communities.',
     coordinates: { lat: 25.6792, lng: -80.3174 },
     neighborhoods: ['West Kendall', 'East Kendall', 'The Hammocks', 'Kendale Lakes', 'Three Lakes'],
-    distance: '5 miles from our central office'
+    distance: '5 miles from our central office',
+    image: '/images/locations/kendall-miami-florida.jpg'
   },
   {
     slug: 'homestead',
@@ -75,7 +80,8 @@ const locations = [
     description: 'Professional pest control in Homestead, FL. Protecting South Miami-Dade homes and farms from termites, rodents, and tropical pests.',
     coordinates: { lat: 25.4687, lng: -80.4776 },
     neighborhoods: ['Downtown Homestead', 'Naranja', 'Florida City', 'Redland', 'Princeton'],
-    distance: '18 miles from our central office'
+    distance: '18 miles from our central office',
+    image: '/images/locations/pinecrest-miami-florida.jpg'
   },
   {
     slug: 'palmetto-bay',
@@ -85,7 +91,8 @@ const locations = [
     description: 'Eco-friendly pest control services in Palmetto Bay. Family-safe extermination protecting South Miami-Dade residential communities.',
     coordinates: { lat: 25.6218, lng: -80.3246 },
     neighborhoods: ['Palmetto Bay Village Center', 'Cutler Ridge', 'Perrine', 'East Perrine', 'Palmetto Estates'],
-    distance: '10 miles from our central office'
+    distance: '10 miles from our central office',
+    image: '/images/locations/coconut-grove-miami.jpg'
   },
   {
     slug: 'cutler-bay',
@@ -95,7 +102,8 @@ const locations = [
     description: 'Reliable pest control in Cutler Bay, Florida. Same-day service available for termite control, bed bugs, mosquitoes, and rodent removal.',
     coordinates: { lat: 25.5808, lng: -80.3468 },
     neighborhoods: ['Saga Bay', 'Cutler Ridge', 'Lakes by the Bay', 'Whispering Pines', 'Franjo Park'],
-    distance: '12 miles from our central office'
+    distance: '12 miles from our central office',
+    image: '/images/locations/key-biscayne-miami.jpg'
   },
   {
     slug: 'doral',
@@ -105,7 +113,8 @@ const locations = [
     description: 'Commercial and residential pest control in Doral, Miami. Serving business parks, shopping centers, and neighborhoods throughout West Miami-Dade.',
     coordinates: { lat: 25.8195, lng: -80.3553 },
     neighborhoods: ['Downtown Doral', 'Doral Isles', 'Costa Del Sol', 'Trump National', 'Blue Lagoon'],
-    distance: '10 miles from our central office'
+    distance: '10 miles from our central office',
+    image: '/images/locations/west-kendall-miami.jpg'
   },
   {
     slug: 'hialeah',
@@ -115,7 +124,8 @@ const locations = [
     description: 'Affordable pest control services in Hialeah, FL. Licensed bilingual exterminators providing quality pest management for Miami-Dade families.',
     coordinates: { lat: 25.8576, lng: -80.2781 },
     neighborhoods: ['Hialeah Gardens', 'Palm Springs', 'Miami Lakes', 'Hialeah Heights', 'Westview'],
-    distance: '8 miles from our central office'
+    distance: '8 miles from our central office',
+    image: '/images/locations/fisher-island-miami-beach.jpg'
   }
 ]
 
@@ -247,8 +257,16 @@ export default function LocationPage({ params }: LocationPageProps) {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="relative bg-brand-black py-20 md:py-32">
+      {/* Hero Section with Location Image Background */}
+      <section 
+        className="relative py-20 md:py-32"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${location.image})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
             <MapPin className="mx-auto mb-6 text-white" size={64} />
@@ -393,29 +411,6 @@ export default function LocationPage({ params }: LocationPageProps) {
 
       {/* Customer Reviews - BLACK BACKGROUND */}
       <Reviews />
-
-      {/* Final CTA */}
-      <section className="py-16 md:py-24 bg-white border-t-4 border-brand-red">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="heading-lg uppercase mb-6 text-brand-black">
-              Ready to Eliminate Pests in {location.name}?
-            </h2>
-            <p className="text-xl mb-8 text-brand-black/80">
-              Get a free pest inspection and quote today. Licensed, insured, and guaranteed results.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <a href="/contact" className="bg-brand-red text-white px-8 py-4 font-bold uppercase border-2 border-brand-black hover:bg-brand-black hover:text-white transition-colors text-lg">
-                Schedule Free Inspection
-              </a>
-              <a href="tel:+13053516886" className="bg-brand-black text-white px-8 py-4 font-bold uppercase border-2 border-brand-black hover:bg-brand-red transition-colors text-lg inline-flex items-center gap-2">
-                <Phone size={20} />
-                Call +1-(305) 351-6886
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   )
 }
