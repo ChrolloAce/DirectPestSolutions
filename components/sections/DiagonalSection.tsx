@@ -26,7 +26,7 @@ export class DiagonalSection extends React.Component<DiagonalSectionProps> {
               : 'polygon(85% 0, 100% 0, 100% 100%, 0 100%)'
           }}
         >
-          <div className="h-full w-full bg-brand-blue/20" />
+          <div className="h-full w-full bg-white" />
         </div>
         <div className="container mx-auto px-4 relative">
           {children}
