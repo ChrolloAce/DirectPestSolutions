@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Menu, X, ChevronDown, Phone } from 'lucide-react'
 import Button from '@/components/ui/Button'
@@ -17,14 +18,13 @@ export function Navbar() {
       label: 'Services', 
       href: '/services',
       dropdown: [
-        { label: 'Landscape Design', href: '/landscape-design' },
-        { label: 'Lawn Maintenance', href: '/lawn-maintenance' },
-        { label: 'Irrigation Systems', href: '/irrigation-systems' },
-        { label: 'Commercial Landscaping', href: '/commercial-landscaping' },
-        { label: 'Tree & Shrub Care', href: '/tree-shrub-care' },
-        { label: 'Emergency Cleanup', href: '/emergency-cleanup' },
-        { label: 'Hardscaping', href: '/hardscaping' },
-        { label: 'Sod Installation', href: '/sod-installation' }
+        { label: 'General Pest Control', href: '/pest-control-miami' },
+        { label: 'Termite Control', href: '/termite-control-miami' },
+        { label: 'Bed Bug Extermination', href: '/bed-bug-extermination-miami' },
+        { label: 'Mosquito Control', href: '/mosquito-control-miami' },
+        { label: 'Rodent & Wildlife Control', href: '/rodent-wildlife-control-miami' },
+        { label: 'Insect Control', href: '/insect-control-miami' },
+        { label: 'Prevention & Inspection', href: '/prevention-inspection-miami' }
       ]
     },
     { label: 'Blog', href: '/blog' },
@@ -142,7 +142,14 @@ export function Navbar() {
             {/* Mobile Logo and Hamburger */}
             <div className="md:hidden flex items-center justify-between w-full">
               <Link href="/" className="flex items-center gap-2">
-                <span className="font-bold text-xl text-white">Car Detailing Miami</span>
+                <Image 
+                  src="/images/direct-pest-solutions-logo.png" 
+                  alt="Direct Pest Solutions" 
+                  width={180} 
+                  height={50}
+                  className="h-8 w-auto"
+                  priority
+                />
               </Link>
               
               <button

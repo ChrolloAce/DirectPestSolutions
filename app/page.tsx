@@ -23,29 +23,29 @@ export default function HomePage() {
       
       {/* Service Teasers */}
       <ServiceTeaser
-        title="Premium Exterior Detailing"
+        title="Professional Termite Control in Miami"
         description={[
-          'When your luxury vehicle needs that showroom shine in Miami, you need expert detailing and reliable service. Our certified detailers restore your car\'s exterior to pristine condition with same-day appointments available.',
-          'We use professional-grade products and advanced techniques including hand washing, clay bar treatment, paint correction, and protective coating to ensure your vehicle looks its absolute best.',
-          'With transparent pricing and a satisfaction guarantee, you can trust our detailing experts to deliver exceptional results that protect your investment and turn heads on Miami streets.'
+          'Protect your Miami home from destructive termites with expert termite control services. Our licensed termite specialists provide comprehensive inspections and effective treatments to eliminate termite infestations.',
+          'We offer multiple treatment options including liquid barrier treatments, baiting systems, and fumigation for drywood termites. All treatments come with warranties and ongoing monitoring to ensure your property stays termite-free.',
+          'Free termite inspections available. With same-day service and transparent pricing, you can trust Direct Pest Solutions to protect your most valuable investment from termite damage.'
         ]}
-        images={['/images/imgi_29_AdobeStock_432639942-1024x654.jpg', '/images/imgi_32_radiator-grille-of-a-new-luxury-car.jpg']}
+        images={['/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/pest-inspection-animation.gif', '/images/Insects/termite.png']}
         direction="left"
-        ctaText="Schedule Exterior Detailing"
-        ctaHref="/services/exterior-detailing-miami"
+        ctaText="Schedule Free Termite Inspection"
+        ctaHref="/termite-control-miami"
       />
       
       <ServiceTeaser
-        title="Ceramic Coating & Paint Protection"
+        title="Complete Bed Bug Extermination"
         description={[
-          'Protect your luxury vehicle with our professional ceramic coating services. Save time on maintenance and enjoy years of durable, hydrophobic protection for your car\'s paint.',
-          'We install premium ceramic coatings including industry-leading brands. Our certified installers ensure proper paint preparation, flawless application, and maximum durability with multi-year warranties.',
-          'Take advantage of our package deals and financing options. With professional installation and comprehensive warranties, your ceramic coating will provide lasting protection and stunning gloss.'
+          'Eliminate bed bugs completely with our proven treatment methods. Bed bugs require professional treatment—our experienced technicians use heat treatment, chemical applications, and thorough inspections to ensure complete elimination.',
+          'We provide detailed preparation guides and flexible scheduling to minimize disruption to your life. Multiple treatment options available based on the severity of your infestation and your specific situation.',
+          'Our bed bug treatments are guaranteed. If bed bugs return within the warranty period, we return for free re-treatment. Discreet service with unmarked vehicles available for your privacy.'
         ]}
-        images={['/images/imgi_34_luxury-car-interior-in-brown-and-white-colors.jpg', '/images/imgi_41_AdobeStock_312924792_Editorial_Use_Only-2048x1160.jpg']}
+        images={['/images/Insects/bed-bug.png', '/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/pest-spraying-animation.gif']}
         direction="right"
-        ctaText="Get Ceramic Coating Quote"
-        ctaHref="/services/ceramic-coating-miami"
+        ctaText="Get Bed Bug Treatment Quote"
+        ctaHref="/bed-bug-extermination-miami"
       />
       
       {/* Why Choose Us */}

@@ -25,16 +25,16 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   
   if (!service) {
     return {
-      title: 'Service Not Found | CBE Air Services',
+      title: 'Service Not Found | Direct Pest Solutions',
     }
   }
   
   return {
-    title: `${service.title} Miami | CBE Air Services`,
-    description: service.shortDescription + ' Call (305) 560-3087 for immediate service in Miami.',
-    keywords: `${service.title.toLowerCase()} Miami, ${service.title.toLowerCase()} Miami FL, emergency ${service.title.toLowerCase()} Miami, HVAC Miami, AC repair Miami, ${service.title.toLowerCase()} service Miami Beach, ${service.title.toLowerCase()} Coral Gables`,
+    title: `${service.title} Miami | Direct Pest Solutions`,
+    description: service.shortDescription + ' Call (305) 560-3087 for same-day service in Miami.',
+    keywords: `${service.title.toLowerCase()} Miami, ${service.title.toLowerCase()} Miami FL, emergency ${service.title.toLowerCase()} Miami, pest control Miami, exterminator Miami, ${service.title.toLowerCase()} service Miami Beach, ${service.title.toLowerCase()} Coral Gables`,
     openGraph: {
-      title: `${service.title} | CBE Air Services`,
+      title: `${service.title} | Direct Pest Solutions`,
       description: service.shortDescription,
       type: 'website',
       images: [service.image],
@@ -53,23 +53,23 @@ export default function ServicePage({ params }: ServicePageProps) {
   
   // Service-specific content
   const problemSolution = {
-    problem: `Without professional ${service.title.toLowerCase()}, you risk system failure, higher energy bills, and uncomfortable living conditions.`,
-    solution: `Our expert HVAC team uses state-of-the-art equipment and proven techniques to deliver lasting results that keep your home comfortable.`
+    problem: `Without professional ${service.title.toLowerCase()}, you risk property damage, health hazards, and pest infestations that worsen over time.`,
+    solution: `Our licensed exterminators use proven IPM methods and safe, effective treatments to eliminate pests and prevent future infestations.`
   }
 
   const process = [
-    { step: 1, title: 'Initial Inspection', description: 'Thorough assessment of your HVAC system' },
-    { step: 2, title: 'Diagnosis', description: 'Identify the root cause of the problem' },
-    { step: 3, title: 'Service Execution', description: 'Professional service using industry-best practices' },
-    { step: 4, title: 'Quality Check', description: 'Final inspection and customer walkthrough' },
+    { step: 1, title: 'Free Inspection', description: 'Comprehensive property assessment and pest identification' },
+    { step: 2, title: 'Custom Treatment Plan', description: 'Tailored solution based on your specific pest problem' },
+    { step: 3, title: 'Safe Treatment', description: 'Professional application using EPA-approved products' },
+    { step: 4, title: 'Follow-Up & Prevention', description: 'Monitoring and preventive measures for lasting protection' },
   ]
 
   // Always use the object format for benefits to maintain consistency
   const benefits = [
-    { icon: 'shield', title: 'Protect Your Investment', description: 'Prevent costly damage and extend system life' },
-    { icon: 'clock', title: 'Save Time & Money', description: 'Efficient service that prevents future problems' },
-    { icon: 'award', title: 'Peace of Mind', description: 'Licensed, insured professionals you can trust' },
-    { icon: 'star', title: 'Guaranteed Results', description: '100% satisfaction guarantee on all work' },
+    { icon: 'shield', title: 'Protect Your Property', description: 'Prevent damage and health risks from pests' },
+    { icon: 'clock', title: 'Fast Response', description: 'Same-day service available for urgent pest problems' },
+    { icon: 'award', title: 'Licensed & Insured', description: 'State-certified exterminators you can trust' },
+    { icon: 'star', title: 'Guaranteed Results', description: 'If pests return, we return for free' },
   ]
 
   const serviceAreas = [
@@ -81,7 +81,7 @@ export default function ServicePage({ params }: ServicePageProps) {
     <>
       {/* Hero Section */}
       <section 
-        className="relative bg-brand-blue bg-noise py-20 md:py-32"
+        className="relative bg-brand-red bg-noise py-20 md:py-32"
         style={{
           backgroundImage: `linear-gradient(rgba(11, 13, 15, 0.7), rgba(11, 13, 15, 0.7)), url(${service.image})`,
           backgroundSize: 'cover',
@@ -91,18 +91,18 @@ export default function ServicePage({ params }: ServicePageProps) {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="heading-xl uppercase mb-6">
-              24/7 {service.title} Services in Miami, Florida
+              Professional {service.title} in Miami, Florida
             </h1>
             <p className="text-xl mb-8 text-white/90">
-              {service.shortDescription} CBE Air Services is Miami's trusted HVAC company, serving Miami-Dade County with {service.title.toLowerCase()} services.
+              {service.shortDescription} Direct Pest Solutions is Miami's trusted pest control company, serving Miami-Dade County with expert {service.title.toLowerCase()}.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <CTAButton href="/contact" size="lg">
-                Get Free Estimate
+                Get Free Inspection
               </CTAButton>
-              <CTAButton href="tel:7862967304" variant="secondary" size="lg">
+              <CTAButton href="tel:+13055603087" variant="secondary" size="lg">
                 <Phone className="inline-block mr-2" size={20} />
-                Call (786) 296-7304
+                Call (305) 560-3087
               </CTAButton>
             </div>
           </div>
@@ -143,8 +143,8 @@ export default function ServicePage({ params }: ServicePageProps) {
                 alt={`Professional ${service.title} service in Miami`}
                 className="rounded-none shadow-xl border-4 border-brand-black"
               />
-              <div className="absolute -bottom-4 -right-4 bg-brand-gold p-4 border-2 border-brand-black">
-                <p className="font-bold text-brand-black">24/7 Emergency</p>
+              <div className="absolute -bottom-4 -right-4 bg-brand-red p-4 border-2 border-brand-black text-white">
+                <p className="font-bold">Same-Day</p>
                 <p className="text-sm">Service Available</p>
               </div>
             </div>
@@ -181,23 +181,23 @@ export default function ServicePage({ params }: ServicePageProps) {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 md:py-24 bg-brand-blue bg-noise">
+      <section className="py-16 md:py-24 bg-brand-red bg-noise">
         <div className="container mx-auto px-4">
           <h2 className="heading-lg uppercase text-center mb-4 text-white">
-            Why Invest in {service.title}?
+            Why Choose Professional {service.title}?
           </h2>
           <p className="text-center text-white/80 mb-12 max-w-3xl mx-auto">
-            Professional {service.title.toLowerCase()} services protect your property and save you money in the long run.
+            Professional {service.title.toLowerCase()} protects your property, health, and peace of mind.
           </p>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {benefits.map((benefit) => (
               <div key={benefit.title} className="bg-white p-6 rounded-none shadow-lg border-2 border-brand-black">
-                <div className="w-12 h-12 bg-brand-gold rounded-full flex items-center justify-center mb-4">
-                  {benefit.icon === 'shield' && <Shield className="text-brand-black" size={24} />}
-                  {benefit.icon === 'clock' && <Clock className="text-brand-black" size={24} />}
-                  {benefit.icon === 'award' && <Award className="text-brand-black" size={24} />}
-                  {benefit.icon === 'star' && <Star className="text-brand-black" size={24} />}
+                <div className="w-12 h-12 bg-brand-red rounded-full flex items-center justify-center mb-4">
+                  {benefit.icon === 'shield' && <Shield className="text-white" size={24} />}
+                  {benefit.icon === 'clock' && <Clock className="text-white" size={24} />}
+                  {benefit.icon === 'award' && <Award className="text-white" size={24} />}
+                  {benefit.icon === 'star' && <Star className="text-white" size={24} />}
                 </div>
                 <h3 className="font-bold text-lg mb-2">{benefit.title}</h3>
                 <p className="text-sm text-brand-black/70">{benefit.description}</p>
@@ -217,29 +217,29 @@ export default function ServicePage({ params }: ServicePageProps) {
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
-                <div className="text-4xl font-bold text-brand-gold mb-2">500+</div>
+                <div className="text-4xl font-bold text-brand-red mb-2">500+</div>
                 <p className="text-lg">{service.title} Projects Completed</p>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-brand-gold mb-2">4.9★</div>
+                <div className="text-4xl font-bold text-brand-red mb-2">4.9★</div>
                 <p className="text-lg">Average Customer Rating</p>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-brand-gold mb-2">24/7</div>
+                <div className="text-4xl font-bold text-brand-red mb-2">Same-Day</div>
                 <p className="text-lg">Emergency Service Available</p>
               </div>
             </div>
 
             {/* Sample Testimonial */}
-            <div className="bg-brand-off p-8 border-l-4 border-brand-gold">
+            <div className="bg-brand-off p-8 border-l-4 border-brand-red">
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="fill-brand-gold text-brand-gold" size={20} />
+                  <Star key={i} className="fill-brand-red text-brand-red" size={20} />
                 ))}
               </div>
               <p className="text-lg italic mb-4">
-                "CBE Air Services provided excellent {service.title.toLowerCase()} service. 
-                Professional, on-time, and the results exceeded our expectations. 
+                "Direct Pest Solutions provided excellent {service.title.toLowerCase()}. 
+                Professional, on-time, and they completely eliminated our pest problem. 
                 Highly recommend for anyone in Miami!"
               </p>
               <p className="font-bold">- Maria G., Coral Gables</p>
@@ -281,21 +281,21 @@ export default function ServicePage({ params }: ServicePageProps) {
       </section>
 
       {/* Final CTA Banner */}
-      <section className="bg-brand-black py-16 border-t-4 border-brand-gold">
+      <section className="bg-brand-black py-16 border-t-4 border-brand-red">
         <div className="container mx-auto px-4 text-center">
           <h2 className="heading-lg uppercase mb-4 text-white">
-            Get Your Free {service.title} Estimate Today
+            Get Your Free {service.title} Inspection Today
           </h2>
           <p className="text-xl text-white/80 mb-8">
-            Professional service, competitive pricing, 100% satisfaction guaranteed
+            Professional service, same-day availability, 100% satisfaction guaranteed
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button href="/contact" size="lg" variant="primary">
-              Get Free Estimate
+              Get Free Inspection
             </Button>
-            <Button href="tel:7862967304" size="lg" variant="secondary">
+            <Button href="tel:+13055603087" size="lg" variant="secondary">
               <Phone className="inline-block mr-2" size={20} />
-              (786) 296-7304
+              (305) 560-3087
             </Button>
           </div>
         </div>
@@ -311,8 +311,8 @@ export default function ServicePage({ params }: ServicePageProps) {
             name: service.title,
             description: service.shortDescription,
             provider: {
-              '@type': 'HVACBusiness',
-              name: 'CBE Air Services',
+              '@type': 'PestControlService',
+              name: 'Direct Pest Solutions',
               telephone: '+1-305-560-3087',
               address: {
                 '@type': 'PostalAddress',

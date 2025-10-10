@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { Phone } from 'lucide-react'
+import Image from 'next/image'
 
 export class TopBar extends React.Component {
   render() {
@@ -13,7 +14,14 @@ export class TopBar extends React.Component {
             {/* Left: Logo */}
             <div className="flex items-center">
               <a href="/" className="flex items-center gap-2">
-                <span className="font-bold text-xl">Car Detailing Miami</span>
+                <Image 
+                  src="/images/direct-pest-solutions-logo.png" 
+                  alt="Direct Pest Solutions" 
+                  width={200} 
+                  height={60}
+                  className="h-10 w-auto"
+                  priority
+                />
               </a>
             </div>
             

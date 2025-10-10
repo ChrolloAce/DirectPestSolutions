@@ -6,34 +6,34 @@ import { Shield, Award, Users, Clock, ThumbsUp, Wrench } from 'lucide-react'
 export function WhyChooseUs() {
   const reasons = [
     {
-      icon: <Shield className="h-10 w-10 text-brand-blue" />,
-      title: 'Certified Detailing Experts',
-      description: 'Professional detailers trained in luxury and exotic vehicle care with full insurance'
+      icon: <Shield className="h-10 w-10 text-brand-red" />,
+      title: 'Licensed & Certified',
+      description: 'State-licensed exterminators with full insurance and ongoing training'
     },
     {
-      icon: <Clock className="h-10 w-10 text-brand-blue" />,
-      title: 'Mobile Service Available',
-      description: 'We come to your home or office - convenient detailing on your schedule'
+      icon: <Clock className="h-10 w-10 text-brand-red" />,
+      title: 'Same-Day Emergency Service',
+      description: 'Available 7 days a week for urgent pest problems - we respond fast'
     },
     {
-      icon: <Award className="h-10 w-10 text-brand-blue" />,
+      icon: <Award className="h-10 w-10 text-brand-red" />,
       title: 'Transparent Pricing',
-      description: 'Upfront quotes with no hidden fees or surprise charges'
+      description: 'Upfront quotes with no hidden fees - you know the cost before we start'
     },
     {
-      icon: <Users className="h-10 w-10 text-brand-blue" />,
+      icon: <Users className="h-10 w-10 text-brand-red" />,
       title: 'Local Miami Company',
-      description: 'Trusted by luxury car owners throughout Miami-Dade County'
+      description: 'Trusted by homeowners and businesses throughout Miami-Dade County'
     },
     {
-      icon: <ThumbsUp className="h-10 w-10 text-brand-blue" />,
+      icon: <ThumbsUp className="h-10 w-10 text-brand-red" />,
       title: '100% Satisfaction Guarantee',
-      description: 'We stand behind our work with comprehensive quality guarantees'
+      description: 'If pests return, we return for free - your satisfaction is guaranteed'
     },
     {
-      icon: <Wrench className="h-10 w-10 text-brand-blue" />,
-      title: 'Premium Products Only',
-      description: 'Professional-grade products specifically chosen for luxury vehicles'
+      icon: <Wrench className="h-10 w-10 text-brand-red" />,
+      title: 'Safe, Eco-Friendly Solutions',
+      description: 'EPA-approved treatments that are safe for your family, pets, and environment'
     }
   ]
 
@@ -42,10 +42,10 @@ export function WhyChooseUs() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-heading text-4xl md:text-5xl uppercase mb-4">
-            Why Choose Our <span className="text-brand-green">Premium Detailing</span>?
+            Why Choose <span className="text-brand-red">Direct Pest Solutions</span>?
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            When it comes to your luxury vehicle, choose Miami's trusted auto detailing professionals. 
+            When it comes to protecting your home from pests, choose Miami's trusted pest control professionals. 
             Here's what sets us apart from the competition.
           </p>
         </div>

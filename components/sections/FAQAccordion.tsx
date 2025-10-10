@@ -11,44 +11,44 @@ interface FAQ {
 export class FAQAccordion extends React.Component {
   private faqs: FAQ[] = [
     {
-      question: 'Do you offer 24/7 emergency plumbing services?',
-      answer: 'Yes! We provide 24/7 emergency plumbing services. Our team is always ready to respond to urgent situations like burst pipes, major leaks, or sewage backups. We guarantee rapid response times, typically within 60 minutes.'
+      question: 'Do you offer same-day pest control services in Miami?',
+      answer: 'Yes! We offer same-day emergency pest control services for urgent situations like bed bugs, rodents, wasps, or severe infestations. Our licensed technicians are available 7 days a week throughout Miami-Dade County.'
     },
     {
-      question: 'How quickly can you respond to emergencies?',
-      answer: 'We guarantee response times within 60 minutes for emergency calls. Our plumbers are strategically located throughout Nashville to ensure rapid response when you need us most.'
+      question: 'Are your pest control treatments safe for children and pets?',
+      answer: 'Absolutely! We use EPA-approved products and follow strict safety protocols. Most treatments are safe for re-entry within a few hours. We always provide specific safety instructions and use eco-friendly options when requested.'
     },
     {
-      question: 'Are your plumbers licensed and insured?',
-      answer: 'Absolutely! All our plumbers are fully licensed master plumbers, bonded, and insured. We maintain all required certifications and carry comprehensive liability insurance for your protection.'
+      question: 'How often should I schedule pest control service in Miami?',
+      answer: 'We recommend quarterly service for general pest control in South Florida due to our warm, humid climate. For specific issues like termites or mosquitoes, we\'ll customize a treatment schedule based on your property\'s needs.'
     },
     {
-      question: 'What are signs I need to call a plumber?',
-      answer: 'Call us if you notice: persistent dripping, slow drains, low water pressure, unusual sounds in pipes, water stains on walls/ceilings, running toilets, or sudden increases in water bills.'
+      question: 'Do you offer free pest inspections?',
+      answer: 'Yes! We provide free termite inspections and complimentary pest assessments with service estimates. Our technicians will identify pest issues, entry points, and provide customized treatment recommendations.'
     },
     {
-      question: 'Do you offer free estimates?',
-      answer: 'Yes! We provide free estimates for all non-emergency services. For emergency calls, we\'ll provide upfront pricing before beginning any work, so there are never any surprises.'
+      question: 'What pests are most common in Miami homes?',
+      answer: 'Miami\'s most common pests include: termites (subterranean and drywood), bed bugs, German cockroaches, ants (especially Argentine ants), mosquitoes, rodents, and spiders. We treat all of these pests effectively.'
     },
     {
-      question: 'Can you help with water heater installation?',
-      answer: 'Yes! We install, repair, and maintain all types of water heaters including traditional tank, tankless, and hybrid models. We offer same-day installation for most models.'
+      question: 'How long does a typical pest control treatment take?',
+      answer: 'Most general pest treatments take 30-60 minutes depending on property size. Termite treatments or fumigation services may require several hours or days. We\'ll provide a timeline during your free inspection.'
     },
     {
-      question: 'How can I prevent frozen pipes?',
-      answer: 'Keep your home heated above 55°F, insulate exposed pipes, let faucets drip during extreme cold, and know where your main water shut-off valve is located. We also offer winterization services.'
+      question: 'Do I need to leave my home during pest control treatment?',
+      answer: 'For most treatments, you don\'t need to leave. However, for intensive treatments like fumigation or severe bed bug heat treatments, temporary relocation may be necessary. We\'ll inform you in advance and help coordinate.'
     },
     {
-      question: 'What should I do if I have a plumbing emergency?',
-      answer: 'First, shut off the main water valve to prevent damage. Then call our 24/7 emergency hotline immediately. We\'ll guide you through temporary measures while our plumber is en route.'
+      question: 'What\'s included in your termite control service?',
+      answer: 'Our termite service includes: comprehensive inspection with detailed report, species identification (subterranean or drywood), treatment (liquid barrier, baiting, or fumigation), warranty coverage, and annual monitoring to ensure termite-free protection.'
     },
     {
-      question: 'Do you work on commercial properties?',
-      answer: 'Yes! We provide comprehensive commercial plumbing services including preventive maintenance programs, emergency repairs, and new installations for businesses throughout Nashville.'
+      question: 'Can you guarantee pest elimination?',
+      answer: 'Yes! We guarantee our treatments. If pests return between scheduled services or during the warranty period, we return for free re-treatment. Our satisfaction guarantee ensures you\'re 100% happy with the results.'
     },
     {
-      question: 'What\'s included in drain cleaning service?',
-      answer: 'Our drain cleaning includes video inspection, hydro-jetting to remove all blockages, and a full system check. We\'ll also provide recommendations for preventing future clogs.'
+      question: 'Do you service commercial properties and businesses?',
+      answer: 'Yes! We provide comprehensive commercial pest control for restaurants, hotels, offices, warehouses, and other businesses. Services include preventive maintenance, IPM programs, and documentation for health inspections.'
     }
   ]
   
@@ -63,7 +63,7 @@ export class FAQAccordion extends React.Component {
           <div className="max-w-3xl mx-auto">
             {this.faqs.map((faq, index) => (
               <details key={index} className="group border-b border-black/10">
-                <summary className="cursor-pointer flex justify-between items-center py-4 text-lg font-semibold hover:text-brand-blue transition">
+                <summary className="cursor-pointer flex justify-between items-center py-4 text-lg font-semibold hover:text-brand-red transition">
                   {faq.question}
                   <ChevronDown className="ml-4 transition-transform group-open:rotate-180" />
                 </summary>

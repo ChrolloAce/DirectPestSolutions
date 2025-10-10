@@ -14,194 +14,165 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: 'exterior-detailing',
-    title: 'Exterior Detailing',
-    shortDescription: 'Premium exterior detailing to restore your vehicle\'s showroom shine',
+    id: 'pest-control',
+    slug: 'pest-control-miami',
+    title: 'General Pest Control',
+    shortDescription: 'Comprehensive pest control services for your Miami home or business',
     description: [
-      'Transform your vehicle\'s exterior with our premium detailing services. Our expert detailers use professional-grade products and techniques to restore your car\'s original luster.',
-      'We perform comprehensive hand washing, clay bar treatment, paint correction, polishing, and protective wax or sealant application for lasting protection.',
-      'With transparent pricing and a satisfaction guarantee, trust our detailing experts to bring your vehicle back to showroom condition.'
+      'Protect your property with our comprehensive pest control services in Miami. Our licensed exterminators provide effective treatments for all common household pests.',
+      'We use Integrated Pest Management (IPM) approaches that combine prevention, monitoring, and treatment for long-lasting results. Safe for your family, pets, and the environment.',
+      'With flexible service plans, satisfaction guarantees, and same-day emergency service available, you can trust Direct Pest Solutions for all your pest control needs.'
     ],
-    icon: 'Sparkles',
-    image: '/images/imgi_23_car-body-polishing-process-at-the-detailing-workshop-1024x682.jpg',
+    icon: 'Shield',
+    image: '/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/pest-treatment-animation.gif',
     benefits: [
-      'Hand wash & clay bar treatment',
-      'Paint correction & polishing',
-      'Protective wax application',
-      'Wheel & tire detailing',
+      'Licensed & certified technicians',
+      'Safe, eco-friendly treatments',
+      'Flexible service plans',
+      'Same-day emergency service',
       '100% satisfaction guarantee'
     ],
-    href: '/services/exterior-detailing-miami',
+    href: '/pest-control-miami',
+    featured: true,
+    emergency: true
+  },
+  {
+    id: 'termite-control',
+    slug: 'termite-control-miami',
+    title: 'Termite Control & Inspection',
+    shortDescription: 'Professional termite inspection and treatment to protect your Miami property',
+    description: [
+      'Protect your home from destructive termites with our professional termite control services. South Florida\'s climate makes termite infestations common—don\'t wait until it\'s too late.',
+      'Our certified termite specialists perform thorough inspections, identify termite species (subterranean or drywood), and implement targeted treatment plans including baiting systems, liquid treatments, and fumigation.',
+      'Free termite inspections available. We offer comprehensive warranties and ongoing monitoring to ensure your property stays termite-free for years to come.'
+    ],
+    icon: 'Bug',
+    image: '/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/pest-inspection-animation.gif',
+    benefits: [
+      'Free termite inspections',
+      'Multiple treatment options',
+      'Licensed termite specialists',
+      'Comprehensive warranties',
+      'Ongoing monitoring programs'
+    ],
+    href: '/termite-control-miami',
     featured: true,
     emergency: false
   },
   {
-    id: 'interior-detailing',
-    title: 'Interior Detailing',
-    shortDescription: 'Deep cleaning and restoration of your vehicle\'s interior',
+    id: 'bed-bug-extermination',
+    slug: 'bed-bug-extermination-miami',
+    title: 'Bed Bug Extermination',
+    shortDescription: 'Fast, effective bed bug treatment with guaranteed results',
     description: [
-      'Experience a like-new interior with our comprehensive interior detailing services. We clean, condition, and protect every surface inside your luxury vehicle.',
-      'Our service includes vacuum, steam cleaning, leather conditioning, fabric protection, dashboard restoration, and odor elimination for a fresh, pristine interior.',
-      'Join our maintenance plan for priority service, discounted treatments, and peace of mind knowing your vehicle interior is always immaculate.'
+      'Eliminate bed bugs completely with our proven treatment methods. Bed bugs are difficult to eradicate—DIY solutions rarely work. Our professionals have the tools and expertise to eliminate infestations.',
+      'We use a combination of heat treatment, chemical applications, and thorough inspection to ensure complete bed bug elimination. Multiple treatment methods available based on your situation.',
+      'Preparation guides provided, flexible scheduling, and follow-up inspections included. We guarantee our bed bug treatments—if they return, we return for free.'
     ],
-    icon: 'Shield',
-    image: '/images/imgi_31_cropped-image-of-businessman-with-luxury-watch-closing-door-while-sitting-in-car.jpg',
+    icon: 'Bed',
+    image: '/images/Insects/bed-bug.png',
     benefits: [
-      'Deep vacuum & steam cleaning',
-      'Leather conditioning & protection',
-      'Fabric stain removal',
-      'Dashboard & console restoration',
-      'Odor elimination'
+      'Heat & chemical treatments',
+      'Detailed preparation guide',
+      'Complete elimination guaranteed',
+      'Follow-up inspections included',
+      'Discreet service'
     ],
-    href: '/services/interior-detailing-miami',
-    featured: true
+    href: '/bed-bug-extermination-miami',
+    featured: true,
+    emergency: true
   },
   {
-    id: 'ceramic-coating',
-    title: 'Ceramic Coating',
-    shortDescription: 'Professional ceramic coating for long-lasting paint protection',
+    id: 'mosquito-control',
+    slug: 'mosquito-control-miami',
+    title: 'Mosquito Control',
+    shortDescription: 'Reduce mosquitoes and reclaim your outdoor space',
     description: [
-      'Protect your investment with our professional ceramic coating services. This advanced protection provides years of durable, hydrophobic protection for your vehicle\'s paint.',
-      'We apply premium ceramic coatings that create a permanent bond with your paint, offering superior protection against UV rays, chemicals, and environmental contaminants.',
-      'Available with multi-year warranties and professional installation that ensures flawless results and maximum durability.'
+      'Enjoy your Miami outdoor space without mosquitoes. Our mosquito control programs reduce mosquito populations by up to 90% using targeted treatments and prevention strategies.',
+      'We treat breeding sites, apply barrier treatments to vegetation, and use larvicides to prevent mosquito development. Safe for your family, pets, and beneficial insects like bees.',
+      'Monthly service plans keep mosquitoes under control year-round. Perfect for homes, businesses, outdoor events, and special occasions.'
     ],
-    icon: 'Shield',
-    image: '/images/imgi_24_AdobeStock_198465715-1024x683.jpg',
+    icon: 'Wind',
+    image: '/images/Insects/mosquito.png',
     benefits: [
-      'Multi-year protection',
-      'Hydrophobic properties',
-      'UV & chemical resistance',
-      'Enhanced gloss & depth',
-      'Warranty included'
+      'Up to 90% mosquito reduction',
+      'Barrier & larvicide treatments',
+      'Monthly service plans',
+      'Safe for family & pets',
+      'Special event treatments available'
     ],
-    href: '/services/ceramic-coating-miami',
-    featured: true
+    href: '/mosquito-control-miami',
+    featured: true,
+    emergency: false
   },
   {
-    id: 'paint-correction',
-    title: 'Paint Correction',
-    shortDescription: 'Expert paint correction to remove swirls, scratches, and imperfections',
+    id: 'rodent-wildlife-control',
+    slug: 'rodent-wildlife-control-miami',
+    title: 'Rodent & Wildlife Control',
+    shortDescription: 'Humane rodent and wildlife removal with exclusion services',
     description: [
-      'Restore your vehicle\'s paint to perfection with our multi-stage paint correction services. We remove swirls, scratches, oxidation, and paint defects.',
-      'Our certified paint correction specialists use precision tools and techniques to safely remove paint imperfections and restore factory finish or better.',
-      'Perfect for luxury and exotic vehicles, our paint correction service delivers mirror-like results that enhance your vehicle\'s value.'
+      'Get rid of rats, mice, raccoons, and other wildlife safely and humanely. Our wildlife control specialists identify entry points, remove animals, and seal your property to prevent re-entry.',
+      'We handle all types of rodents and wildlife common in Miami including rats, mice, squirrels, raccoons, opossums, and birds. Trapping, exclusion, and damage repair services available.',
+      'Long-term solutions that address the root cause. We don\'t just remove the animals—we prevent them from coming back with professional exclusion and prevention strategies.'
     ],
-    icon: 'Wand',
-    image: '/images/imgi_25_AdobeStock_377385492-1024x682.jpg',
+    icon: 'Squirrel',
+    image: '/images/Insects/mouse.png',
     benefits: [
-      'Multi-stage correction',
-      'Swirl & scratch removal',
-      'Paint depth measurement',
-      'Professional-grade equipment',
-      'Guaranteed results'
+      'Humane removal methods',
+      'Entry point identification',
+      'Professional exclusion work',
+      'Damage repair services',
+      'Prevention strategies included'
     ],
-    href: '/services/paint-correction-miami',
-    featured: true
+    href: '/rodent-wildlife-control-miami',
+    featured: true,
+    emergency: true
   },
   {
-    id: 'ppf-installation',
-    title: 'Paint Protection Film',
-    shortDescription: 'Clear paint protection film installation for ultimate paint defense',
+    id: 'insect-control',
+    slug: 'insect-control-miami',
+    title: 'Ant, Roach & General Insect Control',
+    shortDescription: 'Eliminate ants, cockroaches, spiders, and other common insects',
     description: [
-      'Protect your luxury vehicle with invisible paint protection film (PPF). This self-healing film guards against rock chips, scratches, and road debris.',
-      'We install premium PPF brands with precision cutting and expert application, ensuring seamless protection that\'s virtually invisible.',
-      'Available in full front-end coverage or complete vehicle wraps with manufacturer warranties for long-term peace of mind.'
+      'Say goodbye to ants, cockroaches, spiders, and other unwanted insects. Our targeted treatments eliminate existing infestations and create barriers to prevent future invasions.',
+      'We treat for all common South Florida insects including Argentine ants, carpenter ants, German cockroaches, American cockroaches, spiders, silverfish, earwigs, and more.',
+      'Indoor and outdoor treatments available. Safe, effective products that work. Quarterly service plans keep your home insect-free year-round.'
     ],
-    icon: 'Shield',
-    image: '/images/imgi_26_AdobeStock_791616590-1024x574.jpg',
+    icon: 'Bug',
+    image: '/images/Insects/ant.png',
     benefits: [
-      'Self-healing technology',
-      'Invisible protection',
-      'Custom fit installation',
-      'Manufacturer warranty',
-      'Preserves resale value'
+      'Targets all common insects',
+      'Indoor & outdoor treatments',
+      'Quarterly service plans',
+      'Safe for indoor use',
+      'Fast-acting solutions'
     ],
-    href: '/services/ppf-installation-miami',
-    featured: true
+    href: '/insect-control-miami',
+    featured: true,
+    emergency: false
   },
   {
-    id: 'engine-detailing',
-    title: 'Engine Bay Detailing',
-    shortDescription: 'Professional engine bay cleaning and detailing services',
+    id: 'prevention-inspection',
+    slug: 'prevention-inspection-miami',
+    title: 'Pest Prevention & Inspection',
+    shortDescription: 'Proactive pest prevention and comprehensive property inspections',
     description: [
-      'Complete engine bay detailing that makes your engine compartment look as good as the exterior. Safe cleaning methods that protect sensitive components.',
-      'We degrease, clean, and dress all engine bay components including hoses, plastic covers, and metal surfaces for a factory-fresh appearance.',
-      'From daily drivers to show cars, we deliver professional engine bay detailing that impresses and helps maintain resale value.'
+      'Prevent pest problems before they start with our comprehensive inspection and prevention services. Our IPM approach focuses on eliminating conditions that attract pests.',
+      'We perform detailed property inspections, identify vulnerabilities, seal entry points, and recommend modifications to reduce pest attraction. Detailed inspection reports provided.',
+      'Seasonal maintenance plans available. Perfect for new homeowners, property managers, and anyone who wants to stay ahead of pest problems rather than react to them.'
     ],
-    icon: 'Wrench',
-    image: '/images/imgi_27_AdobeStock_462320361-1024x683.jpg',
+    icon: 'Search',
+    image: '/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/pest-inspection-animation.gif',
     benefits: [
-      'Safe degreasing methods',
-      'Component protection',
-      'Detailed hand cleaning',
-      'Dressing & protection',
-      'Show-quality results'
+      'Comprehensive property inspection',
+      'Detailed inspection reports',
+      'IPM approach',
+      'Entry point sealing',
+      'Seasonal maintenance plans'
     ],
-    href: '/services/engine-detailing-miami',
-    featured: false
-  },
-  {
-    id: 'headlight-restoration',
-    title: 'Headlight Restoration',
-    shortDescription: 'Restore clarity and brightness to oxidized headlights',
-    description: [
-      'Restore hazy, yellowed headlights to like-new clarity. Our professional restoration process removes oxidation and protects against future UV damage.',
-      'We use multi-stage wet sanding and polishing followed by UV-protective coating to ensure long-lasting clarity and improved nighttime visibility.',
-      'Affordable alternative to headlight replacement that improves appearance, safety, and resale value.'
-    ],
-    icon: 'Sun',
-    image: '/images/imgi_28_AdobeStock_781952791-1024x574.jpg',
-    benefits: [
-      'Improved visibility',
-      'UV protection coating',
-      'Professional wet sanding',
-      'Long-lasting results',
-      'Cost-effective solution'
-    ],
-    href: '/services/headlight-restoration-miami',
-    featured: false
-  },
-  {
-    id: 'leather-conditioning',
-    title: 'Leather Conditioning',
-    shortDescription: 'Professional leather care to maintain suppleness and prevent cracking',
-    description: [
-      'Preserve your luxury vehicle\'s leather interior with professional cleaning and conditioning. Our treatments restore moisture and protect against cracking and fading.',
-      'We use pH-balanced cleaners and premium conditioners specifically formulated for automotive leather, ensuring proper care without damage.',
-      'Regular leather maintenance extends the life of your interior and maintains that luxurious feel and appearance.'
-    ],
-    icon: 'Armchair',
-    image: '/images/imgi_33_car-dashboard-modern-luxury-interior-steering-wheel.jpg',
-    benefits: [
-      'pH-balanced cleaners',
-      'Premium conditioners',
-      'Prevents cracking',
-      'UV protection',
-      'Maintains suppleness'
-    ],
-    href: '/services/leather-conditioning-miami',
-    featured: false
-  },
-  {
-    id: 'full-detail',
-    title: 'Complete Detail Package',
-    shortDescription: 'Comprehensive interior and exterior detailing for total transformation',
-    description: [
-      'Our complete detail package combines all our premium services for the ultimate vehicle transformation. Inside and out, we restore your car to showroom condition.',
-      'Includes exterior wash, clay bar, paint correction, wax, full interior deep clean, leather conditioning, engine bay detail, and protective treatments.',
-      'Perfect for luxury and exotic vehicles, special occasions, or when your car deserves the absolute best care available in Miami.'
-    ],
-    icon: 'Star',
-    image: '/images/imgi_35_AdobeStock_312924792_Editorial_Use_Only-scaled.jpg',
-    benefits: [
-      'Complete interior & exterior',
-      'Paint correction included',
-      'Engine bay detailing',
-      'All protective treatments',
-      'Premium service package'
-    ],
-    href: '/services/full-detail-miami',
-    featured: true
+    href: '/prevention-inspection-miami',
+    featured: false,
+    emergency: false
   }
 ]
 

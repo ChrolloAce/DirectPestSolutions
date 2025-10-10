@@ -47,14 +47,14 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/imgi_22_AdobeStock_598538013-1024x576.jpg"
-          alt="Premium Auto Detailing Miami - Luxury Car Care Services"
+          src="/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/raccoon-photo.jpg"
+          alt="Direct Pest Solutions Miami - Professional Pest Control Services"
           fill
           priority
           className="object-cover object-center"
         />
         {/* Overlay: left-to-right gradient + subtle noise */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
         <div className="absolute inset-0 mix-blend-overlay bg-noise opacity-[.08]" />
       </div>
 
@@ -63,23 +63,23 @@ export default function Hero() {
           {/* Left: Copy / CTAs */}
           <div className="text-white">
             <h1 className="font-heading uppercase leading-[0.95] tracking-tight text-5xl sm:text-6xl">
-              <span className="underline decoration-brand-green decoration-4 underline-offset-4">Premium</span>
-              <br /> <span className="text-brand-darkgreen">Auto Detailing</span> Miami
+              <span className="underline decoration-brand-red decoration-4 underline-offset-4">Direct</span>
+              <br /> <span className="text-brand-red">Pest Solutions</span> Miami
             </h1>
 
             <p className="mt-5 max-w-xl text-lg text-white/90">
-              Licensed • Insured • Mobile Service Available. Professional car detailing for luxury vehicles, exotic cars, and premium automobiles.
+              Licensed • Insured • Same-Day Service Available. Professional pest control for termites, bed bugs, rodents, mosquitoes & all pests.
             </p>
 
             {/* Trust row */}
             <div className="mt-6 flex flex-wrap items-center gap-4 text-sm">
               <div className="inline-flex items-center gap-2 rounded-none bg-white/10 px-3 py-2 ring-1 ring-white/20">
-                <span className="text-brand-green">★★★★★</span>
-                <span className="text-white/80">5.0 from 500+ luxury car owners</span>
+                <span className="text-brand-red">★★★★★</span>
+                <span className="text-white/80">5.0 from 500+ Miami homeowners</span>
               </div>
               <div className="inline-flex items-center gap-2 rounded-none bg-white/10 px-3 py-2 ring-1 ring-white/20">
-                <span className="text-brand-darkgreen">Certified Detailers</span>
-                <span className="text-white/80">Luxury Car Specialists</span>
+                <span className="text-brand-red">Licensed Exterminators</span>
+                <span className="text-white/80">Pest Control Specialists</span>
               </div>
             </div>
 
@@ -98,13 +98,13 @@ export default function Hero() {
                 href="#quote" 
                 variant="primary"
               >
-                Get Free Detailing Quote
+                Get Free Pest Inspection
               </Button>
             </div>
 
             {/* Small proof strip */}
             <p className="mt-5 text-sm text-white/75">
-              Miami's Premier Auto Detailing • Mobile service available • Free estimates • Trusted by luxury car owners
+              Miami's Trusted Pest Control • Same-day emergency service • Free inspections • Satisfaction guaranteed
             </p>
           </div>
 
@@ -114,12 +114,12 @@ export default function Hero() {
               onSubmit={onSubmit}
               className="rounded-none bg-white/95 backdrop-blur px-5 sm:px-6 py-6 shadow-card ring-1 ring-brand-black/10 max-w-md ml-auto"
             >
-              <div className="pb-4 border-b border-brand-green/30 mb-4">
+              <div className="pb-4 border-b border-brand-red/30 mb-4">
                 <h3 className="font-heading uppercase text-2xl text-brand-black">
-                  Get Your Free Detailing Quote
+                  Get Your Free Pest Inspection
                 </h3>
                 <p className="text-sm text-brand-black/70">
-                  Fast response • Mobile service available
+                  Fast response • Same-day service available
                 </p>
               </div>
 
@@ -129,7 +129,7 @@ export default function Hero() {
                   <input 
                     name="name" 
                     required 
-                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-green" 
+                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-red" 
                   />
                 </label>
 
@@ -140,7 +140,7 @@ export default function Hero() {
                       name="phone" 
                       required 
                       inputMode="tel" 
-                      className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-green" 
+                      className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-red" 
                     />
                   </label>
                   <label className="block">
@@ -149,7 +149,7 @@ export default function Hero() {
                       name="email" 
                       type="email"
                       required 
-                      className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-green" 
+                      className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-red" 
                     />
                   </label>
                 </div>
@@ -158,17 +158,17 @@ export default function Hero() {
                   <span className="text-sm font-medium text-brand-black">Service Needed</span>
                   <select 
                     name="service" 
-                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-green"
+                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-red"
                   >
-                    <option>Exterior Detailing</option>
-                    <option>Interior Detailing</option>
-                    <option>Full Detail Package</option>
-                    <option>Paint Correction</option>
-                    <option>Ceramic Coating</option>
-                    <option>Paint Protection Film</option>
-                    <option>Engine Bay Detailing</option>
-                    <option>Headlight Restoration</option>
-                    <option>Leather Conditioning</option>
+                    <option>General Pest Control</option>
+                    <option>Termite Inspection & Control</option>
+                    <option>Bed Bug Extermination</option>
+                    <option>Mosquito Control</option>
+                    <option>Rodent Control</option>
+                    <option>Ant Control</option>
+                    <option>Cockroach Control</option>
+                    <option>Wildlife Removal</option>
+                    <option>Emergency Service</option>
                     <option>Other</option>
                   </select>
                 </label>
@@ -177,7 +177,7 @@ export default function Hero() {
                   <span className="text-sm font-medium text-brand-black">Address (City/ZIP)</span>
                   <input 
                     name="address" 
-                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-green" 
+                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-red" 
                   />
                 </label>
 
@@ -186,7 +186,7 @@ export default function Hero() {
                   <textarea 
                     name="notes" 
                     rows={3} 
-                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-green" 
+                    className="mt-1 w-full rounded-none border border-brand-black/20 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-red" 
                   />
                 </label>
 
@@ -208,7 +208,7 @@ export default function Hero() {
               </div>
 
               {/* red accent frame */}
-              <div className="pointer-events-none absolute inset-0 rounded-none ring-1 ring-brand-green/60"></div>
+              <div className="pointer-events-none absolute inset-0 rounded-none ring-1 ring-brand-red/60"></div>
             </form>
           </div>
         </div>
