@@ -157,8 +157,11 @@ export default function ServicesPage() {
         </div>
       </section>
       
-      {/* Service Areas */}
-      <section className="py-16 md:py-20 bg-gray-50">
+      {/* Customer Reviews - BLACK BACKGROUND */}
+      <Reviews />
+
+      {/* Service Areas - WHITE BACKGROUND to break up black sections */}
+      <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-heading text-4xl md:text-5xl uppercase mb-6 font-bold text-brand-black">
@@ -170,7 +173,7 @@ export default function ServicesPage() {
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
               {serviceAreas.map(area => (
-                <div key={area} className="py-3 px-4 bg-white hover:bg-brand-red hover:text-white transition-colors border border-brand-black/10 font-medium">
+                <div key={area} className="py-3 px-4 bg-gray-50 hover:bg-brand-red hover:text-white transition-colors border border-brand-black/10 font-medium">
                   {area}
                 </div>
               ))}
@@ -178,9 +181,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-      
-      {/* Customer Reviews - BLACK BACKGROUND */}
-      <Reviews />
 
       {/* Why Choose Us Section - BLACK BACKGROUND */}
       <WhyChooseUs />
