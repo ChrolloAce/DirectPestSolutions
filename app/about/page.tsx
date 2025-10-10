@@ -15,8 +15,21 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-brand-black py-20 md:py-32">
-        <div className="container mx-auto px-4">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/company/pest-prevention-service.webp"
+            alt="Direct Pest Solutions - Professional pest control and prevention services in Miami"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="font-heading text-5xl md:text-7xl uppercase mb-6 font-black">
               ABOUT <span className="text-brand-red">DIRECT PEST SOLUTIONS</span>
@@ -138,24 +151,122 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Owner Section */}
+      {/* Our Approach Section */}
+      <section className="py-16 md:py-24 bg-brand-black">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            <div className="relative">
+              <div className="aspect-square relative">
+                <Image
+                  src="/images/company/commercial-pest-inspection.webp"
+                  alt="Direct Pest Solutions professional pest inspection and treatment approach in Miami"
+                  fill
+                  className="object-cover rounded-lg shadow-2xl"
+                />
+              </div>
+            </div>
+            <div className="text-white">
+              <p className="text-sm uppercase tracking-wider text-brand-red font-bold mb-4">
+                Our Approach
+              </p>
+              <h2 className="font-heading text-4xl md:text-5xl uppercase mb-6 leading-tight">
+                Comprehensive Pest Protection
+              </h2>
+              <p className="text-lg text-white/80 mb-4">
+                We don't just treat pests - we provide comprehensive protection plans tailored to your property's 
+                specific needs. Our integrated pest management (IPM) approach combines inspection, prevention, 
+                treatment, and ongoing monitoring.
+              </p>
+              <p className="text-lg text-white/80 mb-4">
+                Every technician on our team is fully licensed, extensively trained, and equipped with the latest 
+                pest control technology. We use only EPA-approved products that are safe for your family and pets 
+                while being highly effective against pests.
+              </p>
+              <p className="text-lg text-white/80 mb-6">
+                From termite inspections to mosquito treatments, bed bug extermination to wildlife removal, 
+                we handle every pest problem with the same level of professionalism and attention to detail.
+              </p>
+              <Button href="/services" size="lg" variant="primary">
+                View Our Services
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Licensed & Certified Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            <div>
+              <p className="text-sm uppercase tracking-wider text-brand-red font-bold mb-4">
+                Licensed & Certified
+              </p>
+              <h2 className="font-heading text-4xl md:text-5xl uppercase mb-6 text-brand-black leading-tight">
+                Trusted Professionals You Can Count On
+              </h2>
+              <p className="text-lg text-brand-black/80 mb-4">
+                Direct Pest Solutions is fully licensed and insured in the state of Florida. Our team maintains 
+                all required certifications and stays current with the latest pest control techniques and safety 
+                protocols through continuous professional development.
+              </p>
+              <p className="text-lg text-brand-black/80 mb-4">
+                We're proud members of industry associations and adhere to strict standards for quality, safety, 
+                and environmental responsibility. When you hire us, you can rest assured that your property is 
+                in expert hands.
+              </p>
+              <p className="text-lg text-brand-black/80 mb-6">
+                Our commitment to excellence has earned us hundreds of 5-star reviews from satisfied customers 
+                throughout Miami-Dade County. We stand behind our work with a 100% satisfaction guarantee.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center gap-2 bg-brand-red/10 px-4 py-2 rounded">
+                  <CheckCircle className="text-brand-red" size={20} />
+                  <span className="font-semibold">Licensed & Insured</span>
+                </div>
+                <div className="flex items-center gap-2 bg-brand-red/10 px-4 py-2 rounded">
+                  <CheckCircle className="text-brand-red" size={20} />
+                  <span className="font-semibold">EPA Approved Products</span>
+                </div>
+                <div className="flex items-center gap-2 bg-brand-red/10 px-4 py-2 rounded">
+                  <CheckCircle className="text-brand-red" size={20} />
+                  <span className="font-semibold">100% Guaranteed</span>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="aspect-square relative">
+                <Image
+                  src="/images/company/pest-exterminator-spraying.webp"
+                  alt="Licensed and certified pest control professionals from Direct Pest Solutions serving Miami-Dade County"
+                  fill
+                  className="object-cover rounded-lg shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Community Commitment Section */}
       <section className="py-16 md:py-24 bg-brand-black">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-heading text-4xl md:text-5xl uppercase mb-8 text-white font-bold">
-              Our Commitment
+              Our Commitment to Miami
             </h2>
             <div className="bg-white p-8 md:p-12 rounded-lg">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-brand-black">Professional Pest Control Excellence</h3>
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-brand-black">Serving Our Community for Over 22 Years</h3>
               <p className="text-lg text-brand-black/80 mb-6">
                 "We started Direct Pest Solutions with one goal: to provide the kind of professional, thorough pest control 
                 that Miami property owners deserve. Every day, our team works hard to earn your trust through 
                 exceptional workmanship, safe EPA-approved products, and unparalleled attention to detail."
               </p>
               <p className="text-lg text-brand-black/80 mb-6">
-                "When you choose us, you're not just getting pest control - you're getting licensed specialists who treat 
-                every property with care. We personally ensure every treatment meets our exacting standards, and we're 
-                committed to exceeding your expectations."
+                "As a local, family-owned business, we understand Miami's unique pest challenges - from termites and bed bugs 
+                to mosquitoes and wildlife. We're invested in this community because we live and work here too. When you 
+                choose Direct Pest Solutions, you're supporting a local business that truly cares about protecting your 
+                property and your peace of mind."
               </p>
               <p className="font-bold text-brand-black">
                 - The Direct Pest Solutions Team
