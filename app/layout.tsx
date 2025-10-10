@@ -67,7 +67,7 @@ export default function RootLayout({
           <TopBar />
           <Navbar />
           <FloatingPhone />
-          <main className="min-h-screen pt-16 md:pt-[7.5rem] pb-16 md:pb-0">
+          <main className="min-h-screen pt-16 md:pt-0 pb-16 md:pb-0">
             {children}
           </main>
           <Footer />

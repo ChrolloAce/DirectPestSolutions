@@ -39,7 +39,7 @@ export function Navbar() {
   // Handle scroll
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 56) // 56px is TopBar height
+      setIsScrolled(window.scrollY > 80) // Show sticky nav after scrolling past TopBar
     }
     
     window.addEventListener('scroll', handleScroll)
@@ -76,27 +76,94 @@ export function Navbar() {
   
   return (
     <>
-      <nav className={`fixed inset-x-0 md:top-[3.5rem] z-40 bg-white border-b border-brand-black/20 shadow-sm transition-all duration-300 ${
-        isScrolled ? 'top-0 md:top-0' : 'top-16 md:top-[3.5rem]'
+      {/* Static Navbar - Desktop */}
+      <nav className="hidden md:block bg-white border-b border-brand-black/20">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="flex items-center justify-start gap-6 h-16">
+            {navItems.map((item) => {
+              const isActive = pathname === item.href || (item.dropdown && item.dropdown.some(sub => pathname === sub.href))
+              
+              if (item.dropdown) {
+                return (
+                  <div key={item.href} className="relative group">
+                    <Link
+                      href={item.href}
+                      className={`
+                        font-semibold uppercase text-sm tracking-wide transition-colors flex items-center gap-1
+                        ${isActive 
+                          ? 'text-brand-red' 
+                          : 'text-brand-black hover:text-brand-red'
+                        }
+                      `}
+                    >
+                      {item.label}
+                      <ChevronDown size={16} className="group-hover:rotate-180 transition-transform" />
+                    </Link>
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-white border-2 border-brand-black shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                      {item.dropdown.map((subItem) => (
+                        <Link
+                          key={subItem.href}
+                          href={subItem.href}
+                          className="block px-4 py-3 text-sm text-brand-black hover:bg-brand-red hover:text-white transition-colors border-b border-brand-black/10 last:border-b-0"
+                        >
+                          {subItem.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )
+              }
+              
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`
+                    font-semibold uppercase text-sm tracking-wide transition-colors
+                    ${isActive 
+                      ? 'text-brand-red' 
+                      : 'text-brand-black hover:text-brand-red'
+                    }
+                  `}
+                >
+                  {item.label}
+                </Link>
+              )
+            })}
+            
+            <Button
+              as="a"
+              href="/contact"
+              variant="primary"
+              size="sm"
+              className="ml-auto"
+            >
+              Get Free Quote
+            </Button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Sticky Navbar - Appears on Scroll (Desktop Only) */}
+      <nav className={`hidden md:block fixed inset-x-0 top-0 z-50 bg-white border-b border-brand-black/20 shadow-lg transition-transform duration-300 ${
+        isScrolled ? 'translate-y-0' : '-translate-y-full'
       }`}>
         <div className="mx-auto max-w-7xl px-4">
           <div className="flex items-center justify-between h-16">
-            {/* Logo - shows when scrolled */}
-            <Link href="/" className={`md:flex items-center gap-2 transition-all duration-300 ${
-              isScrolled ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4 pointer-events-none'
-            }`}>
+            {/* Logo on left */}
+            <Link href="/" className="flex items-center gap-2">
               <Image 
                 src="/images/direct-pest-solutions-logo.png" 
                 alt="Direct Pest Solutions" 
-                width={180} 
-                height={54}
+                width={200} 
+                height={60}
                 className="h-10 w-auto"
                 priority
               />
             </Link>
             
-            {/* Desktop Nav */}
-            <div className="hidden md:flex items-center gap-6">
+            {/* Nav items */}
+            <div className="flex items-center gap-6">
               {navItems.map((item) => {
                 const isActive = pathname === item.href || (item.dropdown && item.dropdown.some(sub => pathname === sub.href))
                 
@@ -116,7 +183,7 @@ export function Navbar() {
                         {item.label}
                         <ChevronDown size={16} className="group-hover:rotate-180 transition-transform" />
                       </Link>
-                      <div className="absolute top-full left-0 mt-2 w-56 bg-white border-2 border-brand-black shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                      <div className="absolute top-full left-0 mt-2 w-56 bg-white border-2 border-brand-black shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                         {item.dropdown.map((subItem) => (
                           <Link
                             key={subItem.href}
@@ -147,14 +214,12 @@ export function Navbar() {
                   </Link>
                 )
               })}
-            </div>
-            
-            {/* Desktop Right Side Buttons */}
-            <div className="hidden md:flex items-center gap-3">
+              
               <a href="tel:+13055603087" className="flex items-center gap-2 text-brand-black hover:text-brand-red transition-colors">
                 <Phone size={18} />
                 <span className="font-semibold">(305) 560-3087</span>
               </a>
+              
               <Button
                 as="a"
                 href="/contact"
@@ -164,31 +229,35 @@ export function Navbar() {
                 Get Free Quote
               </Button>
             </div>
+          </div>
+        </div>
+      </nav>
+      
+      {/* Mobile Nav - Fixed */}
+      <nav className="md:hidden fixed inset-x-0 top-0 z-40 bg-white border-b border-brand-black/20 shadow-sm">
+        <div className="px-4">
+          <div className="flex items-center justify-between h-16">
+            <Link href="/" className="flex items-center gap-2">
+              <Image 
+                src="/images/direct-pest-solutions-logo.png" 
+                alt="Direct Pest Solutions" 
+                width={180} 
+                height={50}
+                className="h-8 w-auto"
+                priority
+              />
+            </Link>
             
-            {/* Mobile Logo and Hamburger */}
-            <div className="md:hidden flex items-center justify-between w-full">
-              <Link href="/" className="flex items-center gap-2">
-                <Image 
-                  src="/images/direct-pest-solutions-logo.png" 
-                  alt="Direct Pest Solutions - Miami's Trusted Pest Control Company" 
-                  width={180} 
-                  height={50}
-                  className="h-8 w-auto"
-                  priority
-                />
-              </Link>
-              
-              <button
-                type="button"
-                className="h-10 w-10 grid place-items-center rounded-none border-2 border-brand-black bg-white hover:bg-brand-red hover:text-white transition-colors text-brand-black"
-                aria-label={isOpen ? 'Close menu' : 'Open menu'}
-                aria-controls="mobile-menu"
-                aria-expanded={isOpen ? 'true' : 'false'}
-                onClick={toggleMenu}
-              >
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
-            </div>
+            <button
+              type="button"
+              className="h-10 w-10 grid place-items-center rounded-none border-2 border-brand-black bg-white hover:bg-brand-red hover:text-white transition-colors text-brand-black"
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
+              aria-controls="mobile-menu"
+              aria-expanded={isOpen ? 'true' : 'false'}
+              onClick={toggleMenu}
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
       </nav>
@@ -208,7 +277,7 @@ export function Navbar() {
             id="mobile-menu"
             role="dialog"
             aria-label="Navigation menu"
-            className="md:hidden fixed inset-x-0 top-16 z-50 bg-white border-b-2 border-brand-black shadow-lg transform transition-transform duration-200 ease-out"
+            className="md:hidden fixed inset-x-0 top-16 z-50 bg-white border-b-2 border-brand-black shadow-lg transform transition-transform duration-200 ease-out max-h-[calc(100vh-4rem)] overflow-y-auto"
           >
             <div className="px-4 py-4 space-y-1">
               {navItems.map((item) => {
