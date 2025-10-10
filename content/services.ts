@@ -49,7 +49,7 @@ export const services: Service[] = [
       'We understand the unique challenges of commercial pest control—protecting your reputation, meeting health codes, and maintaining a pest-free environment for employees and customers.'
     ],
     icon: 'Building',
-    image: '/images/company/commercial-building-treatment.webp',
+    image: '/images/company/commercial-pest-inspection.webp',
     benefits: [
       'Health code compliance',
       'Scheduled service plans',
@@ -73,7 +73,7 @@ export const services: Service[] = [
       'Includes quarterly inspections, exterior barrier treatments, interior spot treatments as needed, termite monitoring, rodent exclusion, and detailed service reports. Perfect for homeowners and property managers who want complete protection.'
     ],
     icon: 'Shield',
-    image: '/images/company/professional-pest-inspection.webp',
+    image: '/images/company/termite-inspection-professional.webp',
     benefits: [
       'Year-round protection',
       'All pests covered',
