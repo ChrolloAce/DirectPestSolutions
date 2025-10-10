@@ -123,23 +123,31 @@ export class Footer extends React.Component {
               </ul>
             </div>
             
-            {/* Social Links */}
+            {/* Resources */}
             <div>
-              <h3 className="font-heading text-xl uppercase mb-4 text-brand-black">Follow Us</h3>
-              <div className="flex gap-4">
-                <a href="https://www.facebook.com/directpestsolutions" className="text-brand-black/50 hover:text-brand-red transition" aria-label="Facebook">
-                  <Facebook size={24} />
-                </a>
-                <a href="https://www.instagram.com/directpestsolutions" className="text-brand-black/50 hover:text-brand-red transition" aria-label="Instagram">
-                  <Instagram size={24} />
-                </a>
-                <a href="https://www.yelp.com/biz/direct-pest-solutions-miami" className="text-brand-black/50 hover:text-brand-red transition" aria-label="Yelp">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/>
-                    <path d="M12 7c-.552 0-1 .448-1 1v4c0 .552.448 1 1 1s1-.448 1-1V8c0-.552-.448-1-1-1zm0 7c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1z"/>
-                  </svg>
-                </a>
-              </div>
+              <h3 className="font-heading text-xl uppercase mb-4 text-brand-black">Resources</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="/blog" className="text-brand-black/70 hover:text-brand-red transition text-sm">
+                    Pest Control Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="/termite-control-miami/damage-signs" className="text-brand-black/70 hover:text-brand-red transition text-sm">
+                    Signs of Damage
+                  </a>
+                </li>
+                <li>
+                  <a href="/bed-bug-extermination-miami/treatment-methods" className="text-brand-black/70 hover:text-brand-red transition text-sm">
+                    Treatment Methods
+                  </a>
+                </li>
+                <li>
+                  <a href="/locations" className="text-brand-black/70 hover:text-brand-red transition text-sm">
+                    Service Areas
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

@@ -1,8 +1,9 @@
 import { Metadata } from 'next'
-import { ServicesGrid } from '@/components/sections/ServicesGrid'
-import { ServiceFAQ } from '@/components/sections/ServiceFAQ'
-import { CTAButton } from '@/components/ui/CTAButton'
-import { Phone, Clock, Award } from 'lucide-react'
+import Link from 'next/link'
+import { Phone, Clock, Award, Shield, CheckCircle, ArrowRight } from 'lucide-react'
+import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
+import Reviews from '@/components/Reviews'
+import { getFeaturedServices, services } from '@/content/services'
 
 export const metadata: Metadata = {
   title: 'Pest Control Services Miami | Direct Pest Solutions',
@@ -14,71 +15,154 @@ export const metadata: Metadata = {
 }
 
 export default function ServicesPage() {
+  const featuredServices = getFeaturedServices()
+  const allServices = services
+
+  const serviceAreas = [
+    'Miami', 'Miami Beach', 'Coral Gables', 'Aventura',
+    'Kendall', 'Homestead', 'Palmetto Bay', 'Cutler Bay',
+    'Doral', 'Hialeah', 'Sunny Isles Beach', 'Brickell'
+  ]
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-black to-brand-black/90 text-white py-20">
+      <section className="relative bg-brand-black text-white py-20 md:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-heading text-5xl md:text-6xl uppercase mb-6">
-              Professional HVAC Services in Miami
+            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl uppercase mb-6 font-black leading-tight">
+              Professional Pest Control <span className="text-brand-red">Services</span> in Miami
             </h1>
-            <p className="text-xl mb-8 text-white/90">
-              From AC repair to installation, we provide comprehensive HVAC solutions for Miami homes and businesses. 
-              Same-day service available with licensed, certified technicians.
+            <p className="text-xl md:text-2xl mb-8 text-white/90 leading-relaxed">
+              From termite inspections to bed bug extermination, we provide comprehensive pest control solutions for Miami-Dade County homes and businesses. Same-day service available with licensed, insured exterminators.
             </p>
             
             {/* Trust Badges */}
             <div className="flex flex-wrap justify-center gap-6 mb-8">
               <div className="flex items-center gap-2">
                 <Phone className="text-brand-red" size={20} />
-                <span>24/7 Emergency Service</span>
+                <span className="text-sm">Same-Day Service</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="text-brand-red" size={20} />
-                <span>Same-Day Service</span>
+                <span className="text-sm">Emergency Available</span>
               </div>
               <div className="flex items-center gap-2">
                 <Award className="text-brand-red" size={20} />
-                <span>Licensed & Insured</span>
+                <span className="text-sm">Licensed & Insured</span>
               </div>
             </div>
             
             {/* CTAs */}
             <div className="flex flex-wrap justify-center gap-4">
-              <CTAButton href="tel:+13053516886" variant="primary">
+              <a href="tel:+13053516886" className="bg-brand-red text-white px-8 py-4 font-bold uppercase hover:bg-brand-red/90 transition-colors text-lg">
                 Call +1-(305) 351-6886
-              </CTAButton>
-              <CTAButton href="/contact" variant="secondary">
-                Get Free Quote
-              </CTAButton>
+              </a>
+              <a href="/contact" className="bg-white text-brand-black px-8 py-4 font-bold uppercase hover:bg-gray-100 transition-colors text-lg">
+                Get Free Inspection
+              </a>
             </div>
           </div>
         </div>
       </section>
       
-      {/* Services Grid */}
-      <ServicesGrid />
+      {/* Featured Services Grid */}
+      <section className="py-20 md:py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="font-heading uppercase text-5xl md:text-6xl text-brand-black mb-4 font-black">
+              OUR <span className="text-brand-red">SERVICES</span>
+            </h2>
+            <p className="max-w-3xl mx-auto text-xl text-brand-black/80">
+              Expert pest control solutions for every pest problem in Miami-Dade County
+            </p>
+          </div>
+          
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {featuredServices.map((service) => (
+              <Link
+                key={service.id}
+                href={service.href}
+                className="group block"
+              >
+                <div className="bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full rounded-xl">
+                  {/* Service Image with Diagonal Red Banner */}
+                  <div className="relative aspect-square overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={`${service.title} - Professional pest control services in Miami`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    {/* Diagonal red banner at bottom-left */}
+                    <div 
+                      className="absolute bottom-0 left-0 bg-brand-red px-8 py-4" 
+                      style={{ clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0% 100%)' }}
+                    >
+                      <span className="text-white text-sm font-bold uppercase tracking-wider">
+                        {service.id.replace(/-/g, ' ')}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  {/* Service Content */}
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-3 text-brand-black group-hover:text-brand-red transition-colors leading-tight">
+                      {service.title}
+                    </h3>
+                    <p className="text-brand-black/70 mb-4 line-clamp-3 text-sm leading-relaxed">
+                      {service.shortDescription}
+                    </p>
+                    <div className="flex items-center gap-2 text-brand-red font-bold text-sm uppercase tracking-wider">
+                      <span>View Service</span>
+                      <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* Additional Services */}
+          {allServices.filter(s => !s.featured).length > 0 && (
+            <div className="mt-16 max-w-4xl mx-auto">
+              <h3 className="font-heading uppercase text-3xl text-brand-black mb-8 text-center">
+                Additional Services
+              </h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                {allServices.filter(s => !s.featured).map((service) => (
+                  <Link
+                    key={service.id}
+                    href={service.href}
+                    className="group flex items-center gap-4 p-6 bg-gray-50 hover:bg-brand-red hover:text-white transition-colors border border-brand-black/10"
+                  >
+                    <CheckCircle className="text-brand-red group-hover:text-white flex-shrink-0" size={24} />
+                    <div>
+                      <h4 className="font-bold text-lg mb-1">{service.title}</h4>
+                      <p className="text-sm opacity-80 line-clamp-2">{service.shortDescription}</p>
+                    </div>
+                    <ArrowRight className="ml-auto flex-shrink-0 group-hover:translate-x-1 transition-transform" size={20} />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
       
       {/* Service Areas */}
-      <section className="py-16 bg-brand-gray">
+      <section className="py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-heading text-4xl uppercase mb-6">
-              Serving All of Miami-Dade County
+            <h2 className="font-heading text-4xl md:text-5xl uppercase mb-6 font-bold text-brand-black">
+              Serving All of <span className="text-brand-red">Miami-Dade County</span>
             </h2>
-            <p className="text-lg mb-8">
-              CBE Air Services provides professional HVAC services throughout Miami and surrounding areas. 
-              Our local technicians know Miami's unique climate challenges and are ready to help.
+            <p className="text-lg md:text-xl mb-8 text-brand-black/80">
+              Direct Pest Solutions provides professional pest control services throughout Miami and surrounding areas. 
+              Our local exterminators know Miami's unique pest challenges and are ready to protect your property.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-              {[
-                'Miami', 'Miami Beach', 'Sunny Isles Beach', 'Aventura',
-                'North Miami', 'North Miami Beach', 'Bal Harbour', 'Surfside',
-                'Coral Gables', 'Doral', 'Hialeah', 'Wynwood',
-                'Brickell', 'Kendall', 'Homestead', 'Little Havana'
-              ].map(area => (
-                <div key={area} className="py-2 px-4 bg-white rounded-none border border-brand-black/10">
+              {serviceAreas.map(area => (
+                <div key={area} className="py-3 px-4 bg-white hover:bg-brand-red hover:text-white transition-colors border border-brand-black/10 font-medium">
                   {area}
                 </div>
               ))}
@@ -87,66 +171,29 @@ export default function ServicesPage() {
         </div>
       </section>
       
-      {/* Why Choose CBE */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-heading text-4xl uppercase mb-8 text-center">
-              Why Choose CBE Air Services?
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="font-bold text-xl mb-4">Expert Technicians</h3>
-                <p className="text-gray-700">
-                  Our NATE-certified technicians have years of experience with all AC brands and models. 
-                  We diagnose problems accurately and fix them right the first time.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-bold text-xl mb-4">Transparent Pricing</h3>
-                <p className="text-gray-700">
-                  No surprises or hidden fees. We provide upfront pricing before any work begins, 
-                  so you know exactly what to expect.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-bold text-xl mb-4">Fast Response</h3>
-                <p className="text-gray-700">
-                  We understand Miami's heat is no joke. That's why we offer same-day service 
-                  and 24/7 emergency repairs to restore your comfort quickly.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-bold text-xl mb-4">Satisfaction Guaranteed</h3>
-                <p className="text-gray-700">
-                  We stand behind our work with comprehensive warranties and a 100% satisfaction guarantee. 
-                  Your comfort is our priority.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Service FAQ */}
-      <ServiceFAQ />
+      {/* Why Choose Us Section - BLACK BACKGROUND */}
+      <WhyChooseUs />
+
+      {/* Customer Reviews - BLACK BACKGROUND */}
+      <Reviews />
       
       {/* Bottom CTA */}
-      <section className="py-16 bg-brand-red text-white">
+      <section className="py-16 md:py-20 bg-white border-t-4 border-brand-red">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-heading text-4xl uppercase mb-4">
-            Ready to Schedule Service?
+          <h2 className="font-heading text-4xl md:text-5xl uppercase mb-4 font-bold text-brand-black">
+            Ready to Eliminate <span className="text-brand-red">Pests</span>?
           </h2>
-          <p className="text-xl mb-8">
-            Don't wait for a complete breakdown. Call CBE Air Services today!
+          <p className="text-xl mb-8 text-brand-black/80 max-w-2xl mx-auto">
+            Don't wait for pests to cause damage. Call Direct Pest Solutions today for a free inspection!
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <CTAButton href="tel:+13053516886" variant="secondary">
+            <a href="tel:+13053516886" className="bg-brand-red text-white px-8 py-4 font-bold uppercase hover:bg-brand-red/90 transition-colors text-lg inline-flex items-center gap-2">
+              <Phone size={20} />
               Call +1-(305) 351-6886
-            </CTAButton>
-            <CTAButton href="/contact" variant="primary">
-              Schedule Online
-            </CTAButton>
+            </a>
+            <a href="/contact" className="bg-brand-black text-white px-8 py-4 font-bold uppercase hover:bg-brand-black/90 transition-colors text-lg">
+              Schedule Free Inspection
+            </a>
           </div>
         </div>
       </section>
