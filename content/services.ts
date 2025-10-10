@@ -24,7 +24,7 @@ export const services: Service[] = [
       'With flexible service plans, satisfaction guarantees, and same-day emergency service available, you can trust Direct Pest Solutions for all your pest control needs.'
     ],
     icon: 'Shield',
-    image: '/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/pest-treatment-animation.gif',
+    image: '/images/company/residential-pest-control-service.webp',
     benefits: [
       'Licensed & certified technicians',
       'Safe, eco-friendly treatments',
@@ -47,7 +47,7 @@ export const services: Service[] = [
       'Free termite inspections available. We offer comprehensive warranties and ongoing monitoring to ensure your property stays termite-free for years to come.'
     ],
     icon: 'Bug',
-    image: '/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/pest-inspection-animation.gif',
+    image: '/images/company/termite-inspection-professional.webp',
     benefits: [
       'Free termite inspections',
       'Multiple treatment options',
@@ -70,7 +70,7 @@ export const services: Service[] = [
       'Preparation guides provided, flexible scheduling, and follow-up inspections included. We guarantee our bed bug treatments—if they return, we return for free.'
     ],
     icon: 'Bed',
-    image: '/images/Insects/bed-bug.png',
+    image: '/images/company/bed-bug-treatment-residential.webp',
     benefits: [
       'Heat & chemical treatments',
       'Detailed preparation guide',
@@ -93,7 +93,7 @@ export const services: Service[] = [
       'Monthly service plans keep mosquitoes under control year-round. Perfect for homes, businesses, outdoor events, and special occasions.'
     ],
     icon: 'Wind',
-    image: '/images/Insects/mosquito.png',
+    image: '/images/company/mosquito-control-yard-treatment.webp',
     benefits: [
       'Up to 90% mosquito reduction',
       'Barrier & larvicide treatments',
@@ -116,7 +116,7 @@ export const services: Service[] = [
       'Long-term solutions that address the root cause. We don\'t just remove the animals—we prevent them from coming back with professional exclusion and prevention strategies.'
     ],
     icon: 'Squirrel',
-    image: '/images/Insects/mouse.png',
+    image: '/images/company/rodent-control-specialist.webp',
     benefits: [
       'Humane removal methods',
       'Entry point identification',
@@ -139,7 +139,7 @@ export const services: Service[] = [
       'Indoor and outdoor treatments available. Safe, effective products that work. Quarterly service plans keep your home insect-free year-round.'
     ],
     icon: 'Bug',
-    image: '/images/Insects/ant.png',
+    image: '/images/company/insect-control-specialist.webp',
     benefits: [
       'Targets all common insects',
       'Indoor & outdoor treatments',
@@ -162,7 +162,7 @@ export const services: Service[] = [
       'Seasonal maintenance plans available. Perfect for new homeowners, property managers, and anyone who wants to stay ahead of pest problems rather than react to them.'
     ],
     icon: 'Search',
-    image: '/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/pest-inspection-animation.gif',
+    image: '/images/company/pest-prevention-service.webp',
     benefits: [
       'Comprehensive property inspection',
       'Detailed inspection reports',

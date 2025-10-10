@@ -30,8 +30,8 @@ export default function HomePage() {
           'We offer multiple treatment options including liquid barrier treatments, baiting systems, and fumigation for drywood termites. All treatments come with warranties and ongoing monitoring to ensure your property stays termite-free.',
           'Free termite inspections available. With same-day service and transparent pricing, you can trust Direct Pest Solutions to protect your most valuable investment from termite damage.'
         ]}
-        images={['/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/pest-inspection-animation.gif', '/images/Insects/termite.png']}
-        alt="Professional termite inspection and control services in Miami"
+        images={['/images/company/termite-inspection-professional.webp', '/images/company/professional-pest-inspection.webp']}
+        alt="Licensed termite inspector conducting professional termite inspection in Miami home - Direct Pest Solutions certified technician examining foundation and wood structures for termite activity"
         direction="left"
         ctaText="Schedule Free Termite Inspection"
         ctaHref="/termite-control-miami"
@@ -44,8 +44,8 @@ export default function HomePage() {
           'We provide detailed preparation guides and flexible scheduling to minimize disruption to your life. Multiple treatment options available based on the severity of your infestation and your specific situation.',
           'Our bed bug treatments are guaranteed. If bed bugs return within the warranty period, we return for free re-treatment. Discreet service with unmarked vehicles available for your privacy.'
         ]}
-        images={['/images/Insects/bed-bug.png', '/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/pest-spraying-animation.gif']}
-        alt="Bed bug extermination and heat treatment services in Miami"
+        images={['/images/company/bed-bug-treatment-residential.webp', '/images/company/pest-exterminator-spraying.webp']}
+        alt="Professional bed bug exterminator treating residential home in Miami - Licensed technician applying heat and chemical treatment for complete bed bug elimination with guaranteed results"
         direction="right"
         ctaText="Get Bed Bug Treatment Quote"
         ctaHref="/bed-bug-extermination-miami"
