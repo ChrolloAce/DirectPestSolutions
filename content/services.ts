@@ -10,32 +10,155 @@ export interface Service {
   href: string
   featured?: boolean
   emergency?: boolean
+  subServices?: string[]
 }
 
 export const services: Service[] = [
   {
-    id: 'pest-control',
-    slug: 'pest-control-miami',
-    title: 'General Pest Control',
-    shortDescription: 'Comprehensive pest control services for your Miami home or business',
+    id: 'residential-pest-control',
+    slug: 'residential-pest-control-miami',
+    title: 'Residential Pest Control',
+    shortDescription: 'Complete pest protection for your Miami home and family',
     description: [
-      'Protect your property with our comprehensive pest control services in Miami. Our licensed exterminators provide effective treatments for all common household pests.',
-      'We use Integrated Pest Management (IPM) approaches that combine prevention, monitoring, and treatment for long-lasting results. Safe for your family, pets, and the environment.',
-      'With flexible service plans, satisfaction guarantees, and same-day emergency service available, you can trust Direct Pest Solutions for all your pest control needs.'
+      'Protect your home and family with our comprehensive residential pest control services. We handle all common household pests including ants, roaches, spiders, termites, bed bugs, and more.',
+      'Our licensed exterminators use safe, family-friendly treatments that are effective against pests but gentle on your home environment. We offer flexible service plans including one-time treatments, quarterly maintenance, and annual protection.',
+      'Same-day emergency service available. Free inspections for new customers. We guarantee our residential pest control—if pests return between scheduled treatments, we return for free.'
     ],
-    icon: 'Shield',
+    icon: 'Home',
     image: '/images/company/residential-pest-control-service.webp',
     benefits: [
-      'Licensed & certified technicians',
-      'Safe, eco-friendly treatments',
+      'Safe for children & pets',
+      'All household pests covered',
       'Flexible service plans',
       'Same-day emergency service',
-      '100% satisfaction guarantee'
+      'Free re-service guarantee'
     ],
-    href: '/pest-control-miami',
+    href: '/residential-pest-control-miami',
     featured: true,
-    emergency: true
+    emergency: true,
+    subServices: ['General Pest Control', 'Termite Control', 'Bed Bug Treatment', 'Ant Control', 'Roach Control']
   },
+  {
+    id: 'commercial-pest-control',
+    slug: 'commercial-pest-control-miami',
+    title: 'Commercial Pest Control',
+    shortDescription: 'Professional pest management for Miami businesses and commercial properties',
+    description: [
+      'Keep your business pest-free with our commercial pest control services. We serve restaurants, hotels, offices, warehouses, retail stores, and all types of commercial properties throughout Miami-Dade County.',
+      'Our commercial programs include regular scheduled service, detailed documentation for health inspections, discreet service during business hours, and 24/7 emergency response for urgent pest problems.',
+      'We understand the unique challenges of commercial pest control—protecting your reputation, meeting health codes, and maintaining a pest-free environment for employees and customers.'
+    ],
+    icon: 'Building',
+    image: '/images/company/commercial-building-treatment.webp',
+    benefits: [
+      'Health code compliance',
+      'Scheduled service plans',
+      'Discreet treatments',
+      '24/7 emergency response',
+      'Detailed documentation'
+    ],
+    href: '/commercial-pest-control-miami',
+    featured: true,
+    emergency: true,
+    subServices: ['Restaurant Pest Control', 'Hotel Pest Control', 'Office Buildings', 'Retail Stores', 'Warehouses']
+  },
+  {
+    id: 'full-property-protection',
+    slug: 'full-property-protection-miami',
+    title: 'Full Property Protection',
+    shortDescription: 'Comprehensive pest prevention and protection plans for complete peace of mind',
+    description: [
+      'Our Full Property Protection plans provide year-round pest prevention and elimination for your entire property—inside and out. This comprehensive service covers all pests, all year, with unlimited re-services included.',
+      'We create a customized treatment plan based on your property\'s specific needs, season, and pest pressure. Our IPM approach combines prevention, monitoring, and treatment for long-lasting results.',
+      'Includes quarterly inspections, exterior barrier treatments, interior spot treatments as needed, termite monitoring, rodent exclusion, and detailed service reports. Perfect for homeowners and property managers who want complete protection.'
+    ],
+    icon: 'Shield',
+    image: '/images/company/professional-pest-inspection.webp',
+    benefits: [
+      'Year-round protection',
+      'All pests covered',
+      'Unlimited re-services',
+      'Quarterly inspections',
+      'Termite monitoring included'
+    ],
+    href: '/full-property-protection-miami',
+    featured: true,
+    emergency: false,
+    subServices: ['Annual Protection Plans', 'Pest Prevention', 'Termite Monitoring', 'Property Inspections', 'IPM Programs']
+  },
+  {
+    id: 'mosquito-control',
+    slug: 'mosquito-control-miami',
+    title: 'Mosquito Control',
+    shortDescription: 'Reduce mosquitoes by up to 90% and reclaim your outdoor space',
+    description: [
+      'Enjoy your Miami outdoor space without mosquitoes. Our mosquito control programs reduce mosquito populations by up to 90% using targeted treatments and prevention strategies.',
+      'We treat breeding sites, apply barrier treatments to vegetation, and use larvicides to prevent mosquito development. Safe for your family, pets, and beneficial insects like bees and butterflies.',
+      'Monthly service plans keep mosquitoes under control year-round. Perfect for homes, businesses, outdoor events, and special occasions. One-time treatments available for parties and events.'
+    ],
+    icon: 'Wind',
+    image: '/images/company/mosquito-control-yard-treatment.webp',
+    benefits: [
+      'Up to 90% mosquito reduction',
+      'Barrier & larvicide treatments',
+      'Monthly service plans',
+      'Safe for family & pets',
+      'Special event treatments'
+    ],
+    href: '/mosquito-control-miami',
+    featured: true,
+    emergency: false,
+    subServices: ['Yard Treatments', 'Barrier Sprays', 'Larvicide Applications', 'Event Services', 'Monthly Programs']
+  },
+  {
+    id: 'bee-removal',
+    slug: 'bee-removal-miami',
+    title: 'Bee Removal',
+    shortDescription: 'Safe, humane bee removal and wasp/hornet extermination services',
+    description: [
+      'Professional bee, wasp, and hornet removal services throughout Miami. We safely remove bee hives and swarms, relocating honey bees when possible and exterminating aggressive wasps, hornets, and yellow jackets.',
+      'Our bee removal specialists are equipped to handle all stinging insects including honey bees, carpenter bees, bumble bees, paper wasps, mud daubers, hornets, and yellow jackets. We remove nests from homes, trees, walls, attics, and ground locations.',
+      'Emergency same-day service available for dangerous situations. We also provide prevention services to keep bees and wasps from returning. All work guaranteed with licensed and insured technicians.'
+    ],
+    icon: 'Bug',
+    image: '/images/company/pest-exterminator-spraying.webp',
+    benefits: [
+      'Safe bee relocation',
+      'Wasp & hornet extermination',
+      'Same-day emergency service',
+      'Nest removal & prevention',
+      'Licensed bee specialists'
+    ],
+    href: '/bee-removal-miami',
+    featured: true,
+    emergency: true,
+    subServices: ['Honey Bee Removal', 'Wasp Extermination', 'Hornet Removal', 'Yellow Jacket Control', 'Nest Removal']
+  },
+  {
+    id: 'wildlife-control',
+    slug: 'wildlife-control-miami',
+    title: 'Wildlife Control',
+    shortDescription: 'Humane wildlife and rodent removal with professional exclusion services',
+    description: [
+      'Get rid of rats, mice, raccoons, squirrels, opossums, and other wildlife safely and humanely. Our wildlife control specialists identify entry points, remove animals, and seal your property to prevent re-entry.',
+      'We handle all types of wildlife common in Miami including roof rats, Norway rats, mice, squirrels, raccoons, opossums, iguanas, and birds. Trapping, exclusion, damage repair, and sanitization services available.',
+      'Long-term solutions that address the root cause. We don\'t just remove the animals—we prevent them from coming back with professional exclusion work, entry point sealing, and ongoing monitoring.'
+    ],
+    icon: 'Squirrel',
+    image: '/images/company/wildlife-removal-expert.webp',
+    benefits: [
+      'Humane removal methods',
+      'Entry point identification',
+      'Professional exclusion work',
+      'Damage repair & sanitization',
+      'Prevention strategies'
+    ],
+    href: '/wildlife-control-miami',
+    featured: true,
+    emergency: true,
+    subServices: ['Rodent Control', 'Raccoon Removal', 'Squirrel Removal', 'Opossum Removal', 'Iguana Control']
+  },
+  // Additional non-featured services for specific needs
   {
     id: 'termite-control',
     slug: 'termite-control-miami',
@@ -56,7 +179,7 @@ export const services: Service[] = [
       'Ongoing monitoring programs'
     ],
     href: '/termite-control-miami',
-    featured: true,
+    featured: false,
     emergency: false
   },
   {
@@ -79,100 +202,8 @@ export const services: Service[] = [
       'Discreet service'
     ],
     href: '/bed-bug-extermination-miami',
-    featured: true,
-    emergency: true
-  },
-  {
-    id: 'mosquito-control',
-    slug: 'mosquito-control-miami',
-    title: 'Mosquito Control',
-    shortDescription: 'Reduce mosquitoes and reclaim your outdoor space',
-    description: [
-      'Enjoy your Miami outdoor space without mosquitoes. Our mosquito control programs reduce mosquito populations by up to 90% using targeted treatments and prevention strategies.',
-      'We treat breeding sites, apply barrier treatments to vegetation, and use larvicides to prevent mosquito development. Safe for your family, pets, and beneficial insects like bees.',
-      'Monthly service plans keep mosquitoes under control year-round. Perfect for homes, businesses, outdoor events, and special occasions.'
-    ],
-    icon: 'Wind',
-    image: '/images/company/mosquito-control-yard-treatment.webp',
-    benefits: [
-      'Up to 90% mosquito reduction',
-      'Barrier & larvicide treatments',
-      'Monthly service plans',
-      'Safe for family & pets',
-      'Special event treatments available'
-    ],
-    href: '/mosquito-control-miami',
-    featured: true,
-    emergency: false
-  },
-  {
-    id: 'rodent-wildlife-control',
-    slug: 'rodent-wildlife-control-miami',
-    title: 'Rodent & Wildlife Control',
-    shortDescription: 'Humane rodent and wildlife removal with exclusion services',
-    description: [
-      'Get rid of rats, mice, raccoons, and other wildlife safely and humanely. Our wildlife control specialists identify entry points, remove animals, and seal your property to prevent re-entry.',
-      'We handle all types of rodents and wildlife common in Miami including rats, mice, squirrels, raccoons, opossums, and birds. Trapping, exclusion, and damage repair services available.',
-      'Long-term solutions that address the root cause. We don\'t just remove the animals—we prevent them from coming back with professional exclusion and prevention strategies.'
-    ],
-    icon: 'Squirrel',
-    image: '/images/company/rodent-control-specialist.webp',
-    benefits: [
-      'Humane removal methods',
-      'Entry point identification',
-      'Professional exclusion work',
-      'Damage repair services',
-      'Prevention strategies included'
-    ],
-    href: '/rodent-wildlife-control-miami',
-    featured: true,
-    emergency: true
-  },
-  {
-    id: 'insect-control',
-    slug: 'insect-control-miami',
-    title: 'Ant, Roach & General Insect Control',
-    shortDescription: 'Eliminate ants, cockroaches, spiders, and other common insects',
-    description: [
-      'Say goodbye to ants, cockroaches, spiders, and other unwanted insects. Our targeted treatments eliminate existing infestations and create barriers to prevent future invasions.',
-      'We treat for all common South Florida insects including Argentine ants, carpenter ants, German cockroaches, American cockroaches, spiders, silverfish, earwigs, and more.',
-      'Indoor and outdoor treatments available. Safe, effective products that work. Quarterly service plans keep your home insect-free year-round.'
-    ],
-    icon: 'Bug',
-    image: '/images/company/insect-control-specialist.webp',
-    benefits: [
-      'Targets all common insects',
-      'Indoor & outdoor treatments',
-      'Quarterly service plans',
-      'Safe for indoor use',
-      'Fast-acting solutions'
-    ],
-    href: '/insect-control-miami',
-    featured: true,
-    emergency: false
-  },
-  {
-    id: 'prevention-inspection',
-    slug: 'prevention-inspection-miami',
-    title: 'Pest Prevention & Inspection',
-    shortDescription: 'Proactive pest prevention and comprehensive property inspections',
-    description: [
-      'Prevent pest problems before they start with our comprehensive inspection and prevention services. Our IPM approach focuses on eliminating conditions that attract pests.',
-      'We perform detailed property inspections, identify vulnerabilities, seal entry points, and recommend modifications to reduce pest attraction. Detailed inspection reports provided.',
-      'Seasonal maintenance plans available. Perfect for new homeowners, property managers, and anyone who wants to stay ahead of pest problems rather than react to them.'
-    ],
-    icon: 'Search',
-    image: '/images/company/pest-prevention-service.webp',
-    benefits: [
-      'Comprehensive property inspection',
-      'Detailed inspection reports',
-      'IPM approach',
-      'Entry point sealing',
-      'Seasonal maintenance plans'
-    ],
-    href: '/prevention-inspection-miami',
     featured: false,
-    emergency: false
+    emergency: true
   }
 ]
 
