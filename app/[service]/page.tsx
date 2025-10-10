@@ -76,13 +76,6 @@ export default function ServicePage({ params }: ServicePageProps) {
     solution: `Our licensed exterminators use proven IPM methods and safe, effective treatments to eliminate pests and prevent future infestations.`
   }
 
-  const process = [
-    { step: 1, title: 'Free Inspection', description: 'Comprehensive property assessment and pest identification' },
-    { step: 2, title: 'Custom Treatment Plan', description: 'Tailored solution based on your specific pest problem' },
-    { step: 3, title: 'Safe Treatment', description: 'Professional application using EPA-approved products' },
-    { step: 4, title: 'Follow-Up & Prevention', description: 'Monitoring and preventive measures for lasting protection' },
-  ]
-
   // Always use the object format for benefits to maintain consistency
   const benefits = [
     { icon: 'shield', title: 'Protect Your Property', description: 'Prevent damage and health risks from pests' },
@@ -92,8 +85,16 @@ export default function ServicePage({ params }: ServicePageProps) {
   ]
 
   const serviceAreas = [
-    'Miami', 'Miami Beach', 'Coral Gables', 'Aventura', 'Kendall',
-    'Homestead', 'Palmetto Bay', 'Cutler Bay', 'Doral', 'Hialeah'
+    { name: 'Miami', slug: 'miami' },
+    { name: 'Miami Beach', slug: 'miami-beach' },
+    { name: 'Coral Gables', slug: 'coral-gables' },
+    { name: 'Aventura', slug: 'aventura' },
+    { name: 'Kendall', slug: 'kendall' },
+    { name: 'Homestead', slug: 'homestead' },
+    { name: 'Palmetto Bay', slug: 'palmetto-bay' },
+    { name: 'Cutler Bay', slug: 'cutler-bay' },
+    { name: 'Doral', slug: 'doral' },
+    { name: 'Hialeah', slug: 'hialeah' }
   ]
 
   return (
@@ -184,33 +185,6 @@ export default function ServicePage({ params }: ServicePageProps) {
       </section>
 
 
-      {/* Step-by-Step Process */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="heading-lg uppercase text-center mb-12 text-brand-black">
-            Our Process
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            {process.map((step, index) => (
-              <div key={step.step} className="flex gap-6 mb-8 last:mb-0">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-brand-gold rounded-full flex items-center justify-center border-2 border-brand-black">
-                    <span className="font-bold text-brand-black">{step.step}</span>
-                  </div>
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                  <p className="text-brand-black/70">{step.description}</p>
-                  {index < process.length - 1 && (
-                    <div className="w-0.5 h-8 bg-brand-gold/30 ml-6 mt-4"></div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Benefits Section */}
       <section className="py-16 md:py-24 bg-brand-red bg-noise">
         <div className="container mx-auto px-4">
@@ -234,47 +208,6 @@ export default function ServicePage({ params }: ServicePageProps) {
                 <p className="text-sm text-brand-black/70">{benefit.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Trust & Proof Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="heading-lg uppercase text-center mb-12 text-brand-black">
-              Trusted by Miami Homeowners
-            </h2>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-brand-red mb-2">500+</div>
-                <p className="text-lg">{service.title} Projects Completed</p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-brand-red mb-2">4.9★</div>
-                <p className="text-lg">Average Customer Rating</p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-brand-red mb-2">Same-Day</div>
-                <p className="text-lg">Emergency Service Available</p>
-              </div>
-            </div>
-
-            {/* Sample Testimonial */}
-            <div className="bg-brand-off p-8 border-l-4 border-brand-red">
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="fill-brand-red text-brand-red" size={20} />
-                ))}
-              </div>
-              <p className="text-lg italic mb-4">
-                "Direct Pest Solutions provided excellent {service.title.toLowerCase()}. 
-                Professional, on-time, and they completely eliminated our pest problem. 
-                Highly recommend for anyone in Miami!"
-              </p>
-              <p className="font-bold">- Maria G., Coral Gables</p>
-            </div>
           </div>
         </div>
       </section>
@@ -335,9 +268,13 @@ export default function ServicePage({ params }: ServicePageProps) {
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {serviceAreas.map((area) => (
-                <span key={area} className="px-4 py-2 bg-brand-red/10 border border-brand-red text-brand-black">
-                  {area}
-                </span>
+                <a 
+                  key={area.slug} 
+                  href={`/locations/${area.slug}`}
+                  className="px-4 py-2 bg-brand-red/10 border border-brand-red text-brand-black hover:bg-brand-red hover:text-white transition-colors"
+                >
+                  {area.name}
+                </a>
               ))}
             </div>
           </div>
