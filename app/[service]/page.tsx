@@ -15,6 +15,7 @@ import { WhatToExpect } from '@/components/sections/WhatToExpect'
 import { ProcessSection } from '@/components/sections/ProcessSection'
 import { PropertyMaintenance } from '@/components/sections/PropertyMaintenance'
 import { RelatedServicesSection } from '@/components/sections/RelatedServicesSection'
+import Reviews from '@/components/Reviews'
 
 interface ServicePageProps {
   params: {
@@ -172,22 +173,25 @@ export default function ServicePage({ params }: ServicePageProps) {
       {/* Insect Catalog - Only show on applicable services */}
       {showInsectCatalog && <InsectCatalog insects={commonInsects} />}
 
-      {/* Why Choose Us Section */}
+      {/* Why Choose Us Section - BLACK BACKGROUND */}
       <WhyChooseUs />
 
-      {/* What To Expect */}
+      {/* What To Expect - WHITE BACKGROUND */}
       <WhatToExpect />
 
-      {/* Process Section */}
+      {/* Process Section - WHITE BACKGROUND */}
       <ProcessSection />
 
-      {/* Property Maintenance */}
+      {/* Customer Reviews - BLACK BACKGROUND */}
+      <Reviews />
+
+      {/* Property Maintenance - WHITE BACKGROUND */}
       <PropertyMaintenance />
 
-      {/* Related Services */}
+      {/* Related Services - WHITE BACKGROUND */}
       <RelatedServicesSection currentServiceId={service.id} />
 
-      {/* FAQ Section */}
+      {/* FAQ Section - WHITE BACKGROUND */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="font-heading uppercase text-3xl md:text-4xl text-center mb-12 text-brand-black">
