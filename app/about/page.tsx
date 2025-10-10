@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import { CheckCircle } from 'lucide-react'
 import Button from '@/components/ui/Button'
-import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
 import Reviews from '@/components/Reviews'
 
 export const metadata: Metadata = {
@@ -82,9 +81,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Why Choose Us Section - BLACK BACKGROUND */}
-      <WhyChooseUs />
 
       {/* Our Approach Section */}
       <section className="py-16 md:py-24 bg-brand-black">
