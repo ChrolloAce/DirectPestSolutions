@@ -218,10 +218,10 @@ export default function Hero() {
       </div>
 
       {/* Top Rated Bar - Below Hero */}
-      <div className="bg-white border-t-2 border-brand-red/20 py-6">
+      <div className="bg-gray-100 border-t-2 border-brand-red/20 py-6">
         <div className="mx-auto max-w-7xl px-4">
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-12">
-            <h3 className="font-heading uppercase text-xl md:text-2xl text-brand-black tracking-tight text-center lg:text-left">
+          <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between gap-6 lg:gap-12">
+            <h3 className="font-heading uppercase text-xl md:text-2xl text-brand-black tracking-tight text-left">
               Top Rated Pest Control In Miami<br className="hidden lg:block" /> Across All Review Sites
             </h3>
             

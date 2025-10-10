@@ -110,8 +110,8 @@ export default function Reviews() {
     <section id="reviews" className="relative bg-brand-off py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4">
         {/* Top Rated Bar */}
-        <div className="mb-12 flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-12 pb-8 border-b-2 border-brand-black/10">
-          <h3 className="font-heading uppercase text-xl md:text-2xl text-brand-black tracking-tight text-center lg:text-left">
+        <div className="mb-12 flex flex-col lg:flex-row items-center lg:items-center justify-between gap-6 lg:gap-12 pb-8 border-b-2 border-brand-black/10">
+          <h3 className="font-heading uppercase text-xl md:text-2xl text-brand-black tracking-tight text-left">
             Top Rated Pest Control In Miami<br className="hidden lg:block" /> Across All Review Sites
           </h3>
           

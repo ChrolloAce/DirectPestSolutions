@@ -22,31 +22,31 @@ export default function HomePage() {
       
       {/* Service Teasers */}
       <ServiceTeaser
-        title="Professional Termite Control in Miami"
+        title="Why Direct Pest Solutions is Miami's Most Trusted Pest Control Company"
         description={[
-          'Protect your Miami home from destructive termites with expert termite control services. Our licensed termite specialists provide comprehensive inspections and effective treatments to eliminate termite infestations.',
-          'We offer multiple treatment options including liquid barrier treatments, baiting systems, and fumigation for drywood termites. All treatments come with warranties and ongoing monitoring to ensure your property stays termite-free.',
-          'Free termite inspections available. With same-day service and transparent pricing, you can trust Direct Pest Solutions to protect your most valuable investment from termite damage.'
+          'Since 2020, Direct Pest Solutions has been protecting Miami homes and businesses from all types of pests with safe, effective, and environmentally responsible treatments. Our family-owned company combines cutting-edge pest control technology with old-fashioned customer service values.',
+          'We understand Miami's unique pest challenges—from termites thriving in our humid climate to mosquitoes breeding year-round. Our licensed exterminators are trained in Integrated Pest Management (IPM) techniques that prioritize prevention, use minimal chemicals, and deliver long-lasting results that protect your family and pets.',
+          'Every technician is background-checked, fully licensed by the State of Florida, and insured. We offer flexible service plans, transparent pricing with no hidden fees, same-day emergency response, and a 100% satisfaction guarantee. If pests return between scheduled visits, so do we—for free.'
         ]}
-        images={['/images/company/termite-inspection-professional.webp', '/images/company/professional-pest-inspection.webp']}
-        alt="Licensed termite inspector conducting professional termite inspection in Miami home - Direct Pest Solutions certified technician examining foundation and wood structures for termite activity"
+        images={['/images/company/residential-pest-control-service.webp', '/images/company/professional-pest-inspection.webp']}
+        alt="Direct Pest Solutions licensed pest control technicians providing professional residential pest control services in Miami - Family-owned company with certified exterminators and guaranteed results"
         direction="left"
-        ctaText="Schedule Free Termite Inspection"
-        ctaHref="/termite-control-miami"
+        ctaText="Learn More About Our Company"
+        ctaHref="/about"
       />
       
       <ServiceTeaser
-        title="Complete Bed Bug Extermination"
+        title="Comprehensive Pest Control Services for Miami Homes & Businesses"
         description={[
-          'Eliminate bed bugs completely with our proven treatment methods. Bed bugs require professional treatment—our experienced technicians use heat treatment, chemical applications, and thorough inspections to ensure complete elimination.',
-          'We provide detailed preparation guides and flexible scheduling to minimize disruption to your life. Multiple treatment options available based on the severity of your infestation and your specific situation.',
-          'Our bed bug treatments are guaranteed. If bed bugs return within the warranty period, we return for free re-treatment. Discreet service with unmarked vehicles available for your privacy.'
+          'From ants and roaches to termites and rodents, we handle every pest problem Miami properties face. Our comprehensive pest control services cover residential homes, commercial buildings, restaurants, hotels, offices, warehouses, and multi-family properties throughout Miami-Dade County.',
+          'We specialize in the pests that matter most to Miami residents: termite inspections and treatments, bed bug heat treatments, mosquito barrier treatments, rodent exclusion and removal, ant colony elimination, cockroach extermination, wildlife control, and preventive maintenance programs that keep pests away year-round.',
+          'Our proven process starts with a thorough inspection to identify pest entry points and breeding areas. We then create a customized treatment plan using EPA-approved products that are safe for children and pets. Finally, we provide ongoing monitoring and prevention strategies to ensure pests don't return.'
         ]}
-        images={['/images/company/bed-bug-treatment-residential.webp', '/images/company/pest-exterminator-spraying.webp']}
-        alt="Professional bed bug exterminator treating residential home in Miami - Licensed technician applying heat and chemical treatment for complete bed bug elimination with guaranteed results"
+        images={['/images/company/commercial-building-treatment.webp', '/images/company/pest-exterminator-spraying.webp']}
+        alt="Comprehensive pest control services for Miami residential and commercial properties - Direct Pest Solutions offers termite control, mosquito treatment, rodent removal, and ongoing pest prevention programs"
         direction="right"
-        ctaText="Get Bed Bug Treatment Quote"
-        ctaHref="/bed-bug-extermination-miami"
+        ctaText="View All Services"
+        ctaHref="/services"
       />
       
       {/* Why Choose Us */}
