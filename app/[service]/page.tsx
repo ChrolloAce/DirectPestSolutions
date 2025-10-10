@@ -168,7 +168,7 @@ export default function ServicePage({ params }: ServicePageProps) {
       </section>
 
       {/* Service Intro */}
-      <ServiceIntro serviceTitle={service.title} description={serviceDescription} />
+      <ServiceIntro serviceTitle={service.title} description={serviceDescription} image={service.image} />
 
       {/* Insect Catalog - Only show on applicable services */}
       {showInsectCatalog && <InsectCatalog insects={commonInsects} />}
@@ -191,13 +191,15 @@ export default function ServicePage({ params }: ServicePageProps) {
       {/* Related Services - WHITE BACKGROUND */}
       <RelatedServicesSection currentServiceId={service.id} />
 
-      {/* FAQ Section - WHITE BACKGROUND */}
+      {/* FAQ Section - WHITE BACKGROUND - FULL WIDTH */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="font-heading uppercase text-3xl md:text-4xl text-center mb-12 text-brand-black">
             Pest Control Frequently Asked Questions
           </h2>
-          <ServiceFAQ faqs={faqs} serviceName={service.title} />
+          <div className="max-w-full">
+            <ServiceFAQ faqs={faqs} serviceName={service.title} />
+          </div>
         </div>
       </section>
 

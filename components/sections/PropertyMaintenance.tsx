@@ -4,16 +4,16 @@ import Button from '@/components/ui/Button'
 
 export function PropertyMaintenance() {
   return (
-    <section className="py-16 md:py-20 bg-white">
+    <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Content */}
             <div>
               <p className="text-sm uppercase tracking-wider text-brand-red font-bold mb-4">
                 Interested in Pest Control? Book Your Free QUOTE today!
               </p>
-              <h2 className="font-heading text-3xl md:text-4xl text-brand-black mb-6">
+              <h2 className="font-heading text-4xl md:text-5xl text-brand-black mb-6 leading-tight">
                 Maintaining your property isn't just about aesthetics!
               </h2>
               <h3 className="text-xl md:text-2xl font-bold text-brand-black mb-4">
@@ -27,15 +27,16 @@ export function PropertyMaintenance() {
               </Button>
             </div>
             
-            {/* Right: Image */}
+            {/* Right: Image - 1:1 Square */}
             <div>
-              <Image
-                src="/images/company/residential-pest-control-service.webp"
-                alt="Well-maintained residential home with clean exterior"
-                width={600}
-                height={400}
-                className="w-full h-auto rounded-lg shadow-lg"
-              />
+              <div className="aspect-square relative">
+                <Image
+                  src="/images/company/residential-pest-control-service.webp"
+                  alt="Well-maintained residential home with clean exterior"
+                  fill
+                  className="object-cover rounded-lg shadow-2xl"
+                />
+              </div>
             </div>
           </div>
         </div>
