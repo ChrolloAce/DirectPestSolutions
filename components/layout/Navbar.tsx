@@ -153,7 +153,7 @@ export function Navbar() {
             {/* Logo on left */}
             <Link href="/" className="flex items-center gap-2">
               <Image 
-                src="/images/direct-pest-solutions-logo.png" 
+                src="/images/logo.png" 
                 alt="Direct Pest Solutions" 
                 width={200} 
                 height={60}
@@ -239,7 +239,7 @@ export function Navbar() {
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex items-center gap-2">
               <Image 
-                src="/images/direct-pest-solutions-logo.png" 
+                src="/images/logo.png" 
                 alt="Direct Pest Solutions" 
                 width={180} 
                 height={50}

@@ -15,7 +15,7 @@ export class TopBar extends React.Component {
             <div className="flex items-center">
               <a href="/" className="flex items-center gap-2">
                 <Image 
-                  src="/images/direct-pest-solutions-logo.png" 
+                  src="/images/logo.png" 
                   alt="Direct Pest Solutions - Miami's Trusted Pest Control Company" 
                   width={280} 
                   height={84}
