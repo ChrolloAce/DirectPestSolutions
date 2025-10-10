@@ -123,42 +123,22 @@ export class Footer extends React.Component {
               </ul>
             </div>
             
-            {/* Service Areas */}
+            {/* Social Links */}
             <div>
-              <h3 className="font-heading text-xl uppercase mb-4 text-brand-black">Service Areas</h3>
-              <p className="text-brand-black/70 mb-4 text-sm">
-                Proudly serving Miami-Dade County:
-              </p>
-              <ul className="text-sm text-brand-black/60 space-y-1">
-                <li>• Miami</li>
-                <li>• Miami Beach</li>
-                <li>• Coral Gables</li>
-                <li>• Aventura</li>
-                <li>• Kendall</li>
-                <li>• Homestead</li>
-                <li>• Doral</li>
-                <li>• Hialeah</li>
-                <li>• Sunny Isles Beach</li>
-                <li>• All Miami-Dade County</li>
-              </ul>
-              
-              {/* Social Links */}
-              <div className="mt-6">
-                <h4 className="font-semibold mb-3 text-sm text-brand-black">Follow Us</h4>
-                <div className="flex gap-4">
-                  <a href="https://www.facebook.com/directpestsolutions" className="text-brand-black/50 hover:text-brand-red transition" aria-label="Facebook">
-                    <Facebook size={24} />
-                  </a>
-                  <a href="https://www.instagram.com/directpestsolutions" className="text-brand-black/50 hover:text-brand-red transition" aria-label="Instagram">
-                    <Instagram size={24} />
-                  </a>
-                  <a href="https://www.yelp.com/biz/direct-pest-solutions-miami" className="text-brand-black/50 hover:text-brand-red transition" aria-label="Yelp">
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/>
-                      <path d="M12 7c-.552 0-1 .448-1 1v4c0 .552.448 1 1 1s1-.448 1-1V8c0-.552-.448-1-1-1zm0 7c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1z"/>
-                    </svg>
-                  </a>
-                </div>
+              <h3 className="font-heading text-xl uppercase mb-4 text-brand-black">Follow Us</h3>
+              <div className="flex gap-4">
+                <a href="https://www.facebook.com/directpestsolutions" className="text-brand-black/50 hover:text-brand-red transition" aria-label="Facebook">
+                  <Facebook size={24} />
+                </a>
+                <a href="https://www.instagram.com/directpestsolutions" className="text-brand-black/50 hover:text-brand-red transition" aria-label="Instagram">
+                  <Instagram size={24} />
+                </a>
+                <a href="https://www.yelp.com/biz/direct-pest-solutions-miami" className="text-brand-black/50 hover:text-brand-red transition" aria-label="Yelp">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/>
+                    <path d="M12 7c-.552 0-1 .448-1 1v4c0 .552.448 1 1 1s1-.448 1-1V8c0-.552-.448-1-1-1zm0 7c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1z"/>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>

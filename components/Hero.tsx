@@ -62,12 +62,12 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           {/* Left: Copy / CTAs */}
           <div className="text-white">
-            <h1 className="font-heading uppercase leading-[0.95] tracking-tight text-5xl sm:text-6xl">
+            <h1 className="font-heading uppercase leading-[0.95] tracking-tight text-3xl sm:text-4xl">
               <span className="text-white">#1 Pest Control</span> <span className="text-brand-red">In Miami</span>
               <br /> 
-              <span className="text-white text-2xl sm:text-3xl">Top Rated Residential & Commercial</span>
+              <span className="text-white">Top Rated Residential & Commercial</span>
               <br />
-              <span className="text-white text-2xl sm:text-3xl">Pest Control In Florida</span>
+              <span className="text-white">Pest Control In Florida</span>
             </h1>
 
             <p className="mt-5 max-w-xl text-lg text-white/90">
