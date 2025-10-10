@@ -65,9 +65,6 @@ export default function HomePage() {
       
       {/* Portfolio Gallery */}
       <PortfolioCarousel />
-      
-      {/* Next Steps */}
-      <NextSteps />
     </>
   )
 }

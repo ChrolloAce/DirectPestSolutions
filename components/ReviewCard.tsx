@@ -44,7 +44,7 @@ export default function ReviewCard({ review }: ReviewCardProps) {
       <div className="flex items-center gap-3">
         <div>
           <h4 className="font-semibold text-brand-black">{review.name}</h4>
-          <div className="text-sm text-brand-red font-bold">
+          <div className="text-sm text-yellow-400 font-bold">
             {renderStars(review.rating)}
           </div>
         </div>
