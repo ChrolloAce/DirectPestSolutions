@@ -4,6 +4,7 @@ import { TopBar } from '@/components/layout/TopBar'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { ProofToasts } from '@/components/ui/ProofToasts'
+import { FloatingPhone } from '@/components/FloatingPhone'
 import MobileAppBar from '@/components/layout/MobileAppBar'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
@@ -65,6 +66,7 @@ export default function RootLayout({
         <LanguageProvider>
           <TopBar />
           <Navbar />
+          <FloatingPhone />
           <main className="min-h-screen pt-16 md:pt-[7.5rem] pb-16 md:pb-0">
             {children}
           </main>

@@ -10,7 +10,7 @@ import Button from '@/components/ui/Button'
 export function Navbar() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
-  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   
   const navItems = [
     { label: 'Home', href: '/' },
@@ -35,6 +35,16 @@ export function Navbar() {
   
   const toggleMenu = () => setIsOpen(!isOpen)
   const closeMenu = () => setIsOpen(false)
+  
+  // Handle scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 56) // 56px is TopBar height
+    }
+    
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   
   // Close menu on route change
   useEffect(() => {
@@ -66,9 +76,25 @@ export function Navbar() {
   
   return (
     <>
-      <nav className="fixed inset-x-0 top-0 md:top-[3.5rem] z-40 bg-black border-b border-brand-black/20">
+      <nav className={`fixed inset-x-0 md:top-[3.5rem] z-40 bg-white border-b border-brand-black/20 shadow-sm transition-all duration-300 ${
+        isScrolled ? 'top-0 md:top-0' : 'top-16 md:top-[3.5rem]'
+      }`}>
         <div className="mx-auto max-w-7xl px-4">
           <div className="flex items-center justify-between h-16">
+            {/* Logo - shows when scrolled */}
+            <Link href="/" className={`md:flex items-center gap-2 transition-all duration-300 ${
+              isScrolled ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4 pointer-events-none'
+            }`}>
+              <Image 
+                src="/images/direct-pest-solutions-logo.png" 
+                alt="Direct Pest Solutions" 
+                width={180} 
+                height={54}
+                className="h-10 w-auto"
+                priority
+              />
+            </Link>
+            
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-6">
               {navItems.map((item) => {
@@ -83,19 +109,19 @@ export function Navbar() {
                           font-semibold uppercase text-sm tracking-wide transition-colors flex items-center gap-1
                           ${isActive 
                             ? 'text-brand-red' 
-                            : 'text-white hover:text-brand-blue'
+                            : 'text-brand-black hover:text-brand-red'
                           }
                         `}
                       >
                         {item.label}
                         <ChevronDown size={16} className="group-hover:rotate-180 transition-transform" />
                       </Link>
-                      <div className="absolute top-full left-0 mt-2 w-56 bg-black border border-brand-black/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                      <div className="absolute top-full left-0 mt-2 w-56 bg-white border-2 border-brand-black shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                         {item.dropdown.map((subItem) => (
                           <Link
                             key={subItem.href}
                             href={subItem.href}
-                            className="block px-4 py-3 text-sm text-white hover:bg-brand-red hover:text-white transition-colors border-b border-brand-black/10 last:border-b-0"
+                            className="block px-4 py-3 text-sm text-brand-black hover:bg-brand-red hover:text-white transition-colors border-b border-brand-black/10 last:border-b-0"
                           >
                             {subItem.label}
                           </Link>
@@ -113,7 +139,7 @@ export function Navbar() {
                       font-semibold uppercase text-sm tracking-wide transition-colors
                       ${isActive 
                         ? 'text-brand-red' 
-                        : 'text-white hover:text-brand-blue'
+                        : 'text-brand-black hover:text-brand-red'
                       }
                     `}
                   >
@@ -125,7 +151,7 @@ export function Navbar() {
             
             {/* Desktop Right Side Buttons */}
             <div className="hidden md:flex items-center gap-3">
-              <a href="tel:+13055603087" className="flex items-center gap-2 text-white hover:text-brand-blue transition-colors">
+              <a href="tel:+13055603087" className="flex items-center gap-2 text-brand-black hover:text-brand-red transition-colors">
                 <Phone size={18} />
                 <span className="font-semibold">(305) 560-3087</span>
               </a>
@@ -154,7 +180,7 @@ export function Navbar() {
               
               <button
                 type="button"
-                className="h-10 w-10 grid place-items-center rounded-none border border-white/20 bg-black hover:bg-brand-red/20 transition-colors text-white"
+                className="h-10 w-10 grid place-items-center rounded-none border-2 border-brand-black bg-white hover:bg-brand-red hover:text-white transition-colors text-brand-black"
                 aria-label={isOpen ? 'Close menu' : 'Open menu'}
                 aria-controls="mobile-menu"
                 aria-expanded={isOpen ? 'true' : 'false'}
@@ -182,7 +208,7 @@ export function Navbar() {
             id="mobile-menu"
             role="dialog"
             aria-label="Navigation menu"
-            className="md:hidden fixed inset-x-0 top-16 z-50 bg-black border-b border-brand-black/20 shadow-lg transform transition-transform duration-200 ease-out"
+            className="md:hidden fixed inset-x-0 top-16 z-50 bg-white border-b-2 border-brand-black shadow-lg transform transition-transform duration-200 ease-out"
           >
             <div className="px-4 py-4 space-y-1">
               {navItems.map((item) => {
@@ -194,10 +220,10 @@ export function Navbar() {
                       <Link
                         href={item.href}
                         className={`
-                          block px-3 py-3 font-semibold uppercase text-sm tracking-wide transition-colors border-b border-white/10
+                          block px-3 py-3 font-semibold uppercase text-sm tracking-wide transition-colors border-b border-brand-black/10
                           ${isActive 
                             ? 'text-brand-red' 
-                            : 'text-white hover:text-brand-blue'
+                            : 'text-brand-black hover:text-brand-red'
                           }
                         `}
                         onClick={closeMenu}
@@ -209,7 +235,7 @@ export function Navbar() {
                           <Link
                             key={subItem.href}
                             href={subItem.href}
-                            className="block px-3 py-2 text-sm text-white/70 hover:text-brand-blue transition-colors"
+                            className="block px-3 py-2 text-sm text-brand-black/70 hover:text-brand-red transition-colors"
                             onClick={closeMenu}
                           >
                             {subItem.label}
@@ -225,10 +251,10 @@ export function Navbar() {
                     key={item.href}
                     href={item.href}
                     className={`
-                      block px-3 py-3 font-semibold uppercase text-sm tracking-wide transition-colors border-b border-white/10
+                      block px-3 py-3 font-semibold uppercase text-sm tracking-wide transition-colors border-b border-brand-black/10
                       ${isActive 
                         ? 'text-brand-red' 
-                        : 'text-white hover:text-brand-blue'
+                        : 'text-brand-black hover:text-brand-red'
                       }
                     `}
                     onClick={closeMenu}
@@ -242,7 +268,7 @@ export function Navbar() {
               <div className="pt-4 space-y-2">
                 <a 
                   href="tel:+13055603087" 
-                  className="flex items-center justify-center gap-2 px-4 py-3 bg-brand-blue text-white font-semibold rounded-none"
+                  className="flex items-center justify-center gap-2 px-4 py-3 bg-brand-red text-white font-semibold border-2 border-brand-black"
                   onClick={closeMenu}
                 >
                   <Phone size={18} />
