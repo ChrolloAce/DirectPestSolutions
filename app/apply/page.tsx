@@ -4,8 +4,12 @@ import { CTAButton } from '@/components/ui/CTAButton'
 import { CheckCircle, Users, TrendingUp, Shield } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Join Our Team | Brown\'s Pressure Washing | Nashville',
-  description: 'Join the Brown\'s Pressure Washing team. We\'re looking for dedicated professionals who take pride in their work. Apply today!',
+  title: 'Careers | Join Our Team | Direct Pest Solutions Miami',
+  description: 'Join the Direct Pest Solutions team. We\'re looking for dedicated pest control professionals in Miami-Dade County. Competitive pay, training, and benefits. Apply today!',
+  keywords: 'pest control jobs Miami, exterminator jobs, pest control careers, Miami pest control employment, pest technician jobs',
+  alternates: {
+    canonical: 'https://directpestsolutions.com/apply',
+  },
 }
 
 export default function ApplyPage() {

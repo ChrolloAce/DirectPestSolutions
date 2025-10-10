@@ -5,9 +5,12 @@ import { Calendar, Clock, ArrowLeft, Phone } from 'lucide-react'
 import Button from '@/components/ui/Button'
 
 export const metadata: Metadata = {
-  title: 'Maximizing Energy Efficiency in Commercial HVAC Systems | CBE Air Services',
-  description: 'Learn how Miami businesses can reduce energy costs and improve comfort with smart commercial HVAC strategies and modern technology.',
-  keywords: 'commercial HVAC Miami, energy efficiency, commercial AC Miami, business HVAC, office building HVAC',
+  title: 'Maximizing Efficiency in Commercial Pest Control | Direct Pest Solutions',
+  description: 'Learn how Miami businesses can reduce pest-related costs and maintain compliance with smart commercial pest control strategies and integrated pest management.',
+  keywords: 'commercial pest control Miami, business pest control, restaurant pest control, office pest control, IPM Miami',
+  alternates: {
+    canonical: 'https://directpestsolutions.com/blog/commercial-hvac-energy-efficiency',
+  },
 }
 
 export default function BlogPost() {

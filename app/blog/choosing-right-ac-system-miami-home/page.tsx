@@ -5,9 +5,12 @@ import { Calendar, Clock, ArrowLeft, Phone } from 'lucide-react'
 import Button from '@/components/ui/Button'
 
 export const metadata: Metadata = {
-  title: 'How to Choose the Right AC System for Your Miami Home | CBE Air Services',
-  description: 'Complete guide to selecting the perfect air conditioning system for your Miami home. Learn about size, efficiency, and cost considerations from HVAC experts.',
-  keywords: 'AC system selection Miami, best AC for Miami, air conditioning installation Miami, HVAC system Miami, AC sizing Miami',
+  title: 'How to Choose the Right Pest Control Plan for Your Miami Home | Direct Pest Solutions',
+  description: 'Complete guide to selecting the perfect pest control plan for your Miami home. Learn about coverage, frequency, and cost considerations from pest control experts.',
+  keywords: 'pest control plans Miami, best pest control Miami, pest control service Miami, pest protection plans, pest control options Miami',
+  alternates: {
+    canonical: 'https://directpestsolutions.com/blog/choosing-right-ac-system-miami-home',
+  },
 }
 
 export default function BlogPost() {

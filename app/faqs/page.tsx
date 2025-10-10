@@ -4,8 +4,12 @@ import { FAQAccordion } from '@/components/sections/FAQAccordion'
 import { CTAButton } from '@/components/ui/CTAButton'
 
 export const metadata: Metadata = {
-  title: 'FAQs | Brown\'s Pressure Washing | Nashville',
-  description: 'Frequently asked questions about pressure washing, house washing, roof cleaning, and more. Get answers from Nashville\'s trusted pressure washing experts.',
+  title: 'Pest Control FAQs Miami | Direct Pest Solutions',
+  description: 'Frequently asked questions about pest control, termite treatment, bed bug extermination, and more. Get answers from Miami\'s trusted pest control experts. Call +1-(305) 351-6886.',
+  keywords: 'pest control FAQ, pest control questions, termite FAQ Miami, bed bug questions, pest control information, Miami pest control help',
+  alternates: {
+    canonical: 'https://directpestsolutions.com/faqs',
+  },
 }
 
 export default function FAQsPage() {

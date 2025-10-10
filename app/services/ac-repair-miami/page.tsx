@@ -5,9 +5,12 @@ import { Check, Phone, Clock, Shield, Star } from 'lucide-react'
 import { ServiceFAQ } from '@/components/sections/ServiceFAQ'
 
 export const metadata: Metadata = {
-  title: 'AC Repair Miami | Same-Day Service | CBE Air Services',
-  description: 'Fast, reliable AC repair in Miami. Same-day service for all makes & models. Licensed technicians, transparent pricing. Call +1-(305) 351-6886.',
-  keywords: 'AC repair Miami, air conditioning repair Miami, emergency AC repair, AC not cooling, AC repair near me, same-day AC repair Miami'
+  title: 'Emergency Pest Control Miami | Same-Day Service | Direct Pest Solutions',
+  description: 'Fast, reliable emergency pest control in Miami. Same-day service for termites, bed bugs, rodents & more. Licensed exterminators, guaranteed results. Call +1-(305) 351-6886.',
+  keywords: 'emergency pest control Miami, same-day pest control, urgent pest removal Miami, emergency exterminator, 24/7 pest control Miami',
+  alternates: {
+    canonical: 'https://directpestsolutions.com/services/emergency-pest-control-miami',
+  },
 }
 
 export default function ACRepairPage() {

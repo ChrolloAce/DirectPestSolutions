@@ -5,9 +5,12 @@ import { Calendar, Clock, ArrowLeft, Phone } from 'lucide-react'
 import Button from '@/components/ui/Button'
 
 export const metadata: Metadata = {
-  title: '10 Warning Signs Your AC Needs Repair in Miami | CBE Air Services',
-  description: 'Learn to identify early warning signs that your Miami AC system needs professional repair. Expert tips from CBE Air Services to prevent costly breakdowns.',
-  keywords: 'AC repair signs Miami, air conditioning problems, AC not cooling Miami, HVAC repair Miami, AC breakdown symptoms',
+  title: '10 Warning Signs You Need Pest Control in Miami | Direct Pest Solutions',
+  description: 'Learn to identify early warning signs of pest infestation in your Miami home. Expert tips from Direct Pest Solutions to prevent costly damage.',
+  keywords: 'pest infestation signs Miami, pest problem symptoms, termite signs Miami, rodent signs, bed bug signs Miami',
+  alternates: {
+    canonical: 'https://directpestsolutions.com/blog/signs-your-ac-needs-repair-miami',
+  },
 }
 
 export default function BlogPost() {

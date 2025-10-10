@@ -5,9 +5,12 @@ import { CTAButton } from '@/components/ui/CTAButton'
 import { Phone, Clock, Award } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'AC & HVAC Services Miami | CBE Air Services',
-  description: 'Professional AC repair, installation, maintenance and HVAC services in Miami. Same-day service, licensed technicians. Call +1-(305) 351-6886.',
-  keywords: 'AC repair Miami, AC installation Miami, AC maintenance Miami, HVAC services Miami, air conditioning service, heating installation Miami'
+  title: 'Pest Control Services Miami | Direct Pest Solutions',
+  description: 'Comprehensive pest control services in Miami & Miami-Dade County. Termite control, bed bug extermination, rodent removal, mosquito treatment & more. Licensed & insured. Same-day service available. Call +1-(305) 351-6886.',
+  keywords: 'pest control services Miami, exterminator services Miami, termite control, bed bug treatment, rodent control, mosquito control, ant control, cockroach extermination, wildlife removal, pest inspection Miami',
+  alternates: {
+    canonical: 'https://directpestsolutions.com/services',
+  },
 }
 
 export default function ServicesPage() {

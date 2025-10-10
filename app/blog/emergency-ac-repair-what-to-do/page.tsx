@@ -5,9 +5,12 @@ import { Calendar, Clock, ArrowLeft, Phone } from 'lucide-react'
 import Button from '@/components/ui/Button'
 
 export const metadata: Metadata = {
-  title: 'AC Emergency? Here\'s What to Do Before We Arrive | CBE Air Services',
-  description: 'Quick steps to take when your AC breaks down in Miami heat. Emergency AC repair guide from CBE Air Services professionals.',
-  keywords: 'emergency AC repair Miami, AC breakdown Miami, AC not working Miami, emergency HVAC Miami, 24/7 AC repair',
+  title: 'Pest Emergency? Here\'s What to Do Before We Arrive | Direct Pest Solutions',
+  description: 'Quick steps to take when you discover pests in your Miami home. Emergency pest control guide from Direct Pest Solutions professionals. Same-day service available.',
+  keywords: 'emergency pest control Miami, pest emergency, urgent pest removal, emergency exterminator Miami, 24/7 pest control',
+  alternates: {
+    canonical: 'https://directpestsolutions.com/blog/emergency-ac-repair-what-to-do',
+  },
 }
 
 export default function BlogPost() {

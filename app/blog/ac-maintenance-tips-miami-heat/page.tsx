@@ -5,9 +5,12 @@ import { Calendar, Clock, ArrowLeft, Phone } from 'lucide-react'
 import Button from '@/components/ui/Button'
 
 export const metadata: Metadata = {
-  title: 'Essential AC Maintenance Tips for Miami\'s Heat | CBE Air Services',
-  description: 'Keep your AC running efficiently in Miami\'s challenging climate with these professional maintenance tips from CBE Air Services experts.',
-  keywords: 'AC maintenance Miami, HVAC maintenance tips, air conditioning service Miami, AC tune-up Miami, Miami HVAC maintenance',
+  title: 'Essential Pest Prevention Tips for Miami\'s Heat | Direct Pest Solutions',
+  description: 'Keep pests away in Miami\'s challenging climate with these professional prevention tips from Direct Pest Solutions experts. Protect your home year-round.',
+  keywords: 'pest prevention Miami, pest control tips, pest prevention tips Miami, summer pest control, Miami pest prevention',
+  alternates: {
+    canonical: 'https://directpestsolutions.com/blog/ac-maintenance-tips-miami-heat',
+  },
 }
 
 export default function BlogPost() {

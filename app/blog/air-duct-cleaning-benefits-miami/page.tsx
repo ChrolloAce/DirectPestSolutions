@@ -5,9 +5,12 @@ import { Calendar, Clock, ArrowLeft, Phone } from 'lucide-react'
 import Button from '@/components/ui/Button'
 
 export const metadata: Metadata = {
-  title: 'Benefits of Professional Air Duct Cleaning in Miami | CBE Air Services',
-  description: 'Discover how professional duct cleaning improves indoor air quality, reduces allergens, and increases HVAC efficiency in South Florida homes.',
-  keywords: 'air duct cleaning Miami, duct cleaning benefits, indoor air quality Miami, allergen removal, HVAC duct cleaning',
+  title: 'The Benefits of Professional Rodent Exclusion in Miami | Direct Pest Solutions',
+  description: 'Discover how professional rodent exclusion improves home safety, prevents damage, and provides long-term protection for Miami homes and businesses.',
+  keywords: 'rodent exclusion Miami, rodent control Miami, rat prevention, mouse prevention Miami, rodent proofing Miami',
+  alternates: {
+    canonical: 'https://directpestsolutions.com/blog/air-duct-cleaning-benefits-miami',
+  },
 }
 
 export default function BlogPost() {

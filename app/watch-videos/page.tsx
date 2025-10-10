@@ -4,8 +4,12 @@ import { PlayCircle } from 'lucide-react'
 import { CTAButton } from '@/components/ui/CTAButton'
 
 export const metadata: Metadata = {
-  title: 'Watch Videos | Brown\'s Pressure Washing | Nashville',
-  description: 'See our pressure washing services in action. Watch before and after transformations of houses, roofs, driveways, and more in Nashville.',
+  title: 'Pest Control Videos Miami | Direct Pest Solutions',
+  description: 'Watch our pest control services in action. See before and after pest treatments, termite inspections, bed bug extermination, and more in Miami-Dade County. Call +1-(305) 351-6886.',
+  keywords: 'pest control videos, pest extermination videos, termite treatment video, bed bug removal video, pest control Miami',
+  alternates: {
+    canonical: 'https://directpestsolutions.com/watch-videos',
+  },
 }
 
 export default function WatchVideosPage() {
