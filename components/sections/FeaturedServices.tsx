@@ -1,45 +1,53 @@
 'use client'
 
 import React from 'react'
-import { ServiceCard } from '@/components/ui/ServiceCard'
+import Image from 'next/image'
 import { getFeaturedServices } from '@/content/services'
 
 export function FeaturedServices() {
   const services = getFeaturedServices()
   
   return (
-    <section className="py-16 bg-white">
+    <section className="py-20 md:py-28 bg-white">
       <div className="container mx-auto px-4">
+        {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="font-heading text-4xl md:text-5xl uppercase mb-4">
-            Our Pest Control Services
+          <h2 className="font-heading uppercase text-5xl sm:text-6xl md:text-7xl text-brand-black mb-4 leading-none">
+            OUR <span className="text-brand-red">SERVICES</span>
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            From termite inspections to bed bug extermination, we provide comprehensive 
-            pest control solutions for Miami-Dade County homes and businesses.
+          <p className="max-w-4xl mx-auto text-lg md:text-xl text-brand-black/80 font-medium">
+            Explore our comprehensive range of services designed to tackle all your pest control needs with efficiency and expertise
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Service Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {services.map((service) => (
-            <ServiceCard
+            <a
               key={service.id}
-              slug={service.id}
-              title={service.title}
-              icon={service.icon}
-              image={service.image}
-            />
+              href={service.href}
+              className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              {/* Service Image */}
+              <div className="relative h-80 overflow-hidden">
+                <Image
+                  src={service.image}
+                  alt={`${service.title} - Professional pest control services in Miami`}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              </div>
+              
+              {/* Service Title Banner */}
+              <div className="absolute bottom-0 left-0 right-0 bg-brand-red px-6 py-4">
+                <h3 className="font-heading uppercase text-white text-lg md:text-xl font-bold tracking-wide">
+                  {service.title}
+                </h3>
+              </div>
+            </a>
           ))}
-        </div>
-        
-        <div className="mt-12 text-center">
-          <a 
-            href="/services" 
-            className="inline-flex items-center gap-2 text-brand-blue font-semibold hover:text-brand-red transition-colors"
-          >
-            View All Services
-            <span className="text-xl">→</span>
-          </a>
         </div>
       </div>
     </section>
