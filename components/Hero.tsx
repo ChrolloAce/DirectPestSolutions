@@ -52,7 +52,7 @@ export default function Hero() {
           fill
           priority
           className="object-cover object-center"
-          style={{ filter: 'saturate(1.5) invert(1)' }}
+          style={{ transform: 'scaleX(-1)', filter: 'saturate(1.5)' }}
         />
         {/* Overlay: lighter gradient for better visibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/20" />

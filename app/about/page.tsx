@@ -86,9 +86,6 @@ export default function AboutPage() {
       {/* Why Choose Us Section - BLACK BACKGROUND */}
       <WhyChooseUs />
 
-      {/* Customer Reviews - BLACK BACKGROUND */}
-      <Reviews />
-
       {/* Our Approach Section */}
       <section className="py-16 md:py-24 bg-brand-black">
         <div className="container mx-auto px-4">
@@ -186,6 +183,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Customer Reviews - BLACK BACKGROUND - Last Section */}
+      <Reviews />
     </>
   )
 }
