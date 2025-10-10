@@ -114,22 +114,6 @@ export default function Reviews() {
           <h2 className="font-heading uppercase text-5xl md:text-6xl text-brand-black tracking-tight">
             What Our Customers Say
           </h2>
-          <div className="mt-4 flex items-center justify-center gap-3 flex-wrap">
-            <div className="flex items-center gap-2">
-              <Image 
-                src="/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/google-g-logo.png" 
-                alt="Google" 
-                width={24} 
-                height={24}
-                className="w-6 h-6"
-              />
-              <span className="text-brand-red font-bold text-lg">★ {averageRating}/5</span>
-            </div>
-            <span className="text-brand-black/50">•</span>
-            <span className="text-brand-black/70">Licensed & Insured</span>
-            <span className="text-brand-black/50">•</span>
-            <span className="text-brand-black/70">{reviews.length} Verified Reviews</span>
-          </div>
         </header>
 
         <div className="relative">
