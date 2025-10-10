@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
-import { Award, Users, Clock, Shield, CheckCircle, Star } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
 import Button from '@/components/ui/Button'
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
 import Reviews from '@/components/Reviews'
@@ -86,70 +86,8 @@ export default function AboutPage() {
       {/* Why Choose Us Section - BLACK BACKGROUND */}
       <WhyChooseUs />
 
-      {/* Values Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="font-heading text-4xl md:text-5xl uppercase text-center mb-12 text-brand-black font-bold">
-            Our Core Values
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="text-white" size={36} />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Integrity</h3>
-              <p className="text-brand-black/70">
-                Honest pricing, transparent communication, and standing behind our work with a 100% satisfaction guarantee.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="text-white" size={36} />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Customer First</h3>
-              <p className="text-brand-black/70">
-                Your property's protection is our priority. We go above and beyond to ensure every customer is completely satisfied.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="text-white" size={36} />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Excellence</h3>
-              <p className="text-brand-black/70">
-                Continuous training, EPA-approved products, and meticulous attention to detail in every pest control service.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Customer Reviews - BLACK BACKGROUND */}
       <Reviews />
-
-      {/* Stats Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto text-center">
-            <div>
-              <div className="text-4xl font-bold text-brand-red mb-2">10,000+</div>
-              <p className="text-brand-black font-medium">Properties Protected</p>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-brand-red mb-2">4.9★</div>
-              <p className="text-brand-black font-medium">Average Rating</p>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-brand-red mb-2">22+</div>
-              <p className="text-brand-black font-medium">Years Experience</p>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-brand-red mb-2">100%</div>
-              <p className="text-brand-black font-medium">Satisfaction Rate</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Our Approach Section */}
       <section className="py-16 md:py-24 bg-brand-black">
@@ -248,56 +186,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Community Commitment Section */}
-      <section className="py-16 md:py-24 bg-brand-black">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-heading text-4xl md:text-5xl uppercase mb-8 text-white font-bold">
-              Our Commitment to Miami
-            </h2>
-            <div className="bg-white p-8 md:p-12 rounded-lg">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-brand-black">Serving Our Community for Over 22 Years</h3>
-              <p className="text-lg text-brand-black/80 mb-6">
-                "We started Direct Pest Solutions with one goal: to provide the kind of professional, thorough pest control 
-                that Miami property owners deserve. Every day, our team works hard to earn your trust through 
-                exceptional workmanship, safe EPA-approved products, and unparalleled attention to detail."
-              </p>
-              <p className="text-lg text-brand-black/80 mb-6">
-                "As a local, family-owned business, we understand Miami's unique pest challenges - from termites and bed bugs 
-                to mosquitoes and wildlife. We're invested in this community because we live and work here too. When you 
-                choose Direct Pest Solutions, you're supporting a local business that truly cares about protecting your 
-                property and your peace of mind."
-              </p>
-              <p className="font-bold text-brand-black">
-                - The Direct Pest Solutions Team
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-white border-t-4 border-brand-red">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-heading text-4xl md:text-5xl uppercase mb-4 text-brand-black font-bold">
-            Experience Professional Pest Control
-          </h2>
-          <p className="text-xl text-brand-black/80 mb-8 max-w-2xl mx-auto">
-            Join over 10,000 satisfied Miami homeowners and businesses who trust us for all their pest control needs.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <a href="/contact" className="bg-brand-red text-white px-8 py-4 font-bold uppercase border-2 border-brand-black hover:bg-brand-black transition-colors text-lg">
-              Get Free Estimate
-            </a>
-            <a href="tel:+13053516886" className="bg-brand-black text-white px-8 py-4 font-bold uppercase border-2 border-brand-black hover:bg-brand-red transition-colors text-lg inline-flex items-center gap-2">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-              Call +1-(305) 351-6886
-            </a>
-          </div>
-        </div>
-      </section>
     </>
   )
 }
