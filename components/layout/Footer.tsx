@@ -29,17 +29,17 @@ export class Footer extends React.Component {
     return (
       <footer className="bg-white text-brand-black">
         {/* CTA Banner */}
-        <div className="bg-brand-red text-brand-white py-12 border-b-4 border-brand-black">
+        <div className="bg-brand-red text-brand-white py-8 border-b-4 border-brand-black">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <h2 className="font-heading text-4xl md:text-5xl uppercase tracking-tight">
+              <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-tight text-center md:text-left">
                 Need Pest Control? Get Your Free Inspection:
               </h2>
-              <div className="flex gap-4">
-                <a href="/contact" className="bg-white text-brand-black px-6 py-3 font-bold uppercase border-2 border-brand-black hover:bg-brand-black hover:text-white transition-colors">
+              <div className="flex flex-wrap gap-4 justify-center md:justify-end flex-shrink-0">
+                <a href="/contact" className="bg-white text-brand-black px-6 py-3 font-bold uppercase border-2 border-brand-black hover:bg-brand-black hover:text-white transition-colors whitespace-nowrap text-sm">
                   Book Service
                 </a>
-                <a href="tel:+13053516886" className="bg-white text-brand-black px-6 py-3 font-bold uppercase border-2 border-brand-black hover:bg-brand-black hover:text-white transition-colors">
+                <a href="tel:+13053516886" className="bg-white text-brand-black px-6 py-3 font-bold uppercase border-2 border-brand-black hover:bg-brand-black hover:text-white transition-colors whitespace-nowrap text-sm">
                   Call +1-(305) 351-6886
                 </a>
               </div>
