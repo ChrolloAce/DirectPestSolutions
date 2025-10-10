@@ -19,7 +19,9 @@ const serviceLocations = [
     description: 'Downtown Miami, Brickell, Wynwood, Little Havana, and surrounding areas',
     services: ['Termite Control', 'Bed Bug Extermination', 'Rodent Removal', 'Emergency Service'],
     responseTime: 'Same-Day',
-    rating: 4.9
+    rating: 4.9,
+    image: '/images/locations/miami-tropical-building-palm-trees.jpg',
+    imageAlt: 'Professional pest control services in Miami Florida - Direct Pest Solutions serving downtown Miami, Brickell, and Wynwood with expert extermination'
   },
   {
     city: 'Miami Beach',
@@ -27,7 +29,9 @@ const serviceLocations = [
     description: 'South Beach, Mid Beach, North Beach, and Bal Harbour',
     services: ['Bed Bugs', 'Mosquito Control', 'Hotel Pest Control', 'Emergency Service'],
     responseTime: 'Same-Day',
-    rating: 4.9
+    rating: 4.9,
+    image: '/images/locations/miami-beach-florida-coastline.jpg',
+    imageAlt: 'Miami Beach pest control and bed bug extermination - Direct Pest Solutions protecting South Beach, hotels, and condos from pests'
   },
   {
     city: 'Coral Gables',
@@ -35,7 +39,9 @@ const serviceLocations = [
     description: 'The City Beautiful - Historic homes and luxury residences',
     services: ['Termite Inspections', 'Rodent Exclusion', 'Mosquito Treatment', 'Prevention'],
     responseTime: 'Same-Day',
-    rating: 5.0
+    rating: 5.0,
+    image: '/images/locations/coral-gables-florida-pest-control.jpg',
+    imageAlt: 'Coral Gables Florida pest control - Termite inspections and rodent removal for historic homes and luxury residences in the City Beautiful'
   },
   {
     city: 'Aventura',
@@ -43,7 +49,9 @@ const serviceLocations = [
     description: 'High-rise condominiums and luxury shopping district',
     services: ['Condo Pest Control', 'Bed Bugs', 'Emergency Service', 'Commercial'],
     responseTime: 'Same-Day',
-    rating: 4.9
+    rating: 4.9,
+    image: '/images/locations/north-miami-florida.jpg',
+    imageAlt: 'Aventura pest control for condos and high-rises - Bed bug treatment and commercial extermination in Aventura shopping district'
   },
   {
     city: 'Kendall',
@@ -51,7 +59,9 @@ const serviceLocations = [
     description: 'West Miami-Dade residential communities',
     services: ['Termite Control', 'Rodent Removal', 'Ant Control', 'Inspections'],
     responseTime: 'Same-Day',
-    rating: 4.9
+    rating: 4.9,
+    image: '/images/locations/kendall-miami-florida.jpg',
+    imageAlt: 'Kendall Miami pest control and termite treatment - Protecting West Kendall and East Kendall residential communities from pests'
   },
   {
     city: 'Homestead',
@@ -59,7 +69,9 @@ const serviceLocations = [
     description: 'South Miami-Dade agricultural and residential area',
     services: ['Wildlife Removal', 'Termite Treatment', 'Emergency Service', 'Farm Pest Control'],
     responseTime: '1-2 Hours',
-    rating: 4.8
+    rating: 4.8,
+    image: '/images/locations/pinecrest-miami-florida.jpg',
+    imageAlt: 'Homestead Florida pest control and wildlife removal - Farm pest control and termite treatment in South Miami-Dade'
   },
   {
     city: 'Palmetto Bay',
@@ -67,7 +79,9 @@ const serviceLocations = [
     description: 'Upscale residential community in South Miami-Dade',
     services: ['Eco-Friendly Control', 'Termite Prevention', 'Mosquito Treatment', 'Inspections'],
     responseTime: 'Same-Day',
-    rating: 5.0
+    rating: 5.0,
+    image: '/images/locations/coconut-grove-miami.jpg',
+    imageAlt: 'Palmetto Bay eco-friendly pest control - Termite prevention and mosquito treatment for upscale South Miami-Dade homes'
   },
   {
     city: 'Cutler Bay',
@@ -75,7 +89,9 @@ const serviceLocations = [
     description: 'Family-friendly residential community',
     services: ['Pest Control', 'Termite Treatment', 'Rodent Removal', 'Emergency Service'],
     responseTime: 'Same-Day',
-    rating: 4.9
+    rating: 4.9,
+    image: '/images/locations/key-biscayne-miami.jpg',
+    imageAlt: 'Cutler Bay pest control and extermination - Family-safe pest removal and termite treatment for Cutler Bay residential homes'
   },
   {
     city: 'Doral',
@@ -83,7 +99,9 @@ const serviceLocations = [
     description: 'Business district and modern residential developments',
     services: ['Commercial Pest Control', 'Termite Inspections', 'Emergency Service', 'Offices'],
     responseTime: 'Same-Day',
-    rating: 4.9
+    rating: 4.9,
+    image: '/images/locations/west-kendall-miami.jpg',
+    imageAlt: 'Doral commercial pest control - Office and business pest management for Doral business district and residential developments'
   },
   {
     city: 'Hialeah',
@@ -91,7 +109,9 @@ const serviceLocations = [
     description: 'Large residential community in northwest Miami-Dade',
     services: ['Pest Control', 'Termite Treatment', 'Emergency Service', 'Bilingual Service'],
     responseTime: 'Same-Day',
-    rating: 4.9
+    rating: 4.9,
+    image: '/images/locations/fisher-island-miami-beach.jpg',
+    imageAlt: 'Hialeah pest control with bilingual service - Termite treatment and extermination for northwest Miami-Dade residential community'
   }
 ]
 
@@ -166,8 +186,8 @@ export default function LocationsPage() {
                   {/* Image with red banner */}
                   <div className="relative aspect-square overflow-hidden">
                     <Image
-                      src="/images/company/pest-control-technician-exterior.jpg"
-                      alt={`Pest control services in ${location.city}`}
+                      src={location.image}
+                      alt={location.imageAlt}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
