@@ -7,6 +7,7 @@ import Reviews from '@/components/Reviews'
 import { FAQAccordion } from '@/components/sections/FAQAccordion'
 import { BrandMarquee } from '@/components/sections/BrandMarquee'
 import { ProcessSection } from '@/components/sections/ProcessSection'
+import { AboutSection } from '@/components/sections/AboutSection'
 
 export default function HomePage() {
   return (
@@ -14,11 +15,14 @@ export default function HomePage() {
       {/* Hero with Lead Form */}
       <Hero />
       
-      {/* Brand Marquee */}
-      <BrandMarquee />
+      {/* About Us Section with Video */}
+      <AboutSection />
       
       {/* Services Grid */}
       <FeaturedServices />
+      
+      {/* Brand Marquee - Common Pests */}
+      <BrandMarquee />
       
       {/* Service Teasers */}
       <ServiceTeaser
@@ -49,7 +53,7 @@ export default function HomePage() {
         ctaHref="/services"
       />
       
-      {/* Why Choose Us */}
+      {/* Why Choose Us - Black Background */}
       <WhyChooseUs />
       
       {/* The Process Section with 3 GIFs */}
