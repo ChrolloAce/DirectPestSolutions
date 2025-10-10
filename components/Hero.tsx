@@ -47,8 +47,8 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/raccoon-photo.jpg"
-          alt="Professional pest control services in Miami - Direct Pest Solutions offers expert wildlife and rodent removal for Miami-Dade County homes and businesses"
+          src="/images/company/professional-pest-inspection.webp"
+          alt="Professional pest control services in Miami - Direct Pest Solutions offers expert pest inspection and treatment for Miami-Dade County homes and businesses"
           fill
           priority
           className="object-cover object-center"
@@ -65,9 +65,9 @@ export default function Hero() {
             <h1 className="font-heading uppercase leading-[0.95] tracking-tight text-5xl sm:text-6xl">
               <span className="text-white">#1 Pest Control</span> <span className="text-brand-red">In Miami</span>
               <br /> 
-              <span className="text-white text-4xl sm:text-5xl">Top Rated</span> <span className="text-brand-red text-4xl sm:text-5xl">Residential & Commercial</span>
+              <span className="text-white text-2xl sm:text-3xl">Top Rated Residential & Commercial</span>
               <br />
-              <span className="text-white text-4xl sm:text-5xl">Pest Control In Florida</span>
+              <span className="text-white text-2xl sm:text-3xl">Pest Control In Florida</span>
             </h1>
 
             <p className="mt-5 max-w-xl text-lg text-white/90">

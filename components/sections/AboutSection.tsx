@@ -25,20 +25,20 @@ export function AboutSection() {
           {/* Right: Content */}
           <div>
             {/* Rating Badge */}
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-yellow-400 text-xl">★★★★★</span>
-              <span className="text-brand-black font-semibold">453+ Trusted Customer Reviews</span>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-yellow-400 text-lg">★★★★★</span>
+              <span className="text-brand-black text-sm font-semibold">453+ Trusted Reviews</span>
             </div>
 
             {/* Heading */}
-            <h2 className="font-heading uppercase text-4xl md:text-5xl lg:text-6xl text-brand-black leading-tight mb-6">
-              TOP RATED PEST CONTROL SERVICES<br />
+            <h2 className="font-heading uppercase text-3xl md:text-4xl text-brand-black leading-tight mb-4">
+              TOP RATED PEST CONTROL<br />
               <span className="text-brand-black">IN MIAMI, FLORIDA!</span>
             </h2>
 
             {/* Description */}
-            <p className="text-lg text-brand-black/80 mb-8 leading-relaxed">
-              For over 22 years, Direct Pest Solutions has been a trusted, family-owned and operated pest control and wildlife removal company. Based in Miami, Florida, we proudly serve customers throughout the region. Our commitment is straightforward: to ensure customer satisfaction by addressing all pest concerns with unparalleled care and expertise.
+            <p className="text-base text-brand-black/80 mb-6 leading-relaxed">
+              Family-owned and operated for over 22 years, Direct Pest Solutions is Miami's trusted pest control company. Licensed, insured, and committed to 100% customer satisfaction.
             </p>
 
             {/* CTA Button */}
@@ -46,13 +46,13 @@ export function AboutSection() {
               as="a" 
               href="#quote"
               variant="primary"
-              className="!bg-brand-red !text-white !border-brand-red hover:!bg-brand-red/90 !text-lg !px-8 !py-4"
+              className="!bg-brand-red !text-white !border-brand-red hover:!bg-brand-red/90 !text-base !px-6 !py-3"
             >
               GET A FREE QUOTE™ NOW →
             </Button>
             
-            <p className="text-sm text-brand-black/60 mt-3">
-              Join over 10000+ other happy clients
+            <p className="text-xs text-brand-black/60 mt-2">
+              Join over 10,000+ other happy clients
             </p>
           </div>
         </div>
