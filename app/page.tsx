@@ -5,8 +5,6 @@ import { ServiceTeaser } from '@/components/sections/ServiceTeaser'
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
 import Reviews from '@/components/Reviews'
 import { FAQAccordion } from '@/components/sections/FAQAccordion'
-import { NextSteps } from '@/components/sections/NextSteps'
-import { PortfolioCarousel } from '@/components/sections/PortfolioCarousel'
 import { BrandMarquee } from '@/components/sections/BrandMarquee'
 import { ProcessSection } from '@/components/sections/ProcessSection'
 
@@ -62,9 +60,6 @@ export default function HomePage() {
       
       {/* FAQs */}
       <FAQAccordion />
-      
-      {/* Portfolio Gallery */}
-      <PortfolioCarousel />
     </>
   )
 }
