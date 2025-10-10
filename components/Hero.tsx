@@ -68,7 +68,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-5 max-w-xl text-lg text-white/90">
-              Licensed • Insured • Same-Day Service Available. Professional pest control for termites, bed bugs, rodents, mosquitoes & all pests.
+              Miami's #1 Rated Pest Control Company | Licensed & Insured Exterminators | Same-Day Emergency Service | Termite Control, Bed Bug Extermination, Rodent Removal & Mosquito Treatment | Serving Miami-Dade County Since 2020 | Free Inspections & Guaranteed Results
             </p>
 
             {/* Trust row */}

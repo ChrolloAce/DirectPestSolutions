@@ -8,6 +8,7 @@ import { FAQAccordion } from '@/components/sections/FAQAccordion'
 import { NextSteps } from '@/components/sections/NextSteps'
 import { PortfolioCarousel } from '@/components/sections/PortfolioCarousel'
 import { BrandMarquee } from '@/components/sections/BrandMarquee'
+import { ProcessSection } from '@/components/sections/ProcessSection'
 
 export default function HomePage() {
   return (
@@ -52,6 +53,9 @@ export default function HomePage() {
       
       {/* Why Choose Us */}
       <WhyChooseUs />
+      
+      {/* The Process Section with 3 GIFs */}
+      <ProcessSection />
       
       {/* Customer Reviews */}
       <Reviews />

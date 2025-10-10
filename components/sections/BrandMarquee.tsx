@@ -42,18 +42,29 @@ export function BrandMarquee() {
                 <div
                   key={`${pest.name}-${index}`}
                   className="flex-shrink-0 mx-6 group"
-                  style={{ width: '140px' }}
+                  style={{ width: '180px' }}
                 >
-                  <div className="flex flex-col items-center justify-center p-4 hover:bg-white rounded-lg transition-all duration-300">
-                    <div className="relative w-16 h-16 mb-2">
+                  <div className="flex flex-col items-center justify-center p-6 hover:bg-white rounded-lg transition-all duration-300 relative">
+                    <div className="relative w-24 h-24 mb-3">
                       <Image
                         src={pest.icon}
                         alt={`${pest.name} pest control services in Miami - Direct Pest Solutions specializes in ${pest.name.toLowerCase()} extermination`}
                         fill
-                        className="object-contain group-hover:scale-110 transition-transform duration-300"
+                        className="object-contain transition-all duration-300 group-hover:grayscale group-hover:opacity-40"
                       />
+                      {/* Cancel/Close icon on hover */}
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <svg 
+                          className="w-8 h-8 text-brand-red" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </div>
                     </div>
-                    <h3 className="font-bold text-sm text-brand-black text-center">{pest.name}</h3>
+                    <h3 className="font-bold text-base text-brand-black text-center">{pest.name}</h3>
                     <p className="text-xs text-brand-black/60 text-center mt-1">{pest.description}</p>
                   </div>
                 </div>
@@ -64,18 +75,29 @@ export function BrandMarquee() {
                 <div
                   key={`${pest.name}-duplicate-${index}`}
                   className="flex-shrink-0 mx-6 group"
-                  style={{ width: '140px' }}
+                  style={{ width: '180px' }}
                 >
-                  <div className="flex flex-col items-center justify-center p-4 hover:bg-white rounded-lg transition-all duration-300">
-                    <div className="relative w-16 h-16 mb-2">
+                  <div className="flex flex-col items-center justify-center p-6 hover:bg-white rounded-lg transition-all duration-300 relative">
+                    <div className="relative w-24 h-24 mb-3">
                       <Image
                         src={pest.icon}
                         alt={`${pest.name} pest control services in Miami - Direct Pest Solutions specializes in ${pest.name.toLowerCase()} extermination`}
                         fill
-                        className="object-contain group-hover:scale-110 transition-transform duration-300"
+                        className="object-contain transition-all duration-300 group-hover:grayscale group-hover:opacity-40"
                       />
+                      {/* Cancel/Close icon on hover */}
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <svg 
+                          className="w-8 h-8 text-brand-red" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </div>
                     </div>
-                    <h3 className="font-bold text-sm text-brand-black text-center">{pest.name}</h3>
+                    <h3 className="font-bold text-base text-brand-black text-center">{pest.name}</h3>
                     <p className="text-xs text-brand-black/60 text-center mt-1">{pest.description}</p>
                   </div>
                 </div>
