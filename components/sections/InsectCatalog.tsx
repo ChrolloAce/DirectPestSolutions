@@ -11,15 +11,18 @@ interface InsectItem {
 
 interface InsectCatalogProps {
   insects: InsectItem[]
+  title?: string
 }
 
-export function InsectCatalog({ insects }: InsectCatalogProps) {
+export function InsectCatalog({ insects, title }: InsectCatalogProps) {
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-heading uppercase text-4xl md:text-5xl text-brand-black mb-4">
-            Targeted Treatments For The <span className="text-brand-red">Most Common Pests</span>
+            {title ? title : (
+              <>Targeted Treatments For The <span className="text-brand-red">Most Common Pests</span></>
+            )}
           </h2>
           <p className="text-lg text-brand-black/80">
             We target 100,000+ Species to ensure the most tailored and satisfactory job.

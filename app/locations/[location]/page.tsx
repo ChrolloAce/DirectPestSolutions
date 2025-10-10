@@ -6,6 +6,7 @@ import { services } from '@/content/services'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
 import Reviews from '@/components/Reviews'
+import { InsectCatalog } from '@/components/sections/InsectCatalog'
 
 interface LocationPageProps {
   params: {
@@ -170,6 +171,17 @@ export default function LocationPage({ params }: LocationPageProps) {
     { icon: Star, title: '100+ 5-Star Reviews', description: 'Trusted by local families' },
   ]
 
+  const commonInsects = [
+    { name: 'Termite', slug: 'termite', image: '/images/Insects/imgi_21_66a66e4415df3411006c1370_4.png', treatment: 'Subterranean & Drywood' },
+    { name: 'Bed Bug', slug: 'bed-bug', image: '/images/Insects/imgi_11_66a633a171a7cb236aa7c036_bed bug-min.png', treatment: 'Heat & Chemical Treatment' },
+    { name: 'Mosquito', slug: 'mosquito', image: '/images/Insects/imgi_17_66a633a10650a2602e9d577c_mosquito-min.png', treatment: 'Yard & Perimeter Control' },
+    { name: 'Rodent', slug: 'rodent', image: '/images/Insects/imgi_14_66a633a1c9fbe25684df8a27_mouse-min.png', treatment: 'Rats, Mice & Wildlife' },
+    { name: 'Cockroach', slug: 'cockroach', image: '/images/Insects/imgi_20_66a66e456f3bdb0490f15782_6.png', treatment: 'German & American Roaches' },
+    { name: 'Ant', slug: 'ant', image: '/images/Insects/imgi_12_66a633a19fb483dc06dae92b_ant-min.png', treatment: 'Fire Ants & Carpenter Ants' },
+    { name: 'Spider', slug: 'spider', image: '/images/Insects/imgi_18_66a66e44b44f4e3846848c6f_5.png', treatment: 'Black Widows & Brown Recluse' },
+    { name: 'Beetle', slug: 'beetle', image: '/images/Insects/imgi_10_66a633a18bb4818c49b6a30a_beetle-min.png', treatment: 'Wood-Boring Beetles' },
+  ]
+
   return (
     <>
       <script
@@ -327,39 +339,8 @@ export default function LocationPage({ params }: LocationPageProps) {
         </div>
       </section>
 
-      {/* Common Pests */}
-      <section className="py-16 md:py-24 bg-brand-off">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="heading-lg uppercase text-center mb-8 text-brand-black">
-              Common Pests in {location.name}, Florida
-            </h2>
-            <p className="text-center text-lg text-brand-black/80 mb-8">
-              South Florida's tropical climate creates ideal conditions for pests year-round. Our experts eliminate:
-            </p>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {[
-                { name: 'Termites', desc: 'Subterranean and drywood termites threaten structures' },
-                { name: 'Bed Bugs', desc: 'Infestations in homes, hotels, and apartments' },
-                { name: 'Mosquitoes', desc: 'Disease-carrying mosquitoes in yards and pools' },
-                { name: 'Rodents', desc: 'Rats and mice seeking shelter and food' },
-                { name: 'Ants', desc: 'Carpenter ants, fire ants, and sugar ants' },
-                { name: 'Cockroaches', desc: 'German and American roaches in kitchens' },
-                { name: 'Spiders', desc: 'Venomous and nuisance spider species' },
-                { name: 'Wildlife', desc: 'Raccoons, opossums, and squirrels' },
-              ].map((pest) => (
-                <div key={pest.name} className="flex gap-3 bg-white p-4 border border-brand-black">
-                  <CheckCircle className="text-brand-red flex-shrink-0 mt-1" size={20} />
-                  <div>
-                    <h3 className="font-bold mb-1">{pest.name}</h3>
-                    <p className="text-sm text-brand-black/70">{pest.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Common Pests - Insect Catalog - WHITE BACKGROUND */}
+      <InsectCatalog insects={commonInsects} title={`Common Pests in ${location.name}, Florida`} />
 
       {/* Local Information */}
       <section className="py-16 md:py-24 bg-white">

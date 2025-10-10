@@ -1,6 +1,10 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
+import Image from 'next/image'
 import { MapPin, Phone, Clock, Star, Shield, Award } from 'lucide-react'
 import { CTAButton } from '@/components/ui/CTAButton'
+import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
+import Reviews from '@/components/Reviews'
 
 export const metadata: Metadata = {
   title: 'Pest Control Service Locations | Direct Pest Solutions Miami-Dade County',
@@ -95,12 +99,12 @@ export default function LocationsPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-brand-red bg-noise py-20 md:py-32">
+      <section className="relative bg-brand-black py-20 md:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
             <MapPin className="mx-auto mb-6 text-white" size={64} />
-            <h1 className="heading-xl uppercase mb-6">
-              Pest Control Service Locations
+            <h1 className="font-heading text-5xl md:text-7xl uppercase mb-6 font-black">
+              SERVICE <span className="text-brand-red">LOCATIONS</span>
             </h1>
             <p className="text-xl text-white/90 mb-4">
               Professional Pest Control & Extermination Throughout Miami-Dade County
@@ -143,121 +147,104 @@ export default function LocationsPage() {
       </section>
 
       {/* Locations Grid */}
-      <section className="py-16 bg-brand-off">
+      <section className="py-20 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="heading-lg uppercase text-center mb-12 text-brand-black">
+          <h2 className="font-heading text-4xl md:text-5xl uppercase text-center mb-4 text-brand-black font-bold">
             Our Service Locations
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          <p className="text-center text-lg text-brand-black/70 mb-12 max-w-3xl mx-auto">
+            Professional pest control services available throughout Miami-Dade County. Click on your city to view local information.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {serviceLocations.map((location) => (
-              <a 
+              <Link 
                 key={location.slug}
                 href={`/locations/${location.slug}`}
-                className="bg-white border-2 border-brand-black p-6 hover:shadow-lg hover:border-brand-red transition-all group"
+                className="group"
               >
-                <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-xl font-bold text-brand-black group-hover:text-brand-red transition-colors">
-                    {location.city}
-                  </h3>
-                  <MapPin className="text-brand-red flex-shrink-0" size={24} />
-                </div>
-                
-                <p className="text-brand-black/70 mb-4">{location.description}</p>
-                
-                <div className="mb-4">
-                  <h4 className="font-semibold text-brand-black mb-2 text-sm">Services Available:</h4>
-                  <div className="flex flex-wrap gap-1">
-                    {location.services.map((service, idx) => (
-                      <span key={idx} className="text-xs bg-brand-red/10 text-brand-black px-2 py-1 border border-brand-red/30">
-                        {service}
+                <div className="bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full rounded-xl">
+                  {/* Image with red banner */}
+                  <div className="relative aspect-square overflow-hidden">
+                    <Image
+                      src="/images/company/pest-control-technician-exterior.jpg"
+                      alt={`Pest control services in ${location.city}`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    {/* Red diagonal banner */}
+                    <div className="absolute bottom-0 left-0 bg-brand-red px-8 py-4" style={{ clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0% 100%)' }}>
+                      <span className="text-white text-lg font-bold uppercase tracking-wider">
+                        {location.city}
                       </span>
-                    ))}
+                    </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="p-6">
+                    <p className="text-brand-black/70 mb-4 text-sm leading-relaxed">{location.description}</p>
+                    
+                    <div className="mb-4">
+                      <h4 className="font-semibold text-brand-black mb-2 text-xs uppercase tracking-wide">Services Available:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {location.services.slice(0, 3).map((service, idx) => (
+                          <span key={idx} className="text-xs bg-brand-red/10 text-brand-black px-3 py-1 border border-brand-red/30 font-medium">
+                            {service}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between text-sm pt-4 border-t border-brand-black/10">
+                      <div className="flex items-center gap-2">
+                        <Clock size={16} className="text-brand-red" />
+                        <span className="text-brand-black/70 font-medium">{location.responseTime}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Star size={16} className="text-yellow-400 fill-current" />
+                        <span className="text-brand-black font-bold">{location.rating}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="mt-4">
+                      <div className="flex items-center gap-2 text-brand-red font-bold text-sm uppercase tracking-wider">
+                        <span>View Details</span>
+                        <span className="group-hover:translate-x-1 transition-transform">→</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                
-                <div className="flex items-center justify-between text-sm">
-                  <div className="flex items-center gap-1">
-                    <Clock size={16} className="text-brand-red" />
-                    <span className="text-brand-black/70">{location.responseTime}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Star size={16} className="text-yellow-400 fill-current" />
-                    <span className="text-brand-black/70">{location.rating}★</span>
-                  </div>
-                </div>
-                
-                <div className="mt-4 pt-4 border-t border-brand-black/10">
-                  <span className="text-sm text-brand-red font-semibold group-hover:underline">
-                    View Details →
-                  </span>
-                </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Service Benefits */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="heading-lg uppercase text-center mb-12 text-brand-black">
-              Why Choose Direct Pest Solutions?
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="text-white" size={28} />
-                </div>
-                <h3 className="font-bold mb-2">Fast Response</h3>
-                <p className="text-brand-black/70 text-sm">Same-day service available throughout Miami-Dade County</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="text-white" size={28} />
-                </div>
-                <h3 className="font-bold mb-2">Licensed & Insured</h3>
-                <p className="text-brand-black/70 text-sm">State-certified exterminators with full insurance coverage</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Star className="text-white" size={28} />
-                </div>
-                <h3 className="font-bold mb-2">5-Star Rated</h3>
-                <p className="text-brand-black/70 text-sm">Consistently rated 4.9+ stars by customers across all locations</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="text-white" size={28} />
-                </div>
-                <h3 className="font-bold mb-2">100% Guaranteed</h3>
-                <p className="text-brand-black/70 text-sm">If pests return between treatments, we return for free</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Why Choose Us Section - BLACK BACKGROUND */}
+      <WhyChooseUs />
+
+      {/* Customer Reviews - BLACK BACKGROUND */}
+      <Reviews />
 
       {/* CTA Section */}
-      <section className="py-16 bg-brand-red bg-noise">
+      <section className="py-16 md:py-24 bg-white border-t-4 border-brand-red">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="heading-lg uppercase mb-4 text-white">
+          <h2 className="font-heading text-4xl md:text-5xl uppercase mb-4 text-brand-black font-bold">
             Need Pest Control in Your Area?
           </h2>
-          <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-brand-black/80 mb-8 max-w-2xl mx-auto">
             Don't see your specific location listed? We serve all of Miami-Dade County. 
             Call us to confirm service in your area.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <CTAButton href="tel:+13055603087" size="lg" variant="primary">
-              <Phone className="inline-block mr-2" size={20} />
+            <a href="tel:+13055603087" className="bg-brand-red text-white px-8 py-4 font-bold uppercase border-2 border-brand-black hover:bg-brand-black hover:text-white transition-colors text-lg inline-flex items-center gap-2">
+              <Phone size={20} />
               Call (305) 560-3087
-            </CTAButton>
-            <CTAButton href="/contact" size="lg" variant="secondary">
+            </a>
+            <a href="/contact" className="bg-brand-black text-white px-8 py-4 font-bold uppercase border-2 border-brand-black hover:bg-brand-red transition-colors text-lg">
               Get Free Inspection
-            </CTAButton>
+            </a>
           </div>
-          <p className="text-white/60 mt-6 text-sm">
+          <p className="text-brand-black/60 mt-6 text-sm font-medium">
             Licensed & Insured • Same-Day Service Available • 100% Satisfaction Guaranteed
           </p>
         </div>
