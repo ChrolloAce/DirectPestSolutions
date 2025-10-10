@@ -63,8 +63,11 @@ export default function Hero() {
           {/* Left: Copy / CTAs */}
           <div className="text-white">
             <h1 className="font-heading uppercase leading-[0.95] tracking-tight text-5xl sm:text-6xl">
-              <span className="underline decoration-brand-red decoration-4 underline-offset-4">Direct</span>
-              <br /> <span className="text-brand-red">Pest Solutions</span> Miami
+              <span className="text-white">#1 Pest Control</span> <span className="text-brand-red">In Miami</span>
+              <br /> 
+              <span className="text-white text-4xl sm:text-5xl">Top Rated</span> <span className="text-brand-red text-4xl sm:text-5xl">Residential & Commercial</span>
+              <br />
+              <span className="text-white text-4xl sm:text-5xl">Pest Control In Florida</span>
             </h1>
 
             <p className="mt-5 max-w-xl text-lg text-white/90">
@@ -74,8 +77,8 @@ export default function Hero() {
             {/* Trust row */}
             <div className="mt-6 flex flex-wrap items-center gap-4 text-sm">
               <div className="inline-flex items-center gap-2 rounded-none bg-white/10 px-3 py-2 ring-1 ring-white/20">
-                <span className="text-brand-red">★★★★★</span>
-                <span className="text-white/80">5.0 from 500+ Miami homeowners</span>
+                <span className="text-yellow-400">★★★★★</span>
+                <span className="text-white/80">5.0 from 2000+ Miami homeowners</span>
               </div>
               <div className="inline-flex items-center gap-2 rounded-none bg-white/10 px-3 py-2 ring-1 ring-white/20">
                 <span className="text-brand-red">Licensed Exterminators</span>
@@ -210,6 +213,75 @@ export default function Hero() {
               {/* red accent frame */}
               <div className="pointer-events-none absolute inset-0 rounded-none ring-1 ring-brand-red/60"></div>
             </form>
+          </div>
+        </div>
+      </div>
+
+      {/* Top Rated Bar - Below Hero */}
+      <div className="bg-white border-t-2 border-brand-red/20 py-6">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-12">
+            <h3 className="font-heading uppercase text-xl md:text-2xl text-brand-black tracking-tight text-center lg:text-left">
+              Top Rated Pest Control In Miami<br className="hidden lg:block" /> Across All Review Sites
+            </h3>
+            
+            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
+              {/* Google */}
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/google-g-logo.png"
+                  alt="Google Reviews"
+                  width={48}
+                  height={48}
+                  className="w-10 h-10 md:w-12 md:h-12"
+                />
+                <div className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-brand-black">5/5</div>
+                  <div className="text-xs text-brand-black/70">200+ reviews</div>
+                </div>
+              </div>
+
+              {/* Yelp */}
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/yelp-logo.png"
+                  alt="Yelp Reviews"
+                  width={48}
+                  height={48}
+                  className="w-10 h-10 md:w-12 md:h-12"
+                />
+                <div className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-brand-black">4.8/5</div>
+                  <div className="text-xs text-brand-black/70">4+ reviews</div>
+                </div>
+              </div>
+
+              {/* Trustpilot */}
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/trustpilot-star-logo.png"
+                  alt="Trustpilot Reviews"
+                  width={48}
+                  height={48}
+                  className="w-10 h-10 md:w-12 md:h-12"
+                />
+                <div className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-brand-black">4.8/5</div>
+                  <div className="text-xs text-brand-black/70">125+ reviews</div>
+                </div>
+              </div>
+
+              {/* Facebook */}
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-[#1877F2] rounded-full flex items-center justify-center">
+                  <span className="text-white text-2xl md:text-3xl font-bold">f</span>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-brand-black">4.8/5</div>
+                  <div className="text-xs text-brand-black/70">24+ reviews</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

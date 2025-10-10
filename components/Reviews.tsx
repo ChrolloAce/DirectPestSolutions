@@ -127,7 +127,7 @@ export default function Reviews() {
               />
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-brand-black">5/5</div>
-                <div className="text-xs text-brand-black/70">17+ reviews</div>
+                <div className="text-xs text-brand-black/70">200+ reviews</div>
               </div>
             </div>
 
