@@ -10,6 +10,11 @@ import Button from '@/components/ui/Button'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
 import { InsectCatalog } from '@/components/sections/InsectCatalog'
+import { ServiceIntro } from '@/components/sections/ServiceIntro'
+import { WhatToExpect } from '@/components/sections/WhatToExpect'
+import { ProcessSection } from '@/components/sections/ProcessSection'
+import { PropertyMaintenance } from '@/components/sections/PropertyMaintenance'
+import { RelatedServicesSection } from '@/components/sections/RelatedServicesSection'
 
 interface ServicePageProps {
   params: {
@@ -114,6 +119,9 @@ export default function ServicePage({ params }: ServicePageProps) {
     { name: 'Hialeah', slug: 'hialeah' }
   ]
 
+  // Generate service intro description
+  const serviceDescription = `Protect your home with Direct Pest Solutions' expert ${service.title.toLowerCase()} services in Miami. Our team specializes in eliminating common household pests, including ants, bed bugs, cockroaches, termites, and more. We provide customized treatment plans, safe and eco-friendly solutions, and ongoing prevention to ensure your home remains pest-free. Trust our experienced professionals to keep your family safe and your property protected from infestations. Contact us today for a free quote and take the first step towards a pest-free home.`
+  
   return (
     <>
       {/* Breadcrumbs */}
@@ -158,143 +166,34 @@ export default function ServicePage({ params }: ServicePageProps) {
         </div>
       </section>
 
-      {/* Problem & Solution Block */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <div>
-              <h2 className="heading-lg uppercase mb-6 text-brand-black">
-                Why {service.title} Matters
-              </h2>
-              
-              <div className="mb-8">
-                <h3 className="text-xl font-bold mb-3 text-red-600">The Problem:</h3>
-                <p className="text-lg text-brand-black/80">
-                  {problemSolution.problem}
-                </p>
-              </div>
-              
-              <div className="mb-8">
-                <h3 className="text-xl font-bold mb-3 text-brand-blue">Our Solution:</h3>
-                <p className="text-lg text-brand-black/80">
-                  {problemSolution.solution}
-                </p>
-              </div>
-              
-              <Button href="/contact" size="lg">
-                Schedule Service Today
-              </Button>
-            </div>
-            
-            <div className="relative">
-              <img 
-                src={service.image} 
-                alt={`Professional ${service.title} in Miami - Licensed exterminators providing expert ${service.title.toLowerCase()} for Miami-Dade County homes and businesses`}
-                className="rounded-none shadow-xl border-4 border-brand-black"
-              />
-              <div className="absolute -bottom-4 -right-4 bg-brand-red p-4 border-2 border-brand-black text-white">
-                <p className="font-bold">Same-Day</p>
-                <p className="text-sm">Service Available</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      {/* Why Choose Us Section */}
-      <WhyChooseUs />
+      {/* Service Intro */}
+      <ServiceIntro serviceTitle={service.title} description={serviceDescription} />
 
       {/* Insect Catalog - Only show on applicable services */}
       {showInsectCatalog && <InsectCatalog insects={commonInsects} />}
 
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
+
+      {/* What To Expect */}
+      <WhatToExpect />
+
+      {/* Process Section */}
+      <ProcessSection />
+
+      {/* Property Maintenance */}
+      <PropertyMaintenance />
+
+      {/* Related Services */}
+      <RelatedServicesSection currentServiceId={service.id} />
+
       {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-brand-off">
-        <div className="container mx-auto px-4">
-          <h2 className="heading-lg uppercase text-center mb-12 text-brand-black">
-            {service.title} FAQs
-          </h2>
-          <ServiceFAQ faqs={faqs} serviceName={service.title} />
-        </div>
-      </section>
-
-      {/* Related Services - Internal Linking */}
-      <section className="py-16 md:py-24 bg-brand-off">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="heading-lg uppercase text-center mb-12 text-brand-black">
-              Related Pest Control Services
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              {services
-                .filter(s => s.id !== service.id && s.featured)
-                .slice(0, 3)
-                .map((relatedService) => (
-                  <a
-                    key={relatedService.id}
-                    href={relatedService.href}
-                    className="bg-white p-6 border-2 border-brand-black hover:border-brand-red transition-all group"
-                  >
-                    <h3 className="font-bold text-xl mb-3 group-hover:text-brand-red transition-colors">
-                      {relatedService.title}
-                    </h3>
-                    <p className="text-brand-black/70 mb-4 text-sm">
-                      {relatedService.shortDescription}
-                    </p>
-                    <span className="text-brand-red font-semibold text-sm flex items-center gap-2">
-                      Learn More <ChevronRight size={16} />
-                    </span>
-                  </a>
-                ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Service Area Block */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <MapPin className="mx-auto mb-4 text-brand-red" size={48} />
-            <h2 className="heading-lg uppercase mb-6 text-brand-black">
-              Serving All of Miami-Dade County
-            </h2>
-            <p className="text-lg mb-8 text-brand-black/80">
-              We provide professional {service.title.toLowerCase()} services throughout the Miami metropolitan area.
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {serviceAreas.map((area) => (
-                <a 
-                  key={area.slug} 
-                  href={`/locations/${area.slug}`}
-                  className="px-4 py-2 bg-brand-red/10 border border-brand-red text-brand-black hover:bg-brand-red hover:text-white transition-colors"
-                >
-                  {area.name}
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA Banner */}
-      <section className="bg-brand-black py-16 border-t-4 border-brand-red">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="heading-lg uppercase mb-4 text-white">
-            Get Your Free {service.title} Inspection Today
+          <h2 className="font-heading uppercase text-3xl md:text-4xl text-center mb-12 text-brand-black">
+            Pest Control Frequently Asked Questions
           </h2>
-          <p className="text-xl text-white/80 mb-8">
-            Professional service, same-day availability, 100% satisfaction guaranteed
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button href="/contact" size="lg" variant="primary">
-              Get Free Inspection
-            </Button>
-            <Button href="tel:+13055603087" size="lg" variant="secondary">
-              <Phone className="inline-block mr-2" size={20} />
-              (305) 560-3087
-            </Button>
-          </div>
+          <ServiceFAQ faqs={faqs} serviceName={service.title} />
         </div>
       </section>
 
