@@ -5,6 +5,7 @@ import { Phone, CheckCircle, Shield, Clock, Award } from 'lucide-react'
 import Button from '@/components/ui/Button'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
+import Reviews from '@/components/Reviews'
 
 interface PestPageProps {
   params: {
@@ -427,8 +428,8 @@ export default function PestPage({ params }: PestPageProps) {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="relative bg-brand-red py-20 md:py-32">
+      {/* Hero Section - BLACK BACKGROUND */}
+      <section className="relative bg-brand-black py-20 md:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -443,7 +444,7 @@ export default function PestPage({ params }: PestPageProps) {
                   {pest.description}
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Button href="/contact" size="lg" variant="secondary">
+                  <Button href="/contact" size="lg" variant="primary">
                     Get Free Inspection
                   </Button>
                   <Button href="tel:+13055603087" variant="secondary" size="lg">
@@ -469,7 +470,7 @@ export default function PestPage({ params }: PestPageProps) {
         </div>
       </section>
 
-      {/* Dangers Section */}
+      {/* Dangers Section - WHITE BACKGROUND */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -478,8 +479,8 @@ export default function PestPage({ params }: PestPageProps) {
             </h2>
             <div className="grid md:grid-cols-2 gap-4">
               {pest.dangers.map((danger, index) => (
-                <div key={index} className="flex items-start gap-3 p-4 bg-red-50 border-l-4 border-brand-red">
-                  <Shield className="text-brand-red flex-shrink-0 mt-1" size={20} />
+                <div key={index} className="flex items-start gap-3 p-4 bg-gray-50 border-l-4 border-brand-black">
+                  <Shield className="text-brand-black flex-shrink-0 mt-1" size={20} />
                   <p className="text-brand-black">{danger}</p>
                 </div>
               ))}
@@ -488,8 +489,8 @@ export default function PestPage({ params }: PestPageProps) {
         </div>
       </section>
 
-      {/* Signs Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      {/* Signs Section - WHITE BACKGROUND */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="font-heading uppercase text-3xl md:text-4xl text-brand-black mb-8 text-center">
@@ -497,8 +498,8 @@ export default function PestPage({ params }: PestPageProps) {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {pest.signs.map((sign, index) => (
-                <div key={index} className="flex items-start gap-3 p-4 bg-white border-2 border-brand-black/10">
-                  <CheckCircle className="text-brand-red flex-shrink-0 mt-1" size={20} />
+                <div key={index} className="flex items-start gap-3 p-4 bg-gray-50 border-2 border-brand-black/10">
+                  <CheckCircle className="text-brand-black flex-shrink-0 mt-1" size={20} />
                   <p className="text-brand-black">{sign}</p>
                 </div>
               ))}
@@ -507,7 +508,10 @@ export default function PestPage({ params }: PestPageProps) {
         </div>
       </section>
 
-      {/* Treatment Section */}
+      {/* Why Choose Us - BLACK BACKGROUND */}
+      <WhyChooseUs />
+
+      {/* Treatment Section - WHITE BACKGROUND */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -524,8 +528,11 @@ export default function PestPage({ params }: PestPageProps) {
         </div>
       </section>
 
-      {/* Prevention Tips */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      {/* Customer Reviews - BLACK BACKGROUND */}
+      <Reviews />
+
+      {/* Prevention Tips - WHITE BACKGROUND */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="font-heading uppercase text-3xl md:text-4xl text-brand-black mb-8 text-center">
@@ -533,7 +540,7 @@ export default function PestPage({ params }: PestPageProps) {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {pest.prevention.map((tip, index) => (
-                <div key={index} className="flex items-start gap-3 p-4 bg-white border-2 border-brand-black/10">
+                <div key={index} className="flex items-start gap-3 p-4 bg-gray-50 border-2 border-brand-black/10">
                   <CheckCircle className="text-green-600 flex-shrink-0 mt-1" size={20} />
                   <p className="text-brand-black">{tip}</p>
                 </div>
@@ -543,11 +550,8 @@ export default function PestPage({ params }: PestPageProps) {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <WhyChooseUs />
-
-      {/* Final CTA */}
-      <section className="bg-brand-black py-16 border-t-4 border-brand-red">
+      {/* Final CTA - BLACK BACKGROUND */}
+      <section className="bg-brand-black py-16 border-t-4 border-white/10">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-heading uppercase text-3xl md:text-4xl mb-4 text-white">
             Need {pest.name} Control in Miami?
