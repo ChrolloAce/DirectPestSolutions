@@ -27,7 +27,15 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-brand-black text-white py-20 md:py-28">
+      <section 
+        className="relative text-white py-20 md:py-28"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('/images/company/termite-inspection-professional.webp')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl uppercase mb-6 font-black leading-tight">
@@ -171,32 +179,11 @@ export default function ServicesPage() {
         </div>
       </section>
       
-      {/* Why Choose Us Section - BLACK BACKGROUND */}
-      <WhyChooseUs />
-
       {/* Customer Reviews - BLACK BACKGROUND */}
       <Reviews />
-      
-      {/* Bottom CTA */}
-      <section className="py-16 md:py-20 bg-white border-t-4 border-brand-red">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-heading text-4xl md:text-5xl uppercase mb-4 font-bold text-brand-black">
-            Ready to Eliminate <span className="text-brand-red">Pests</span>?
-          </h2>
-          <p className="text-xl mb-8 text-brand-black/80 max-w-2xl mx-auto">
-            Don't wait for pests to cause damage. Call Direct Pest Solutions today for a free inspection!
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+13053516886" className="bg-brand-red text-white px-8 py-4 font-bold uppercase hover:bg-brand-red/90 transition-colors text-lg inline-flex items-center gap-2">
-              <Phone size={20} />
-              Call +1-(305) 351-6886
-            </a>
-            <a href="/contact" className="bg-brand-black text-white px-8 py-4 font-bold uppercase hover:bg-brand-black/90 transition-colors text-lg">
-              Schedule Free Inspection
-            </a>
-          </div>
-        </div>
-      </section>
+
+      {/* Why Choose Us Section - BLACK BACKGROUND */}
+      <WhyChooseUs />
     </div>
   )
 }
