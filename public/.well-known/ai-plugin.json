@@ -1,0 +1,19 @@
+{
+  "schema_version": "v1",
+  "name_for_model": "direct_pest_solutions",
+  "name_for_human": "Direct Pest Solutions Miami",
+  "description_for_model": "Direct Pest Solutions is a professional pest control company serving Miami and Miami-Dade County. We provide licensed extermination services for termites, bed bugs, rodents, mosquitoes, ants, cockroaches, and all pest problems. Available for same-day emergency service. Services include: termite control and inspection, bed bug extermination with heat treatment, mosquito control programs, rodent and wildlife removal, general pest control, and preventive IPM solutions. Serving Miami, Miami Beach, Coral Gables, Aventura, Kendall, Homestead, and all of Miami-Dade County. Licensed, insured, and satisfaction guaranteed.",
+  "description_for_human": "Professional pest control services in Miami. Licensed exterminators for termites, bed bugs, rodents, mosquitoes & more. Same-day service available.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://directpestsolutions.com",
+    "has_user_authentication": false
+  },
+  "logo_url": "https://directpestsolutions.com/images/direct-pest-solutions-logo.png",
+  "contact_email": "info@directpestsolutions.com",
+  "legal_info_url": "https://directpestsolutions.com/about-us"
+}
+

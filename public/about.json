@@ -1,0 +1,124 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Direct Pest Solutions",
+  "alternateName": "Direct Pest Solutions Miami",
+  "description": "Professional pest control and extermination services serving Miami and Miami-Dade County. Licensed and insured exterminators specializing in termite control, bed bug extermination, rodent removal, mosquito control, and all pest problems.",
+  "url": "https://directpestsolutions.com",
+  "logo": "https://directpestsolutions.com/images/direct-pest-solutions-logo.png",
+  "image": "https://directpestsolutions.com/images/direct-pest-solutions-logo.png",
+  "telephone": "+1-305-560-3087",
+  "email": "info@directpestsolutions.com",
+  "priceRange": "$$",
+  "paymentAccepted": "Cash, Credit Card, Check",
+  "currenciesAccepted": "USD",
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": "25.7617",
+      "longitude": "-80.1918"
+    },
+    "geoRadius": "50000"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "201 180th Dr",
+    "addressLocality": "Sunny Isles Beach",
+    "addressRegion": "FL",
+    "postalCode": "33160",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "25.9429",
+    "longitude": "-80.1213"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "07:00",
+      "closes": "19:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/directpestsolutions",
+    "https://www.instagram.com/directpestsolutions",
+    "https://www.yelp.com/biz/direct-pest-solutions-miami"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Pest Control Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Termite Control & Inspection",
+          "description": "Professional termite inspection and treatment for Miami homes. Free inspections available."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Bed Bug Extermination",
+          "description": "Complete bed bug elimination using heat treatment and chemical applications. Guaranteed results."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mosquito Control",
+          "description": "Mosquito reduction programs for Miami homes. Up to 90% reduction with monthly treatments."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rodent & Wildlife Control",
+          "description": "Humane rodent and wildlife removal with professional exclusion services."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "General Pest Control",
+          "description": "Comprehensive pest control for ants, cockroaches, spiders, and all common pests."
+        }
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "500",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "knowsAbout": [
+    "Termite Control",
+    "Bed Bug Extermination",
+    "Rodent Removal",
+    "Mosquito Control",
+    "Pest Inspection",
+    "IPM (Integrated Pest Management)",
+    "Wildlife Removal",
+    "Ant Control",
+    "Cockroach Control",
+    "Pest Prevention"
+  ],
+  "slogan": "Miami's Trusted Pest Control Company",
+  "foundingDate": "2020",
+  "license": "Florida State Pest Control License",
+  "certifications": [
+    "Licensed Pest Control Operator",
+    "State Certified Exterminators",
+    "EPA Approved Treatments"
+  ]
+}
+
