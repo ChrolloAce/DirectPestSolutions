@@ -1,10 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { MapPin, Phone, Clock, Star, Shield, Award } from 'lucide-react'
-import { CTAButton } from '@/components/ui/CTAButton'
-import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
-import Reviews from '@/components/Reviews'
+import { MapPin } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Pest Control Service Locations | Direct Pest Solutions Miami-Dade County',
@@ -119,8 +116,21 @@ export default function LocationsPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-brand-black py-20 md:py-32">
-        <div className="container mx-auto px-4">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/locations/miami-tropical-building-palm-trees.jpg"
+            alt="Miami Pest Control Service Locations"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
             <MapPin className="mx-auto mb-6 text-white" size={64} />
             <h1 className="font-heading text-5xl md:text-7xl uppercase mb-6 font-black">
@@ -132,36 +142,6 @@ export default function LocationsPage() {
             <p className="text-lg text-white/80">
               Locations • Licensed & Insured • 100% Guaranteed
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Service Area Overview */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="heading-lg uppercase mb-6 text-brand-black">
-              Serving All of Miami-Dade County
-            </h2>
-            <p className="text-lg text-brand-black/80 mb-8">
-              Direct Pest Solutions proudly serves 10+ cities and communities throughout Miami-Dade County. 
-              Our licensed exterminators are strategically located near 15245 SW 31st Ln to provide fast response times and 
-              professional pest control service to every corner of South Florida.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-brand-off border-2 border-brand-black p-6">
-                <div className="text-3xl font-bold text-brand-red mb-2">10+</div>
-                <p className="font-semibold">Cities Served</p>
-              </div>
-              <div className="bg-brand-off border-2 border-brand-black p-6">
-                <div className="text-3xl font-bold text-brand-red mb-2">Same-Day</div>
-                <p className="font-semibold">Emergency Service</p>
-              </div>
-              <div className="bg-brand-off border-2 border-brand-black p-6">
-                <div className="text-3xl font-bold text-brand-red mb-2">4.9★</div>
-                <p className="font-semibold">Average Rating</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -209,12 +189,6 @@ export default function LocationsPage() {
           </div>
         </div>
       </section>
-
-      {/* Why Choose Us Section - BLACK BACKGROUND */}
-      <WhyChooseUs />
-
-      {/* Customer Reviews - BLACK BACKGROUND */}
-      <Reviews />
     </>
   )
 }

@@ -67,8 +67,8 @@ export class Footer extends React.Component {
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
-                  <Clock size={18} className="text-brand-red mt-1 flex-shrink-0" />
                   <span className="text-brand-black/70 text-sm">
+                    <strong>Hours:</strong><br />
                     Monday – Friday: 9 AM – 5 PM<br />
                     Saturday: 9 AM – 1 PM
                   </span>
@@ -101,25 +101,6 @@ export class Footer extends React.Component {
                     </a>
                   </li>
                 ))}
-              </ul>
-              
-              <h3 className="font-heading text-xl uppercase mt-6 mb-4 text-brand-black">Resources</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="/faqs" className="text-brand-black/70 hover:text-brand-red transition text-sm">
-                    FAQs
-                  </a>
-                </li>
-                <li>
-                  <a href="/termite-control-miami/treatment-cost" className="text-brand-black/70 hover:text-brand-red transition text-sm">
-                    Treatment Costs
-                  </a>
-                </li>
-                <li>
-                  <a href="/termite-control-miami/prevention" className="text-brand-black/70 hover:text-brand-red transition text-sm">
-                    Prevention Tips
-                  </a>
-                </li>
               </ul>
             </div>
             

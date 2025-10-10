@@ -6,22 +6,22 @@ import { Search, Shield, Users, Headphones } from 'lucide-react'
 export function WhyChooseUs() {
   const reasons = [
     {
-      icon: <Search className="h-12 w-12 text-brand-red mx-auto" />,
+      icon: <Search className="h-12 w-12 text-brand-red mx-auto" strokeWidth={1.5} />,
       title: 'Thorough Inspections',
       description: 'Our team conducts meticulous inspections to identify and address all potential pest issues. We leave no stone unturned to ensure your property is thoroughly examined and protected.'
     },
     {
-      icon: <Shield className="h-12 w-12 text-brand-red mx-auto" />,
+      icon: <Shield className="h-12 w-12 text-brand-red mx-auto" strokeWidth={1.5} />,
       title: 'Lifetime Protection Guarantee',
       description: 'Enjoy peace of mind with our lifetime protection guarantee. We stand by our services and offer ongoing support to keep your home or business pest-free for the long term.'
     },
     {
-      icon: <Users className="h-12 w-12 text-brand-red mx-auto" />,
+      icon: <Users className="h-12 w-12 text-brand-red mx-auto" strokeWidth={1.5} />,
       title: 'Skilled and Certified Experts',
       description: 'Our skilled and certified experts bring extensive knowledge and experience to every job. Trust in our professional team to deliver effective and reliable pest control solutions.'
     },
     {
-      icon: <Headphones className="h-12 w-12 text-brand-red mx-auto" />,
+      icon: <Headphones className="h-12 w-12 text-brand-red mx-auto" strokeWidth={1.5} />,
       title: 'Exceptional Customer Care',
       description: 'At Direct Pest Solutions, we prioritize your satisfaction. Our exceptional customer care ensures that your needs are met with prompt, courteous, and effective service every time.'
     }
@@ -31,9 +31,9 @@ export function WhyChooseUs() {
     <section className="py-20 md:py-24" style={{ backgroundColor: '#0E0E0E' }}>
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-[40%_60%] gap-16 items-start">
+          <div className="grid lg:grid-cols-[40%_60%] gap-16 items-center">
             {/* Left Column - Text & CTA */}
-            <div className="space-y-8">
+            <div className="space-y-8 flex flex-col justify-center">
               {/* Eyebrow Label */}
               <p className="text-brand-red font-bold uppercase text-sm tracking-wider">
                 WHY TRUST DIRECT PEST SOLUTIONS?
@@ -51,7 +51,7 @@ export function WhyChooseUs() {
               </p>
               
               {/* CTA Button */}
-              <div className="space-y-3">
+              <div>
                 <a 
                   href="/contact" 
                   className="block w-full bg-brand-red text-white px-8 py-5 text-center font-bold uppercase text-base tracking-wide hover:shadow-xl transition-shadow duration-300"
@@ -62,11 +62,6 @@ export function WhyChooseUs() {
                     <span className="text-xl">→</span>
                   </div>
                 </a>
-                
-                {/* Subtext */}
-                <p className="text-[#DDD] text-sm text-center tracking-wide">
-                  Join over 10000+ other happy clients
-                </p>
               </div>
             </div>
             

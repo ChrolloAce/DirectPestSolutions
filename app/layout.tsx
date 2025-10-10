@@ -3,7 +3,6 @@ import './globals.css'
 import { TopBar } from '@/components/layout/TopBar'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
-import { ProofToasts } from '@/components/ui/ProofToasts'
 import { FloatingPhone } from '@/components/FloatingPhone'
 import MobileAppBar from '@/components/layout/MobileAppBar'
 import { LanguageProvider } from '@/contexts/LanguageContext'
@@ -72,7 +71,6 @@ export default function RootLayout({
           </main>
           <Footer />
           <MobileAppBar />
-          <ProofToasts />
         </LanguageProvider>
         
         {/* Schema.org LocalBusiness markup */}
