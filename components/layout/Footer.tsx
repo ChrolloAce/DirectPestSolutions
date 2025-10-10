@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Youtube } from 'lucide-react'
 import { CTAButton } from '../ui/CTAButton'
 
@@ -51,35 +52,25 @@ export class Footer extends React.Component {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Company Info */}
             <div>
-              <h3 className="font-heading text-xl uppercase mb-4 text-brand-black">Direct Pest Solutions</h3>
+              <div className="mb-4">
+                <Image
+                  src="/images/logo.png"
+                  alt="Direct Pest Solutions - Miami's Trusted Pest Control Company"
+                  width={200}
+                  height={60}
+                  className="h-12 w-auto"
+                  priority
+                />
+              </div>
               <p className="text-brand-black/70 mb-4 text-sm">
                 Miami's trusted pest control company providing professional extermination services since 2020. Licensed, insured, and guaranteed.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
-                  <MapPin size={18} className="text-brand-red mt-1 flex-shrink-0" />
-                  <span className="text-brand-black/70 text-sm">
-                    201 180th Dr<br />
-                    Sunny Isles Beach, FL 33160
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Phone size={18} className="text-brand-red mt-1 flex-shrink-0" />
-                  <a href="tel:+13053516886" className="text-brand-black/70 hover:text-brand-red transition text-sm">
-                    +1-(305) 351-6886
-                  </a>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Mail size={18} className="text-brand-red mt-1 flex-shrink-0" />
-                  <a href="mailto:directpestsolutions@hotmail.com" className="text-brand-black/70 hover:text-brand-red transition text-sm">
-                    directpestsolutions@hotmail.com
-                  </a>
-                </li>
-                <li className="flex items-start gap-2">
                   <Clock size={18} className="text-brand-red mt-1 flex-shrink-0" />
                   <span className="text-brand-black/70 text-sm">
-                    Mon-Sun: 7:00 AM - 7:00 PM<br />
-                    Emergency Service Available
+                    Monday – Friday: 9 AM – 5 PM<br />
+                    Saturday: 9 AM – 1 PM
                   </span>
                 </li>
               </ul>
