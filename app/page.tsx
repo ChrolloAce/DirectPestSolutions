@@ -21,9 +21,6 @@ export default function HomePage() {
       {/* Services Grid */}
       <FeaturedServices />
       
-      {/* Brand Marquee - Common Pests */}
-      <BrandMarquee />
-      
       {/* Service Teasers */}
       <ServiceTeaser
         title="Why Direct Pest Solutions is Miami's Most Trusted Pest Control Company"
@@ -55,6 +52,9 @@ export default function HomePage() {
       
       {/* Why Choose Us - Black Background */}
       <WhyChooseUs />
+      
+      {/* Brand Marquee - Common Pests */}
+      <BrandMarquee />
       
       {/* The Process Section with 3 GIFs */}
       <ProcessSection />
