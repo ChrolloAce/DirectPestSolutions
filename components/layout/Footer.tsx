@@ -35,12 +35,12 @@ export class Footer extends React.Component {
                 Need Pest Control? Get Your Free Inspection:
               </h2>
               <div className="flex gap-4">
-                <CTAButton href="/contact" variant="secondary">
+                <a href="/contact" className="bg-white text-brand-black px-6 py-3 font-bold uppercase border-2 border-brand-black hover:bg-brand-black hover:text-white transition-colors">
                   Book Service
-                </CTAButton>
-                <CTAButton href="tel:+13055603087" variant="primary">
+                </a>
+                <a href="tel:+13055603087" className="bg-white text-brand-black px-6 py-3 font-bold uppercase border-2 border-brand-black hover:bg-brand-black hover:text-white transition-colors">
                   Call (305) 560-3087
-                </CTAButton>
+                </a>
               </div>
             </div>
           </div>

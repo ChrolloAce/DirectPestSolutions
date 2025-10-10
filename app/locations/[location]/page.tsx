@@ -387,23 +387,23 @@ export default function LocationPage({ params }: LocationPageProps) {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 md:py-24 bg-brand-red bg-noise">
+      <section className="py-16 md:py-24 bg-white border-t-4 border-brand-red">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="heading-lg uppercase mb-6 text-white">
+            <h2 className="heading-lg uppercase mb-6 text-brand-black">
               Ready to Eliminate Pests in {location.name}?
             </h2>
-            <p className="text-xl mb-8 text-white/90">
+            <p className="text-xl mb-8 text-brand-black/80">
               Get a free pest inspection and quote today. Licensed, insured, and guaranteed results.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <CTAButton href="/contact" variant="secondary" size="lg">
+              <a href="/contact" className="bg-brand-red text-white px-8 py-4 font-bold uppercase border-2 border-brand-black hover:bg-brand-black hover:text-white transition-colors text-lg">
                 Schedule Free Inspection
-              </CTAButton>
-              <CTAButton href="tel:+13055603087" variant="primary" size="lg">
-                <Phone className="inline-block mr-2" size={20} />
+              </a>
+              <a href="tel:+13055603087" className="bg-brand-black text-white px-8 py-4 font-bold uppercase border-2 border-brand-black hover:bg-brand-red transition-colors text-lg inline-flex items-center gap-2">
+                <Phone size={20} />
                 Call (305) 560-3087
-              </CTAButton>
+              </a>
             </div>
           </div>
         </div>
