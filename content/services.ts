@@ -25,7 +25,7 @@ export const services: Service[] = [
       'Same-day emergency service available. Free inspections for new customers. We guarantee our residential pest control—if pests return between scheduled treatments, we return for free.'
     ],
     icon: 'Home',
-    image: '/images/company/residential-pest-control-service.webp',
+    image: '/images/company/pest-control-technician-exterior.jpg',
     benefits: [
       'Safe for children & pets',
       'All household pests covered',
@@ -97,7 +97,7 @@ export const services: Service[] = [
       'Monthly service plans keep mosquitoes under control year-round. Perfect for homes, businesses, outdoor events, and special occasions. One-time treatments available for parties and events.'
     ],
     icon: 'Wind',
-    image: '/images/company/mosquito-control-yard-treatment.webp',
+    image: '/images/company/insect-control-specialist.webp',
     benefits: [
       'Up to 90% mosquito reduction',
       'Barrier & larvicide treatments',
@@ -121,7 +121,7 @@ export const services: Service[] = [
       'Emergency same-day service available for dangerous situations. We also provide prevention services to keep bees and wasps from returning. All work guaranteed with licensed and insured technicians.'
     ],
     icon: 'Bug',
-    image: '/images/company/pest-exterminator-spraying.webp',
+    image: '/images/company/rodent-control-specialist.webp',
     benefits: [
       'Safe bee relocation',
       'Wasp & hornet extermination',
@@ -145,7 +145,7 @@ export const services: Service[] = [
       'Long-term solutions that address the root cause. We don\'t just remove the animals—we prevent them from coming back with professional exclusion work, entry point sealing, and ongoing monitoring.'
     ],
     icon: 'Squirrel',
-    image: '/images/company/wildlife-removal-expert.webp',
+    image: '/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/raccoon-photo.jpg',
     benefits: [
       'Humane removal methods',
       'Entry point identification',
