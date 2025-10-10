@@ -168,9 +168,9 @@ export default function TermiteDamageSignsPage() {
               <Button href="/contact" size="lg" variant="secondary">
                 Schedule Inspection
               </Button>
-              <Button href="tel:+13055603087" size="lg" variant="primary" className="bg-white !text-brand-red hover:bg-gray-100">
+              <Button href="tel:+13053516886" size="lg" variant="primary" className="bg-white !text-brand-red hover:bg-gray-100">
                 <Phone className="inline-block mr-2" size={20} />
-                Call (305) 560-3087
+                Call +1-(305) 351-6886
               </Button>
             </div>
           </div>

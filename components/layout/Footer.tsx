@@ -38,8 +38,8 @@ export class Footer extends React.Component {
                 <a href="/contact" className="bg-white text-brand-black px-6 py-3 font-bold uppercase border-2 border-brand-black hover:bg-brand-black hover:text-white transition-colors">
                   Book Service
                 </a>
-                <a href="tel:+13055603087" className="bg-white text-brand-black px-6 py-3 font-bold uppercase border-2 border-brand-black hover:bg-brand-black hover:text-white transition-colors">
-                  Call (305) 560-3087
+                <a href="tel:+13053516886" className="bg-white text-brand-black px-6 py-3 font-bold uppercase border-2 border-brand-black hover:bg-brand-black hover:text-white transition-colors">
+                  Call +1-(305) 351-6886
                 </a>
               </div>
             </div>
@@ -65,14 +65,14 @@ export class Footer extends React.Component {
                 </li>
                 <li className="flex items-start gap-2">
                   <Phone size={18} className="text-brand-red mt-1 flex-shrink-0" />
-                  <a href="tel:+13055603087" className="text-brand-black/70 hover:text-brand-red transition text-sm">
-                    (305) 560-3087
+                  <a href="tel:+13053516886" className="text-brand-black/70 hover:text-brand-red transition text-sm">
+                    +1-(305) 351-6886
                   </a>
                 </li>
                 <li className="flex items-start gap-2">
                   <Mail size={18} className="text-brand-red mt-1 flex-shrink-0" />
-                  <a href="mailto:info@directpestsolutions.com" className="text-brand-black/70 hover:text-brand-red transition text-sm">
-                    info@directpestsolutions.com
+                  <a href="mailto:directpestsolutions@hotmail.com" className="text-brand-black/70 hover:text-brand-red transition text-sm">
+                    directpestsolutions@hotmail.com
                   </a>
                 </li>
                 <li className="flex items-start gap-2">

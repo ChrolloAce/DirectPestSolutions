@@ -11,7 +11,7 @@ import { LanguageProvider } from '@/contexts/LanguageContext'
 export const metadata: Metadata = {
   metadataBase: new URL('https://directpestsolutions.com'),
   title: 'Direct Pest Solutions Miami – Professional Pest Control Services | Licensed & Insured',
-  description: 'Professional pest control services in Miami & Miami-Dade County. Licensed exterminators specializing in termites, bed bugs, rodents, mosquitoes & more. Same-day service available. Call (305) 560-3087.',
+  description: 'Professional pest control services in Miami & Miami-Dade County. Licensed exterminators specializing in termites, bed bugs, rodents, mosquitoes & more. Same-day service available. Call +1-(305) 351-6886.',
   keywords: 'pest control Miami, exterminator Miami, termite control Miami, bed bug extermination Miami, mosquito control Miami, rodent control Miami, ant control Miami, cockroach control Miami, wildlife removal Miami, pest inspection Miami',
   authors: [{ name: 'Direct Pest Solutions' }],
   creator: 'Direct Pest Solutions',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Direct Pest Solutions Miami – Professional Pest Control Services',
-    description: 'Licensed pest control services in Miami. Specializing in termites, bed bugs, rodents, and all pest problems. Same-day service available. Call (305) 560-3087.',
+    description: 'Licensed pest control services in Miami. Specializing in termites, bed bugs, rodents, and all pest problems. Same-day service available. Call +1-(305) 351-6886.',
     type: 'website',
     locale: 'en_US',
     url: 'https://directpestsolutions.com',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Direct Pest Solutions Miami – Professional Pest Control Services',
-    description: 'Licensed pest control services in Miami. Call (305) 560-3087.',
+    description: 'Licensed pest control services in Miami. Call +1-(305) 351-6886.',
   },
   alternates: {
     canonical: 'https://directpestsolutions.com',
@@ -84,8 +84,8 @@ export default function RootLayout({
               '@type': 'PestControlService',
               name: 'Direct Pest Solutions Miami',
               description: 'Professional pest control and extermination services in Miami and Miami-Dade County',
-              telephone: '+1-305-560-3087',
-              email: 'info@directpestsolutions.com',
+              telephone: '+1-305-351-6886',
+              email: 'directpestsolutions@hotmail.com',
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: '201 180th Dr',

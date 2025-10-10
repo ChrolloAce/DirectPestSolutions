@@ -215,9 +215,9 @@ export function Navbar() {
                 )
               })}
               
-              <a href="tel:+13055603087" className="flex items-center gap-2 text-brand-black hover:text-brand-red transition-colors">
+              <a href="tel:+13053516886" className="flex items-center gap-2 text-brand-black hover:text-brand-red transition-colors">
                 <Phone size={18} />
-                <span className="font-semibold">(305) 560-3087</span>
+                <span className="font-semibold">+1-(305) 351-6886</span>
               </a>
               
               <Button
@@ -336,12 +336,12 @@ export function Navbar() {
               {/* Mobile CTA Buttons */}
               <div className="pt-4 space-y-2">
                 <a 
-                  href="tel:+13055603087" 
+                  href="tel:+13053516886" 
                   className="flex items-center justify-center gap-2 px-4 py-3 bg-brand-red text-white font-semibold border-2 border-brand-black"
                   onClick={closeMenu}
                 >
                   <Phone size={18} />
-                  Call (305) 560-3087
+                  Call +1-(305) 351-6886
                 </a>
                 <Button
                   as="a"

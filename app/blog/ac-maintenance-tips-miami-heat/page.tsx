@@ -120,9 +120,9 @@ export default function BlogPost() {
                   for Miami's climate.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Button href="tel:3055603087" variant="primary" className="!bg-brand-gold !text-brand-black hover:!bg-white">
+                  <Button href="tel:3053516886" variant="primary" className="!bg-brand-gold !text-brand-black hover:!bg-white">
                     <Phone className="inline-block mr-2" size={18} />
-                    Call (305) 560-3087
+                    Call +1-(305) 351-6886
                   </Button>
                   <Button href="/contact" variant="secondary" className="!bg-white/10 !text-white !border-white hover:!bg-white/20">
                     Schedule Maintenance

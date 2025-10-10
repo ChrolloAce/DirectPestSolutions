@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   
   return {
     title: `${service.title} Miami | Licensed Exterminators | Direct Pest Solutions`,
-    description: `${service.shortDescription} Licensed & insured pest control company serving Miami-Dade County. Same-day service available. Free inspections. Call (305) 560-3087.`,
+    description: `${service.shortDescription} Licensed & insured pest control company serving Miami-Dade County. Same-day service available. Free inspections. Call +1-(305) 351-6886.`,
     keywords: `${service.title.toLowerCase()} Miami, ${service.title.toLowerCase()} Miami FL, emergency ${service.title.toLowerCase()} Miami, pest control Miami, exterminator Miami, ${service.title.toLowerCase()} service Miami Beach, ${service.title.toLowerCase()} Coral Gables, ${service.title.toLowerCase()} Aventura, ${service.title.toLowerCase()} Kendall, ${service.title.toLowerCase()} Homestead, licensed exterminator Miami, pest inspection Miami`,
     authors: [{ name: 'Direct Pest Solutions' }],
     openGraph: {
@@ -158,9 +158,9 @@ export default function ServicePage({ params }: ServicePageProps) {
               <CTAButton href="/contact" size="lg">
                 Get Free Inspection
               </CTAButton>
-              <CTAButton href="tel:+13055603087" variant="secondary" size="lg">
+              <CTAButton href="tel:+13053516886" variant="secondary" size="lg">
                 <Phone className="inline-block mr-2" size={20} />
-                Call (305) 560-3087
+                Call +1-(305) 351-6886
               </CTAButton>
             </div>
           </div>
@@ -215,7 +215,7 @@ export default function ServicePage({ params }: ServicePageProps) {
             provider: {
               '@type': 'PestControlService',
               name: 'Direct Pest Solutions',
-              telephone: '+1-305-560-3087',
+              telephone: '+1-305-351-6886',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Miami',

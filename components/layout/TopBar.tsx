@@ -28,12 +28,12 @@ export class TopBar extends React.Component {
             {/* Right: Phone */}
             <div className="flex items-center">
               <a 
-                href="tel:+13055603087" 
+                href="tel:+13053516886" 
                 className="flex items-center gap-2 text-lg font-bold hover:text-brand-red transition-colors"
-                aria-label="Call Direct Pest Solutions at 305-560-3087"
+                aria-label="Call Direct Pest Solutions at 305-351-6886"
               >
                 <Phone size={20} />
-                <span>(305) 560-3087</span>
+                <span>+1-(305) 351-6886</span>
               </a>
             </div>
           </div>

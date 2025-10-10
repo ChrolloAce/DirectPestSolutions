@@ -93,13 +93,13 @@ export default function ThankYouClient({
             <div className="mt-8">
               <Button
                 as="a"
-                href="tel:3055603087"
+                href="tel:3053516886"
                 size="lg"
                 variant="primary"
                 className="!bg-white !text-brand-black hover:!bg-brand-gold"
               >
                 <Phone className="inline-block mr-2" size={20} />
-                Call Now (305) 560-3087
+                Call Now +1-(305) 351-6886
               </Button>
             </div>
 
@@ -277,7 +277,7 @@ export default function ThankYouClient({
             className="!bg-brand-gold !text-brand-black hover:!bg-white"
           >
             <Phone className="inline-block mr-2" size={20} />
-            Call Emergency Line: (305) 560-3087
+            Call Emergency Line: +1-(305) 351-6886
           </Button>
         </div>
       </section>

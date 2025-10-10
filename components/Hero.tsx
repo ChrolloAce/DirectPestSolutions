@@ -86,11 +86,11 @@ export default function Hero() {
             <div className="mt-7 flex flex-wrap items-center gap-4">
               <Button 
                 as="a" 
-                href="tel:+13055603087" 
+                href="tel:+13053516886" 
                 variant="secondary"
                 className="!bg-white/10 !text-white !border-white hover:!bg-white/20"
               >
-                Call (305) 560-3087
+                Call +1-(305) 351-6886
               </Button>
               <Button 
                 as="a" 

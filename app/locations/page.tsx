@@ -236,9 +236,9 @@ export default function LocationsPage() {
             Call us to confirm service in your area.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="tel:+13055603087" className="bg-brand-red text-white px-8 py-4 font-bold uppercase border-2 border-brand-black hover:bg-brand-black hover:text-white transition-colors text-lg inline-flex items-center gap-2">
+            <a href="tel:+13053516886" className="bg-brand-red text-white px-8 py-4 font-bold uppercase border-2 border-brand-black hover:bg-brand-black hover:text-white transition-colors text-lg inline-flex items-center gap-2">
               <Phone size={20} />
-              Call (305) 560-3087
+              Call +1-(305) 351-6886
             </a>
             <a href="/contact" className="bg-brand-black text-white px-8 py-4 font-bold uppercase border-2 border-brand-black hover:bg-brand-red transition-colors text-lg">
               Get Free Inspection

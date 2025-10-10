@@ -1,14 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { Metadata } from 'next'
 import { Phone, Mail, MapPin, Clock, CheckCircle, AlertCircle } from 'lucide-react'
 import Button from '@/components/ui/Button'
-
-// export const metadata: Metadata = {
-//   title: 'Contact CBE Air Services | AC Repair Miami',
-//   description: 'Contact CBE Air Services for AC repair, installation & maintenance in Miami. Call (305) 560-3087 for same-day service. Available 24/7 for emergencies.',
-// }
 
 export default function ContactPage() {
   const [loading, setLoading] = useState(false)
@@ -47,14 +41,17 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-brand-blue bg-noise py-20 md:py-32">
+      <section className="relative bg-brand-black py-20 md:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h1 className="heading-xl uppercase mb-6">
-              Contact GreenScape Miami
+            <h1 className="font-heading text-5xl md:text-7xl uppercase mb-6 font-black">
+              CONTACT <span className="text-brand-red">US</span>
             </h1>
             <p className="text-xl text-white/90">
-              24/7 Emergency Service • Same-Day Repairs • Free Estimates
+              Book A Free Pest Control Estimate Today!
+            </p>
+            <p className="text-lg text-white/80 mt-4">
+              Contact us using the links below or fill out the form. One of our agents will get in touch with you shortly.
             </p>
           </div>
         </div>
@@ -63,254 +60,210 @@ export default function ContactPage() {
       {/* Contact Info Cards */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16">
-            <div className="bg-brand-off border-2 border-brand-black p-6 text-center hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="text-brand-black" size={28} />
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
+            <div className="bg-white border-2 border-brand-black p-6 text-center hover:shadow-lg transition-shadow rounded-lg">
+              <div className="w-16 h-16 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="text-white" size={28} />
               </div>
               <h3 className="font-bold text-lg mb-2">Call Us</h3>
-              <a href="tel:3055603087" className="text-brand-blue hover:text-brand-red font-bold text-xl">
-                (305) 560-3087
+              <a href="tel:+13053516886" className="text-brand-red hover:text-brand-black font-bold text-xl">
+                +1-(305) 351-6886
               </a>
               <p className="text-sm text-brand-black/60 mt-2">24/7 Emergency Line</p>
             </div>
 
-            <div className="bg-brand-off border-2 border-brand-black p-6 text-center hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="text-brand-black" size={28} />
+            <div className="bg-white border-2 border-brand-black p-6 text-center hover:shadow-lg transition-shadow rounded-lg">
+              <div className="w-16 h-16 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="text-white" size={28} />
               </div>
               <h3 className="font-bold text-lg mb-2">Email Us</h3>
-              <a href="mailto:cbeairservices@gmail.com" className="text-brand-blue hover:text-brand-red">
-                cbeairservices@gmail.com
+              <a href="mailto:directpestsolutions@hotmail.com" className="text-brand-red hover:text-brand-black font-bold break-all">
+                directpestsolutions@hotmail.com
               </a>
               <p className="text-sm text-brand-black/60 mt-2">Quick Response</p>
             </div>
 
-            <div className="bg-brand-off border-2 border-brand-black p-6 text-center hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="text-brand-black" size={28} />
+            <div className="bg-white border-2 border-brand-black p-6 text-center hover:shadow-lg transition-shadow rounded-lg">
+              <div className="w-16 h-16 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="text-white" size={28} />
               </div>
               <h3 className="font-bold text-lg mb-2">Service Area</h3>
-              <p className="text-brand-black">Miami-Dade County</p>
-              <p className="text-sm text-brand-black/60 mt-2">All Areas Covered</p>
-            </div>
-
-            <div className="bg-brand-off border-2 border-brand-black p-6 text-center hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="text-brand-black" size={28} />
-              </div>
-              <h3 className="font-bold text-lg mb-2">Hours</h3>
-              <p className="text-brand-black">24/7 Available</p>
-              <p className="text-sm text-brand-black/60 mt-2">Emergency Service</p>
+              <p className="font-semibold">15245 SW 31st Ln</p>
+              <p className="text-brand-black/70">Miami, FL 33185</p>
+              <p className="text-sm text-brand-black/60 mt-2">Serving Miami-Dade</p>
             </div>
           </div>
 
-          {/* Contact Form and Info */}
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Contact Form */}
-            <div>
-              <h2 className="heading-lg uppercase mb-6 text-brand-black">
-                Get Your Free Quote
+          {/* Contact Form */}
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-white border-2 border-brand-black p-8 md:p-12 rounded-lg shadow-lg">
+              <h2 className="font-heading text-3xl md:text-4xl uppercase mb-2 text-brand-black font-bold text-center">
+                Get Your Free Pest Inspection
               </h2>
-              <p className="text-lg text-brand-black/70 mb-8">
-                Fill out the form below and we'll get back to you within 30 minutes during business hours.
+              <p className="text-center text-brand-black/70 mb-8">
+                Fill out the form below and we'll contact you within 24 hours
               </p>
 
-              {submitted ? (
-                <div className="bg-green-50 border-2 border-green-500 p-8 text-center">
-                  <CheckCircle className="mx-auto mb-4 text-green-500" size={48} />
-                  <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
-                  <p className="text-lg">We've received your request and will contact you shortly.</p>
+              {submitted && (
+                <div className="mb-6 bg-green-50 border-2 border-green-500 p-4 rounded-lg flex items-start gap-3">
+                  <CheckCircle className="text-green-600 flex-shrink-0 mt-0.5" size={20} />
+                  <div>
+                    <p className="font-bold text-green-800">Thank you for contacting us!</p>
+                    <p className="text-sm text-green-700">We'll get back to you within 24 hours.</p>
+                  </div>
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-brand-black mb-2">
-                        First Name*
-                      </label>
-                      <input
-                        type="text"
-                        name="firstName"
-                        required
-                        className="w-full px-4 py-3 border-2 border-brand-black/20 focus:border-brand-blue outline-none transition-colors"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-brand-black mb-2">
-                        Last Name*
-                      </label>
-                      <input
-                        type="text"
-                        name="lastName"
-                        required
-                        className="w-full px-4 py-3 border-2 border-brand-black/20 focus:border-brand-blue outline-none transition-colors"
-                      />
-                    </div>
-                  </div>
+              )}
 
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-brand-black mb-2">
-                        Phone*
-                      </label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        required
-                        className="w-full px-4 py-3 border-2 border-brand-black/20 focus:border-brand-blue outline-none transition-colors"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-brand-black mb-2">
-                        Email*
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        required
-                        className="w-full px-4 py-3 border-2 border-brand-black/20 focus:border-brand-blue outline-none transition-colors"
-                      />
-                    </div>
-                  </div>
-
+              {error && (
+                <div className="mb-6 bg-red-50 border-2 border-red-500 p-4 rounded-lg flex items-start gap-3">
+                  <AlertCircle className="text-red-600 flex-shrink-0 mt-0.5" size={20} />
                   <div>
-                    <label className="block text-sm font-medium text-brand-black mb-2">
-                      Service Needed
-                    </label>
-                    <select
-                      name="service"
-                      className="w-full px-4 py-3 border-2 border-brand-black/20 focus:border-brand-blue outline-none transition-colors"
-                    >
-                      <option value="">Select a Service</option>
-                      <option>Landscape Design</option>
-                      <option>Lawn Maintenance</option>
-                      <option>Irrigation Systems</option>
-                      <option>Commercial Landscaping</option>
-                      <option>Tree & Shrub Care</option>
-                      <option>Emergency Cleanup</option>
-                      <option>Hardscaping</option>
-                      <option>Sod Installation</option>
-                      <option>Other</option>
-                    </select>
+                    <p className="font-bold text-red-800">Something went wrong</p>
+                    <p className="text-sm text-red-700">Please try again or call us directly.</p>
                   </div>
+                </div>
+              )}
 
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-brand-black mb-2">
-                      Address
+                    <label htmlFor="name" className="block font-semibold mb-2 text-brand-black">
+                      Full Name *
                     </label>
                     <input
                       type="text"
-                      name="address"
-                      className="w-full px-4 py-3 border-2 border-brand-black/20 focus:border-brand-blue outline-none transition-colors"
-                      placeholder="City, ZIP Code"
+                      id="name"
+                      name="name"
+                      required
+                      className="w-full px-4 py-3 border-2 border-brand-black rounded focus:outline-none focus:border-brand-red transition-colors"
+                      placeholder="John Smith"
                     />
                   </div>
-
                   <div>
-                    <label className="block text-sm font-medium text-brand-black mb-2">
-                      Message
+                    <label htmlFor="phone" className="block font-semibold mb-2 text-brand-black">
+                      Phone Number *
                     </label>
-                    <textarea
-                      name="message"
-                      rows={4}
-                      className="w-full px-4 py-3 border-2 border-brand-black/20 focus:border-brand-blue outline-none transition-colors resize-none"
-                      placeholder="Please describe your AC issue or service needs..."
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      required
+                      className="w-full px-4 py-3 border-2 border-brand-black rounded focus:outline-none focus:border-brand-red transition-colors"
+                      placeholder="(305) 123-4567"
                     />
                   </div>
+                </div>
 
-                  {error && (
-                    <div className="bg-red-50 border border-red-200 p-4 flex items-start gap-3">
-                      <AlertCircle className="text-red-500 flex-shrink-0" size={20} />
-                      <p className="text-sm text-red-700">
-                        There was an error submitting your request. Please try again or call us directly.
-                      </p>
-                    </div>
-                  )}
+                <div>
+                  <label htmlFor="email" className="block font-semibold mb-2 text-brand-black">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full px-4 py-3 border-2 border-brand-black rounded focus:outline-none focus:border-brand-red transition-colors"
+                    placeholder="john@example.com"
+                  />
+                </div>
 
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full"
-                    disabled={loading}
+                <div>
+                  <label htmlFor="address" className="block font-semibold mb-2 text-brand-black">
+                    Property Address
+                  </label>
+                  <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    className="w-full px-4 py-3 border-2 border-brand-black rounded focus:outline-none focus:border-brand-red transition-colors"
+                    placeholder="123 Main St, Miami, FL"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="service" className="block font-semibold mb-2 text-brand-black">
+                    Service Needed *
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    required
+                    className="w-full px-4 py-3 border-2 border-brand-black rounded focus:outline-none focus:border-brand-red transition-colors bg-white"
                   >
-                    {loading ? 'Sending...' : 'Get Free Quote'}
-                  </Button>
+                    <option value="">Select a service</option>
+                    <option value="Residential Pest Control">Residential Pest Control</option>
+                    <option value="Commercial Pest Control">Commercial Pest Control</option>
+                    <option value="Termite Control">Termite Control</option>
+                    <option value="Bed Bug Extermination">Bed Bug Extermination</option>
+                    <option value="Mosquito Control">Mosquito Control</option>
+                    <option value="Rodent Control">Rodent Control</option>
+                    <option value="Wildlife Control">Wildlife Control</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
 
-                  <p className="text-sm text-brand-black/60 text-center">
-                    By submitting, you agree to receive communications from GreenScape Miami
-                  </p>
-                </form>
-              )}
-            </div>
+                <div>
+                  <label htmlFor="message" className="block font-semibold mb-2 text-brand-black">
+                    Tell us about your pest problem
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    className="w-full px-4 py-3 border-2 border-brand-black rounded focus:outline-none focus:border-brand-red transition-colors resize-none"
+                    placeholder="Describe your pest issue..."
+                  ></textarea>
+                </div>
 
-            {/* Right Side - Info */}
-            <div>
-              <div className="bg-brand-blue bg-noise text-white p-8 mb-8">
-                <h3 className="text-2xl font-bold mb-4">Why Choose CBE?</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="text-brand-gold flex-shrink-0 mt-1" size={20} />
-                    <span>24/7 Emergency Service Available</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="text-brand-gold flex-shrink-0 mt-1" size={20} />
-                    <span>Same-Day Service for Most Repairs</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="text-brand-gold flex-shrink-0 mt-1" size={20} />
-                    <span>Licensed & Insured Technicians</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="text-brand-gold flex-shrink-0 mt-1" size={20} />
-                    <span>Transparent, Upfront Pricing</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="text-brand-gold flex-shrink-0 mt-1" size={20} />
-                    <span>100% Satisfaction Guarantee</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="text-brand-gold flex-shrink-0 mt-1" size={20} />
-                    <span>5-Star Rated on Google</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-brand-gold border-2 border-brand-black p-8">
-                <h3 className="text-2xl font-bold mb-4 text-brand-black">Need Immediate Help?</h3>
-                <p className="text-lg mb-6 text-brand-black/80">
-                  Don't wait for a callback. Our emergency line is available 24/7 for urgent AC repairs.
-                </p>
-                <Button
-                  href="tel:3055603087"
-                  size="lg"
-                  className="w-full !bg-brand-black !text-white hover:!bg-brand-blue"
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full bg-brand-red text-white px-8 py-4 font-bold uppercase border-2 border-brand-black hover:bg-brand-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-lg"
                 >
-                  <Phone className="inline-block mr-2" size={20} />
-                  Call Now: (305) 560-3087
-                </Button>
-              </div>
+                  {loading ? 'Sending...' : 'Request Free Inspection'}
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <div className="mt-8 p-6 bg-brand-off border-l-4 border-brand-red">
-                <h4 className="font-bold mb-2">Service Areas Include:</h4>
-                <p className="text-sm text-brand-black/70">
-                  Miami, Miami Beach, Coral Gables, Aventura, Kendall, Homestead, 
-                  Palmetto Bay, Cutler Bay, Doral, Hialeah, and all of Miami-Dade County
-                </p>
+      {/* Hours Section */}
+      <section className="py-16 bg-brand-black">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <div className="inline-block bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-lg p-8">
+              <Clock className="mx-auto mb-4 text-brand-red" size={48} />
+              <h3 className="text-2xl font-bold mb-4">Business Hours</h3>
+              <div className="space-y-2 text-lg">
+                <p><strong>Monday - Sunday:</strong> 7:00 AM - 7:00 PM</p>
+                <p className="text-brand-red font-bold">24/7 Emergency Service Available</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Map Section (Optional Placeholder) */}
-      <section className="bg-gray-200 h-96 relative">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center">
-            <MapPin className="mx-auto mb-4 text-brand-blue" size={48} />
-            <h3 className="text-2xl font-bold mb-2">Serving All of Miami-Dade County</h3>
-            <p className="text-brand-black/70">Professional HVAC Services Throughout South Florida</p>
-          </div>
+      {/* CTA Section */}
+      <section className="py-16 bg-white border-t-4 border-brand-red">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-heading text-4xl md:text-5xl uppercase mb-4 text-brand-black font-bold">
+            Need Immediate Assistance?
+          </h2>
+          <p className="text-xl text-brand-black/80 mb-8 max-w-2xl mx-auto">
+            Call us now for same-day pest control service in Miami-Dade County
+          </p>
+          <a
+            href="tel:+13053516886"
+            className="inline-flex items-center gap-3 bg-brand-red text-white px-10 py-5 font-bold uppercase border-2 border-brand-black hover:bg-brand-black transition-colors text-xl rounded-lg shadow-lg"
+          >
+            <Phone size={24} />
+            Call Now: +1-(305) 351-6886
+          </a>
+          <p className="text-brand-black/60 mt-6 text-sm font-medium">
+            Licensed & Insured • Same-Day Service Available • 100% Satisfaction Guaranteed
+          </p>
         </div>
       </section>
     </>

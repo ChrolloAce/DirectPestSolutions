@@ -6,7 +6,7 @@ import { Phone, Clock, Award } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'AC & HVAC Services Miami | CBE Air Services',
-  description: 'Professional AC repair, installation, maintenance and HVAC services in Miami. Same-day service, licensed technicians. Call (305) 560-3087.',
+  description: 'Professional AC repair, installation, maintenance and HVAC services in Miami. Same-day service, licensed technicians. Call +1-(305) 351-6886.',
   keywords: 'AC repair Miami, AC installation Miami, AC maintenance Miami, HVAC services Miami, air conditioning service, heating installation Miami'
 }
 
@@ -43,8 +43,8 @@ export default function ServicesPage() {
             
             {/* CTAs */}
             <div className="flex flex-wrap justify-center gap-4">
-              <CTAButton href="tel:+13055603087" variant="primary">
-                Call (305) 560-3087
+              <CTAButton href="tel:+13053516886" variant="primary">
+                Call +1-(305) 351-6886
               </CTAButton>
               <CTAButton href="/contact" variant="secondary">
                 Get Free Quote
@@ -138,8 +138,8 @@ export default function ServicesPage() {
             Don't wait for a complete breakdown. Call CBE Air Services today!
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <CTAButton href="tel:+13055603087" variant="secondary">
-              Call (305) 560-3087
+            <CTAButton href="tel:+13053516886" variant="secondary">
+              Call +1-(305) 351-6886
             </CTAButton>
             <CTAButton href="/contact" variant="primary">
               Schedule Online

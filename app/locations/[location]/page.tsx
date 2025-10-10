@@ -7,6 +7,7 @@ import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
 import Reviews from '@/components/Reviews'
 import { InsectCatalog } from '@/components/sections/InsectCatalog'
+import Image from 'next/image'
 
 interface LocationPageProps {
   params: {
@@ -135,7 +136,7 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
   
   return {
     title: `Pest Control ${location.name} ${location.state} | Direct Pest Solutions | Licensed Exterminators`,
-    description: `${location.description} Call (305) 560-3087 for same-day pest control service. Licensed, insured, and guaranteed results.`,
+    description: `${location.description} Call +1-(305) 351-6886 for same-day pest control service. Licensed, insured, and guaranteed results.`,
     keywords: `pest control ${location.name}, exterminator ${location.name}, ${location.name} pest control, termite control ${location.name}, bed bug extermination ${location.name}, rodent removal ${location.name}, mosquito control ${location.name}, pest inspection ${location.name}, ${location.name} ${location.state} pest control, emergency pest control ${location.name}`,
     authors: [{ name: 'Direct Pest Solutions' }],
     openGraph: {
@@ -193,8 +194,8 @@ export default function LocationPage({ params }: LocationPageProps) {
             "name": `Direct Pest Solutions - ${location.name}`,
             "description": location.description,
             "url": `https://directpestsolutions.com/locations/${location.slug}`,
-            "telephone": "+13055603087",
-            "email": "info@directpestsolutions.com",
+            "telephone": "+13053516886",
+            "email": "directpestsolutions@hotmail.com",
             "areaServed": {
               "@type": "City",
               "name": location.name,
@@ -261,9 +262,9 @@ export default function LocationPage({ params }: LocationPageProps) {
               <CTAButton href="/contact" size="lg">
                 Get Free Inspection
               </CTAButton>
-              <CTAButton href="tel:+13055603087" variant="secondary" size="lg">
+              <CTAButton href="tel:+13053516886" variant="secondary" size="lg">
                 <Phone className="inline-block mr-2" size={20} />
-                Call (305) 560-3087
+                Call +1-(305) 351-6886
               </CTAButton>
             </div>
           </div>
@@ -342,35 +343,53 @@ export default function LocationPage({ params }: LocationPageProps) {
       {/* Common Pests - Insect Catalog - WHITE BACKGROUND */}
       <InsectCatalog insects={commonInsects} title={`Common Pests in ${location.name}, Florida`} />
 
-      {/* Local Information */}
+      {/* Why Choose Us Section - BLACK BACKGROUND */}
+      <WhyChooseUs />
+
+      {/* Local Information - WHITE BACKGROUND (separates black sections) */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="heading-lg uppercase mb-8 text-brand-black">
-              About Pest Control in {location.name}
-            </h2>
-            <div className="prose prose-lg max-w-none">
-              <p className="text-lg text-brand-black/80 mb-6">
-                {location.name} residents face unique pest challenges due to Florida's humid subtropical climate. 
-                Our local exterminators understand the specific pest pressures in {location.name} and provide 
-                targeted treatments that work in South Florida conditions.
-              </p>
-              <p className="text-lg text-brand-black/80 mb-6">
-                We serve all neighborhoods in {location.name}, including {location.neighborhoods.slice(0, 3).join(', ')}, 
-                and surrounding areas. Our service area includes {location.zip} and nearby zip codes throughout Miami-Dade County.
-              </p>
-              <p className="text-lg text-brand-black/80 mb-6">
-                <strong>Same-day emergency service available.</strong> We understand pest problems can't wait. 
-                Call us at <a href="tel:+13055603087" className="text-brand-red font-bold">(305) 560-3087</a> and 
-                we'll dispatch a licensed exterminator to your {location.name} property today.
-              </p>
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Left: Image */}
+              <div className="order-2 lg:order-1">
+                <div className="aspect-square relative">
+                  <Image
+                    src="/images/company/residential-pest-control-service.webp"
+                    alt={`Professional pest control services in ${location.name}`}
+                    fill
+                    className="object-cover rounded-lg shadow-2xl"
+                  />
+                </div>
+              </div>
+              
+              {/* Right: Content */}
+              <div className="order-1 lg:order-2">
+                <p className="text-sm uppercase tracking-wider text-brand-red font-bold mb-4">
+                  Local Pest Control Experts
+                </p>
+                <h2 className="font-heading text-4xl md:text-5xl text-brand-black mb-6 leading-tight">
+                  About Pest Control in {location.name}
+                </h2>
+                <p className="text-lg text-brand-black/80 mb-6">
+                  {location.name} residents face unique pest challenges due to Florida's humid subtropical climate. 
+                  Our local exterminators understand the specific pest pressures in {location.name} and provide 
+                  targeted treatments that work in South Florida conditions.
+                </p>
+                <p className="text-lg text-brand-black/80 mb-6">
+                  We serve all neighborhoods in {location.name}, including {location.neighborhoods.slice(0, 3).join(', ')}, 
+                  and surrounding areas. Our service area includes {location.zip} and nearby zip codes throughout Miami-Dade County.
+                </p>
+                <p className="text-lg text-brand-black/80 mb-6">
+                  <strong>Same-day emergency service available.</strong> We understand pest problems can't wait. 
+                  Call us at <a href="tel:+13053516886" className="text-brand-red font-bold">+1-(305) 351-6886</a> and 
+                  we'll dispatch a licensed exterminator to your {location.name} property today.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Why Choose Us Section - BLACK BACKGROUND */}
-      <WhyChooseUs />
 
       {/* Customer Reviews - BLACK BACKGROUND */}
       <Reviews />
@@ -389,9 +408,9 @@ export default function LocationPage({ params }: LocationPageProps) {
               <a href="/contact" className="bg-brand-red text-white px-8 py-4 font-bold uppercase border-2 border-brand-black hover:bg-brand-black hover:text-white transition-colors text-lg">
                 Schedule Free Inspection
               </a>
-              <a href="tel:+13055603087" className="bg-brand-black text-white px-8 py-4 font-bold uppercase border-2 border-brand-black hover:bg-brand-red transition-colors text-lg inline-flex items-center gap-2">
+              <a href="tel:+13053516886" className="bg-brand-black text-white px-8 py-4 font-bold uppercase border-2 border-brand-black hover:bg-brand-red transition-colors text-lg inline-flex items-center gap-2">
                 <Phone size={20} />
-                Call (305) 560-3087
+                Call +1-(305) 351-6886
               </a>
             </div>
           </div>

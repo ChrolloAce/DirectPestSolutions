@@ -26,7 +26,7 @@ export default function MobileAppBar() {
     },
     {
       name: 'Call Now',
-      href: 'tel:3055603087',
+      href: 'tel:3053516886',
       icon: Phone,
       isExternal: true,
     },

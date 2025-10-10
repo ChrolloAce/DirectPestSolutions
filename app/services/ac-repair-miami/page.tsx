@@ -6,7 +6,7 @@ import { ServiceFAQ } from '@/components/sections/ServiceFAQ'
 
 export const metadata: Metadata = {
   title: 'AC Repair Miami | Same-Day Service | CBE Air Services',
-  description: 'Fast, reliable AC repair in Miami. Same-day service for all makes & models. Licensed technicians, transparent pricing. Call (305) 560-3087.',
+  description: 'Fast, reliable AC repair in Miami. Same-day service for all makes & models. Licensed technicians, transparent pricing. Call +1-(305) 351-6886.',
   keywords: 'AC repair Miami, air conditioning repair Miami, emergency AC repair, AC not cooling, AC repair near me, same-day AC repair Miami'
 }
 
@@ -48,8 +48,8 @@ export default function ACRepairPage() {
               
               {/* CTAs */}
               <div className="flex flex-wrap gap-4">
-                <CTAButton href="tel:+13055603087" variant="primary">
-                  Call (305) 560-3087
+                <CTAButton href="tel:+13053516886" variant="primary">
+                  Call +1-(305) 351-6886
                 </CTAButton>
                 <CTAButton href="/contact" variant="secondary">
                   Get Free Quote
@@ -126,7 +126,7 @@ export default function ACRepairPage() {
                 <div>
                   <h3 className="font-bold text-xl mb-2">Call or Schedule Online</h3>
                   <p className="text-gray-700">
-                    Contact us at (305) 560-3087 or book online. We'll schedule your service appointment, 
+                    Contact us at +1-(305) 351-6886 or book online. We'll schedule your service appointment, 
                     often for the same day.
                   </p>
                 </div>
@@ -253,8 +253,8 @@ export default function ACRepairPage() {
             Don't suffer in the heat. Call CBE Air Services for fast, reliable AC repair in Miami.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <CTAButton href="tel:+13055603087" variant="secondary">
-              Call (305) 560-3087
+            <CTAButton href="tel:+13053516886" variant="secondary">
+              Call +1-(305) 351-6886
             </CTAButton>
             <CTAButton href="/contact" variant="primary">
               Schedule Online

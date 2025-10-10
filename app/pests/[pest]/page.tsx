@@ -399,7 +399,7 @@ export async function generateMetadata({ params }: PestPageProps): Promise<Metad
   
   return {
     title: `${pest.name} Control Miami | Professional ${pest.treatmentName} | Direct Pest Solutions`,
-    description: `${pest.description} Professional ${pest.name.toLowerCase()} control serving Miami-Dade County. Licensed exterminators. Same-day service. Call (305) 560-3087.`,
+    description: `${pest.description} Professional ${pest.name.toLowerCase()} control serving Miami-Dade County. Licensed exterminators. Same-day service. Call +1-(305) 351-6886.`,
     keywords: `${pest.name.toLowerCase()} control Miami, ${pest.name.toLowerCase()} extermination Miami, ${pest.name.toLowerCase()} removal Miami, pest control Miami, exterminator Miami, ${pest.scientificName}`,
     alternates: {
       canonical: `https://directpestsolutions.com/pests/${params.pest}`,
@@ -447,9 +447,9 @@ export default function PestPage({ params }: PestPageProps) {
                   <Button href="/contact" size="lg" variant="primary">
                     Get Free Inspection
                   </Button>
-                  <Button href="tel:+13055603087" variant="secondary" size="lg">
+                  <Button href="tel:+13053516886" variant="secondary" size="lg">
                     <Phone className="inline-block mr-2" size={20} />
-                    Call (305) 560-3087
+                    Call +1-(305) 351-6886
                   </Button>
                 </div>
               </div>
@@ -563,9 +563,9 @@ export default function PestPage({ params }: PestPageProps) {
             <Button href="/contact" size="lg" variant="primary">
               Get Free Inspection
             </Button>
-            <Button href="tel:+13055603087" size="lg" variant="primary">
+            <Button href="tel:+13053516886" size="lg" variant="primary">
               <Phone className="inline-block mr-2" size={20} />
-              (305) 560-3087
+              +1-(305) 351-6886
             </Button>
           </div>
         </div>

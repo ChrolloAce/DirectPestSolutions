@@ -124,9 +124,9 @@ export default function BlogPost() {
                   technicians arrive quickly with fully-stocked trucks to get your cooling restored fast.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Button href="tel:3055603087" variant="primary" className="!bg-brand-gold !text-brand-black hover:!bg-white">
+                  <Button href="tel:3053516886" variant="primary" className="!bg-brand-gold !text-brand-black hover:!bg-white">
                     <Phone className="inline-block mr-2" size={18} />
-                    Emergency: (305) 560-3087
+                    Emergency: +1-(305) 351-6886
                   </Button>
                   <Button href="/contact" variant="secondary" className="!bg-white/10 !text-white !border-white hover:!bg-white/20">
                     Schedule Service
