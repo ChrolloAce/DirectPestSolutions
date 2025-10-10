@@ -80,10 +80,6 @@ export default function Hero() {
                 <span className="text-yellow-400">★★★★★</span>
                 <span className="text-white/80">5.0 from 2000+ Miami homeowners</span>
               </div>
-              <div className="inline-flex items-center gap-2 rounded-none bg-white/10 px-3 py-2 ring-1 ring-white/20">
-                <span className="text-brand-red">Licensed Exterminators</span>
-                <span className="text-white/80">Pest Control Specialists</span>
-              </div>
             </div>
 
             {/* CTAs */}
