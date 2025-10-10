@@ -4,6 +4,8 @@ import { CTAButton } from '@/components/ui/CTAButton'
 import { Phone, MapPin, CheckCircle, Clock, Shield, Award, Star } from 'lucide-react'
 import { services } from '@/content/services'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
+import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
+import Reviews from '@/components/Reviews'
 
 interface LocationPageProps {
   params: {
@@ -233,7 +235,7 @@ export default function LocationPage({ params }: LocationPageProps) {
       </div>
 
       {/* Hero Section */}
-      <section className="relative bg-brand-red bg-noise py-20 md:py-32">
+      <section className="relative bg-brand-black py-20 md:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
             <MapPin className="mx-auto mb-6 text-white" size={64} />
@@ -385,6 +387,12 @@ export default function LocationPage({ params }: LocationPageProps) {
           </div>
         </div>
       </section>
+
+      {/* Why Choose Us Section - BLACK BACKGROUND */}
+      <WhyChooseUs />
+
+      {/* Customer Reviews - BLACK BACKGROUND */}
+      <Reviews />
 
       {/* Final CTA */}
       <section className="py-16 md:py-24 bg-white border-t-4 border-brand-red">
