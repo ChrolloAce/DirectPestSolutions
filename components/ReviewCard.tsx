@@ -28,9 +28,9 @@ export default function ReviewCard({ review }: ReviewCardProps) {
   }
 
   return (
-    <article className="relative h-full rounded-none bg-white border-2 border-brand-black shadow-card p-5 pt-8">
+    <article className="relative h-full rounded-none bg-white border-2 border-white shadow-card p-5 pt-8">
       {/* Google icon badge - positioned with proper spacing */}
-      <div className="absolute top-0 left-4 h-10 w-10 rounded-full border-2 border-brand-black bg-white flex items-center justify-center transform -translate-y-1/2">
+      <div className="absolute top-0 left-4 h-10 w-10 rounded-full border-2 border-white bg-brand-red flex items-center justify-center transform -translate-y-1/2">
         <Image 
           src="/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/google-g-logo.png" 
           alt="Google Review" 

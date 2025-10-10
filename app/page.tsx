@@ -61,9 +61,6 @@ export default function HomePage() {
       
       {/* Customer Reviews */}
       <Reviews />
-      
-      {/* FAQs */}
-      <FAQAccordion />
     </>
   )
 }

@@ -107,11 +107,11 @@ export default function Reviews() {
   }
 
   return (
-    <section id="reviews" className="relative bg-brand-off py-16 md:py-24">
+    <section id="reviews" className="relative bg-brand-black py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4">
         {/* Top Rated Bar */}
-        <div className="mb-12 flex flex-col lg:flex-row items-center lg:items-center justify-between gap-6 lg:gap-12 pb-8 border-b-2 border-brand-black/10">
-          <h3 className="font-heading uppercase text-xl md:text-2xl text-brand-black tracking-tight text-left">
+        <div className="mb-12 flex flex-col lg:flex-row items-center lg:items-center justify-between gap-6 lg:gap-12 pb-8 border-b-2 border-white/10">
+          <h3 className="font-heading uppercase text-xl md:text-2xl text-white tracking-tight text-left">
             Top Rated Pest Control In Miami<br className="hidden lg:block" /> Across All Review Sites
           </h3>
           
@@ -126,8 +126,8 @@ export default function Reviews() {
                 className="w-10 h-10 md:w-12 md:h-12"
               />
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-brand-black">5/5</div>
-                <div className="text-xs text-brand-black/70">200+ reviews</div>
+                <div className="text-2xl md:text-3xl font-bold text-white">5/5</div>
+                <div className="text-xs text-white/70">200+ reviews</div>
               </div>
             </div>
 
@@ -141,8 +141,8 @@ export default function Reviews() {
                 className="w-10 h-10 md:w-12 md:h-12"
               />
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-brand-black">4.8/5</div>
-                <div className="text-xs text-brand-black/70">4+ reviews</div>
+                <div className="text-2xl md:text-3xl font-bold text-white">4.8/5</div>
+                <div className="text-xs text-white/70">4+ reviews</div>
               </div>
             </div>
 
@@ -156,8 +156,8 @@ export default function Reviews() {
                 className="w-10 h-10 md:w-12 md:h-12"
               />
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-brand-black">4.8/5</div>
-                <div className="text-xs text-brand-black/70">125+ reviews</div>
+                <div className="text-2xl md:text-3xl font-bold text-white">4.8/5</div>
+                <div className="text-xs text-white/70">125+ reviews</div>
               </div>
             </div>
 
@@ -167,8 +167,8 @@ export default function Reviews() {
                 <span className="text-white text-2xl md:text-3xl font-bold">f</span>
               </div>
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-brand-black">4.8/5</div>
-                <div className="text-xs text-brand-black/70">24+ reviews</div>
+                <div className="text-2xl md:text-3xl font-bold text-white">4.8/5</div>
+                <div className="text-xs text-white/70">24+ reviews</div>
               </div>
             </div>
           </div>
@@ -176,7 +176,7 @@ export default function Reviews() {
 
         {/* Header */}
         <header className="mb-8 md:mb-12 text-center">
-          <h2 className="font-heading uppercase text-5xl md:text-6xl text-brand-black tracking-tight">
+          <h2 className="font-heading uppercase text-5xl md:text-6xl text-white tracking-tight">
             What Our Customers Say
           </h2>
         </header>
@@ -215,7 +215,7 @@ export default function Reviews() {
                 aria-label="Previous review"
                 onClick={prev}
                 disabled={currentIndex === 0 && reviews.length <= slidesPerView}
-                className="h-11 w-11 rounded-none border-2 border-brand-black bg-white hover:bg-brand-blue text-brand-black shadow-btn disabled:opacity-40 disabled:cursor-not-allowed transition flex items-center justify-center text-2xl font-bold"
+                className="h-11 w-11 rounded-none border-2 border-white bg-brand-black hover:bg-brand-red text-white shadow-btn disabled:opacity-40 disabled:cursor-not-allowed transition flex items-center justify-center text-2xl font-bold"
               >
                 ‹
               </button>
@@ -223,7 +223,7 @@ export default function Reviews() {
                 aria-label="Next review"
                 onClick={next}
                 disabled={currentIndex >= maxIndex && reviews.length <= slidesPerView}
-                className="h-11 w-11 rounded-none border-2 border-brand-black bg-white hover:bg-brand-blue text-brand-black shadow-btn disabled:opacity-40 disabled:cursor-not-allowed transition flex items-center justify-center text-2xl font-bold"
+                className="h-11 w-11 rounded-none border-2 border-white bg-brand-black hover:bg-brand-red text-white shadow-btn disabled:opacity-40 disabled:cursor-not-allowed transition flex items-center justify-center text-2xl font-bold"
               >
                 ›
               </button>
@@ -243,7 +243,7 @@ export default function Reviews() {
                       aria-current={i === currentIndex}
                       aria-label={`Go to slide ${i + 1}`}
                       onClick={() => goToSlide(i)}
-                      className="h-2.5 w-4 rounded-full border border-brand-black bg-white aria-[current=true]:bg-brand-red transition-colors"
+                      className="h-2.5 w-4 rounded-full border border-white bg-brand-black aria-[current=true]:bg-brand-red transition-colors"
                     />
                   ))
                 }
@@ -266,7 +266,7 @@ export default function Reviews() {
                       aria-current={i === currentIndex}
                       aria-label={`Go to slide ${i + 1}`}
                       onClick={() => goToSlide(i)}
-                      className="h-2.5 w-4 rounded-full border border-brand-black bg-white aria-[current=true]:bg-brand-red transition-colors"
+                      className="h-2.5 w-4 rounded-full border border-white bg-brand-black aria-[current=true]:bg-brand-red transition-colors"
                     />
                   )
                 }
