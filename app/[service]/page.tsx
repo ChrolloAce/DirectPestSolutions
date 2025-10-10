@@ -8,6 +8,8 @@ import { ServiceFAQ } from '@/components/sections/ServiceFAQ'
 import { getServiceFAQs } from '@/content/service-faqs'
 import Button from '@/components/ui/Button'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
+import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
+import { InsectCatalog } from '@/components/sections/InsectCatalog'
 
 interface ServicePageProps {
   params: {
@@ -69,6 +71,21 @@ export default function ServicePage({ params }: ServicePageProps) {
   }
 
   const faqs = getServiceFAQs(service.id)
+  
+  // Define insects for catalog (show on applicable service pages)
+  const commonInsects = [
+    { name: 'Beetle', slug: 'beetle', image: '/images/Insects/beetle.png', treatment: 'Beetle Treatment' },
+    { name: 'Bed Bug', slug: 'bed-bug', image: '/images/Insects/bed-bug.png', treatment: 'Bed Bug Treatment' },
+    { name: 'Ant', slug: 'ant', image: '/images/Insects/ant.png', treatment: 'Ant Treatment' },
+    { name: 'Centipede', slug: 'centipede', image: '/images/Insects/centipede.png', treatment: 'Centipede Treatment' },
+    { name: 'Mouse', slug: 'rodent', image: '/images/Insects/mouse.png', treatment: 'Rodent Treatment' },
+    { name: 'Fly', slug: 'fly', image: '/images/Insects/fly.png', treatment: 'Fly Treatment' },
+    { name: 'Cricket', slug: 'cricket', image: '/images/Insects/cricket.png', treatment: 'Cricket Treatment' },
+    { name: 'Mosquito', slug: 'mosquito', image: '/images/Insects/mosquito.png', treatment: 'Mosquito Treatment' },
+  ]
+  
+  // Show insect catalog on general pest control, residential, and insect control pages
+  const showInsectCatalog = ['pest-control', 'residential-pest-control', 'insect-control', 'general-pest-control'].includes(service.id)
   
   // Service-specific content
   const problemSolution = {
@@ -185,32 +202,11 @@ export default function ServicePage({ params }: ServicePageProps) {
       </section>
 
 
-      {/* Benefits Section */}
-      <section className="py-16 md:py-24 bg-brand-red bg-noise">
-        <div className="container mx-auto px-4">
-          <h2 className="heading-lg uppercase text-center mb-4 text-white">
-            Why Choose Professional {service.title}?
-          </h2>
-          <p className="text-center text-white/80 mb-12 max-w-3xl mx-auto">
-            Professional {service.title.toLowerCase()} protects your property, health, and peace of mind.
-          </p>
-          
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {benefits.map((benefit) => (
-              <div key={benefit.title} className="bg-white p-6 rounded-none shadow-lg border-2 border-brand-black">
-                <div className="w-12 h-12 bg-brand-red rounded-full flex items-center justify-center mb-4">
-                  {benefit.icon === 'shield' && <Shield className="text-white" size={24} />}
-                  {benefit.icon === 'clock' && <Clock className="text-white" size={24} />}
-                  {benefit.icon === 'award' && <Award className="text-white" size={24} />}
-                  {benefit.icon === 'star' && <Star className="text-white" size={24} />}
-                </div>
-                <h3 className="font-bold text-lg mb-2">{benefit.title}</h3>
-                <p className="text-sm text-brand-black/70">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
+
+      {/* Insect Catalog - Only show on applicable services */}
+      {showInsectCatalog && <InsectCatalog insects={commonInsects} />}
 
       {/* FAQ Section */}
       <section className="py-16 md:py-24 bg-brand-off">
