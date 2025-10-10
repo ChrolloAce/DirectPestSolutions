@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Calendar, Clock, ArrowLeft, Phone } from 'lucide-react'
-import Button from '@/components/ui/Button'
 
 export const metadata: Metadata = {
   title: 'Essential Pest Prevention Tips for Miami\'s Heat | Direct Pest Solutions',
@@ -16,22 +15,22 @@ export const metadata: Metadata = {
 export default function BlogPost() {
   return (
     <>
-      <section className="py-12 bg-brand-off">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Link href="/blog" className="inline-flex items-center gap-2 text-brand-blue hover:text-brand-red transition-colors mb-6">
+            <Link href="/blog" className="inline-flex items-center gap-2 text-brand-black hover:text-brand-red transition-colors mb-6">
               <ArrowLeft size={20} />
               Back to Blog
             </Link>
             
             <div className="mb-6">
-              <span className="bg-brand-gold text-brand-black px-3 py-1 text-sm font-bold border border-brand-black">
-                Maintenance
+              <span className="bg-brand-red text-white px-4 py-2 text-sm font-bold uppercase">
+                Prevention Tips
               </span>
             </div>
             
-            <h1 className="heading-xl uppercase mb-6 text-brand-black">
-              Essential AC Maintenance Tips for Miami's Heat
+            <h1 className="font-heading text-4xl md:text-5xl uppercase mb-6 text-brand-black font-bold">
+              Essential Pest Prevention Tips for Miami's Heat
             </h1>
             
             <div className="flex items-center gap-6 text-brand-black/60 mb-8">
@@ -43,7 +42,7 @@ export default function BlogPost() {
                 <Clock size={18} />
                 <span>7 min read</span>
               </div>
-              <span>By CBE Air Services</span>
+              <span>By Direct Pest Solutions</span>
             </div>
           </div>
         </div>
@@ -54,136 +53,167 @@ export default function BlogPost() {
           <div className="max-w-4xl mx-auto">
             <div className="relative aspect-[16/9] mb-8">
               <Image
-                src="/images/ac-maintenance-tech.png"
-                alt="AC maintenance technician in Miami"
+                src="/images/company/mosquito-control-yard-treatment.webp"
+                alt="Pest prevention tips for Miami heat - Direct Pest Solutions"
                 fill
-                className="object-cover border-2 border-brand-black"
+                className="object-cover rounded-lg shadow-2xl"
               />
             </div>
             
             <div className="prose prose-lg max-w-none">
-              <p className="text-xl text-brand-black/80 mb-8 font-medium">
-                Miami's year-round heat and humidity put extraordinary demands on air conditioning systems. 
-                Regular maintenance is essential to keep your AC running efficiently and prevent costly breakdowns.
+              <p className="text-xl text-brand-black/80 mb-8 font-medium leading-relaxed">
+                Miami's year-round heat and humidity create the perfect breeding ground for pests. From mosquitoes and 
+                ants to termites and roaches, South Florida's tropical climate attracts unwanted visitors to your property. 
+                Here are essential prevention tips to keep pests away during Miami's hottest months.
               </p>
 
-              <h2 className="text-2xl font-bold text-brand-black mt-8 mb-4">Why Miami AC Systems Need Special Care</h2>
-              <p className="text-brand-black/80 mb-6">
-                Unlike other climates where AC systems get seasonal breaks, Miami air conditioners run almost continuously. 
-                The combination of high temperatures, humidity, salt air (near the coast), and frequent storms creates 
-                unique challenges that require proactive maintenance.
+              <h2 className="text-3xl font-bold text-brand-black mt-8 mb-4">Why Miami's Heat Attracts Pests</h2>
+              <p className="text-brand-black/80 mb-6 leading-relaxed">
+                Unlike other climates where pests hibernate or die off in winter, Miami's consistently warm temperatures 
+                mean pests are active year-round. The combination of high humidity, frequent rain, and tropical heat creates 
+                ideal conditions for pest reproduction and activity. Understanding this helps you stay vigilant with prevention.
               </p>
 
-              <h2 className="text-2xl font-bold text-brand-black mt-8 mb-4">Monthly Maintenance Tasks</h2>
+              <h2 className="text-3xl font-bold text-brand-black mt-8 mb-4">Top 10 Pest Prevention Tips for Miami Heat</h2>
               
-              <h3 className="text-xl font-bold text-brand-black mt-6 mb-3">Check and Replace Air Filters</h3>
-              <p className="text-brand-black/80 mb-4">
-                In Miami's dusty environment, air filters can clog quickly. Check filters monthly and replace them 
-                every 1-2 months during peak usage. Clean filters improve airflow, reduce energy consumption, and 
-                protect your system from debris.
+              <h3 className="text-2xl font-bold text-brand-black mt-6 mb-3">1. Eliminate Standing Water</h3>
+              <p className="text-brand-black/80 mb-4 leading-relaxed">
+                Mosquitoes can breed in as little as a bottle cap of water. Check your property weekly for standing water 
+                in plant saucers, gutters, bird baths, and outdoor containers. Change water features regularly and ensure 
+                proper drainage around your foundation.
               </p>
 
-              <h3 className="text-xl font-bold text-brand-black mt-6 mb-3">Clear Debris from Outdoor Unit</h3>
-              <p className="text-brand-black/80 mb-4">
-                Miami's frequent storms and lush vegetation can quickly clog outdoor units with leaves, branches, 
-                and debris. Keep a 2-foot clearance around your outdoor unit and regularly remove any obstructions.
+              <h3 className="text-2xl font-bold text-brand-black mt-6 mb-3">2. Seal Entry Points</h3>
+              <p className="text-brand-black/80 mb-4 leading-relaxed">
+                Inspect your home's exterior for cracks, gaps, and holes. Seal openings around windows, doors, pipes, and 
+                utility lines. Use weather stripping on doors and windows. Even small gaps can allow ants, roaches, and 
+                rodents to enter your home.
               </p>
 
-              <h3 className="text-xl font-bold text-brand-black mt-6 mb-3">Check Thermostat Settings</h3>
-              <p className="text-brand-black/80 mb-6">
-                Ensure your thermostat is set to cooling mode and the temperature is appropriate for Miami's climate. 
-                Consider upgrading to a programmable thermostat to optimize energy usage when you're away.
+              <h3 className="text-2xl font-bold text-brand-black mt-6 mb-3">3. Maintain Your Yard</h3>
+              <p className="text-brand-black/80 mb-4 leading-relaxed">
+                Keep grass trimmed, bushes pruned, and vegetation away from your home's foundation. Overgrown landscaping 
+                provides shelter for mosquitoes, ants, rodents, and other pests. Remove yard debris, fallen fruit, and 
+                organic matter that attracts pests.
               </p>
 
-              <h2 className="text-2xl font-bold text-brand-black mt-8 mb-4">Seasonal Maintenance (Every 3-6 Months)</h2>
-              
-              <h3 className="text-xl font-bold text-brand-black mt-6 mb-3">Clean Evaporator and Condenser Coils</h3>
-              <p className="text-brand-black/80 mb-4">
-                Miami's humidity and dust can quickly dirty coils, reducing efficiency by up to 30%. Professional 
-                coil cleaning should be done every 3-6 months to maintain peak performance.
+              <h3 className="text-2xl font-bold text-brand-black mt-6 mb-3">4. Store Food Properly</h3>
+              <p className="text-brand-black/80 mb-4 leading-relaxed">
+                Keep all food in sealed containers, including pet food. Clean up crumbs and spills immediately. Don't leave 
+                dirty dishes overnight. Take garbage out regularly and use bins with tight-fitting lids. These simple steps 
+                eliminate food sources that attract roaches, ants, and rodents.
               </p>
 
-              <h3 className="text-xl font-bold text-brand-black mt-6 mb-3">Inspect and Clean Drain Lines</h3>
-              <p className="text-brand-black/80 mb-4">
-                High humidity means your AC produces lots of condensation. Clogged drain lines can cause water 
-                damage and system shutdowns. Regular cleaning prevents these costly problems.
+              <h3 className="text-2xl font-bold text-brand-black mt-6 mb-3">5. Fix Leaks and Reduce Moisture</h3>
+              <p className="text-brand-black/80 mb-6 leading-relaxed">
+                Repair leaky pipes, faucets, and AC units. Use dehumidifiers in damp areas. Ensure proper ventilation in 
+                bathrooms and kitchens. Pests like roaches, termites, and silverfish are attracted to moisture and can 
+                cause significant damage if left unchecked.
               </p>
 
-              <h3 className="text-xl font-bold text-brand-black mt-6 mb-3">Check Refrigerant Levels</h3>
-              <p className="text-brand-black/80 mb-6">
-                Low refrigerant levels reduce cooling capacity and increase energy costs. Only licensed technicians 
-                should check and add refrigerant, as this requires specialized equipment and EPA certification.
-              </p>
-
-              <div className="bg-brand-blue bg-noise text-white p-8 my-8 border-2 border-brand-black">
-                <h3 className="text-2xl font-bold mb-4">Professional Maintenance Plans</h3>
-                <p className="mb-6">
-                  While some maintenance tasks can be done by homeowners, professional tune-ups are essential for 
-                  optimal performance. CBE Air Services offers comprehensive maintenance plans designed specifically 
-                  for Miami's climate.
+              <div className="bg-brand-red text-white p-8 my-8 rounded-lg">
+                <h3 className="text-2xl font-bold mb-4">Professional Pest Prevention Services</h3>
+                <p className="mb-6 leading-relaxed">
+                  While DIY prevention is important, professional pest control provides comprehensive protection. 
+                  Direct Pest Solutions offers customized prevention plans designed specifically for Miami's climate.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Button href="tel:3053516886" variant="primary" className="!bg-brand-gold !text-brand-black hover:!bg-white">
-                    <Phone className="inline-block mr-2" size={18} />
+                  <a href="tel:+13053516886" className="inline-flex items-center gap-2 bg-white text-brand-red px-6 py-3 font-bold uppercase hover:bg-brand-black hover:text-white transition-colors">
+                    <Phone size={18} />
                     Call +1-(305) 351-6886
-                  </Button>
-                  <Button href="/contact" variant="secondary" className="!bg-white/10 !text-white !border-white hover:!bg-white/20">
-                    Schedule Maintenance
-                  </Button>
+                  </a>
+                  <a href="/contact" className="bg-brand-black text-white px-6 py-3 font-bold uppercase hover:bg-white hover:text-brand-black transition-colors">
+                    Get Free Inspection
+                  </a>
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold text-brand-black mt-8 mb-4">Annual Professional Maintenance</h2>
-              <p className="text-brand-black/80 mb-4">
-                Even with regular DIY maintenance, annual professional service is crucial. Our certified technicians perform:
+              <h3 className="text-2xl font-bold text-brand-black mt-6 mb-3">6. Screen Windows and Doors</h3>
+              <p className="text-brand-black/80 mb-4 leading-relaxed">
+                Install or repair window and door screens to keep flying insects out while enjoying fresh air. Check screens 
+                regularly for tears or gaps and repair immediately. Consider screen enclosures for patios and pools.
               </p>
-              <ul className="list-disc list-inside text-brand-black/80 mb-6 space-y-2">
-                <li>Complete system inspection and testing</li>
-                <li>Electrical connection tightening and testing</li>
-                <li>Motor lubrication and belt adjustment</li>
-                <li>Refrigerant pressure testing</li>
-                <li>Thermostat calibration</li>
-                <li>Ductwork inspection for leaks</li>
-                <li>Safety control testing</li>
-              </ul>
 
-              <h2 className="text-2xl font-bold text-brand-black mt-8 mb-4">Signs Your AC Needs Professional Attention</h2>
-              <p className="text-brand-black/80 mb-4">
-                Even with regular maintenance, watch for these warning signs:
+              <h3 className="text-2xl font-bold text-brand-black mt-6 mb-3">7. Clean Gutters Regularly</h3>
+              <p className="text-brand-black/80 mb-4 leading-relaxed">
+                Clogged gutters collect water and organic debris, creating perfect breeding grounds for mosquitoes and 
+                shelter for other pests. Clean gutters at least quarterly, more often during rainy season.
               </p>
-              <ul className="list-disc list-inside text-brand-black/80 mb-6 space-y-2">
-                <li>Rising energy bills without increased usage</li>
-                <li>Uneven cooling throughout your home</li>
-                <li>Strange noises or odors</li>
-                <li>Frequent cycling on and off</li>
-                <li>Excessive humidity indoors</li>
-                <li>Ice formation on the unit</li>
-              </ul>
 
-              <h2 className="text-2xl font-bold text-brand-black mt-8 mb-4">Miami-Specific Maintenance Tips</h2>
+              <h3 className="text-2xl font-bold text-brand-black mt-6 mb-3">8. Store Firewood Properly</h3>
+              <p className="text-brand-black/80 mb-4 leading-relaxed">
+                If you store firewood, keep it at least 20 feet from your home and elevated off the ground. Firewood piles 
+                attract termites, ants, and other wood-destroying insects that can migrate to your house.
+              </p>
+
+              <h3 className="text-2xl font-bold text-brand-black mt-6 mb-3">9. Use Outdoor Lighting Wisely</h3>
+              <p className="text-brand-black/80 mb-4 leading-relaxed">
+                Replace white outdoor lights with yellow or sodium vapor lights that are less attractive to insects. Keep 
+                lights away from doors and windows. Consider motion-sensor lights to reduce the time lights are on.
+              </p>
+
+              <h3 className="text-2xl font-bold text-brand-black mt-6 mb-3">10. Schedule Regular Inspections</h3>
+              <p className="text-brand-black/80 mb-6 leading-relaxed">
+                Professional pest inspections can identify problems before they become infestations. Our licensed 
+                exterminators know where to look for early signs of pest activity and can treat issues before they escalate.
+              </p>
+
+              <h2 className="text-3xl font-bold text-brand-black mt-8 mb-4">Miami-Specific Pest Challenges</h2>
               
-              <h3 className="text-xl font-bold text-brand-black mt-6 mb-3">Hurricane Preparation</h3>
-              <p className="text-brand-black/80 mb-4">
-                Before hurricane season, secure outdoor units and consider surge protectors. After storms, 
-                inspect for damage and debris before restarting your system.
+              <h3 className="text-2xl font-bold text-brand-black mt-6 mb-3">Hurricane Season Preparation</h3>
+              <p className="text-brand-black/80 mb-4 leading-relaxed">
+                Before hurricane season, inspect and repair your home's exterior. After storms, remove standing water 
+                immediately and check for new entry points created by wind damage. Storms can displace pests and drive 
+                them into homes seeking shelter.
               </p>
 
-              <h3 className="text-xl font-bold text-brand-black mt-6 mb-3">Salt Air Protection</h3>
-              <p className="text-brand-black/80 mb-4">
-                If you live near the coast, salt air can corrode AC components faster. More frequent professional 
-                cleaning and inspection of coils and electrical connections is recommended.
+              <h3 className="text-2xl font-bold text-brand-black mt-6 mb-3">Rainy Season Protection</h3>
+              <p className="text-brand-black/80 mb-4 leading-relaxed">
+                Miami's rainy season (May-October) brings increased mosquito and ant activity. Be extra vigilant about 
+                standing water removal during this time. Consider professional mosquito treatments for outdoor areas.
               </p>
 
-              <h3 className="text-xl font-bold text-brand-black mt-6 mb-3">Mold and Mildew Prevention</h3>
-              <p className="text-brand-black/80 mb-6">
-                Miami's humidity creates ideal conditions for mold growth. Ensure proper drainage, consider UV 
-                lights in ductwork, and maintain low indoor humidity levels (30-50%).
+              <h3 className="text-2xl font-bold text-brand-black mt-6 mb-3">Year-Round Termite Risk</h3>
+              <p className="text-brand-black/80 mb-6 leading-relaxed">
+                Miami's warm, humid climate means termites are active year-round. Annual termite inspections are essential. 
+                Watch for mud tubes, hollow-sounding wood, discarded wings, and wood damage.
               </p>
 
-              <p className="text-brand-black/80 mb-6">
-                Regular maintenance is the key to reliable cooling in Miami's demanding climate. Don't wait for 
-                problems to develop - schedule your maintenance appointment today with CBE Air Services.
+              <h2 className="text-3xl font-bold text-brand-black mt-8 mb-4">When to Call Professionals</h2>
+              <p className="text-brand-black/80 mb-4 leading-relaxed">
+                While prevention is important, some situations require professional intervention:
               </p>
+              <ul className="list-disc list-inside text-brand-black/80 mb-6 space-y-2 ml-4 leading-relaxed">
+                <li>You see signs of active termite or ant colonies</li>
+                <li>Rodent droppings or gnaw marks appear</li>
+                <li>You notice bed bugs or their signs</li>
+                <li>Mosquito populations are overwhelming your outdoor space</li>
+                <li>You see multiple roaches, even during the day</li>
+                <li>Wasps or bees are building nests on your property</li>
+              </ul>
+
+              <p className="text-brand-black/80 mb-6 leading-relaxed">
+                Regular prevention combined with professional pest control keeps your Miami property protected year-round. 
+                Don't wait for an infestation—contact Direct Pest Solutions today for a free inspection and customized 
+                prevention plan.
+              </p>
+
+              <div className="bg-gray-100 p-6 rounded-lg mt-8">
+                <h3 className="text-xl font-bold text-brand-black mb-4">Need Professional Pest Control?</h3>
+                <p className="text-brand-black/80 mb-4 leading-relaxed">
+                  Direct Pest Solutions offers comprehensive pest prevention and treatment services throughout Miami-Dade 
+                  County. Our licensed exterminators use EPA-approved products and proven methods to keep your property 
+                  pest-free.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <a href="/contact" className="bg-brand-red text-white px-6 py-3 font-bold uppercase hover:bg-brand-black transition-colors">
+                    Schedule Free Inspection
+                  </a>
+                  <a href="/services" className="bg-brand-black text-white px-6 py-3 font-bold uppercase hover:bg-brand-red transition-colors">
+                    View Our Services
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

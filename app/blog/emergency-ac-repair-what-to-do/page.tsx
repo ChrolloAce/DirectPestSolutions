@@ -1,13 +1,12 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Calendar, Clock, ArrowLeft, Phone } from 'lucide-react'
-import Button from '@/components/ui/Button'
+import { Calendar, Clock, ArrowLeft, Phone, AlertCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Pest Emergency? Here\'s What to Do Before We Arrive | Direct Pest Solutions',
-  description: 'Quick steps to take when you discover pests in your Miami home. Emergency pest control guide from Direct Pest Solutions professionals. Same-day service available.',
-  keywords: 'emergency pest control Miami, pest emergency, urgent pest removal, emergency exterminator Miami, 24/7 pest control',
+  description: 'Discovered a pest infestation? Learn what immediate actions to take before professional help arrives. Emergency pest control guide for Miami homeowners.',
+  keywords: 'pest emergency, emergency pest control, pest infestation Miami, what to do bed bugs, emergency exterminator Miami',
   alternates: {
     canonical: 'https://directpestsolutions.com/blog/emergency-ac-repair-what-to-do',
   },
@@ -16,34 +15,34 @@ export const metadata: Metadata = {
 export default function BlogPost() {
   return (
     <>
-      <section className="py-12 bg-brand-off">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Link href="/blog" className="inline-flex items-center gap-2 text-brand-blue hover:text-brand-red transition-colors mb-6">
+            <Link href="/blog" className="inline-flex items-center gap-2 text-brand-black hover:text-brand-red transition-colors mb-6">
               <ArrowLeft size={20} />
               Back to Blog
             </Link>
             
             <div className="mb-6">
-              <span className="bg-brand-gold text-brand-black px-3 py-1 text-sm font-bold border border-brand-black">
-                Emergency
+              <span className="bg-brand-red text-white px-4 py-2 text-sm font-bold uppercase">
+                Emergency Guide
               </span>
             </div>
             
-            <h1 className="heading-xl uppercase mb-6 text-brand-black">
-              AC Emergency? Here's What to Do Before We Arrive
+            <h1 className="font-heading text-4xl md:text-5xl uppercase mb-6 text-brand-black font-bold">
+              Pest Emergency? Here's What to Do Before We Arrive
             </h1>
             
             <div className="flex items-center gap-6 text-brand-black/60 mb-8">
               <div className="flex items-center gap-2">
                 <Calendar size={18} />
-                <span>December 20, 2023</span>
+                <span>February 15, 2024</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={18} />
-                <span>4 min read</span>
+                <span>6 min read</span>
               </div>
-              <span>By CBE Air Services</span>
+              <span>By Direct Pest Solutions</span>
             </div>
           </div>
         </div>
@@ -54,152 +53,175 @@ export default function BlogPost() {
           <div className="max-w-4xl mx-auto">
             <div className="relative aspect-[16/9] mb-8">
               <Image
-                src="/images/emergency-ac-new.png"
-                alt="Emergency AC repair service in Miami"
+                src="/images/company/pest-exterminator-spraying.webp"
+                alt="Emergency pest control services in Miami - Direct Pest Solutions"
                 fill
-                className="object-cover border-2 border-brand-black"
+                className="object-cover rounded-lg shadow-2xl"
               />
             </div>
             
             <div className="prose prose-lg max-w-none">
-              <p className="text-xl text-brand-black/80 mb-8 font-medium">
-                When your AC breaks down in Miami's sweltering heat, every minute counts. While waiting for professional 
-                help to arrive, there are several steps you can take to diagnose the problem and potentially restore 
-                cooling to your home.
-              </p>
-
-              <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-8">
-                <h3 className="text-xl font-bold text-red-800 mb-2">⚠️ Safety First</h3>
-                <p className="text-red-700">
-                  If you smell gas, hear unusual electrical sounds, see sparks, or notice burning odors, 
-                  turn off your system immediately and call for emergency service. Do not attempt any troubleshooting.
-                </p>
-              </div>
-
-              <h2 className="text-2xl font-bold text-brand-black mt-8 mb-4">Step 1: Check Your Thermostat</h2>
-              <p className="text-brand-black/80 mb-4">
-                Before panicking, verify these basic thermostat settings:
-              </p>
-              <ul className="list-disc list-inside text-brand-black/80 mb-6 space-y-2">
-                <li>Ensure it's set to "COOL" mode, not "HEAT" or "OFF"</li>
-                <li>Check that the temperature setting is below current room temperature</li>
-                <li>Replace thermostat batteries if display is dim or blank</li>
-                <li>Look for error codes or unusual displays</li>
-              </ul>
-
-              <h2 className="text-2xl font-bold text-brand-black mt-8 mb-4">Step 2: Check Your Circuit Breakers</h2>
-              <p className="text-brand-black/80 mb-4">
-                AC systems have multiple electrical components that can trip breakers:
-              </p>
-              <ul className="list-disc list-inside text-brand-black/80 mb-6 space-y-2">
-                <li>Check the main AC breaker in your electrical panel</li>
-                <li>Look for any tripped breakers (switches in middle position)</li>
-                <li>Reset tripped breakers by turning them fully OFF, then ON</li>
-                <li>Check the outdoor unit's disconnect switch near the condenser</li>
-              </ul>
-
-              <h2 className="text-2xl font-bold text-brand-black mt-8 mb-4">Step 3: Inspect Your Air Filter</h2>
-              <p className="text-brand-black/80 mb-4">
-                A severely clogged filter can cause system shutdown:
-              </p>
-              <ul className="list-disc list-inside text-brand-black/80 mb-6 space-y-2">
-                <li>Locate your air filter (usually in return air grille or air handler)</li>
-                <li>Remove and inspect the filter - if you can't see through it, it's too dirty</li>
-                <li>Replace with a new filter if available</li>
-                <li>Never run your system without a filter</li>
-              </ul>
-
-              <h2 className="text-2xl font-bold text-brand-black mt-8 mb-4">Step 4: Check the Outdoor Unit</h2>
-              <p className="text-brand-black/80 mb-4">
-                Inspect your outdoor condenser unit for obvious problems:
-              </p>
-              <ul className="list-disc list-inside text-brand-black/80 mb-6 space-y-2">
-                <li>Clear any debris, leaves, or objects blocking airflow</li>
-                <li>Ensure the unit has at least 2 feet of clearance on all sides</li>
-                <li>Check if the fan is running when system is on</li>
-                <li>Look for ice formation (if present, turn system off immediately)</li>
-              </ul>
-
-              <div className="bg-brand-blue bg-noise text-white p-8 my-8 border-2 border-brand-black">
-                <h3 className="text-2xl font-bold mb-4">Need Emergency Service?</h3>
-                <p className="mb-6">
-                  CBE Air Services provides 24/7 emergency AC repair throughout Miami-Dade County. Our certified 
-                  technicians arrive quickly with fully-stocked trucks to get your cooling restored fast.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Button href="tel:3053516886" variant="primary" className="!bg-brand-gold !text-brand-black hover:!bg-white">
-                    <Phone className="inline-block mr-2" size={18} />
-                    Emergency: +1-(305) 351-6886
-                  </Button>
-                  <Button href="/contact" variant="secondary" className="!bg-white/10 !text-white !border-white hover:!bg-white/20">
-                    Schedule Service
-                  </Button>
+              <div className="bg-red-50 border-l-4 border-brand-red p-6 mb-8">
+                <div className="flex items-start gap-3">
+                  <AlertCircle className="text-brand-red flex-shrink-0 mt-1" size={24} />
+                  <div>
+                    <p className="font-bold text-brand-black mb-2">Pest Emergency?</p>
+                    <p className="text-brand-black/80">
+                      Call Direct Pest Solutions now at <a href="tel:+13053516886" className="text-brand-red font-bold">+1-(305) 351-6886</a> for same-day emergency service in Miami-Dade County.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold text-brand-black mt-8 mb-4">What NOT to Do During an AC Emergency</h2>
-              <ul className="list-disc list-inside text-brand-black/80 mb-6 space-y-2">
-                <li><strong>Don't</strong> repeatedly turn the system on and off - this can cause more damage</li>
-                <li><strong>Don't</strong> attempt electrical repairs unless you're qualified</li>
-                <li><strong>Don't</strong> remove panels or access electrical components</li>
-                <li><strong>Don't</strong> add refrigerant yourself - it requires EPA certification</li>
-                <li><strong>Don't</strong> ignore strange smells, sounds, or smoke</li>
+              <p className="text-xl text-brand-black/80 mb-8 font-medium leading-relaxed">
+                Discovering a pest infestation can be alarming. Whether it's bed bugs, a wasp nest, rodents, or a swarm 
+                of termites, knowing what to do while waiting for professional help can prevent the problem from getting 
+                worse and keep your family safe. Here's your complete emergency pest control guide.
+              </p>
+
+              <h2 className="text-3xl font-bold text-brand-black mt-8 mb-4">Immediate Actions for Common Pest Emergencies</h2>
+
+              <h3 className="text-2xl font-bold text-brand-black mt-6 mb-3">Bed Bug Discovery</h3>
+              <p className="text-brand-black/80 mb-4 leading-relaxed">
+                If you suspect or confirm bed bugs:
+              </p>
+              <ul className="list-disc list-inside text-brand-black/80 mb-6 space-y-2 ml-4 leading-relaxed">
+                <li><strong>Don't panic or spray pesticides</strong> - This can spread bed bugs to other rooms</li>
+                <li><strong>Isolate infected bedding</strong> - Place in sealed plastic bags immediately</li>
+                <li><strong>Vacuum thoroughly</strong> - Focus on mattress seams, bed frame, and nearby furniture. Dispose of vacuum bag in sealed plastic bag outside</li>
+                <li><strong>Wash fabrics in hot water</strong> - Use highest heat setting for linens, clothing, and curtains</li>
+                <li><strong>Don't move to another room</strong> - This spreads the infestation</li>
+                <li><strong>Avoid DIY treatments</strong> - Wait for professional heat or chemical treatment</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-brand-black mt-8 mb-4">Temporary Cooling Measures</h2>
-              <p className="text-brand-black/80 mb-4">
-                While waiting for repair service, try these cooling strategies:
+              <h3 className="text-2xl font-bold text-brand-black mt-6 mb-3">Wasp or Bee Nest</h3>
+              <p className="text-brand-black/80 mb-4 leading-relaxed">
+                If you discover an active wasp or bee nest:
               </p>
-              <ul className="list-disc list-inside text-brand-black/80 mb-6 space-y-2">
-                <li>Close blinds and curtains to block sunlight</li>
-                <li>Use fans to circulate air and create a cooling effect</li>
-                <li>Stay hydrated and avoid strenuous activities</li>
-                <li>Consider temporary cooling with portable units if available</li>
-                <li>Move to the coolest room in your home</li>
+              <ul className="list-disc list-inside text-brand-black/80 mb-6 space-y-2 ml-4 leading-relaxed">
+                <li><strong>Stay away from the nest</strong> - Keep family and pets at a safe distance</li>
+                <li><strong>Don't disturb it</strong> - No swatting, throwing objects, or spraying water</li>
+                <li><strong>Close nearby windows and doors</strong> - Prevent insects from entering your home</li>
+                <li><strong>Never attempt DIY removal</strong> - Wasp and bee stings can be dangerous, especially for those with allergies</li>
+                <li><strong>Remove food sources</strong> - Cover trash cans and remove pet food from the area</li>
+                <li><strong>Wait for professionals</strong> - We have protective equipment and proper removal techniques</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-brand-black mt-8 mb-4">When to Call for Emergency Service</h2>
-              <p className="text-brand-black/80 mb-4">
-                Call immediately if you experience:
+              <h3 className="text-2xl font-bold text-brand-black mt-6 mb-3">Rodent Sighting</h3>
+              <p className="text-brand-black/80 mb-4 leading-relaxed">
+                If you see a mouse or rat:
               </p>
-              <ul className="list-disc list-inside text-brand-black/80 mb-6 space-y-2">
-                <li>Complete system failure during extreme heat</li>
-                <li>Burning smells or visible smoke</li>
-                <li>Electrical sparks or unusual sounds</li>
-                <li>Water leaks causing property damage</li>
-                <li>Ice formation on the unit</li>
-                <li>Refrigerant leaks (sweet chemical smell)</li>
+              <ul className="list-disc list-inside text-brand-black/80 mb-6 space-y-2 ml-4 leading-relaxed">
+                <li><strong>Remove food sources</strong> - Store all food in sealed containers, including pet food</li>
+                <li><strong>Clean thoroughly</strong> - Eliminate crumbs and food residue</li>
+                <li><strong>Seal accessible entry points</strong> - Stuff steel wool in obvious gaps (temporary measure)</li>
+                <li><strong>Remove clutter</strong> - Reduce hiding spots in storage areas</li>
+                <li><strong>Don't touch droppings</strong> - Rodent waste can carry disease. Wait for professional cleanup</li>
+                <li><strong>Keep pets away</strong> - Prevent contact with rodents or their droppings</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-brand-black mt-8 mb-4">Information to Have Ready</h2>
-              <p className="text-brand-black/80 mb-4">
-                When calling for service, have this information ready:
+              <div className="bg-brand-red text-white p-8 my-8 rounded-lg">
+                <h3 className="text-2xl font-bold mb-4">Need Emergency Pest Control?</h3>
+                <p className="mb-6 leading-relaxed">
+                  Direct Pest Solutions offers same-day emergency service throughout Miami-Dade County. Our licensed 
+                  exterminators are equipped to handle any pest emergency safely and effectively.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <a href="tel:+13053516886" className="inline-flex items-center gap-2 bg-white text-brand-red px-6 py-3 font-bold uppercase hover:bg-brand-black hover:text-white transition-colors">
+                    <Phone size={18} />
+                    Call +1-(305) 351-6886
+                  </a>
+                  <a href="/contact" className="bg-brand-black text-white px-6 py-3 font-bold uppercase hover:bg-white hover:text-brand-black transition-colors">
+                    Request Emergency Service
+                  </a>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-bold text-brand-black mt-6 mb-3">Termite Swarm</h3>
+              <p className="text-brand-black/80 mb-4 leading-relaxed">
+                If you see flying termites (swarmers):
               </p>
-              <ul className="list-disc list-inside text-brand-black/80 mb-6 space-y-2">
-                <li>AC system make, model, and age (if known)</li>
-                <li>Description of the problem and when it started</li>
-                <li>Any unusual sounds, smells, or visible issues</li>
-                <li>What troubleshooting steps you've already tried</li>
-                <li>Your address and best contact number</li>
+              <ul className="list-disc list-inside text-brand-black/80 mb-6 space-y-2 ml-4 leading-relaxed">
+                <li><strong>Don't spray pesticides</strong> - Swarmers you see are the tip of the iceberg</li>
+                <li><strong>Collect a few specimens</strong> - Place in a sealed bag or container for identification</li>
+                <li><strong>Note the location</strong> - Remember where you saw the swarm</li>
+                <li><strong>Check for mud tubes</strong> - Look for brown mud tubes on foundation walls</li>
+                <li><strong>Document the damage</strong> - Take photos of any visible wood damage</li>
+                <li><strong>Schedule immediate inspection</strong> - Termites cause extensive damage quickly</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-brand-black mt-8 mb-4">Prevention for Future Emergencies</h2>
-              <p className="text-brand-black/80 mb-4">
-                Reduce the likelihood of future AC emergencies:
+              <h3 className="text-2xl font-bold text-brand-black mt-6 mb-3">Ant Infestation</h3>
+              <p className="text-brand-black/80 mb-4 leading-relaxed">
+                For sudden ant invasions:
               </p>
-              <ul className="list-disc list-inside text-brand-black/80 mb-6 space-y-2">
-                <li>Schedule regular maintenance twice per year</li>
-                <li>Replace air filters monthly during peak season</li>
-                <li>Keep outdoor unit clean and clear of debris</li>
-                <li>Address minor issues before they become major problems</li>
-                <li>Consider a maintenance agreement for priority service</li>
+              <ul className="list-disc list-inside text-brand-black/80 mb-6 space-y-2 ml-4 leading-relaxed">
+                <li><strong>Don't spray</strong> - Store-bought sprays scatter colonies and make treatment harder</li>
+                <li><strong>Clean up food</strong> - Wipe down surfaces and sweep floors</li>
+                <li><strong>Seal food containers</strong> - Use airtight containers for all food</li>
+                <li><strong>Note entry points</strong> - Watch where ants are coming from</li>
+                <li><strong>Fix moisture issues</strong> - Repair leaks and reduce humidity</li>
+                <li><strong>Wait for professional treatment</strong> - We'll treat the colony, not just the ants you see</li>
               </ul>
 
-              <p className="text-brand-black/80 mb-6">
-                Remember, while these troubleshooting steps can help identify simple problems, most AC issues 
-                require professional diagnosis and repair. Don't hesitate to call CBE Air Services for fast, 
-                reliable emergency service when your Miami home's cooling is at stake.
+              <h2 className="text-3xl font-bold text-brand-black mt-8 mb-4">What NOT to Do During a Pest Emergency</h2>
+              
+              <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-8">
+                <p className="font-bold text-brand-black mb-3">❌ Common Mistakes That Make Things Worse:</p>
+                <ul className="list-disc list-inside text-brand-black/80 space-y-2 ml-4 leading-relaxed">
+                  <li>Don't use multiple DIY pest control products</li>
+                  <li>Don't disturb nests or colonies</li>
+                  <li>Don't ignore the problem hoping it goes away</li>
+                  <li>Don't delay professional treatment</li>
+                  <li>Don't attempt to handle stinging insects yourself</li>
+                  <li>Don't touch or clean rodent waste without proper protection</li>
+                </ul>
+              </div>
+
+              <h2 className="text-3xl font-bold text-brand-black mt-8 mb-4">Preparing for the Exterminator's Arrival</h2>
+              
+              <p className="text-brand-black/80 mb-4 leading-relaxed">
+                While waiting for professional help:
               </p>
+              <ul className="list-disc list-inside text-brand-black/80 mb-6 space-y-2 ml-4 leading-relaxed">
+                <li><strong>Clear access areas</strong> - Move furniture away from walls if possible</li>
+                <li><strong>Secure pets</strong> - Plan to keep them in a safe area during treatment</li>
+                <li><strong>Document the problem</strong> - Note when you first noticed pests and where you've seen them</li>
+                <li><strong>Prepare questions</strong> - Write down concerns to discuss with the technician</li>
+                <li><strong>Remove clutter</strong> - This helps the exterminator access problem areas</li>
+              </ul>
+
+              <h2 className="text-3xl font-bold text-brand-black mt-8 mb-4">Why Choose Direct Pest Solutions for Emergencies</h2>
+              
+              <ul className="list-disc list-inside text-brand-black/80 mb-6 space-y-2 ml-4 leading-relaxed">
+                <li><strong>Same-day service available</strong> throughout Miami-Dade County</li>
+                <li><strong>Licensed and insured</strong> exterminators with years of experience</li>
+                <li><strong>Safe, EPA-approved products</strong> for your family and pets</li>
+                <li><strong>Comprehensive treatment</strong> that addresses the root cause</li>
+                <li><strong>Follow-up service</strong> to ensure complete elimination</li>
+                <li><strong>Emergency hotline</strong> available 24/7</li>
+              </ul>
+
+              <p className="text-brand-black/80 mb-6 leading-relaxed">
+                Don't let a pest emergency ruin your peace of mind. Contact Direct Pest Solutions immediately for 
+                professional, fast, and effective treatment. We're here to help protect your Miami home.
+              </p>
+
+              <div className="bg-gray-100 p-6 rounded-lg mt-8">
+                <h3 className="text-xl font-bold text-brand-black mb-4">24/7 Emergency Pest Control</h3>
+                <p className="text-brand-black/80 mb-4 leading-relaxed">
+                  Direct Pest Solutions provides emergency pest control services throughout Miami-Dade County. Don't wait 
+                  for pests to multiply—call now for immediate assistance.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <a href="tel:+13053516886" className="inline-flex items-center gap-2 bg-brand-red text-white px-6 py-3 font-bold uppercase hover:bg-brand-black transition-colors">
+                    <Phone size={18} />
+                    Call +1-(305) 351-6886
+                  </a>
+                  <a href="/contact" className="bg-brand-black text-white px-6 py-3 font-bold uppercase hover:bg-brand-red transition-colors">
+                    Get Emergency Service
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
