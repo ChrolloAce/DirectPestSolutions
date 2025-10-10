@@ -30,6 +30,7 @@ export default function HomePage() {
           'Free termite inspections available. With same-day service and transparent pricing, you can trust Direct Pest Solutions to protect your most valuable investment from termite damage.'
         ]}
         images={['/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/pest-inspection-animation.gif', '/images/Insects/termite.png']}
+        alt="Professional termite inspection and control services in Miami"
         direction="left"
         ctaText="Schedule Free Termite Inspection"
         ctaHref="/termite-control-miami"
@@ -43,6 +44,7 @@ export default function HomePage() {
           'Our bed bug treatments are guaranteed. If bed bugs return within the warranty period, we return for free re-treatment. Discreet service with unmarked vehicles available for your privacy.'
         ]}
         images={['/images/Insects/bed-bug.png', '/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/pest-spraying-animation.gif']}
+        alt="Bed bug extermination and heat treatment services in Miami"
         direction="right"
         ctaText="Get Bed Bug Treatment Quote"
         ctaHref="/bed-bug-extermination-miami"

@@ -7,6 +7,7 @@ import { ServiceIcon } from '@/components/ui/ServiceIcon'
 import { ServiceFAQ } from '@/components/sections/ServiceFAQ'
 import { getServiceFAQs } from '@/content/service-faqs'
 import Button from '@/components/ui/Button'
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
 
 interface ServicePageProps {
   params: {
@@ -30,14 +31,32 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   }
   
   return {
-    title: `${service.title} Miami | Direct Pest Solutions`,
-    description: service.shortDescription + ' Call (305) 560-3087 for same-day service in Miami.',
-    keywords: `${service.title.toLowerCase()} Miami, ${service.title.toLowerCase()} Miami FL, emergency ${service.title.toLowerCase()} Miami, pest control Miami, exterminator Miami, ${service.title.toLowerCase()} service Miami Beach, ${service.title.toLowerCase()} Coral Gables`,
+    title: `${service.title} Miami | Licensed Exterminators | Direct Pest Solutions`,
+    description: `${service.shortDescription} Licensed & insured pest control company serving Miami-Dade County. Same-day service available. Free inspections. Call (305) 560-3087.`,
+    keywords: `${service.title.toLowerCase()} Miami, ${service.title.toLowerCase()} Miami FL, emergency ${service.title.toLowerCase()} Miami, pest control Miami, exterminator Miami, ${service.title.toLowerCase()} service Miami Beach, ${service.title.toLowerCase()} Coral Gables, ${service.title.toLowerCase()} Aventura, ${service.title.toLowerCase()} Kendall, ${service.title.toLowerCase()} Homestead, licensed exterminator Miami, pest inspection Miami`,
+    authors: [{ name: 'Direct Pest Solutions' }],
     openGraph: {
-      title: `${service.title} | Direct Pest Solutions`,
-      description: service.shortDescription,
+      title: `${service.title} Miami | Direct Pest Solutions`,
+      description: `${service.shortDescription} Professional, licensed pest control serving Miami-Dade County.`,
       type: 'website',
+      url: `https://directpestsolutions.com${service.href}`,
+      siteName: 'Direct Pest Solutions',
+      images: [{
+        url: service.image,
+        width: 1200,
+        height: 630,
+        alt: `Professional ${service.title} in Miami`
+      }],
+      locale: 'en_US',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${service.title} Miami | Direct Pest Solutions`,
+      description: service.shortDescription,
       images: [service.image],
+    },
+    alternates: {
+      canonical: `https://directpestsolutions.com${service.href}`,
     },
   }
 }
@@ -79,6 +98,18 @@ export default function ServicePage({ params }: ServicePageProps) {
 
   return (
     <>
+      {/* Breadcrumbs */}
+      <div className="bg-white border-b border-brand-black/10">
+        <div className="container mx-auto px-4">
+          <Breadcrumbs 
+            items={[
+              { label: 'Services', href: '/services' },
+              { label: service.title }
+            ]}
+          />
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section 
         className="relative bg-brand-red bg-noise py-20 md:py-32"
@@ -140,7 +171,7 @@ export default function ServicePage({ params }: ServicePageProps) {
             <div className="relative">
               <img 
                 src={service.image} 
-                alt={`Professional ${service.title} service in Miami`}
+                alt={`Professional ${service.title} in Miami - Licensed exterminators providing expert ${service.title.toLowerCase()} for Miami-Dade County homes and businesses`}
                 className="rounded-none shadow-xl border-4 border-brand-black"
               />
               <div className="absolute -bottom-4 -right-4 bg-brand-red p-4 border-2 border-brand-black text-white">
@@ -258,11 +289,44 @@ export default function ServicePage({ params }: ServicePageProps) {
         </div>
       </section>
 
+      {/* Related Services - Internal Linking */}
+      <section className="py-16 md:py-24 bg-brand-off">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="heading-lg uppercase text-center mb-12 text-brand-black">
+              Related Pest Control Services
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {services
+                .filter(s => s.id !== service.id && s.featured)
+                .slice(0, 3)
+                .map((relatedService) => (
+                  <a
+                    key={relatedService.id}
+                    href={relatedService.href}
+                    className="bg-white p-6 border-2 border-brand-black hover:border-brand-red transition-all group"
+                  >
+                    <h3 className="font-bold text-xl mb-3 group-hover:text-brand-red transition-colors">
+                      {relatedService.title}
+                    </h3>
+                    <p className="text-brand-black/70 mb-4 text-sm">
+                      {relatedService.shortDescription}
+                    </p>
+                    <span className="text-brand-red font-semibold text-sm flex items-center gap-2">
+                      Learn More <ChevronRight size={16} />
+                    </span>
+                  </a>
+                ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Service Area Block */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <MapPin className="mx-auto mb-4 text-brand-blue" size={48} />
+            <MapPin className="mx-auto mb-4 text-brand-red" size={48} />
             <h2 className="heading-lg uppercase mb-6 text-brand-black">
               Serving All of Miami-Dade County
             </h2>
@@ -271,7 +335,7 @@ export default function ServicePage({ params }: ServicePageProps) {
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {serviceAreas.map((area) => (
-                <span key={area} className="px-4 py-2 bg-brand-blue/10 border border-brand-blue text-brand-black">
+                <span key={area} className="px-4 py-2 bg-brand-red/10 border border-brand-red text-brand-black">
                   {area}
                 </span>
               ))}

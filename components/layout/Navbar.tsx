@@ -144,7 +144,7 @@ export function Navbar() {
               <Link href="/" className="flex items-center gap-2">
                 <Image 
                   src="/images/direct-pest-solutions-logo.png" 
-                  alt="Direct Pest Solutions" 
+                  alt="Direct Pest Solutions - Miami's Trusted Pest Control Company" 
                   width={180} 
                   height={50}
                   className="h-8 w-auto"

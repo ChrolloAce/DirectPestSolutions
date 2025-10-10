@@ -48,7 +48,7 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10">
         <Image
           src="/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/raccoon-photo.jpg"
-          alt="Direct Pest Solutions Miami - Professional Pest Control Services"
+          alt="Professional pest control services in Miami - Direct Pest Solutions offers expert wildlife and rodent removal for Miami-Dade County homes and businesses"
           fill
           priority
           className="object-cover object-center"

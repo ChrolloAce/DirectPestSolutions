@@ -8,9 +8,18 @@ import MobileAppBar from '@/components/layout/MobileAppBar'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://directpestsolutions.com'),
   title: 'Direct Pest Solutions Miami – Professional Pest Control Services | Licensed & Insured',
   description: 'Professional pest control services in Miami & Miami-Dade County. Licensed exterminators specializing in termites, bed bugs, rodents, mosquitoes & more. Same-day service available. Call (305) 560-3087.',
   keywords: 'pest control Miami, exterminator Miami, termite control Miami, bed bug extermination Miami, mosquito control Miami, rodent control Miami, ant control Miami, cockroach control Miami, wildlife removal Miami, pest inspection Miami',
+  authors: [{ name: 'Direct Pest Solutions' }],
+  creator: 'Direct Pest Solutions',
+  publisher: 'Direct Pest Solutions',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   icons: {
     icon: '/favicon.png',
     shortcut: '/favicon.png',
@@ -28,6 +37,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Direct Pest Solutions Miami – Professional Pest Control Services',
     description: 'Licensed pest control services in Miami. Call (305) 560-3087.',
+  },
+  alternates: {
+    canonical: 'https://directpestsolutions.com',
   },
   robots: {
     index: true,

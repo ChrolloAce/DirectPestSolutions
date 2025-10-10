@@ -9,6 +9,7 @@ interface ServiceTeaserProps {
   title: string
   description: string[]
   images: string[]
+  alt?: string
   direction?: 'left' | 'right'
   ctaText?: string
   ctaHref?: string
@@ -20,6 +21,7 @@ export class ServiceTeaser extends React.Component<ServiceTeaserProps> {
       title, 
       description, 
       images, 
+      alt,
       direction = 'right',
       ctaText = 'Learn More',
       ctaHref = '/contact'
@@ -47,14 +49,14 @@ export class ServiceTeaser extends React.Component<ServiceTeaserProps> {
               
               {/* Right - Images */}
               <div>
-                <PhotoStack images={images} alt={title} />
+                <PhotoStack images={images} alt={alt || title} />
               </div>
             </>
           ) : (
             <>
               {/* Left - Images */}
               <div>
-                <PhotoStack images={images} alt={title} />
+                <PhotoStack images={images} alt={alt || title} />
               </div>
               
               {/* Right - Content */}
