@@ -26,28 +26,41 @@ export function FeaturedServices() {
             <a
               key={service.id}
               href={service.href}
-              className="group relative overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1"
+              className="group block"
             >
-              {/* Service Image */}
-              <div className="relative h-96 overflow-hidden">
-                <Image
-                  src={service.image}
-                  alt={`${service.title} - Professional pest control services in Miami`}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                {/* Subtle Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              </div>
-              
-              {/* Service Title Banner */}
-              <div className="absolute bottom-0 left-0 right-0 bg-brand-red px-8 py-5 border-t-2 border-white/10">
-                <h3 className="font-heading uppercase text-white text-xl md:text-2xl font-extrabold tracking-wide leading-tight">
-                  {service.title}
-                </h3>
-                <p className="text-white/90 text-sm mt-1 font-medium">
-                  BOOK NOW →
-                </p>
+              <div className="bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full rounded-xl">
+                {/* Service Image with Diagonal Red Banner */}
+                <div className="relative aspect-square overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={`${service.title} - Professional pest control services in Miami`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  {/* Diagonal red banner at bottom-left */}
+                  <div 
+                    className="absolute bottom-0 left-0 bg-brand-red px-8 py-4" 
+                    style={{ clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0% 100%)' }}
+                  >
+                    <span className="text-white text-sm font-bold uppercase tracking-wider">
+                      {service.id.replace(/-/g, ' ')}
+                    </span>
+                  </div>
+                </div>
+                
+                {/* Service Content */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3 text-brand-black group-hover:text-brand-red transition-colors leading-tight">
+                    {service.title}
+                  </h3>
+                  <p className="text-brand-black/70 mb-4 line-clamp-3 text-sm leading-relaxed">
+                    {service.shortDescription}
+                  </p>
+                  <div className="flex items-center gap-2 text-brand-red font-bold text-sm uppercase tracking-wider">
+                    <span>Book Now</span>
+                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  </div>
+                </div>
               </div>
             </a>
           ))}
