@@ -47,14 +47,15 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/company/professional-pest-inspection.webp"
-          alt="Professional pest control services in Miami - Direct Pest Solutions offers expert pest inspection and treatment for Miami-Dade County homes and businesses"
+          src="/images/company/wholeteam.webp"
+          alt="Direct Pest Solutions professional pest control team in Miami - Licensed exterminators providing expert pest control and extermination services for Miami-Dade County homes and businesses"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-center saturate-150"
+          style={{ filter: 'saturate(1.5)' }}
         />
-        {/* Overlay: left-to-right gradient + subtle noise */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
+        {/* Overlay: lighter gradient for better visibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/20" />
         <div className="absolute inset-0 mix-blend-overlay bg-noise opacity-[.08]" />
       </div>
 
