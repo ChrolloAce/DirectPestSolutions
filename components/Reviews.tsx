@@ -109,6 +109,71 @@ export default function Reviews() {
   return (
     <section id="reviews" className="relative bg-brand-off py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4">
+        {/* Top Rated Bar */}
+        <div className="mb-12 flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-12 pb-8 border-b-2 border-brand-black/10">
+          <h3 className="font-heading uppercase text-xl md:text-2xl text-brand-black tracking-tight text-center lg:text-left">
+            Top Rated Pest Control In Miami<br className="hidden lg:block" /> Across All Review Sites
+          </h3>
+          
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
+            {/* Google */}
+            <div className="flex items-center gap-3">
+              <Image
+                src="/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/google-g-logo.png"
+                alt="Google Reviews"
+                width={48}
+                height={48}
+                className="w-10 h-10 md:w-12 md:h-12"
+              />
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-brand-black">5/5</div>
+                <div className="text-xs text-brand-black/70">17+ reviews</div>
+              </div>
+            </div>
+
+            {/* Yelp */}
+            <div className="flex items-center gap-3">
+              <Image
+                src="/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/yelp-logo.png"
+                alt="Yelp Reviews"
+                width={48}
+                height={48}
+                className="w-10 h-10 md:w-12 md:h-12"
+              />
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-brand-black">4.8/5</div>
+                <div className="text-xs text-brand-black/70">4+ reviews</div>
+              </div>
+            </div>
+
+            {/* Trustpilot */}
+            <div className="flex items-center gap-3">
+              <Image
+                src="/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/trustpilot-star-logo.png"
+                alt="Trustpilot Reviews"
+                width={48}
+                height={48}
+                className="w-10 h-10 md:w-12 md:h-12"
+              />
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-brand-black">4.8/5</div>
+                <div className="text-xs text-brand-black/70">125+ reviews</div>
+              </div>
+            </div>
+
+            {/* Facebook */}
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-[#1877F2] rounded-full flex items-center justify-center">
+                <span className="text-white text-2xl md:text-3xl font-bold">f</span>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-brand-black">4.8/5</div>
+                <div className="text-xs text-brand-black/70">24+ reviews</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Header */}
         <header className="mb-8 md:mb-12 text-center">
           <h2 className="font-heading uppercase text-5xl md:text-6xl text-brand-black tracking-tight">
@@ -164,17 +229,50 @@ export default function Reviews() {
               </button>
             </div>
 
-            {/* Dots */}
+            {/* Dots - Limited display */}
             <div className="flex gap-2 order-1 sm:order-2">
-              {Array.from({ length: maxIndex + 1 }).map((_, i) => (
-                <button
-                  key={i}
-                  aria-current={i === currentIndex}
-                  aria-label={`Go to slide ${i + 1}`}
-                  onClick={() => goToSlide(i)}
-                  className="h-2.5 w-4 rounded-full border border-brand-black bg-white aria-[current=true]:bg-brand-red transition-colors"
-                />
-              ))}
+              {(() => {
+                const totalDots = maxIndex + 1
+                const maxVisibleDots = 7
+                
+                // If we have fewer dots than max, show them all
+                if (totalDots <= maxVisibleDots) {
+                  return Array.from({ length: totalDots }).map((_, i) => (
+                    <button
+                      key={i}
+                      aria-current={i === currentIndex}
+                      aria-label={`Go to slide ${i + 1}`}
+                      onClick={() => goToSlide(i)}
+                      className="h-2.5 w-4 rounded-full border border-brand-black bg-white aria-[current=true]:bg-brand-red transition-colors"
+                    />
+                  ))
+                }
+                
+                // Show limited dots with current in center
+                const dots = []
+                const halfVisible = Math.floor(maxVisibleDots / 2)
+                let startDot = Math.max(0, currentIndex - halfVisible)
+                let endDot = Math.min(totalDots - 1, startDot + maxVisibleDots - 1)
+                
+                // Adjust if we're near the end
+                if (endDot - startDot < maxVisibleDots - 1) {
+                  startDot = Math.max(0, endDot - maxVisibleDots + 1)
+                }
+                
+                for (let i = startDot; i <= endDot; i++) {
+                  dots.push(
+                    <button
+                      key={i}
+                      aria-current={i === currentIndex}
+                      aria-label={`Go to slide ${i + 1}`}
+                      onClick={() => goToSlide(i)}
+                      className="h-2.5 w-4 rounded-full border border-brand-black bg-white aria-[current=true]:bg-brand-red transition-colors"
+                    />
+                  )
+                }
+                
+                return dots
+              })()}
             </div>
           </div>
         </div>
