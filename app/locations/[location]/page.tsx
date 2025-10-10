@@ -173,14 +173,14 @@ export default function LocationPage({ params }: LocationPageProps) {
   ]
 
   const commonInsects = [
-    { name: 'Termite', slug: 'termite', image: '/images/Insects/imgi_21_66a66e4415df3411006c1370_4.png', treatment: 'Subterranean & Drywood' },
-    { name: 'Bed Bug', slug: 'bed-bug', image: '/images/Insects/imgi_11_66a633a171a7cb236aa7c036_bed bug-min.png', treatment: 'Heat & Chemical Treatment' },
-    { name: 'Mosquito', slug: 'mosquito', image: '/images/Insects/imgi_17_66a633a10650a2602e9d577c_mosquito-min.png', treatment: 'Yard & Perimeter Control' },
-    { name: 'Rodent', slug: 'rodent', image: '/images/Insects/imgi_14_66a633a1c9fbe25684df8a27_mouse-min.png', treatment: 'Rats, Mice & Wildlife' },
-    { name: 'Cockroach', slug: 'cockroach', image: '/images/Insects/imgi_20_66a66e456f3bdb0490f15782_6.png', treatment: 'German & American Roaches' },
-    { name: 'Ant', slug: 'ant', image: '/images/Insects/imgi_12_66a633a19fb483dc06dae92b_ant-min.png', treatment: 'Fire Ants & Carpenter Ants' },
-    { name: 'Spider', slug: 'spider', image: '/images/Insects/imgi_18_66a66e44b44f4e3846848c6f_5.png', treatment: 'Black Widows & Brown Recluse' },
-    { name: 'Beetle', slug: 'beetle', image: '/images/Insects/imgi_10_66a633a18bb4818c49b6a30a_beetle-min.png', treatment: 'Wood-Boring Beetles' },
+    { name: 'Termite', slug: 'termite', image: '/images/Insects/termite.png', treatment: 'Subterranean & Drywood' },
+    { name: 'Bed Bug', slug: 'bed-bug', image: '/images/Insects/bed-bug.png', treatment: 'Heat & Chemical Treatment' },
+    { name: 'Mosquito', slug: 'mosquito', image: '/images/Insects/mosquito.png', treatment: 'Yard & Perimeter Control' },
+    { name: 'Rodent', slug: 'rodent', image: '/images/Insects/mouse.png', treatment: 'Rats, Mice & Wildlife' },
+    { name: 'Cockroach', slug: 'cockroach', image: '/images/Insects/cockroach.png', treatment: 'German & American Roaches' },
+    { name: 'Ant', slug: 'ant', image: '/images/Insects/ant.png', treatment: 'Fire Ants & Carpenter Ants' },
+    { name: 'Spider', slug: 'spider', image: '/images/Insects/spider.png', treatment: 'Black Widows & Brown Recluse' },
+    { name: 'Beetle', slug: 'beetle', image: '/images/Insects/beetle.png', treatment: 'Wood-Boring Beetles' },
   ]
 
   return (
