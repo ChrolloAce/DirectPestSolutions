@@ -2,15 +2,19 @@
 
 import Image from 'next/image'
 
-const brands = [
-  { name: 'Bentley', logo: '/images/imgi_42_bentley-logo.png' },
-  { name: 'McLaren', logo: '/images/imgi_43_mclaren-logo.png' },
-  { name: 'GMC', logo: '/images/imgi_44_gmc-logo.png' },
-  { name: 'Fiat', logo: '/images/imgi_45_fiat-logo.png' },
-  { name: 'Lamborghini', logo: '/images/imgi_46_lamborghini-logo.png' },
-  { name: 'Mini', logo: '/images/imgi_47_mini-logo.png' },
-  { name: 'Mercedes-Benz', logo: '/images/imgi_48_mercedes-benz-logo.png' },
-  { name: 'BMW', logo: '/images/imgi_49_bmw-logo.png' },
+const pests = [
+  { name: 'Termites', icon: '/images/Insects/termite.png', description: 'Subterranean & Drywood' },
+  { name: 'Bed Bugs', icon: '/images/Insects/bed-bug.png', description: 'Heat & Chemical Treatment' },
+  { name: 'Mosquitoes', icon: '/images/Insects/mosquito.png', description: 'Yard & Perimeter Control' },
+  { name: 'Rodents', icon: '/images/Insects/mouse.png', description: 'Rats, Mice & Wildlife' },
+  { name: 'Cockroaches', icon: '/images/Insects/cockroach.png', description: 'German & American Roaches' },
+  { name: 'Ants', icon: '/images/Insects/ant.png', description: 'Fire Ants & Carpenter Ants' },
+  { name: 'Spiders', icon: '/images/Insects/spider.png', description: 'Black Widows & Brown Recluse' },
+  { name: 'Beetles', icon: '/images/Insects/beetle.png', description: 'Wood-Boring Beetles' },
+  { name: 'Fleas', icon: '/images/Insects/flea.png', description: 'Pet & Yard Flea Control' },
+  { name: 'Flies', icon: '/images/Insects/fly.png', description: 'House Flies & Fruit Flies' },
+  { name: 'Crickets', icon: '/images/Insects/cricket.png', description: 'Mole Crickets & House Crickets' },
+  { name: 'Centipedes', icon: '/images/Insects/centipede.png', description: 'House Centipedes & Millipedes' },
 ]
 
 export function BrandMarquee() {
@@ -19,10 +23,10 @@ export function BrandMarquee() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-heading uppercase text-3xl sm:text-4xl text-brand-black">
-            Trusted by <span className="text-brand-green">Luxury Car Owners</span>
+            Common Pests We <span className="text-brand-red">Control in Miami</span>
           </h2>
           <p className="mt-3 text-lg text-brand-black/70">
-            We detail the finest vehicles in Miami
+            Expert extermination for all pest problems in Miami-Dade County
           </p>
         </div>
 
@@ -34,36 +38,46 @@ export function BrandMarquee() {
           {/* Marquee container */}
           <div className="flex overflow-hidden">
             <div className="flex animate-marquee">
-              {[...brands, ...brands].map((brand, index) => (
+              {[...pests, ...pests].map((pest, index) => (
                 <div
-                  key={`${brand.name}-${index}`}
-                  className="flex-shrink-0 mx-8 flex items-center justify-center"
-                  style={{ width: '150px', height: '80px' }}
+                  key={`${pest.name}-${index}`}
+                  className="flex-shrink-0 mx-6 group"
+                  style={{ width: '140px' }}
                 >
-                  <Image
-                    src={brand.logo}
-                    alt={`${brand.name} logo`}
-                    width={120}
-                    height={60}
-                    className="object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
-                  />
+                  <div className="flex flex-col items-center justify-center p-4 hover:bg-white rounded-lg transition-all duration-300">
+                    <div className="relative w-16 h-16 mb-2">
+                      <Image
+                        src={pest.icon}
+                        alt={`${pest.name} pest control services in Miami - Direct Pest Solutions specializes in ${pest.name.toLowerCase()} extermination`}
+                        fill
+                        className="object-contain group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    <h3 className="font-bold text-sm text-brand-black text-center">{pest.name}</h3>
+                    <p className="text-xs text-brand-black/60 text-center mt-1">{pest.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
             <div className="flex animate-marquee" aria-hidden="true">
-              {[...brands, ...brands].map((brand, index) => (
+              {[...pests, ...pests].map((pest, index) => (
                 <div
-                  key={`${brand.name}-duplicate-${index}`}
-                  className="flex-shrink-0 mx-8 flex items-center justify-center"
-                  style={{ width: '150px', height: '80px' }}
+                  key={`${pest.name}-duplicate-${index}`}
+                  className="flex-shrink-0 mx-6 group"
+                  style={{ width: '140px' }}
                 >
-                  <Image
-                    src={brand.logo}
-                    alt={`${brand.name} logo`}
-                    width={120}
-                    height={60}
-                    className="object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
-                  />
+                  <div className="flex flex-col items-center justify-center p-4 hover:bg-white rounded-lg transition-all duration-300">
+                    <div className="relative w-16 h-16 mb-2">
+                      <Image
+                        src={pest.icon}
+                        alt={`${pest.name} pest control services in Miami - Direct Pest Solutions specializes in ${pest.name.toLowerCase()} extermination`}
+                        fill
+                        className="object-contain group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    <h3 className="font-bold text-sm text-brand-black text-center">{pest.name}</h3>
+                    <p className="text-xs text-brand-black/60 text-center mt-1">{pest.description}</p>
+                  </div>
                 </div>
               ))}
             </div>

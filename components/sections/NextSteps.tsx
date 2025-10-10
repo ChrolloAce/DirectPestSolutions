@@ -14,21 +14,21 @@ export class NextSteps extends React.Component {
   private steps: Step[] = [
     {
       icon: <Phone className="h-12 w-12" />,
-      label: 'Get Your Quote',
-      description: 'Free, no-obligation estimates',
+      label: 'Get Free Inspection',
+      description: 'Free pest inspection & quote',
       href: '/contact'
     },
     {
       icon: <Calendar className="h-12 w-12" />,
-      label: 'Get Scheduled',
-      description: 'Fast, convenient appointment times',
+      label: 'Schedule Treatment',
+      description: 'Same-day service available',
       href: '/contact'
     },
     {
       icon: <Info className="h-12 w-12" />,
       label: 'Learn More',
-      description: 'See our work and process',
-      href: '/watch-videos'
+      description: 'Explore our pest control services',
+      href: '/services'
     }
   ]
   
@@ -45,9 +45,9 @@ export class NextSteps extends React.Component {
               <a
                 key={index}
                 href={step.href}
-                className="group text-center p-8 rounded-xl2 border-2 border-black/10 hover:border-brand-blue hover:shadow-card transition-all"
+                className="group text-center p-8 rounded-xl2 border-2 border-black/10 hover:border-brand-red hover:shadow-card transition-all"
               >
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-brand-blue/10 rounded-full mb-4 group-hover:bg-brand-blue/20 transition">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-brand-red/10 rounded-full mb-4 group-hover:bg-brand-red/20 transition text-brand-red">
                   {step.icon}
                 </div>
                 <h3 className="font-heading text-2xl uppercase mb-2">

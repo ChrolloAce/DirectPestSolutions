@@ -5,18 +5,18 @@ import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const portfolioImages = [
-  { src: '/images/imgi_23_car-body-polishing-process-at-the-detailing-workshop-1024x682.jpg', alt: 'Premium Exterior Detailing Service' },
-  { src: '/images/imgi_24_AdobeStock_198465715-1024x683.jpg', alt: 'Professional Paint Correction' },
-  { src: '/images/imgi_25_AdobeStock_377385492-1024x682.jpg', alt: 'Ceramic Coating Application' },
-  { src: '/images/imgi_26_AdobeStock_791616590-1024x574.jpg', alt: 'Paint Protection Film Installation' },
-  { src: '/images/imgi_27_AdobeStock_462320361-1024x683.jpg', alt: 'Engine Bay Detailing' },
-  { src: '/images/imgi_28_AdobeStock_781952791-1024x574.jpg', alt: 'Headlight Restoration Service' },
-  { src: '/images/imgi_29_AdobeStock_432639942-1024x654.jpg', alt: 'Complete Detail Package' },
-  { src: '/images/imgi_31_cropped-image-of-businessman-with-luxury-watch-closing-door-while-sitting-in-car.jpg', alt: 'Luxury Interior Detailing' },
-  { src: '/images/imgi_32_radiator-grille-of-a-new-luxury-car.jpg', alt: 'Exotic Vehicle Care' },
-  { src: '/images/imgi_33_car-dashboard-modern-luxury-interior-steering-wheel.jpg', alt: 'Premium Interior Restoration' },
-  { src: '/images/imgi_34_luxury-car-interior-in-brown-and-white-colors.jpg', alt: 'Leather Conditioning Service' },
-  { src: '/images/imgi_35_AdobeStock_312924792_Editorial_Use_Only-scaled.jpg', alt: 'Luxury Car Detailing Miami' },
+  { src: '/porfolio/IMG_3592.webp', alt: 'Professional pest control treatment in Miami home - Direct Pest Solutions technician performing thorough interior pest inspection and treatment' },
+  { src: '/porfolio/IMG_3734.webp', alt: 'Exterior pest control perimeter treatment - Miami pest prevention service protecting home foundation from termites and insects' },
+  { src: '/porfolio/IMG_4076.webp', alt: 'Commercial pest control service in Miami - Direct Pest Solutions providing business pest management and prevention solutions' },
+  { src: '/porfolio/IMG_4077.webp', alt: 'Rodent exclusion and wildlife removal service - Professional Miami pest control sealing entry points to prevent infestations' },
+  { src: '/porfolio/IMG_4108.webp', alt: 'Termite treatment and barrier installation - Miami termite control specialist applying protective perimeter treatment around property' },
+  { src: '/porfolio/IMG_4144.webp', alt: 'Mosquito control yard treatment Miami - Professional mosquito reduction spray application for outdoor living spaces' },
+  { src: '/porfolio/2024-01-24.webp', alt: 'Bed bug heat treatment equipment setup - Professional bed bug extermination using thermal remediation in Miami residence' },
+  { src: '/porfolio/2024-05-03.webp', alt: 'Attic pest inspection and treatment - Miami pest control technician treating for rodents and insects in residential attic space' },
+  { src: '/porfolio/2024-05-03 (1).webp', alt: 'Crawl space pest control treatment - Professional pest prevention and moisture control in Miami home crawl space' },
+  { src: '/porfolio/Resized_20230516_171828.webp', alt: 'Commercial kitchen pest control - Restaurant pest management and sanitation treatment in Miami-Dade County' },
+  { src: '/porfolio/Resized_20230516_171935.webp', alt: 'Multi-unit building pest control service - Apartment complex pest management and preventive treatment in Miami' },
+  { src: '/porfolio/Resized_20230715_094803.webp', alt: 'Post-treatment inspection and monitoring - Quality assurance pest control follow-up by Direct Pest Solutions in Miami' },
 ]
 
 export function PortfolioCarousel() {
@@ -66,11 +66,11 @@ export function PortfolioCarousel() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="heading-lg uppercase mb-4 text-brand-black">
-            Our Detailing Portfolio
+            Our Pest Control Work
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Browse through our recent car detailing projects, paint corrections, and ceramic coating applications. 
-            Quality workmanship and customer satisfaction on every luxury vehicle.
+            Browse through our recent pest control projects, termite treatments, and extermination services. 
+            Professional workmanship and guaranteed results protecting Miami homes and businesses.
           </p>
         </div>
 
@@ -143,9 +143,9 @@ export function PortfolioCarousel() {
         <div className="text-center mt-12">
           <a 
             href="/contact" 
-            className="inline-block bg-brand-red hover:bg-brand-red2 text-white px-8 py-4 font-bold uppercase transition-all duration-300 border-2 border-brand-black"
+            className="inline-block bg-brand-red hover:bg-red-700 text-white px-8 py-4 font-bold uppercase transition-all duration-300 border-2 border-brand-black"
           >
-            Get Your Free Detailing Quote Today
+            Get Your Free Pest Inspection Today
           </a>
         </div>
       </div>
