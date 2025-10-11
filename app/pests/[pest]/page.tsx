@@ -442,51 +442,35 @@ export default function PestPage({ params }: PestPageProps) {
         </div>
       </div>
 
-      {/* Hero Section - WITH BACKGROUND IMAGE */}
+      {/* Hero Section - WITH INSECT IMAGE AS BACKGROUND */}
       <section 
-        className="relative py-20 md:py-32"
+        className="relative py-20 md:py-32 min-h-[600px] flex items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(11, 13, 15, 0.75), rgba(11, 13, 15, 0.75)), url(${pest.heroImage})`,
+          backgroundImage: `linear-gradient(rgba(11, 13, 15, 0.85), rgba(11, 13, 15, 0.85)), url(${pest.image})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }}
       >
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="text-white">
-                <h1 className="font-heading uppercase text-4xl md:text-5xl mb-4 drop-shadow-lg">
-                  {pest.name} Control in Miami
-                </h1>
-                <p className="text-lg text-white/90 mb-2 italic drop-shadow">
-                  Scientific Name: {pest.scientificName}
-                </p>
-                <p className="text-xl mb-8 text-white/95 drop-shadow">
-                  {pest.description}
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Button as="a" href="/contact" size="lg" variant="primary">
-                    Get Free Inspection
-                  </Button>
-                  <Button as="a" href="tel:+13053516886" variant="secondary" size="lg">
-                    <Phone className="inline-block mr-2" size={20} />
-                    Call +1-(305) 351-6886
-                  </Button>
-                </div>
-              </div>
-              
-              <div className="relative">
-                <div className="bg-white rounded-lg p-8 shadow-2xl border-4 border-white/20">
-                  <Image
-                    src={pest.image}
-                    alt={`${pest.name} pest control in Miami`}
-                    width={400}
-                    height={400}
-                    className="w-full h-auto"
-                  />
-                </div>
-              </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="font-heading uppercase text-4xl md:text-6xl lg:text-7xl mb-6 drop-shadow-2xl text-white">
+              {pest.name} Control in Miami
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 mb-3 italic drop-shadow-lg">
+              Scientific Name: {pest.scientificName}
+            </p>
+            <p className="text-lg md:text-xl mb-10 text-white/95 drop-shadow-lg max-w-3xl mx-auto">
+              {pest.description}
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button as="a" href="/contact" size="lg" variant="primary">
+                Get Free Inspection
+              </Button>
+              <Button as="a" href="tel:+13053516886" variant="secondary" size="lg">
+                <Phone className="inline-block mr-2" size={20} />
+                Call +1-(305) 351-6886
+              </Button>
             </div>
           </div>
         </div>
