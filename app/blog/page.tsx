@@ -75,28 +75,6 @@ const blogPosts = [
     category: 'Rodent Control',
     image: '/images/company/rodent-control-specialist.webp',
     featured: false
-  },
-  {
-    slug: 'hvac-maintenance-schedule-miami',
-    title: 'Year-Round Pest Prevention Schedule for Miami Homes',
-    excerpt: 'A month-by-month guide to pest prevention tasks that will keep your home pest-free in Miami\'s year-round tropical climate.',
-    author: 'Direct Pest Solutions',
-    date: '2023-12-10',
-    readTime: '9 min read',
-    category: 'Prevention',
-    image: '/images/company/interior-pest-treatment.webp',
-    featured: false
-  },
-  {
-    slug: 'common-ac-problems-miami-solutions',
-    title: 'Most Common Pest Problems in Miami and Their Solutions',
-    excerpt: 'Explore the most frequent pest issues Miami homeowners face and learn when to DIY versus when to call professional exterminators.',
-    author: 'Direct Pest Solutions',
-    date: '2023-12-05',
-    readTime: '8 min read',
-    category: 'Pest Control',
-    image: '/images/company/pest-exterminator-spraying.webp',
-    featured: false
   }
 ]
 

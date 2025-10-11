@@ -444,10 +444,10 @@ export default function PestPage({ params }: PestPageProps) {
                   {pest.description}
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Button href="/contact" size="lg" variant="primary">
+                  <Button as="a" href="/contact" size="lg" variant="primary">
                     Get Free Inspection
                   </Button>
-                  <Button href="tel:+13053516886" variant="secondary" size="lg">
+                  <Button as="a" href="tel:+13053516886" variant="secondary" size="lg">
                     <Phone className="inline-block mr-2" size={20} />
                     Call +1-(305) 351-6886
                   </Button>
@@ -521,7 +521,7 @@ export default function PestPage({ params }: PestPageProps) {
             <p className="text-lg text-brand-black/80 mb-8">
               {pest.treatment}
             </p>
-            <Button href="/contact" size="lg">
+            <Button as="a" href="/contact" size="lg">
               Schedule Treatment Today
             </Button>
           </div>

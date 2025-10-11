@@ -185,10 +185,10 @@ export default function BedBugTreatmentMethodsPage() {
               Compare proven bed bug extermination methods and find the best solution for your Miami home. Expert guidance on heat treatment, chemical applications, and integrated approaches.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button href="/contact" size="lg" variant="secondary">
+              <Button as="a" href="/contact" size="lg" variant="secondary">
                 Get Treatment Recommendation
               </Button>
-              <Button href="tel:+13053516886" size="lg" variant="primary" className="bg-white !text-brand-red hover:bg-gray-100">
+              <Button as="a" href="tel:+13053516886" size="lg" variant="primary" className="bg-white !text-brand-red hover:bg-gray-100">
                 <Phone className="inline-block mr-2" size={20} />
                 Call +1-(305) 351-6886
               </Button>
@@ -478,7 +478,7 @@ export default function BedBugTreatmentMethodsPage() {
               ))}
             </div>
 
-            <Button href="/contact" size="lg" variant="secondary">
+            <Button as="a" href="/contact" size="lg" variant="secondary">
               Get Custom IPM Plan
             </Button>
           </div>

@@ -33,8 +33,8 @@ export default function MobileAppBar() {
   ]
 
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t-2 border-brand-black">
-      <nav className="flex items-center justify-around">
+    <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t-2 border-brand-black m-0 p-0">
+      <nav className="flex items-center justify-around m-0 p-0">
         {navItems.map((item) => {
           const isActive = pathname === item.href
           const Icon = item.icon
@@ -44,7 +44,7 @@ export default function MobileAppBar() {
               <a
                 key={item.name}
                 href={item.href}
-                className="flex flex-col items-center justify-center py-2 px-3 flex-1 transition-colors"
+                className="flex flex-col items-center justify-center py-3 px-3 flex-1 transition-colors"
               >
                 <div
                   className={`p-1.5 rounded-none transition-colors ${
@@ -68,7 +68,7 @@ export default function MobileAppBar() {
             <Link
               key={item.name}
               href={item.href}
-              className="flex flex-col items-center justify-center py-2 px-3 flex-1 transition-colors"
+              className="flex flex-col items-center justify-center py-3 px-3 flex-1 transition-colors"
             >
               <div
                 className={`p-1.5 rounded-none transition-colors ${

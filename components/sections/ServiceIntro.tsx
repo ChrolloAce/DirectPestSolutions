@@ -26,7 +26,7 @@ export function ServiceIntro({ serviceTitle, description, image }: ServiceIntroP
               <p className="text-lg text-brand-black/80 leading-relaxed mb-8">
                 {description}
               </p>
-              <Button href="/contact" size="lg" variant="primary">
+              <Button as="a" href="/contact" size="lg" variant="primary">
                 BOOK A FREE QUOTE™ NOW
               </Button>
             </div>

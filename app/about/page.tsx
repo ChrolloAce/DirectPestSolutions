@@ -64,7 +64,7 @@ export default function AboutPage() {
                 What sets us apart is our hands-on approach - we personally ensure every job meets our high 
                 standards, and we treat every customer's property as if it were our own.
               </p>
-              <Button href="/contact" size="lg" variant="primary">
+              <Button as="a" href="/contact" size="lg" variant="primary">
                 Get to Know Us Better
               </Button>
             </div>
@@ -117,7 +117,7 @@ export default function AboutPage() {
                 From termite inspections to mosquito treatments, bed bug extermination to wildlife removal, 
                 we handle every pest problem with the same level of professionalism and attention to detail.
               </p>
-              <Button href="/services" size="lg" variant="primary">
+              <Button as="a" href="/services" size="lg" variant="primary">
                 View Our Services
               </Button>
             </div>

@@ -165,10 +165,10 @@ export default function TermiteDamageSignsPage() {
               Learn to identify termite activity early. Recognize the warning signs and protect your home from extensive damage.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button href="/contact" size="lg" variant="secondary">
+              <Button as="a" href="/contact" size="lg" variant="secondary">
                 Schedule Inspection
               </Button>
-              <Button href="tel:+13053516886" size="lg" variant="primary" className="bg-white !text-brand-red hover:bg-gray-100">
+              <Button as="a" href="tel:+13053516886" size="lg" variant="primary" className="bg-white !text-brand-red hover:bg-gray-100">
                 <Phone className="inline-block mr-2" size={20} />
                 Call +1-(305) 351-6886
               </Button>
@@ -228,7 +228,7 @@ export default function TermiteDamageSignsPage() {
               <p className="text-white/90 mb-4">
                 A colony of 60,000 termites can consume 1 foot of 2x4 wood in just 5 months. Early detection saves thousands in repairs.
               </p>
-              <Button href="/contact" variant="secondary" size="lg">
+              <Button as="a" href="/contact" variant="secondary" size="lg">
                 Get Free Inspection Today
               </Button>
             </div>
@@ -311,7 +311,7 @@ export default function TermiteDamageSignsPage() {
                     <li>• Acoustic sensors for wall detection</li>
                     <li>• Trained eyes for subtle indicators</li>
                   </ul>
-                  <Button href="/contact" className="mt-4">
+                  <Button as="a" href="/contact" className="mt-4">
                     Schedule Professional Inspection
                   </Button>
                 </div>
@@ -352,7 +352,7 @@ export default function TermiteDamageSignsPage() {
               <p className="text-xl text-white/90 mb-6">
                 The sooner you catch termites, the less damage and lower the repair costs. Annual inspections are your best defense.
               </p>
-              <Button href="/contact" size="lg" variant="secondary">
+              <Button as="a" href="/contact" size="lg" variant="secondary">
                 Protect Your Home - Schedule Inspection
               </Button>
             </div>

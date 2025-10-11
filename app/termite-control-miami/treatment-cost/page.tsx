@@ -97,10 +97,10 @@ export default function TermiteTreatmentCostPage() {
               Transparent pricing guide for Miami homeowners. Learn what affects termite treatment costs and get a free, no-obligation estimate from licensed professionals.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button href="/contact" size="lg" variant="secondary">
+              <Button as="a" href="/contact" size="lg" variant="secondary">
                 Get Free Estimate
               </Button>
-              <Button href="tel:+13053516886" size="lg" variant="primary" className="bg-white !text-brand-red hover:bg-gray-100">
+              <Button as="a" href="tel:+13053516886" size="lg" variant="primary" className="bg-white !text-brand-red hover:bg-gray-100">
                 <Phone className="inline-block mr-2" size={20} />
                 Call +1-(305) 351-6886
               </Button>
@@ -236,7 +236,7 @@ export default function TermiteTreatmentCostPage() {
             <p className="text-xl text-white/90 mb-8">
               Professional treatment ($1,200-$2,500) is a small investment compared to repair costs. Most homeowner insurance policies DON'T cover termite damage.
             </p>
-            <Button href="/contact" size="lg" variant="secondary">
+            <Button as="a" href="/contact" size="lg" variant="secondary">
               Protect Your Investment - Get Quote
             </Button>
           </div>

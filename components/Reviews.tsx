@@ -111,13 +111,13 @@ export default function Reviews() {
       <div className="mx-auto max-w-7xl px-4">
         {/* Top Rated Bar */}
         <div className="mb-12 flex flex-col lg:flex-row items-center lg:items-center justify-between gap-6 lg:gap-12 pb-8 border-b-2 border-white/10">
-          <h3 className="font-heading uppercase text-xl md:text-2xl text-white tracking-tight text-left">
+          <h3 className="font-heading uppercase text-xl md:text-2xl text-white tracking-tight text-center lg:text-left">
             Top Rated Pest Control In Miami<br className="hidden lg:block" /> Across All Review Sites
           </h3>
           
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
+          <div className="grid grid-cols-2 md:flex md:flex-wrap items-center justify-center gap-4 md:gap-6 lg:gap-8 w-full lg:w-auto">
             {/* Google */}
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-3">
               <Image
                 src="/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/google-g-logo.png"
                 alt="Google Reviews"
@@ -126,13 +126,13 @@ export default function Reviews() {
                 className="w-10 h-10 md:w-12 md:h-12"
               />
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-white">5/5</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white">5/5</div>
                 <div className="text-xs text-white/70">200+ reviews</div>
               </div>
             </div>
 
             {/* Yelp */}
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-3">
               <Image
                 src="/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/yelp-logo.png"
                 alt="Yelp Reviews"
@@ -141,13 +141,13 @@ export default function Reviews() {
                 className="w-10 h-10 md:w-12 md:h-12"
               />
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-white">4.8/5</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white">4.8/5</div>
                 <div className="text-xs text-white/70">4+ reviews</div>
               </div>
             </div>
 
             {/* Trustpilot */}
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-3">
               <Image
                 src="/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/trustpilot-star-logo.png"
                 alt="Trustpilot Reviews"
@@ -156,18 +156,18 @@ export default function Reviews() {
                 className="w-10 h-10 md:w-12 md:h-12"
               />
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-white">4.8/5</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white">4.8/5</div>
                 <div className="text-xs text-white/70">125+ reviews</div>
               </div>
             </div>
 
             {/* Facebook */}
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-3">
               <div className="w-10 h-10 md:w-12 md:h-12 bg-[#1877F2] rounded-full flex items-center justify-center">
                 <span className="text-white text-2xl md:text-3xl font-bold">f</span>
               </div>
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-white">4.8/5</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white">4.8/5</div>
                 <div className="text-xs text-white/70">24+ reviews</div>
               </div>
             </div>

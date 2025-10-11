@@ -22,7 +22,7 @@ export function PropertyMaintenance() {
               <p className="text-lg text-brand-black/80 leading-relaxed mb-8">
                 it's crucial to prevent pest infestations. Well-kept properties deter pests like rodents, insects, and termites, which thrive in cluttered, damp, and unkempt environments. Regular maintenance, such as fixing leaks, sealing cracks, and keeping your yard tidy, reduces the risk of attracting pests. Not only does this protect your investment by preventing structural damage, but it also ensures a healthier living environment for you and your family. Prioritize property maintenance and safeguard your home from unwanted invaders with Direct Pest Solutions' expert guidance and services.
               </p>
-              <Button href="/contact" size="lg" variant="primary">
+              <Button as="a" href="/contact" size="lg" variant="primary">
                 BOOK A FREE QUOTE™ NOW
               </Button>
             </div>

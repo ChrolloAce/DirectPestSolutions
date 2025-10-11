@@ -126,10 +126,10 @@ export default function TermitePreventionPage() {
               Protect your Miami home from termite damage before it starts. Expert prevention strategies proven effective in South Florida's climate.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button href="/contact" size="lg" variant="secondary">
+              <Button as="a" href="/contact" size="lg" variant="secondary">
                 Get Prevention Plan
               </Button>
-              <Button href="tel:+13053516886" size="lg" variant="primary" className="bg-white !text-brand-red hover:bg-gray-100">
+              <Button as="a" href="tel:+13053516886" size="lg" variant="primary" className="bg-white !text-brand-red hover:bg-gray-100">
                 <Phone className="inline-block mr-2" size={20} />
                 Call +1-(305) 351-6886
               </Button>
@@ -240,7 +240,7 @@ export default function TermitePreventionPage() {
                     </div>
                   ))}
                 </div>
-                <Button href="/contact" className="w-full mt-6" size="lg">
+                <Button as="a" href="/contact" className="w-full mt-6" size="lg">
                   Get Professional Protection Plan
                 </Button>
               </div>
@@ -302,10 +302,10 @@ export default function TermitePreventionPage() {
               Combine these prevention strategies with professional protection for complete peace of mind. Free inspections available.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button href="/contact" size="lg" variant="secondary">
+              <Button as="a" href="/contact" size="lg" variant="secondary">
                 Schedule Free Inspection
               </Button>
-              <Button href="/termite-control-miami" size="lg" variant="primary" className="bg-white !text-brand-red hover:bg-gray-100">
+              <Button as="a" href="/termite-control-miami" size="lg" variant="primary" className="bg-white !text-brand-red hover:bg-gray-100">
                 View All Termite Services
               </Button>
             </div>

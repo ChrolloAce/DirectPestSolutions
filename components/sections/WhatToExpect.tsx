@@ -31,7 +31,7 @@ export function WhatToExpect() {
               <p className="text-lg text-brand-black/80 leading-relaxed mb-8">
                 At Direct Pest Solutions, we deliver top-quality pest control services with professionalism and expertise. Our experienced team offers personalized solutions, ensuring effective and long-lasting protection for your property. Expect thorough inspections, eco-friendly treatments, and ongoing support tailored to your specific needs. We prioritize safety and customer satisfaction, providing a seamless and stress-free experience from start to finish. Trust us to handle all your pest concerns with reliability and excellence.
               </p>
-              <Button href="/contact" size="lg" variant="primary">
+              <Button as="a" href="/contact" size="lg" variant="primary">
                 BOOK A FREE QUOTE™ NOW
               </Button>
             </div>
