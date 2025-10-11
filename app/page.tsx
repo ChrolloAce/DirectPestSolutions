@@ -46,7 +46,7 @@ export default function HomePage() {
           'We specialize in the pests that matter most to Miami residents: termite inspections and treatments, bed bug heat treatments, mosquito barrier treatments, rodent exclusion and removal, ant colony elimination, cockroach extermination, wildlife control, and preventive maintenance programs that keep pests away year-round.',
           'Our proven process starts with a thorough inspection to identify pest entry points and breeding areas. We then create a customized treatment plan using EPA-approved products that are safe for children and pets. Finally, we provide ongoing monitoring and prevention strategies to ensure pests don\'t return.'
         ]}
-        images={['/images/company/commercial-building-treatment.webp', '/images/company/wholeteam.webp']}
+        images={['/images/company/pest-exterminator-spraying.webp', '/images/company/spraybushes.webp']}
         alt="Comprehensive pest control services for Miami residential and commercial properties - Direct Pest Solutions offers termite control, mosquito treatment, rodent removal, and ongoing pest prevention programs"
         direction="right"
         ctaText="View All Services"
