@@ -18,13 +18,14 @@ export function Navbar() {
       label: 'Services', 
       href: '/services',
       dropdown: [
-        { label: 'General Pest Control', href: '/pest-control-miami' },
+        { label: 'Residential Pest Control', href: '/residential-pest-control-miami' },
+        { label: 'Commercial Pest Control', href: '/commercial-pest-control-miami' },
         { label: 'Termite Control', href: '/termite-control-miami' },
         { label: 'Bed Bug Extermination', href: '/bed-bug-extermination-miami' },
         { label: 'Mosquito Control', href: '/mosquito-control-miami' },
-        { label: 'Rodent & Wildlife Control', href: '/rodent-wildlife-control-miami' },
-        { label: 'Insect Control', href: '/insect-control-miami' },
-        { label: 'Prevention & Inspection', href: '/prevention-inspection-miami' }
+        { label: 'Wildlife Control', href: '/wildlife-control-miami' },
+        { label: 'Bee Removal', href: '/bee-removal-miami' },
+        { label: 'Full Property Protection', href: '/full-property-protection-miami' }
       ]
     },
     { label: 'Blog', href: '/blog' },
