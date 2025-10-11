@@ -6,6 +6,8 @@ import Button from '@/components/ui/Button'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
 import Reviews from '@/components/Reviews'
+import { ProcessSection } from '@/components/sections/ProcessSection'
+import { WhatToExpect } from '@/components/sections/WhatToExpect'
 
 interface PestPageProps {
   params: {
@@ -20,6 +22,7 @@ const pests = {
     scientificName: 'Isoptera',
     treatmentName: 'Termite Control & Treatment',
     image: '/images/Insects/termite.png',
+    heroImage: '/images/company/termite-inspection-professional.webp',
     description: 'Termites are wood-destroying insects that can cause significant structural damage to homes and buildings. In Miami\'s humid climate, subterranean and drywood termites thrive year-round.',
     dangers: [
       'Structural damage to homes and buildings',
@@ -49,6 +52,7 @@ const pests = {
     scientificName: 'Cimex lectularius',
     treatmentName: 'Bed Bug Extermination',
     image: '/images/Insects/bed-bug.png',
+    heroImage: '/images/company/bed-bug-treatment-residential.webp',
     description: 'Bed bugs are small, blood-feeding insects that hide in mattresses, furniture, and cracks. They are notoriously difficult to eliminate and require professional treatment.',
     dangers: [
       'Itchy, painful bites',
@@ -79,6 +83,7 @@ const pests = {
     scientificName: 'Culicidae',
     treatmentName: 'Mosquito Control',
     image: '/images/Insects/mosquito.png',
+    heroImage: '/images/company/mosquito-control-yard-treatment.webp',
     description: 'Mosquitoes are flying insects that feed on blood and breed in standing water. Miami\'s tropical climate makes it a prime breeding ground for multiple mosquito species year-round.',
     dangers: [
       'Zika virus transmission',
@@ -109,6 +114,7 @@ const pests = {
     scientificName: 'Rodentia',
     treatmentName: 'Rodent Control & Removal',
     image: '/images/Insects/mouse.png',
+    heroImage: '/images/company/rodent-control-specialist.webp',
     description: 'Rodents including rats and mice are destructive pests that contaminate food, spread disease, and cause property damage. They can squeeze through incredibly small openings.',
     dangers: [
       'Disease transmission (Hantavirus, Salmonella)',
@@ -140,6 +146,7 @@ const pests = {
     scientificName: 'Blattodea',
     treatmentName: 'Cockroach Extermination',
     image: '/images/Insects/cockroach.png',
+    heroImage: '/images/company/pest-exterminator-spraying.webp',
     description: 'Cockroaches are resilient pests that thrive in warm, humid environments. Miami has multiple species including German and American roaches that spread disease and trigger allergies.',
     dangers: [
       'Asthma and allergy triggers',
@@ -172,6 +179,7 @@ const pests = {
     scientificName: 'Formicidae',
     treatmentName: 'Ant Control & Extermination',
     image: '/images/Insects/ant.png',
+    heroImage: '/images/company/insect-control-specialist.webp',
     description: 'Ants are social insects that form large colonies. Miami has multiple ant species including fire ants, carpenter ants, and sugar ants that invade homes and cause problems.',
     dangers: [
       'Painful fire ant stings',
@@ -204,6 +212,7 @@ const pests = {
     scientificName: 'Araneae',
     treatmentName: 'Spider Control & Removal',
     image: '/images/Insects/spider.png',
+    heroImage: '/images/company/interior-pest-treatment.webp',
     description: 'Spiders are arachnids that help control other pests but can be dangerous when venomous species like Black Widows and Brown Recluses are present in your home.',
     dangers: [
       'Venomous bites (Black Widow, Brown Recluse)',
@@ -234,6 +243,7 @@ const pests = {
     scientificName: 'Coleoptera',
     treatmentName: 'Beetle Control',
     image: '/images/Insects/beetle.png',
+    heroImage: '/images/company/residential-pest-control-service.webp',
     description: 'Beetles are a diverse group of insects that include wood-boring species, carpet beetles, and pantry pests. Some species cause significant damage to structures and stored products.',
     dangers: [
       'Structural damage (wood-boring beetles)',
@@ -263,6 +273,7 @@ const pests = {
     scientificName: 'Siphonaptera',
     treatmentName: 'Flea Control & Treatment',
     image: '/images/Insects/flea.png',
+    heroImage: '/images/company/pest-prevention-service.webp',
     description: 'Fleas are blood-feeding parasites that primarily infest pets but can also bite humans. They multiply rapidly and are difficult to eliminate without professional treatment.',
     dangers: [
       'Itchy, painful bites',
@@ -295,6 +306,7 @@ const pests = {
     scientificName: 'Diptera',
     treatmentName: 'Fly Control',
     image: '/images/Insects/fly.png',
+    heroImage: '/images/company/commercial-pest-inspection.webp',
     description: 'Flies are flying insects that breed in decaying organic matter and spread disease through contamination. House flies and fruit flies are common Miami pests.',
     dangers: [
       'Disease transmission',
@@ -325,6 +337,7 @@ const pests = {
     scientificName: 'Gryllidae',
     treatmentName: 'Cricket Control',
     image: '/images/Insects/cricket.png',
+    heroImage: '/images/company/professional-pest-inspection.webp',
     description: 'Crickets are jumping insects known for their chirping sounds. While mostly harmless, large infestations can cause fabric damage and become a significant nuisance.',
     dangers: [
       'Fabric and paper damage',
@@ -355,6 +368,7 @@ const pests = {
     scientificName: 'Chilopoda',
     treatmentName: 'Centipede Control',
     image: '/images/Insects/centipede.png',
+    heroImage: '/images/company/commercial-building-treatment.webp',
     description: 'Centipedes are multi-legged arthropods that prey on other insects. While beneficial outdoors, they can be alarming indoors and some species can deliver painful bites.',
     dangers: [
       'Painful bites',
@@ -428,19 +442,27 @@ export default function PestPage({ params }: PestPageProps) {
         </div>
       </div>
 
-      {/* Hero Section - BLACK BACKGROUND */}
-      <section className="relative bg-brand-black py-20 md:py-32">
+      {/* Hero Section - WITH BACKGROUND IMAGE */}
+      <section 
+        className="relative py-20 md:py-32"
+        style={{
+          backgroundImage: `linear-gradient(rgba(11, 13, 15, 0.75), rgba(11, 13, 15, 0.75)), url(${pest.heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="text-white">
-                <h1 className="font-heading uppercase text-4xl md:text-5xl mb-4">
+                <h1 className="font-heading uppercase text-4xl md:text-5xl mb-4 drop-shadow-lg">
                   {pest.name} Control in Miami
                 </h1>
-                <p className="text-lg text-white/90 mb-2 italic">
+                <p className="text-lg text-white/90 mb-2 italic drop-shadow">
                   Scientific Name: {pest.scientificName}
                 </p>
-                <p className="text-xl mb-8 text-white/90">
+                <p className="text-xl mb-8 text-white/95 drop-shadow">
                   {pest.description}
                 </p>
                 <div className="flex flex-wrap gap-4">
@@ -455,7 +477,7 @@ export default function PestPage({ params }: PestPageProps) {
               </div>
               
               <div className="relative">
-                <div className="bg-white rounded-lg p-8 shadow-2xl">
+                <div className="bg-white rounded-lg p-8 shadow-2xl border-4 border-white/20">
                   <Image
                     src={pest.image}
                     alt={`${pest.name} pest control in Miami`}
@@ -527,6 +549,12 @@ export default function PestPage({ params }: PestPageProps) {
           </div>
         </div>
       </section>
+
+      {/* Process Section */}
+      <ProcessSection />
+
+      {/* What To Expect Section */}
+      <WhatToExpect />
 
       {/* Customer Reviews - BLACK BACKGROUND */}
       <Reviews />
