@@ -54,19 +54,6 @@ export default function ThankYouClient({
 
   return (
     <main className="min-h-screen bg-brand-off">
-      {/* Confetti Animation */}
-      {showConfetti && (
-        <div className="fixed inset-0 z-50 pointer-events-none flex items-center justify-center">
-          <div className="animate-bounce">
-            <div className="relative">
-              <CheckCircle className="w-32 h-32 text-brand-gold animate-pulse" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-4xl">🎉</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Hero Section */}
       <section className="relative overflow-hidden border-b-4 border-brand-gold bg-brand-blue">
@@ -81,13 +68,13 @@ export default function ThankYouClient({
             
             <h1 className="mt-6 font-heading uppercase tracking-tight leading-[0.95] text-4xl sm:text-5xl md:text-6xl text-white">
               Thank You, {name}!
-              <span className="block text-brand-gold">Your Free Estimate</span>
-              Is On The Way
+              <span className="block text-brand-gold">We've Received</span>
+              Your Request
             </h1>
             
             <p className="mt-6 text-xl text-white/90">
-              An HVAC specialist will contact you within <strong>30 minutes</strong> during business hours 
-              to confirm details and provide pricing. For urgent AC issues, call us directly.
+              Our expert pest control team will contact you within <strong>30 minutes</strong> during business hours 
+              to confirm details and schedule your free inspection. For urgent pest problems, call us directly.
             </p>
 
             <div className="mt-8">
@@ -151,10 +138,10 @@ export default function ThankYouClient({
               </h2>
               <div className="space-y-4">
                 {[
-                  { num: '1', text: 'Our dispatch team reviews your request and checks technician availability in your area' },
-                  { num: '2', text: 'We call or text you with an exact price quote and available time slots' },
-                  { num: '3', text: 'Once confirmed, we send a technician and text you when they\'re on the way' },
-                  { num: '4', text: 'Service is completed, and you only pay after you\'re 100% satisfied' }
+                  { num: '1', text: 'We review your request and check our licensed exterminator availability in your area' },
+                  { num: '2', text: 'We contact you to schedule your free inspection at a convenient time for you' },
+                  { num: '3', text: 'Our certified pest control specialist conducts a thorough inspection and provides a treatment plan' },
+                  { num: '4', text: 'We eliminate your pest problem with safe, effective treatments and guarantee results' }
                 ].map((step) => (
                   <div key={step.num} className="flex gap-4">
                     <span className="flex-shrink-0 w-8 h-8 bg-brand-gold text-brand-black font-bold rounded-full flex items-center justify-center">
@@ -176,12 +163,12 @@ export default function ThankYouClient({
                 </Button>
                 <Button
                   as="a"
-                  href="/24-7-emergency"
+                  href="/contact"
                   variant="primary"
                   size="md"
                   className="!bg-brand-blue"
                 >
-                  Emergency Services
+                  Contact Us
                 </Button>
               </div>
             </div>
@@ -194,7 +181,7 @@ export default function ThankYouClient({
                     <Star key={i} className="w-5 h-5 fill-current" />
                   ))}
                 </div>
-                <span className="text-sm text-black/70">4.9/5 from 500+ Miami homeowners</span>
+                <span className="text-sm text-black/70">5/5 from 200+ satisfied Miami customers</span>
               </div>
               
               <div className="grid md:grid-cols-2 gap-4">
@@ -228,29 +215,29 @@ export default function ThankYouClient({
               <div className="space-y-3">
                 <details className="border-b border-black/10 pb-3">
                   <summary className="cursor-pointer font-semibold hover:text-brand-blue">
-                    How quickly can you arrive?
+                    How quickly can you provide service?
                   </summary>
                   <p className="mt-2 text-black/70">
-                    Emergency services: 30-60 minutes. Regular service: Same day or next day. 
-                    We'll confirm exact timing when we call.
+                    We offer same-day and emergency pest control services throughout Miami-Dade County. 
+                    Most inspections can be scheduled within 24 hours. We'll confirm your appointment when we call.
                   </p>
                 </details>
                 <details className="border-b border-black/10 pb-3">
                   <summary className="cursor-pointer font-semibold hover:text-brand-blue">
-                    Do I need to be home?
+                    Are your treatments safe for my family and pets?
                   </summary>
                   <p className="mt-2 text-black/70">
-                    For most services, yes. However, for some exterior work we can arrange 
-                    access. We'll discuss this when confirming your appointment.
+                    Absolutely! We use EPA-approved products that are safe for children and pets when applied 
+                    correctly. Our licensed technicians follow strict safety protocols on every job.
                   </p>
                 </details>
                 <details className="border-b border-black/10 pb-3">
                   <summary className="cursor-pointer font-semibold hover:text-brand-blue">
-                    What payment methods do you accept?
+                    Do you guarantee your pest control services?
                   </summary>
                   <p className="mt-2 text-black/70">
-                    We accept cash, check, all major credit cards, and offer financing 
-                    for larger projects through approved credit.
+                    Yes! If pests return between scheduled treatments, we return for free. 
+                    Your satisfaction is guaranteed with Direct Pest Solutions.
                   </p>
                 </details>
               </div>
@@ -264,20 +251,20 @@ export default function ThankYouClient({
       <section className="bg-brand-black border-t-4 border-brand-gold py-12">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <h2 className="font-heading uppercase text-3xl text-white mb-4">
-            Need Immediate Help?
+            Have An Urgent Pest Problem?
           </h2>
           <p className="text-white/80 mb-6">
-            Our emergency team is standing by 24/7 for urgent AC issues
+            Call us now for same-day emergency pest control service throughout Miami
           </p>
           <Button
             as="a"
-            href="tel:7862967304"
+            href="tel:3053516886"
             size="lg"
             variant="primary"
             className="!bg-brand-gold !text-brand-black hover:!bg-white"
           >
             <Phone className="inline-block mr-2" size={20} />
-            Call Emergency Line: +1-(305) 351-6886
+            Call Now: +1-(305) 351-6886
           </Button>
         </div>
       </section>
