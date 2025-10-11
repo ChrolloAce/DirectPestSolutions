@@ -204,7 +204,7 @@ export default function ThankYouClient({
                 />
                 <ReviewCard
                   name="Kevin K. • Aventura"
-                  text="CBE Air did a whole house central AC install for me. They were excellent, very knowledgeable, professional and punctual!"
+                  text="Direct Pest Solutions did a whole house pest treatment for me. They were excellent, very knowledgeable, professional and punctual!"
                 />
               </div>
             </div>

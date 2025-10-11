@@ -226,7 +226,7 @@ export default function ACRepairPage() {
             AC Repair Service Areas in Miami
           </h2>
           <p className="text-center text-lg mb-8 max-w-3xl mx-auto">
-            CBE Air Services provides fast AC repair throughout Miami-Dade County. 
+            Direct Pest Solutions provides fast pest control throughout Miami-Dade County. 
             Our local technicians can reach you quickly, no matter where you are.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-center">
@@ -253,7 +253,7 @@ export default function ACRepairPage() {
             Need AC Repair Now?
           </h2>
           <p className="text-xl mb-8">
-            Don't suffer in the heat. Call CBE Air Services for fast, reliable AC repair in Miami.
+            Don't suffer with pests. Call Direct Pest Solutions for fast, reliable pest control in Miami.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <CTAButton href="tel:+13053516886" variant="secondary">

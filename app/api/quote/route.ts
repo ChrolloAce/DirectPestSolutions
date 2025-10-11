@@ -6,7 +6,7 @@ const resend = new Resend(process.env.RESEND_API_KEY || 're_QFX2anNF_Q4KwUyFJHg2
 
 // Email recipients
 const EMAIL_RECIPIENTS = [
-  'cbeairservices@gmail.com',  // Primary recipient
+  'directpestsolutions@hotmail.com',  // Primary recipient
   'ernesto@maktubtechnologies.com'  // Test recipient for verification
 ]
 
@@ -34,11 +34,11 @@ export async function POST(request: Request) {
           <style>
             body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
             .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-            .header { background: #63C7E6; color: white; padding: 20px; text-align: center; }
+            .header { background: #DC2626; color: white; padding: 20px; text-align: center; }
             .content { background: #f9f9f9; padding: 20px; margin-top: 20px; }
             .field { margin-bottom: 15px; }
             .label { font-weight: bold; color: #555; }
-            .value { margin-top: 5px; padding: 10px; background: white; border-left: 3px solid #E8B243; }
+            .value { margin-top: 5px; padding: 10px; background: white; border-left: 3px solid #DC2626; }
             .footer { margin-top: 30px; padding-top: 20px; border-top: 2px solid #ddd; text-align: center; color: #777; }
           </style>
         </head>
@@ -46,7 +46,7 @@ export async function POST(request: Request) {
           <div class="container">
             <div class="header">
               <h1>New ${formType} Submission</h1>
-              <p>GreenScape Miami</p>
+              <p>Direct Pest Solutions</p>
             </div>
             
             <div class="content">
@@ -95,7 +95,7 @@ export async function POST(request: Request) {
             </div>
             
             <div class="footer">
-              <p>This lead was submitted from the GreenScape Miami website.</p>
+              <p>This lead was submitted from the Direct Pest Solutions website.</p>
               <p>Please respond within 1 hour for best conversion.</p>
             </div>
           </div>
@@ -105,7 +105,7 @@ export async function POST(request: Request) {
 
     // Create plain text version
     const emailText = `
-New ${formType} Submission - GreenScape Miami
+New ${formType} Submission - Direct Pest Solutions
 
 Name: ${name || 'Not provided'}
 Email: ${email || 'Not provided'}
@@ -115,19 +115,19 @@ ${address ? `Address: ${address}` : ''}
 ${preferredTime ? `Preferred Time: ${preferredTime}` : ''}
 ${message ? `Message: ${message}` : ''}
 
-This lead was submitted from the CBE Air Services website.
+This lead was submitted from the Direct Pest Solutions website.
 Please respond within 1 hour for best conversion.
     `.trim()
 
     // Send email to all recipients
     const emailPromises = EMAIL_RECIPIENTS.map(recipient => 
       resend.emails.send({
-        from: 'CBE Air Services <noreply@maktubworkspace.com>',
+        from: 'Direct Pest Solutions <noreply@maktubworkspace.com>',
         to: recipient,
         subject: `New ${formType} Lead - ${name || 'Website Visitor'}`,
         html: emailHtml,
         text: emailText,
-        replyTo: email || 'cbeairservices@gmail.com'
+        replyTo: email || 'directpestsolutions@hotmail.com'
       })
     )
 
