@@ -2,152 +2,332 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Pages -->
   <url>
-    <loc>https://cbeairservices.com/</loc>
-    <lastmod>2024-09-17</lastmod>
+    <loc>https://www.directpestsolutions.us/</loc>
+    <lastmod>2025-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- Service Pages -->
   <url>
-    <loc>https://cbeairservices.com/services</loc>
-    <lastmod>2024-09-17</lastmod>
+    <loc>https://www.directpestsolutions.us/services</loc>
+    <lastmod>2025-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <!-- Individual Service Pages -->
   <url>
-    <loc>https://cbeairservices.com/ac-repair</loc>
-    <lastmod>2024-09-17</lastmod>
+    <loc>https://www.directpestsolutions.us/pest-control-miami</loc>
+    <lastmod>2025-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://cbeairservices.com/ac-maintenance</loc>
-    <lastmod>2024-09-17</lastmod>
+    <loc>https://www.directpestsolutions.us/residential-pest-control-miami</loc>
+    <lastmod>2025-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://cbeairservices.com/ac-installation</loc>
-    <lastmod>2024-09-17</lastmod>
+    <loc>https://www.directpestsolutions.us/commercial-pest-control-miami</loc>
+    <lastmod>2025-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://cbeairservices.com/commercial-hvac</loc>
-    <lastmod>2024-09-17</lastmod>
+    <loc>https://www.directpestsolutions.us/termite-control-miami</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/bed-bug-extermination-miami</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/mosquito-control-miami</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/rodent-wildlife-control-miami</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/insect-control-miami</loc>
+    <lastmod>2025-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cbeairservices.com/emergency-service</loc>
-    <lastmod>2024-09-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cbeairservices.com/duct-cleaning</loc>
-    <lastmod>2024-09-17</lastmod>
+    <loc>https://www.directpestsolutions.us/prevention-inspection-miami</loc>
+    <lastmod>2025-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/full-property-protection-miami</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   
-  <!-- Legacy Service Page -->
+  <!-- Pest-Specific Pages -->
   <url>
-    <loc>https://cbeairservices.com/services/ac-repair-miami</loc>
-    <lastmod>2024-09-17</lastmod>
+    <loc>https://www.directpestsolutions.us/pests/termite</loc>
+    <lastmod>2025-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/pests/bed-bug</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/pests/mosquito</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/pests/rodent</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/pests/cockroach</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/pests/ant</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/pests/spider</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/pests/beetle</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/pests/flea</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/pests/fly</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/pests/cricket</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/pests/centipede</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Termite Sub-Pages -->
+  <url>
+    <loc>https://www.directpestsolutions.us/termite-control-miami/damage-signs</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/termite-control-miami/prevention</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/termite-control-miami/treatment-cost</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Bed Bug Sub-Pages -->
+  <url>
+    <loc>https://www.directpestsolutions.us/bed-bug-extermination-miami/treatment-methods</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   
   <!-- Information Pages -->
   <url>
-    <loc>https://cbeairservices.com/about</loc>
-    <lastmod>2024-09-17</lastmod>
+    <loc>https://www.directpestsolutions.us/about</loc>
+    <lastmod>2025-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cbeairservices.com/contact</loc>
-    <lastmod>2024-09-17</lastmod>
+    <loc>https://www.directpestsolutions.us/contact</loc>
+    <lastmod>2025-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://cbeairservices.com/locations</loc>
-    <lastmod>2024-09-17</lastmod>
+    <loc>https://www.directpestsolutions.us/locations</loc>
+    <lastmod>2025-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cbeairservices.com/faqs</loc>
-    <lastmod>2024-09-17</lastmod>
+    <loc>https://www.directpestsolutions.us/faqs</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Location Pages -->
+  <url>
+    <loc>https://www.directpestsolutions.us/locations/miami</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/locations/miami-beach</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/locations/coral-gables</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/locations/aventura</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/locations/kendall</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/locations/homestead</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/locations/palmetto-bay</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/locations/cutler-bay</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/locations/pinecrest</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/locations/doral</loc>
+    <lastmod>2025-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <!-- Blog Pages -->
   <url>
-    <loc>https://cbeairservices.com/blog</loc>
-    <lastmod>2024-09-17</lastmod>
+    <loc>https://www.directpestsolutions.us/blog</loc>
+    <lastmod>2025-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cbeairservices.com/blog/signs-your-ac-needs-repair-miami</loc>
-    <lastmod>2024-09-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cbeairservices.com/blog/ac-maintenance-tips-miami-heat</loc>
-    <lastmod>2024-09-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cbeairservices.com/blog/choosing-right-ac-system-miami-home</loc>
-    <lastmod>2024-09-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cbeairservices.com/blog/commercial-hvac-energy-efficiency</loc>
-    <lastmod>2024-09-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cbeairservices.com/blog/emergency-ac-repair-what-to-do</loc>
-    <lastmod>2024-09-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cbeairservices.com/blog/air-duct-cleaning-benefits-miami</loc>
-    <lastmod>2024-09-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Other Pages -->
-  <url>
-    <loc>https://cbeairservices.com/apply</loc>
-    <lastmod>2024-09-17</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://cbeairservices.com/watch-videos</loc>
-    <lastmod>2024-09-17</lastmod>
+    <loc>https://www.directpestsolutions.us/blog/signs-your-ac-needs-repair-miami</loc>
+    <lastmod>2025-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://cbeairservices.com/thank-you</loc>
-    <lastmod>2024-09-17</lastmod>
+    <loc>https://www.directpestsolutions.us/blog/ac-maintenance-tips-miami-heat</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/blog/choosing-right-ac-system-miami-home</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/blog/commercial-hvac-energy-efficiency</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/blog/emergency-ac-repair-what-to-do</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/blog/air-duct-cleaning-benefits-miami</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Other Pages -->
+  <url>
+    <loc>https://www.directpestsolutions.us/apply</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/watch-videos</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.directpestsolutions.us/thank-you</loc>
+    <lastmod>2025-01-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

@@ -25,7 +25,7 @@ interface ServicePageProps {
 
 export async function generateStaticParams() {
   return services.map((service) => ({
-    service: service.id,
+    service: service.slug || service.id,
   }))
 }
 
