@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import Link from 'next/link'
 import { Phone, Download, Calendar, CheckCircle, Star, MapPin, Gift } from 'lucide-react'
 import Button from '@/components/ui/Button'
@@ -16,8 +16,6 @@ export default function ThankYouClient({
   const service = (searchParams?.service as string) || ''
   const city = (searchParams?.city as string) || (searchParams?.address as string) || ''
   const message = (searchParams?.message as string) || ''
-  
-  const [showConfetti, setShowConfetti] = useState(true)
 
   useEffect(() => {
     // Fire conversion events
@@ -46,10 +44,6 @@ export default function ThankYouClient({
         })
       }
     }
-
-    // Hide confetti after animation
-    const timer = setTimeout(() => setShowConfetti(false), 3000)
-    return () => clearTimeout(timer)
   }, [])
 
   return (
