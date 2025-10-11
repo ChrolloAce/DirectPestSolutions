@@ -145,7 +145,7 @@ export const services: Service[] = [
       'Long-term solutions that address the root cause. We don\'t just remove the animals—we prevent them from coming back with professional exclusion work, entry point sealing, and ongoing monitoring.'
     ],
     icon: 'Squirrel',
-    image: '/images/Direct Pest Solutions _ Top Pest Control Miami & Surrounding Areas/raccoon-photo.jpg',
+    image: '/images/company/wildlife-removal-expert.webp',
     benefits: [
       'Humane removal methods',
       'Entry point identification',
